@@ -176,8 +176,6 @@ var LoginComponent = (function () {
         this.store.select(__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["a" /* getAuthStatus */]).subscribe(function (data) {
             if (data === true) {
                 _this.router.navigate([_this.returnUrl]);
-                // this.router.ngOnDestroy();
-                // window.location.href='http://localhost:3000/spree/admin';
             }
         });
     };
