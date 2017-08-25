@@ -18,3 +18,4 @@ end
 Spree.user_class = "Spree::User"
 
 Spree::Api::Config[:requires_authentication] = false
+# Spree::PermittedAttributes.product_attributes << :comment_option

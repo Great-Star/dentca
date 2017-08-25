@@ -11,6 +11,16 @@ Deface::Override.new(:virtual_path=>"spree/admin/products/_form",
     :name=>"remove_shipping_specs",
     :remove=>"div#shipping_specs")  
 
+Deface::Override.new(:virtual_path=>"spree/admin/products/_form",
+    :name =>"add_comment_option_types",
+    :insert_before =>"[data-hook='admin_product_form_shipping_categories']",
+    :text =>"<div data-hook='admin_product_form_comment'>
+          <%= f.field_container :comment_option, class: ['form-group'] do %>
+            <%= f.label :comment_option, Spree.t(:comment_option) %>
+            <%= f.check_box :comment_option, class: 'form-control' %>
+          <% end %>
+        </div>")  
+
 Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
     :name => "_main_menu_remove_orders",
     :remove => "erb[loud]:contains('ORDER_TABS')")     

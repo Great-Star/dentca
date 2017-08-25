@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   Spree::Core::Engine.routes.prepend do
     namespace :admin do
       resources :coupons 
+      resources :comment_options
     end
   end
 
