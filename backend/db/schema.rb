@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170825020009) do
+ActiveRecord::Schema.define(version: 20170828031804) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20170825020009) do
   create_table "coupons", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -232,9 +232,10 @@ ActiveRecord::Schema.define(version: 20170825020009) do
   create_table "spree_option_types", force: :cascade do |t|
     t.string   "name",         limit: 100
     t.string   "presentation", limit: 100
-    t.integer  "position",                 default: 0, null: false
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.integer  "position",                 default: 0,     null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.boolean  "comment",                  default: false
   end
 
   add_index "spree_option_types", ["name"], name: "index_spree_option_types_on_name"
@@ -260,6 +261,15 @@ ActiveRecord::Schema.define(version: 20170825020009) do
   add_index "spree_option_values", ["name"], name: "index_spree_option_values_on_name"
   add_index "spree_option_values", ["option_type_id"], name: "index_spree_option_values_on_option_type_id"
   add_index "spree_option_values", ["position"], name: "index_spree_option_values_on_position"
+
+  create_table "spree_order_info_options", force: :cascade do |t|
+    t.string   "name"
+    t.string   "presentation"
+    t.string   "description"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "position"
+  end
 
   create_table "spree_order_promotions", force: :cascade do |t|
     t.integer "order_id"
@@ -421,7 +431,7 @@ ActiveRecord::Schema.define(version: 20170825020009) do
   add_index "spree_product_properties", ["property_id"], name: "index_spree_product_properties_on_property_id"
 
   create_table "spree_products", force: :cascade do |t|
-    t.string   "name",                 default: "",    null: false
+    t.string   "name",                  default: "",    null: false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -430,12 +440,13 @@ ActiveRecord::Schema.define(version: 20170825020009) do
     t.string   "meta_keywords"
     t.integer  "tax_category_id"
     t.integer  "shipping_category_id"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-    t.boolean  "promotionable",        default: true
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.boolean  "promotionable",         default: true
     t.string   "meta_title"
     t.datetime "discontinue_on"
-    t.boolean  "comment_option",       default: false
+    t.text     "order_info_option_ids"
+    t.boolean  "file_up_load",          default: false
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on"

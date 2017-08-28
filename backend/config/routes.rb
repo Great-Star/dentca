@@ -30,10 +30,10 @@ Rails.application.routes.draw do
 
   mount Spree::Core::Engine, at: '/spree'
 
-  Spree::Core::Engine.routes.prepend do
+  Spree::Core::Engine.add_routes do
     namespace :admin do
-      resources :coupons 
-      resources :comment_options
+      resources :order_info_options
+      resources :coupons
     end
   end
 
