@@ -4,16 +4,16 @@
 
 #------------------------- Product form customization -----------------------
 
-Deface::Override.new(:virtual_path => "spree/admin/products/_form",
-    :name => "remove_promotionable",
-    :replace => "[data-hook='admin_product_form_promotionable']",
-    :text => "<div data-hook='admin_product_form_file_up_load'>
-        <%= f.field_container :file_up_load, class: ['form-group'] do %>
-          <%= f.label :file_up_load, Spree.t(:file_up_load) %>
-          <%= f.error_message_on :file_up_load %>
-          <%= f.check_box :file_up_load, class: 'form-control' %>
-        <% end %>
-      </div>")
+# Deface::Override.new(:virtual_path => "spree/admin/products/_form",
+#     :name => "remove_promotionable",
+#     :replace => "[data-hook='admin_product_form_promotionable']",
+#     :text => "<div data-hook='admin_product_form_file_up_load'>
+#         <%= f.field_container :file_up_load, class: ['form-group'] do %>
+#           <%= f.label :file_up_load, Spree.t(:file_up_load) %>
+#           <%= f.error_message_on :file_up_load %>
+#           <%= f.check_box :file_up_load, class: 'form-control' %>
+#         <% end %>
+#       </div>")
 
 Deface::Override.new(:virtual_path => "spree/admin/products/_form",
     :name => "remove_shipping_specs",
