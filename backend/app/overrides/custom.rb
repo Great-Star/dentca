@@ -30,7 +30,7 @@ Deface::Override.new(:virtual_path=>"spree/admin/option_types/index",
             <th class='no-border'></th>
             <th><%= Spree.t(:name) %></th>
             <th><%= Spree.t(:presentation) %></th>
-            <th><%= Spree.t(:comment) %></th>
+            <th><%= Spree.t(:option_case) %></th>
             <th class='actions'></th>
             </tr>
         </thead>
@@ -42,7 +42,7 @@ Deface::Override.new(:virtual_path=>"spree/admin/option_types/index",
                 </td>
                 <td><%= option_type.name %></td>
                 <td class='presentation'><%= option_type.presentation %></td>
-                <td class='comment'><%= option_type.comment %></td>
+                <td class='option_case'><%= option_type.spree_option_case_id %></td>
                 <td class='actions actions-2 text-right'>
                 <%= link_to_edit(option_type, class: 'admin_edit_option_type', no_text: true) if can?(:edit, option_type) %>
                 <%= link_to_delete(option_type, no_text: true) if can?(:delete, option_type) %>
@@ -73,34 +73,33 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/_form",
                 <% end %> 
             </div>
             <div class='col-xs-12 col-md-4'>
-                <%= f.field_container :comment, class: ['form-group'] do %>
-                <%= f.label :comment, Spree.t(:comment) %> <span class='required'>*</span>
-                <%= f.check_box :comment, class: 'form-control' %>
-                <%= f.error_message_on :comment %>
+                <%= f.field_container :option_case, class: ['form-group'] do %>
+                <%= f.label :type, Spree.t(:option_case) %>
+                <%= f.collection_select(:spree_option_case_id, @option_cases, :id, :name, {  }, { class: 'select2' }) %>
+                <%= f.error_message_on :option_case %>
                 <% end %>
-            </div>
-        </div>
+            </div>  
         ")
 
 
 Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
     :name => "remove_option_values_if_comment",
     :surround => "table.table-condensed",
-    :text => "<% if @option_type.comment == false %>
+    :text => "<% if @option_type.spree_option_case_id == 1 %>
                 <%= render_original %>
             <% end %>")
 
 Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
     :name => "add_validation_of_add_new_option_value_button",
     :surround => "span#new_add_option_value",
-    :text => "<% if @option_type.comment == false %>
+    :text => "<% if @option_type.spree_option_case_id == 1 %>
                 <%= render_original %>
             <% end %>")
 
 Deface::Override.new(:virtual_path => "spree/admin/variants/_form",
     :name => "add_validation_comment",
     :surround => "[data-hook='presentation']",
-    :text => "<% if !option_type.comment %>
+    :text => "<% if option_type.spree_option_case_id == 1 %>
                 <%= render_original %>
             <% end %>")
 

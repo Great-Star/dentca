@@ -1,5 +1,6 @@
 Spree::Admin::OptionTypesController.class_eval do
-    
+    before_action :load_data
+
     def location_after_save
         
         if @option_type.comment
@@ -11,5 +12,9 @@ Spree::Admin::OptionTypesController.class_eval do
         else
         admin_option_types_url
         end
+    end
+
+    def load_data
+        @option_cases=Spree::OptionCase.order(:name)
     end
 end

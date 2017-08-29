@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170828031804) do
+ActiveRecord::Schema.define(version: 20170829050140) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -221,6 +221,12 @@ ActiveRecord::Schema.define(version: 20170828031804) do
 
   add_index "spree_log_entries", ["source_id", "source_type"], name: "index_spree_log_entries_on_source_id_and_source_type"
 
+  create_table "spree_option_cases", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "spree_option_type_prototypes", force: :cascade do |t|
     t.integer "prototype_id"
     t.integer "option_type_id"
@@ -230,16 +236,18 @@ ActiveRecord::Schema.define(version: 20170828031804) do
   add_index "spree_option_type_prototypes", ["prototype_id", "option_type_id"], name: "index_option_types_prototypes_on_prototype_and_option_type"
 
   create_table "spree_option_types", force: :cascade do |t|
-    t.string   "name",         limit: 100
-    t.string   "presentation", limit: 100
-    t.integer  "position",                 default: 0,     null: false
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.boolean  "comment",                  default: false
+    t.string   "name",                 limit: 100
+    t.string   "presentation",         limit: 100
+    t.integer  "position",                         default: 0,     null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.boolean  "comment",                          default: false
+    t.integer  "spree_option_case_id"
   end
 
   add_index "spree_option_types", ["name"], name: "index_spree_option_types_on_name"
   add_index "spree_option_types", ["position"], name: "index_spree_option_types_on_position"
+  add_index "spree_option_types", ["spree_option_case_id"], name: "index_spree_option_types_on_spree_option_case_id"
 
   create_table "spree_option_value_variants", force: :cascade do |t|
     t.integer "variant_id"

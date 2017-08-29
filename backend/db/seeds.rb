@@ -5,7 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+# require 'csv'
 
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+
+Spree::OptionCase.create({"name" => "Selection"})
+Spree::OptionCase.create({"name" => "Comment"})
+Spree::OptionCase.create({"name" => "FileUpLoad"})
