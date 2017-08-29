@@ -97,12 +97,12 @@ Spree::Admin::ProductsController.class_eval do
     spree.edit_admin_product_url(@product)
     end
 
-    # def load_data
-    # @taxons = Spree::Taxon.order(:name)
-    # @option_types = Spree::OptionType.order(:name)
-    # @tax_categories = Spree::TaxCategory.order(:name)
-    # @shipping_categories = Spree::ShippingCategory.order(:name)
-    # end
+    def load_data
+    @taxons = Spree::Taxon.order(:name)
+    @option_types = Spree::OptionType.order(:name)
+    @tax_categories = Spree::TaxCategory.order(:name)
+    @shipping_categories = Spree::ShippingCategory.order(:name)
+    end
 
     def collection
     return @collection if @collection.present?
