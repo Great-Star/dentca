@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829050140) do
+ActiveRecord::Schema.define(version: 20170906143753) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -437,6 +437,24 @@ ActiveRecord::Schema.define(version: 20170829050140) do
   add_index "spree_product_properties", ["position"], name: "index_spree_product_properties_on_position"
   add_index "spree_product_properties", ["product_id"], name: "index_product_properties_on_product_id"
   add_index "spree_product_properties", ["property_id"], name: "index_spree_product_properties_on_property_id"
+
+  create_table "spree_product_variant_types", force: :cascade do |t|
+    t.string   "name"
+    t.string   "presentation"
+    t.integer  "product_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "spree_product_variant_values", force: :cascade do |t|
+    t.string   "name"
+    t.string   "presentation"
+    t.float    "price",                   default: 0.0
+    t.integer  "product_id"
+    t.integer  "product_variant_type_id"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
 
   create_table "spree_products", force: :cascade do |t|
     t.string   "name",                  default: "",    null: false

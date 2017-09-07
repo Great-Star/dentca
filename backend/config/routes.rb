@@ -34,6 +34,14 @@ Rails.application.routes.draw do
     namespace :admin do
       resources :order_info_options
       resources :coupons
+      resources :products do
+        resources :product_variant_types do
+          collection do
+            post :update_positions
+          end
+        end
+        resources :product_variant_values 
+      end
     end
   end
 

@@ -4,16 +4,16 @@
 
 #------------------------- Product form customization -----------------------
 
-# Deface::Override.new(:virtual_path => "spree/admin/products/_form",
-#     :name => "remove_promotionable",
-#     :replace => "[data-hook='admin_product_form_promotionable']",
-#     :text => "<div data-hook='admin_product_form_file_up_load'>
-#         <%= f.field_container :file_up_load, class: ['form-group'] do %>
-#           <%= f.label :file_up_load, Spree.t(:file_up_load) %>
-#           <%= f.error_message_on :file_up_load %>
-#           <%= f.check_box :file_up_load, class: 'form-control' %>
-#         <% end %>
-#       </div>")
+Deface::Override.new(:virtual_path => "spree/admin/products/_form",
+    :name => "remove_promotionable",
+    :replace => "[data-hook='admin_product_form_promotionable']",
+    :text => "<div data-hook='admin_product_form_file_up_load'>
+        <%= f.field_container :file_up_load, class: ['form-group'] do %>
+          <%= f.label :file_up_load, Spree.t(:file_up_load) %>
+          <%= f.error_message_on :file_up_load %>
+          <%= f.check_box :file_up_load, class: 'form-control' %>
+        <% end %>
+      </div>")
 
 Deface::Override.new(:virtual_path => "spree/admin/products/_form",
     :name => "remove_shipping_specs",
@@ -103,9 +103,9 @@ Deface::Override.new(:virtual_path => "spree/admin/variants/_form",
                 <%= render_original %>
             <% end %>")
 
-Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
-    :name => "_main_menu_remove_orders",
-    :remove => "erb[loud]:contains('ORDER_TABS')")     
+# Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
+#     :name => "_main_menu_remove_orders",
+#     :remove => "erb[loud]:contains('ORDER_TABS')")     
 
 Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
     :name => "_main_menu_remove_tab_reports",
@@ -137,3 +137,10 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
 #     :name => "_main_menu_add_tab_orders",
 #     :insert_before => "erb[loud]:contains(':properties')",
 #     :text => "<%= tab :order_info_options %>")  
+
+Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
+    :name => "add_product_variant_type_tab_product_admin_tabs",
+    :insert_before => "erb[loud]:contains('current == :properties')",
+    :text => "<%= content_tag :li, class: ('active' if current == :product_variant_types) do %>
+                <%= link_to_with_icon 'th-large', Spree.t(:variant_types),  spree.admin_product_product_variant_types_url(@product) %>
+            <% end if can?(:admin, Spree::ProductVariantType) && !@product.deleted? %>")

@@ -1,157 +1,124 @@
 
 Spree::Admin::ProductsController.class_eval do
-    # helper 'spree/products'
-
-    # before_action :load_data, except: :index
-    # create.before :create_before
-    # update.before :update_before
-    # helper_method :clone_object_url
-
-    def show
-    session[:return_to] ||= request.referer
-    redirect_to action: :edit
-    end
-
-    def index
-        session[:return_to] = request.url
-        respond_with(@collection)
-    end
 
     def update
-    if params[:product][:taxon_ids].present?
-        params[:product][:taxon_ids] = params[:product][:taxon_ids].split(',')
-    end
-    if params[:product][:option_type_ids].present?
-        params[:product][:option_type_ids] = params[:product][:option_type_ids].split(',')
-    end
-    # if params[:product][:order_info_option_ids].present?
-    #     params[:product][:order_info_option_ids] = params[:product][:order_info_option_ids].split(',')
-    # end    
-    invoke_callbacks(:update, :before)
-    if @object.update_attributes(permitted_resource_params)
-        invoke_callbacks(:update, :after)
-        flash[:success] = flash_message_for(@object, :successfully_updated)
-        respond_with(@object) do |format|
-        format.html { redirect_to location_after_save }
-        format.js   { render layout: false }
+        if params[:product][:taxon_ids].present?
+            params[:product][:taxon_ids] = params[:product][:taxon_ids].split(',')
         end
-    else
-        # Stops people submitting blank slugs, causing errors when they try to
-        # update the product again
-        @product.slug = @product.slug_was if @product.slug.blank?
-        invoke_callbacks(:update, :fails)
-        respond_with(@object)
-    end
-    end
+        if params[:product][:option_type_ids].present?
+            params[:product][:option_type_ids] = params[:product][:option_type_ids].split(',')
+        end
+        # if params[:product][:order_info_option_ids].present?
+        #     params[:product][:order_info_option_ids] = params[:product][:order_info_option_ids].split(',')
+        # end    
 
-    def destroy
-    @product = Product.friendly.find(params[:id])
+        invoke_callbacks(:update, :before)
 
-    begin
-        # TODO: why is @product.destroy raising ActiveRecord::RecordNotDestroyed instead of failing with false result
-        if @product.destroy
-        flash[:success] = Spree.t('notice_messages.product_deleted')
+        if @object.update_attributes(permitted_resource_params)
+            invoke_callbacks(:update, :after)
+            flash[:success] = flash_message_for(@object, :successfully_updated)
+            Rails.logger.warn "--------------------------------------#{type_updated?}-----------------------------"
+            if type_updated?
+                Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
+                create_product_variant_values_for_types
+                Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
+                @object.variants.clear
+                create_variants_for_product(0)
+            end
+
+            respond_with(@object) do |format|
+                format.html { redirect_to location_after_save }
+                format.js   { render layout: false }
+            end
         else
-        flash[:error] = Spree.t('notice_messages.product_not_deleted')
+            # Stops people submitting blank slugs, causing errors when they try to
+            # update the product again
+            @product.slug = @product.slug_was if @product.slug.blank?
+            invoke_callbacks(:update, :fails)
+            respond_with(@object)
         end
-    rescue ActiveRecord::RecordNotDestroyed => e
-        flash[:error] = Spree.t('notice_messages.product_not_deleted')
+
     end
 
-    respond_with(@product) do |format|
-        format.html { redirect_to collection_url }
-        format.js  { render_js_for_destroy }
-    end
-    end
+    def type_updated?
 
-    def clone
-    @new = @product.duplicate
+        i = 0
+        @object.option_types.each do |ot|
+            if ot.spree_option_case_id == 1
 
-    if @new.persisted?
-        flash[:success] = Spree.t('notice_messages.product_cloned')
-        redirect_to edit_admin_product_url(@new)
-    else
-        flash[:error] = Spree.t('notice_messages.product_not_cloned')
-        redirect_to admin_products_url
-    end
+                if @object.product_variant_types[i] == nil
+                    return true
+                end
 
-    rescue ActiveRecord::RecordInvalid
-    # Handle error on uniqueness validation on product fields
-    flash[:error] = Spree.t('notice_messages.product_not_cloned')
-    redirect_to admin_products_url
-    end
+                if ot.name != @object.product_variant_types[i].name 
+                    return true
+                end
 
-    def stock
-    @variants = @product.variants.includes(*variant_stock_includes)
-    @variants = [@product.master] if @variants.empty?
-    @stock_locations = StockLocation.accessible_by(current_ability, :read)
-    if @stock_locations.empty?
-        flash[:error] = Spree.t(:stock_management_requires_a_stock_location)
-        redirect_to admin_stock_locations_path
-    end
+                i = i + 1
+            end
+        end
+
+        if i != @object.product_variant_types.length
+            return true
+        else
+            return false
+        end
     end
 
-    protected
+    def create_variants_for_product(ot_count, vat = nil)
+        
+        if @object.option_types[ot_count] == nil
+            return
+        end
 
-    def location_after_save
-    spree.edit_admin_product_url(@product)
+        if @object.option_types[ot_count].spree_option_case_id != 1
+            if ot_count == @object.option_types.length - 1
+                @object.variants << vat
+            else 
+                create_variants_for_product(ot_count + 1, vat)
+            end
+        end
+
+        @object.option_types[ot_count].option_values.each do |ov|
+            variant = @product.variants.build
+            
+            if vat != nil
+                vat.option_values.each do |o|
+                    variant.option_values << o
+                end
+            end
+
+            variant.option_values << ov
+            
+            if ot_count == @object.option_types.length - 1
+                @object.variants << variant
+            else
+                create_variants_for_product(ot_count + 1, variant)
+            end
+        end
     end
 
-    def load_data
-    @taxons = Spree::Taxon.order(:name)
-    @option_types = Spree::OptionType.order(:name)
-    @tax_categories = Spree::TaxCategory.order(:name)
-    @shipping_categories = Spree::ShippingCategory.order(:name)
+    def create_product_variant_values_for_types
+        @object.product_variant_types.clear
+        @object.product_variant_values.clear
+
+        @object.option_types.each do |ot|
+            if ot.spree_option_case_id == 1
+                
+                vt = @product.product_variant_types.build
+                vt.name = ot.name
+                vt.presentation = ot.presentation
+
+                ot.option_values.each do |ov|
+                    vv = @product.product_variant_values.build
+                    vv.name = ov.name
+                    vv.presentation = ov.presentation
+
+                    vt.product_variant_values << vv
+                end
+                @object.product_variant_types << vt
+            end
+        end
     end
 
-    def collection
-    return @collection if @collection.present?
-    params[:q] ||= {}
-    params[:q][:deleted_at_null] ||= "1"
-    params[:q][:not_discontinued] ||= "1"
-
-    params[:q][:s] ||= "name asc"
-    @collection = super
-    # Don't delete params[:q][:deleted_at_null] here because it is used in view to check the
-    # checkbox for 'q[deleted_at_null]'. This also messed with pagination when deleted_at_null is checked.
-    if params[:q][:deleted_at_null] == '0'
-        @collection = @collection.with_deleted
-    end
-    # @search needs to be defined as this is passed to search_form_for
-    # Temporarily remove params[:q][:deleted_at_null] from params[:q] to ransack products.
-    # This is to include all products and not just deleted products.
-    @search = @collection.ransack(params[:q].reject { |k, _v| k.to_s == 'deleted_at_null' })
-    @collection = @search.result.
-            distinct_by_product_ids(params[:q][:s]).
-            includes(product_includes).
-            page(params[:page]).
-            per(params[:per_page] || Spree::Config[:admin_products_per_page])
-    @collection
-    end
-
-    def create_before
-    return if params[:product][:prototype_id].blank?
-    @prototype = Spree::Prototype.find(params[:product][:prototype_id])
-    end
-
-    def update_before
-    # note: we only reset the product properties if we're receiving a post
-    #       from the form on that tab
-    return unless params[:clear_product_properties]
-    params[:product] ||= {}
-    end
-
-    def product_includes
-    [{ variants: [:images], master: [:images, :default_price] }]
-    end
-
-    def clone_object_url(resource)
-    clone_admin_product_url resource
-    end
-
-    private
-
-    def variant_stock_includes
-    [:images, stock_items: :stock_location, option_values: :option_type]
-    end
-end
+ end
