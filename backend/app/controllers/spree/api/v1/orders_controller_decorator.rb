@@ -1,4 +1,4 @@
-Spree::Api::V1::OrdersController.class_eval do
+# Spree::Api::V1::OrdersController.class_eval do
 
     # def create
     #     authorize! :create, Order
@@ -105,4 +105,4 @@ Spree::Api::V1::OrdersController.class_eval do
     #     def order_id
     #         super || params[:id]
     #     end
-end
+# end

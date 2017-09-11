@@ -7,16 +7,18 @@ module Spree
             def update_variants
                 
                 @product.variants.each do |variant|
-                    price = @product.price
-                    variant.option_values.each do |value|
-                        @product.product_variant_values.each do |vv|
-                            if value.name == vv.name
-                                price += vv.price
+                    if variant.option_values.length == 1
+                        price = 0
+                        variant.option_values.each do |value|
+                            @product.product_variant_values.each do |vv|
+                                if value.name == vv.name
+                                    price += vv.price
+                                end
                             end
                         end
+                        variant.price = price
+                        variant.save
                     end
-                    variant.price = price
-                    variant.save
                 end
             end
 

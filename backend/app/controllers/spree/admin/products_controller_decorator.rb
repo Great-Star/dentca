@@ -23,7 +23,7 @@ Spree::Admin::ProductsController.class_eval do
                 create_product_variant_values_for_types
                 Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
                 @object.variants.clear
-                create_variants_for_product(0)
+                create_variants_for_product
             end
 
             respond_with(@object) do |format|
@@ -65,35 +65,25 @@ Spree::Admin::ProductsController.class_eval do
         end
     end
 
-    def create_variants_for_product(ot_count, vat = nil)
+    def create_variants_for_product
+
+        variant = @product.variants.build
+        variant.price = @product.price
+
+        @object.option_types.each do |ot|
+            ot.option_values.each do |ov|
+                variant.option_values << ov
+            end
+        end
         
-        if @object.option_types[ot_count] == nil
-            return
-        end
+        @object.variants << variant
 
-        if @object.option_types[ot_count].spree_option_case_id != 1
-            if ot_count == @object.option_types.length - 1
-                @object.variants << vat
-            else 
-                create_variants_for_product(ot_count + 1, vat)
-            end
-        end
-
-        @object.option_types[ot_count].option_values.each do |ov|
-            variant = @product.variants.build
-            
-            if vat != nil
-                vat.option_values.each do |o|
-                    variant.option_values << o
-                end
-            end
-
-            variant.option_values << ov
-            
-            if ot_count == @object.option_types.length - 1
+        @object.option_types.each do |ot|
+            ot.option_values.each do |ov|
+                variant = @product.variants.build
+                variant.option_values << ov
+                variant.price = 0
                 @object.variants << variant
-            else
-                create_variants_for_product(ot_count + 1, variant)
             end
         end
     end

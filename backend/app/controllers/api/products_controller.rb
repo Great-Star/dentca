@@ -39,7 +39,7 @@ class Api::ProductsController < BaseController
   private
 
   def product_scope
-    Spree::Product.active.includes(:option_types, :taxons, master: %i(images option_values prices), product_properties: [:property], variants: %i(images option_values prices))
+    Spree::Product.active.includes(:taxons, master: %i(images option_values prices), product_properties: [:property], variants: %i(images option_values prices))
   end
 
   def find_taxon_id
