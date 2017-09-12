@@ -11,5 +11,7 @@ Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
 Spree::OptionCase.create({"name" => "Selection"})
-Spree::OptionCase.create({"name" => "Comment"})
+Spree::OptionCase.create({"name" => "Text"})
 Spree::OptionCase.create({"name" => "FileUpLoad"})
+Spree::OptionCase.create({"name" => "Checkbox"})
+Spree::OptionCase.create({"name" => "TextArea"})

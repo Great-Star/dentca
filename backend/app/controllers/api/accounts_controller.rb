@@ -27,7 +27,6 @@ class Api::AccountsController < BaseController
     render_user
   end
 
-
   def update
     authorize! :update, @user
     @user.update_attributes spree_user_params
