@@ -1,4 +1,4 @@
-webpackJsonp([14],{
+webpackJsonp([15],{
 
 /***/ "../../../../../src/$$_gendir async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -6,7 +6,7 @@ webpackJsonp([14],{
 var map = {
 	"./aboutus/aboutus.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/aboutus/aboutus.module.ngfactory.ts",
-		13
+		14
 	],
 	"./auth/auth.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/auth/auth.module.ngfactory.ts",
@@ -14,19 +14,23 @@ var map = {
 	],
 	"./blog/blog.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/blog.module.ngfactory.ts",
-		12
+		13
 	],
 	"./checkout/checkout.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/checkout/checkout.module.ngfactory.ts",
 		0
 	],
+	"./dashboard/dashboard.module.ngfactory": [
+		"../../../../../src/$$_gendir/app/dashboard/dashboard.module.ngfactory.ts",
+		5
+	],
 	"./dentca-3d/dentca-3d.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/dentca-3d/dentca-3d.module.ngfactory.ts",
-		11
+		12
 	],
 	"./doctors/doctors.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/doctors/doctors.module.ngfactory.ts",
-		10
+		11
 	],
 	"./home/index.ngfactory": [
 		"../../../../../src/$$_gendir/app/home/index.ngfactory.ts",
@@ -34,11 +38,11 @@ var map = {
 	],
 	"./news/news.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/news/news.module.ngfactory.ts",
-		9
+		10
 	],
 	"./order/order.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/order/order.module.ngfactory.ts",
-		8
+		9
 	],
 	"./product/index.ngfactory": [
 		"../../../../../src/$$_gendir/app/product/index.ngfactory.ts",
@@ -46,11 +50,11 @@ var map = {
 	],
 	"./products/products.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/products/products.module.ngfactory.ts",
-		7
+		8
 	],
 	"./resources/resources.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/resources/resources.module.ngfactory.ts",
-		6
+		7
 	],
 	"./user/index.ngfactory": [
 		"../../../../../src/$$_gendir/app/user/index.ngfactory.ts",
@@ -58,7 +62,7 @@ var map = {
 	],
 	"./welcome/welcome.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/welcome/welcome.module.ngfactory.ts",
-		5
+		6
 	]
 };
 function webpackAsyncContext(req) {
@@ -638,9 +642,10 @@ var AppModuleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵcmf"](__
                         loadChildren: './dentca-3d/dentca-3d.module#Dentca3dModule' },
                     { path: 'doctors', loadChildren: './doctors/doctors.module#DoctorsModule' }],
                 [{ path: '', loadChildren: './blog/blog.module#BlogModule' }, { path: 'admin',
-                        redirectTo: 'https://localhost:3000/admin' }, { path: 'blog', loadChildren: './blog/blog.module#BlogModule' },
-                    { path: 'home', loadChildren: './home/index#HomeModule' }, { path: 'home/:id',
-                        loadChildren: './home/index#HomeModule' }, { path: 'checkout', loadChildren: './checkout/checkout.module#CheckoutModule' },
+                        loadChildren: './dashboard/dashboard.module#DashboardModule' }, { path: 'blog',
+                        loadChildren: './blog/blog.module#BlogModule' }, { path: 'home', loadChildren: './home/index#HomeModule' },
+                    { path: 'home/:id', loadChildren: './home/index#HomeModule' }, { path: 'checkout',
+                        loadChildren: './checkout/checkout.module#CheckoutModule' },
                     { path: 'user', loadChildren: './user/index#UserModule', canActivate: [__WEBPACK_IMPORTED_MODULE_62__app_core_guards_auth_guard__["a" /* CanActivateViaAuthGuard */]] },
                     { path: 'product', loadChildren: './product/index#ProductModule' },
                     { path: 'auth', loadChildren: './auth/auth.module#AuthModule' }]];
@@ -676,7 +681,7 @@ var AppModuleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵcmf"](__
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_136__app_blog_order_order_module__["a" /* OrderModule */], __WEBPACK_IMPORTED_MODULE_136__app_blog_order_order_module__["a" /* OrderModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_137__app_blog_blog_module__["a" /* BlogModule */], __WEBPACK_IMPORTED_MODULE_137__app_blog_blog_module__["a" /* BlogModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_46__angular_platform_browser_animations__["e" /* NoopAnimationsModule */], __WEBPACK_IMPORTED_MODULE_46__angular_platform_browser_animations__["e" /* NoopAnimationsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_1__app_app_module__["a" /* AppModule */], __WEBPACK_IMPORTED_MODULE_1__app_app_module__["a" /* AppModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](256, __WEBPACK_IMPORTED_MODULE_44__angular_material__["_22" /* MD_MENU_DEFAULT_OPTIONS */], { overlapTrigger: true,
             xPosition: 'after', yPosition: 'below' }, []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](256, __WEBPACK_IMPORTED_MODULE_138_ngx_bootstrap_dropdown_bs_dropdown_config__["a" /* BsDropdownConfig */], { autoClose: true }, [])]);
 });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvYXBwLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L2RlbnRjYXdlYi9mcm9udGVuZC9zcmMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvYXBwLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L2RlbnRjYXdlYi9mcm9udGVuZC9zcmMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
 //# sourceMappingURL=app.module.ngfactory.js.map
 
 /***/ }),
