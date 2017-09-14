@@ -59,7 +59,7 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/_form",
     :name => "replace_option_type_form_fields",
     :replace => "[data-hook='admin_option_type_form_fields']",
     :text => "<div data-hook='admin_option_type_form_fields' class='row'>
-            <div class='col-xs-12 col-md-4'>
+            <div class='col-xs-12 col-md-3'>
                 <%= f.field_container :name, class: ['form-group'] do %>
                 <%= f.label :name, Spree.t(:name) %> <span class='required'>*</span>
                 <%= f.text_field :name, class: 'form-control' %>
@@ -73,11 +73,17 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/_form",
                 <%= f.error_message_on :presentation %>
                 <% end %> 
             </div>
-            <div class='col-xs-12 col-md-4'>
+            <div class='col-xs-12 col-md-3'>
                 <%= f.field_container :option_case, class: ['form-group'] do %>
                 <%= f.label :type, Spree.t(:option_case) %>
                 <%= f.collection_select(:spree_option_case_id, @option_cases, :id, :name, {  }, { class: 'select2' }) %>
                 <%= f.error_message_on :option_case %>
+                <% end %>
+            </div>
+            <div class='col-xs-12 col-md-2'>
+                <%= f.field_container :mandatory, class: ['form-group'] do %>
+                <%= f.label :type, Spree.t(:mandatory) %>
+                <%= f.check_box :mandatory, class: 'form-control' %>
                 <% end %>
             </div>  
             <div class='col-xs-12 col-md-12'>
@@ -89,9 +95,54 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/_form",
             </div>
         ")
 
+Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
+    :name => "image_view_if_image",
+    :insert_before => "table.table-condensed",
+    :text => "<% if @option_type.spree_option_case_id == 7 %>
+                <div class='panel-image row'>
+                    <div class = 'col-md-6 col-sm-12'>
+                        <% if @option_type.image_file_name %>
+                            <%= image_tag @option_type.image.url(:large) %>
+                        <% end %>
+                    </div>
+                    <div class = 'col-md-6 col-sm-12'>
+                        <div class = 'col-md-6 col-sm-12'>
+                            <%= f.text_field :image_file_name, readonly:true, class: 'form-control' %>
+                        </div>
+                        <div class = 'col-md-6 col-sm-12'>
+                            <%= f.file_field :image %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>")
 
 Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
-    :name => "remove_option_values_if_comment",
+    :name => "child_option_types_if_select_options",
+    :insert_before => "table.table-condensed",
+    :text => "<% if @option_type.spree_option_case_id == 8 %>
+                <table class='table table-bordered sortable'>
+                    <thead data-hook='option_type_header'>
+                        <tr>
+                            <th ><%= Spree.t(:options) %></th>
+                            <th><%= Spree.t(:title) %></th>
+
+                        </tr>
+                    </thead>
+                    <tbody id='child_option_types'>
+                        <tr>
+                            <td><%= Spree.t(:first_option) %></td>
+                            <td><%= f.collection_select(:child_one_id, @type_values, :id, :name, {}, { class: 'select2' }) %></td>
+                        </tr>                        
+                        <tr>
+                            <td><%= Spree.t(:second_option) %></td>
+                            <td><%= f.collection_select(:child_two_id, @type_values, :id, :name, {}, { class: 'select2' }) %></td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            <% end %>")            
+
+Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
+    :name => "remove_option_values_if_comment", 
     :surround => "table.table-condensed",
     :text => "<% if @option_type.spree_option_case_id == 1 %>
                 <%= render_original %>
@@ -107,7 +158,9 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
 Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
     :name => "add_image_to_table_header",
     :insert_after => "erb[loud]:contains('.t(:display)')",
-    :text => "<th><%= Spree.t(:image) %></th>")            
+    :text => "<% if @option_type.spree_option_case_id != 8 %>
+                <th><%= Spree.t(:image) %></th>
+            <% end %>")            
 
 Deface::Override.new(:virtual_path => "spree/admin/option_types/_option_value_fields",
     :name => "add_attached_image_field",
@@ -120,27 +173,6 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/_option_value_fi
                     <%= f.file_field :image %>
                 </div>
             </td>")
-
-# Deface::Override.new(:virtual_path => "spree/admin/option_types/_option_value_fields",
-#     :name => "add_attached_image_field",
-#     :replace => "tr.option_value",
-#     :text => "<tr class='option_value fields row' id='spree_<%= dom_id(f.object) %>' data-hook='option_value'>
-#                 <td class='move-handle text-center'>
-#                     <span class='icon icon-move handle'></span>
-#                     <%= f.hidden_field :id %>
-#                 </td>
-#                 <td class='name'><%= f.text_field :name, class: 'form-control' %></td>
-#                 <td class='presentation'><%= f.text_field :presentation, class: 'form-control' %></td>
-#                 <td class='image row'>
-#                     <div class = 'col-md-6 col-sm-12'>
-#                         <%= f.text_field :image_file_name, class: 'form-control' %>
-#                     </div>
-#                     <div class = 'col-md-6 col-sm-12'>
-#                         <%= f.file_field :image %>
-#                     </div>
-#                 </td>
-#                 <td class='actions actions-1 text-center'><%= link_to_icon_remove_fields f %></td>
-#             </tr>")
 
 Deface::Override.new(:virtual_path => "spree/admin/variants/_form",
     :name => "add_validation_comment",
@@ -179,10 +211,10 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
     :text => "<ul class='nav nav-sidebar'>
                 <%= tab :coupons, icon: 'file'  %>
                 </ul>")      
-# Deface::Override.new(:virtual_path => "spree/admin/shared/sub_menu/_product",
-#     :name => "_main_menu_add_tab_orders",
-#     :insert_before => "erb[loud]:contains(':properties')",
-#     :text => "<%= tab :order_info_options %>")  
+Deface::Override.new(:virtual_path => "spree/admin/shared/sub_menu/_product",
+    :name => "_main_menu_add_tab_orders",
+    :insert_before => "erb[loud]:contains(':properties')",
+    :text => "<%= tab :order_info_options %>")  
 
 Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
     :name => "remove_product_variant_tab_from_product_admin_tabs",
@@ -235,6 +267,7 @@ Deface::Override.new(:virtual_path => "spree/admin/products/_add_stock_form",
                     </div>
                 <% end %>
                 </div>")
+
 Deface::Override.new(:virtual_path => "spree/admin/products/stock",
     :name => "modify_stock_view_thead",
     :replace => "thead",
@@ -244,7 +277,6 @@ Deface::Override.new(:virtual_path => "spree/admin/products/stock",
         <th colspan='3'><%= Spree.t(:stock_location_info) %></th>
       </tr>
     </thead>")
-
 
 Deface::Override.new(:virtual_path => "spree/admin/products/stock",
     :name => "modify_stock_view_tbody",

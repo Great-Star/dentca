@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170912095129) do
+ActiveRecord::Schema.define(version: 20170914152826) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -244,14 +244,22 @@ ActiveRecord::Schema.define(version: 20170912095129) do
   add_index "spree_option_type_prototypes", ["prototype_id", "option_type_id"], name: "index_option_types_prototypes_on_prototype_and_option_type"
 
   create_table "spree_option_types", force: :cascade do |t|
-    t.string   "name",                 limit: 100
-    t.string   "presentation",         limit: 100
-    t.integer  "position",                         default: 0,     null: false
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-    t.boolean  "comment",                          default: false
+    t.string   "name",                  limit: 100
+    t.string   "presentation",          limit: 100
+    t.integer  "position",                          default: 0,     null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.boolean  "comment",                           default: false
     t.integer  "spree_option_case_id"
     t.string   "description"
+    t.boolean  "mandatory",                         default: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "parent_option_type_id"
+    t.integer  "child_one_id"
+    t.integer  "child_two_id"
   end
 
   add_index "spree_option_types", ["name"], name: "index_spree_option_types_on_name"

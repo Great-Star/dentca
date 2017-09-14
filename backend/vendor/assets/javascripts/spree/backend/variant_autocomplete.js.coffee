@@ -28,13 +28,13 @@ $.fn.variantAutocomplete = ->
 
       results: (data, page) ->
         window.variants = data["variants"]
-        # index = 0
-        # for key, variant of data["variants"]
-        #   if key == '1'
-        #     result = variant
-        #   else
-        #     console.log data["variants"].key
-        results: data["variants"]
+        result =[]
+        for key, variant of data["variants"]
+          if key == '1'
+            result.push variant
+            console.log result  
+
+        results: [result]
 
     formatResult: formatVariantResult
     formatSelection: (variant, container, escapeMarkup) ->
