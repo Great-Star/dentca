@@ -1,5 +1,5 @@
 Spree::Admin::OptionTypesController.class_eval do
-    before_action :load_data, only: :edit
+    before_action :load_data, only: [:new, :edit]
     before_action :save_child_ids, only: :update
 
     attr_writer :child_one_id, :child_two_id
@@ -21,7 +21,7 @@ Spree::Admin::OptionTypesController.class_eval do
         @option_cases=Spree::OptionCase.order(:name)
         @type_values=[]
         Spree::OptionType.all.each do |ot|
-            if ot.id != @option_type.id
+            if ot.id != @option_type.id && ot.spree_option_case_id != 1
                 @type_values << ot
             end
         end
