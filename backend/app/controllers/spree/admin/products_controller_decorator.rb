@@ -1,5 +1,7 @@
 
 Spree::Admin::ProductsController.class_eval do
+    # before_action :update_variant, only: :update
+    # after_action :create_variant_1, only: :update
 
     def update
         if params[:product][:taxon_ids].present?
@@ -16,15 +18,12 @@ Spree::Admin::ProductsController.class_eval do
 
         if @object.update_attributes(permitted_resource_params)
             invoke_callbacks(:update, :after)
+
+            update_variant
+            Rails.logger.warn "-------------------------------------Update Variant#{@object.variants.length}-------------------------------------"
+            create_variant_1
+            Rails.logger.warn "-------------------------------------Update Variant#{@object.variants.length}-------------------------------------"
             flash[:success] = flash_message_for(@object, :successfully_updated)
-            Rails.logger.warn "--------------------------------------#{type_updated?}-----------------------------"
-            if type_updated?
-                Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
-                create_product_variant_values_for_types
-                Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
-                @object.variants.clear
-                create_variants_for_product
-            end
 
             respond_with(@object) do |format|
                 format.html { redirect_to location_after_save }
@@ -37,7 +36,22 @@ Spree::Admin::ProductsController.class_eval do
             invoke_callbacks(:update, :fails)
             respond_with(@object)
         end
+    end
 
+    def create_variant_1
+        if @object.variants.length == 0
+            variant = @product.variants.build
+            variant.price = @product.price
+            variant.is_master = false
+            # variant.name = "start"
+
+            variant.option_values = []
+            # variant.save
+            
+            @object.variants << variant
+            
+            Rails.logger.warn "-------------------------------------Create Variant#{variant}-------------------------------------"
+        end
     end
 
     def type_updated?
@@ -66,7 +80,7 @@ Spree::Admin::ProductsController.class_eval do
     end
 
     def create_variants_for_product
-
+        
         variant = @product.variants.build
         variant.price = @product.price
 
@@ -108,6 +122,16 @@ Spree::Admin::ProductsController.class_eval do
                 end
                 @object.product_variant_types << vt
             end
+        end
+    end
+
+    def update_variant
+        if type_updated?
+            Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
+            create_product_variant_values_for_types
+            Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
+            @object.variants.clear
+            create_variants_for_product
         end
     end
 
