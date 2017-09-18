@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914152826) do
+ActiveRecord::Schema.define(version: 20170918032519) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -1123,6 +1123,7 @@ ActiveRecord::Schema.define(version: 20170914152826) do
     t.integer  "stock_items_count",                          default: 0,     null: false
     t.datetime "discontinue_on"
     t.integer  "order_info_id"
+    t.boolean  "is_clone",                                   default: false
   end
 
   add_index "spree_variants", ["deleted_at"], name: "index_spree_variants_on_deleted_at"

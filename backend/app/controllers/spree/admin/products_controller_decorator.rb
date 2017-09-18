@@ -20,9 +20,8 @@ Spree::Admin::ProductsController.class_eval do
             invoke_callbacks(:update, :after)
 
             update_variant
-            Rails.logger.warn "-------------------------------------Update Variant#{@object.variants.length}-------------------------------------"
-            create_variant_1
-            Rails.logger.warn "-------------------------------------Update Variant#{@object.variants.length}-------------------------------------"
+            create_clone_variant
+
             flash[:success] = flash_message_for(@object, :successfully_updated)
 
             respond_with(@object) do |format|
@@ -38,19 +37,15 @@ Spree::Admin::ProductsController.class_eval do
         end
     end
 
-    def create_variant_1
+    def create_clone_variant
         if @object.variants.length == 0
             variant = @product.variants.build
             variant.price = @product.price
             variant.is_master = false
-            # variant.name = "start"
+            variant.sku = @product.sku
+            variant.is_clone = true
 
-            variant.option_values = []
-            # variant.save
-            
-            @object.variants << variant
-            
-            Rails.logger.warn "-------------------------------------Create Variant#{variant}-------------------------------------"
+            @object.save
         end
     end
 
@@ -81,17 +76,6 @@ Spree::Admin::ProductsController.class_eval do
 
     def create_variants_for_product
         
-        variant = @product.variants.build
-        variant.price = @product.price
-
-        @object.option_types.each do |ot|
-            ot.option_values.each do |ov|
-                variant.option_values << ov
-            end
-        end
-        
-        @object.variants << variant
-
         @object.option_types.each do |ot|
             ot.option_values.each do |ov|
                 variant = @product.variants.build
@@ -127,10 +111,11 @@ Spree::Admin::ProductsController.class_eval do
 
     def update_variant
         if type_updated?
-            Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
             create_product_variant_values_for_types
-            Rails.logger.warn "-------------------Length---#{@object.product_variant_types.length}---------------------"
-            @object.variants.clear
+            # @object.variants.delete_all
+            Spree::Variant.delete_all "product_id = #{@object.id}"
+            Rails.logger.warn "---------------------Update#{@object.variants.length}--#{Spree::Variant.all.length}------------------------------"
+            create_clone_variant
             create_variants_for_product
         end
     end

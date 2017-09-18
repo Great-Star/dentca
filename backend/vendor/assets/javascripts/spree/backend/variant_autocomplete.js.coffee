@@ -30,11 +30,10 @@ $.fn.variantAutocomplete = ->
         window.variants = data["variants"]
         result =[]
         for key, variant of data["variants"]
-          if key == '1'
-            result.push variant
-            console.log result  
-
-        results: [result]
+          if variant.is_clone
+            console.log variant
+            result.push(variant)
+        results: result
 
     formatResult: formatVariantResult
     formatSelection: (variant, container, escapeMarkup) ->

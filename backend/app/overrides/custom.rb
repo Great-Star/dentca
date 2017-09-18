@@ -25,33 +25,33 @@ Deface::Override.new(:virtual_path=>"spree/admin/option_types/index",
     :name=>"replace_option_types_any",
     :replace=>"table",
     :text=>"<table class='table sortable' id='listing_option_types' data-hook data-sortable-link='<%= update_positions_admin_option_types_url %>'>
-        <thead>
-            <tr data-hook='option_header'>
-            <th class='no-border'></th>
-            <th><%= Spree.t(:name) %></th>
-            <th><%= Spree.t(:presentation) %></th>
-            <th><%= Spree.t(:description) %></th>
-            <th><%= Spree.t(:option_case) %></th>
-            <th class='actions'></th>
-            </tr>
-        </thead>
-        <tbody>
-            <% @option_types.each do |option_type| %>
-            <tr class='spree_option_type <%= cycle('odd', 'even')%>' id='<%= spree_dom_id option_type %>' data-hook='option_row'>
-                <td class='move-handle text-center'>
-                    <span class='icon icon-move handle'></span>
-                </td>
-                <td><%= option_type.name %></td>
-                <td class='presentation'><%= option_type.presentation %></td>
-                <td class='description'><%= option_type.description %></td>
-                <td class='option_case'><%= option_type.spree_option_case_id %></td>
-                <td class='actions actions-2 text-right'>
-                    <%= link_to_edit(option_type, class: 'admin_edit_option_type', no_text: true) if can?(:edit, option_type) %>
-                    <%= link_to_delete(option_type, no_text: true) if can?(:delete, option_type) %>
-                </td>
-            </tr>
-            <% end %>
-        </tbody>
+            <thead>
+                <tr data-hook='option_header'>
+                <th class='no-border'></th>
+                <th><%= Spree.t(:name) %></th>
+                <th><%= Spree.t(:presentation) %></th>
+                <th><%= Spree.t(:description) %></th>
+                <th><%= Spree.t(:option_case) %></th>
+                <th class='actions'></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @option_types.each do |option_type| %>
+                    <tr class='spree_option_type <%= cycle('odd', 'even')%>' id='<%= spree_dom_id option_type %>' data-hook='option_row'>
+                        <td class='move-handle text-center'>
+                            <span class='icon icon-move handle'></span>
+                        </td>
+                        <td><%= option_type.name %></td>
+                        <td class='presentation'><%= option_type.presentation %></td>
+                        <td class='description'><%= option_type.description %></td>
+                        <td class='option_case'><%= option_type.spree_option_case_id %></td>
+                        <td class='actions actions-2 text-right'>
+                            <%= link_to_edit(option_type, class: 'admin_edit_option_type', no_text: true) if can?(:edit, option_type) %>
+                            <%= link_to_delete(option_type, no_text: true) if can?(:delete, option_type) %>
+                        </td>
+                    </tr>
+                <% end %>
+            </tbody>
         </table>") 
 
 #
@@ -212,9 +212,9 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
                 <%= tab :coupons, icon: 'file'  %>
                 </ul>")      
 
-# Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
-#     :name => "remove_product_variant_tab_from_product_admin_tabs",
-#     :remove => "erb[loud]:contains('Spree.t(:variants)')")
+Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
+    :name => "remove_product_variant_tab_from_product_admin_tabs",
+    :remove => "erb[loud]:contains('Spree.t(:variants)')")
 
 Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
     :name => "add_product_variant_type_tab_product_admin_tabs",
