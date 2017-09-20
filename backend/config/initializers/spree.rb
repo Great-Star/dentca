@@ -18,4 +18,4 @@ end
 Spree.user_class = "Spree::User"
 
 Spree::Api::Config[:requires_authentication] = false
-Spree::PermittedAttributes.line_item_attributes << :variants
+# Spree::PermittedAttributes.line_item_attributes << :variants

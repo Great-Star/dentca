@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170918032519) do
+ActiveRecord::Schema.define(version: 20170920144621) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -126,6 +126,27 @@ ActiveRecord::Schema.define(version: 20170918032519) do
   add_index "spree_calculators", ["calculable_id", "calculable_type"], name: "index_spree_calculators_on_calculable_id_and_calculable_type"
   add_index "spree_calculators", ["deleted_at"], name: "index_spree_calculators_on_deleted_at"
   add_index "spree_calculators", ["id", "type"], name: "index_spree_calculators_on_id_and_type"
+
+  create_table "spree_corporate_accounts", force: :cascade do |t|
+    t.integer  "company_id"
+    t.string   "company_name"
+    t.string   "email"
+    t.string   "password"
+    t.string   "checkout_password"
+    t.string   "company"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state_name"
+    t.integer  "state_id"
+    t.integer  "country_id"
+    t.integer  "zip_code"
+    t.integer  "contact_phone"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "address"
+    t.integer  "shipping_category_id"
+  end
 
   create_table "spree_countries", force: :cascade do |t|
     t.string   "iso_name"
