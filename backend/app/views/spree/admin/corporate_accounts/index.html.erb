@@ -19,6 +19,7 @@
         <th><%= Spree.t(:company_name) %></th>
         <th><%= Spree.t(:address) %></th>
         <th><%= Spree.t(:shipping) %></th>
+        <th><%= Spree.t(:price_set) %></th>
         <th data-hook="admin_corporate_accounts_index_header_actions" class="actions"></th>
       </tr>
     </thead>
@@ -29,6 +30,7 @@
           <td class='corporate_account_name'><%= corporate_account.company_name %></td>
           <td class='corporate_account_address'><%= corporate_account.address %></td>
           <td class='corporate_account_shipping'><%= Spree::ShippingCategory.find(corporate_account.shipping_category_id).name %></td>
+          <td class='corporate_account_price_set'><%= Spree::ProductPriceSet.find(corporate_account.product_price_set_id).name %></td>
           <td data-hook="admin_corporate_accounts_index_row_actions" class="actions actions-2 text-right">
             <%= link_to_edit corporate_account, no_text: true if can?(:edit, corporate_account) %>
             <%= link_to_delete corporate_account, no_text: true if can?(:delete, corporate_account) %>

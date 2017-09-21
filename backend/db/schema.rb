@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(version: 20170921140905) do
     t.integer  "state_id"
     t.integer  "country_id"
     t.integer  "zip_code"
-    t.integer  "contact_phone"
+    t.string   "contact_phone"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "address"

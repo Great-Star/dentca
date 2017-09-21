@@ -15,7 +15,7 @@ class CreateSpreeCorporateAccounts < ActiveRecord::Migration
       t.integer :state_id
       t.integer :country_id
       t.integer :zip_code
-      t.integer :contact_phone
+      t.string :contact_phone
 
       t.timestamps null: false
     end
