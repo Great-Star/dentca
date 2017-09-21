@@ -43,6 +43,8 @@ Rails.application.routes.draw do
         resources :product_variant_values 
       end
       resources :corporate_accounts
+      resources :product_price_sets
+      resources :product_prices
     end
   end
 

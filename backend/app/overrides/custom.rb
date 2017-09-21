@@ -210,9 +210,9 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
     :name => "_main_menu_remove_tab_promotions",
     :remove => "erb[loud]:contains('.t(:promotions)')")    
 
-# Deface::Override.new(:virtual_path => "spree/layouts/spree_application",
-#     :name => "_login_header_remove",
-#     :remove => "erb[loud]:contains('spree/shared/header')")
+Deface::Override.new(:virtual_path => "spree/layouts/spree_application",
+    :name => "_login_header_remove",
+    :remove => "erb[loud]:contains('spree/shared/header')")
 
 Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
     :name => "_main_menu_add_tab_coupon",

@@ -21,6 +21,7 @@ class Spree::CorporateAccount < Spree::Base
     belongs_to :state, class_name: "Spree::State"
 
     belongs_to :spree_shipping_categories, :foreign_key => "shipping_category_id"
+    belongs_to :spree_product_price_sets, :foreign_key => "product_price_set_id"
 
     def address_email_save
         self.email = email.downcase

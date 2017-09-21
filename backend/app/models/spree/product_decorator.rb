@@ -3,6 +3,7 @@ module Spree
 
         has_many :product_variant_types,    :dependent => :destroy
         has_many :product_variant_values,    :dependent => :destroy
+        has_many :product_prices, :dependent => :destroy
 
         def empty_option_values?
             options.empty? || options.any? do |opt|

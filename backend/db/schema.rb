@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170920144621) do
+ActiveRecord::Schema.define(version: 20170921140905) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -146,6 +146,7 @@ ActiveRecord::Schema.define(version: 20170920144621) do
     t.datetime "updated_at",           null: false
     t.string   "address"
     t.integer  "shipping_category_id"
+    t.integer  "product_price_set_id"
   end
 
   create_table "spree_countries", force: :cascade do |t|
@@ -466,6 +467,20 @@ ActiveRecord::Schema.define(version: 20170920144621) do
   add_index "spree_product_option_types", ["option_type_id"], name: "index_spree_product_option_types_on_option_type_id"
   add_index "spree_product_option_types", ["position"], name: "index_spree_product_option_types_on_position"
   add_index "spree_product_option_types", ["product_id"], name: "index_spree_product_option_types_on_product_id"
+
+  create_table "spree_product_price_sets", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "spree_product_prices", force: :cascade do |t|
+    t.integer  "price"
+    t.integer  "product_price_set_id"
+    t.integer  "product_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "spree_product_promotion_rules", force: :cascade do |t|
     t.integer "product_id"
