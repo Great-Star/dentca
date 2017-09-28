@@ -19,3 +19,16 @@ Spree::OptionCase.create({"name" => "Description"})
 Spree::OptionCase.create({"name" => "Image"})
 Spree::OptionCase.create({"name" => "Option Select"})
 Spree::OptionCase.create({"name" => "Button"})
+
+Spree::Role.create(name: "corporate user")
+Spree::Role.create(name: "doctor")
+Spree::Role.create(name: "dentca 4 doctor")
+Spree::Role.create(name: "vip doctor")
+Spree::Role.create(name: "operator")
+Spree::Role.create(name: "school")
+
+Spree::BillingType.create(name: "Credit Card")
+Spree::BillingType.create(name: "Post Bill")
+Spree::BillingType.create(name: "Individual")
+
+Spree::ProductPriceSet.create(name: "Default")

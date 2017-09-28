@@ -34,7 +34,6 @@ Spree::Api::V1::LineItemsController.class_eval do
 
         order_info.context = context
         order_info.price = master.price + price
-        Rails.logger.warn "-----------------master price #{order_info.price} -------------------"        
         
         @line_item.price += price
         

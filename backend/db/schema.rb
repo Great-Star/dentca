@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170921140905) do
+ActiveRecord::Schema.define(version: 20170927171723) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -113,6 +113,25 @@ ActiveRecord::Schema.define(version: 20170921140905) do
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
 
+  create_table "spree_billing_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "spree_bookkeeping_documents", force: :cascade do |t|
+    t.integer  "printable_id"
+    t.string   "printable_type"
+    t.string   "template"
+    t.string   "number"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.decimal  "total",          precision: 12, scale: 2
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+  end
+
   create_table "spree_calculators", force: :cascade do |t|
     t.string   "type"
     t.integer  "calculable_id"
@@ -128,7 +147,7 @@ ActiveRecord::Schema.define(version: 20170921140905) do
   add_index "spree_calculators", ["id", "type"], name: "index_spree_calculators_on_id_and_type"
 
   create_table "spree_corporate_accounts", force: :cascade do |t|
-    t.integer  "company_id"
+    t.string   "company_id"
     t.string   "company_name"
     t.string   "email"
     t.string   "password"
@@ -147,6 +166,7 @@ ActiveRecord::Schema.define(version: 20170921140905) do
     t.string   "address"
     t.integer  "shipping_category_id"
     t.integer  "product_price_set_id"
+    t.integer  "billing_type_id"
   end
 
   create_table "spree_countries", force: :cascade do |t|
@@ -1133,6 +1153,9 @@ ActiveRecord::Schema.define(version: 20170921140905) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.integer  "corporate_account_id"
+    t.string   "doctor"
+    t.string   "license"
   end
 
   add_index "spree_users", ["bill_address_id"], name: "index_spree_users_on_bill_address_id"

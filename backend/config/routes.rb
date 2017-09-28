@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     resources :addresses, only: :destroy
     resources :countries, only: :index
     resources :orders, only: %i(index show)
+    resource :corporate_accounts
   end
 
   mount Spree::Core::Engine, at: '/spree'

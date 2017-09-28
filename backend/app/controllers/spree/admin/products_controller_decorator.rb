@@ -119,5 +119,4 @@ Spree::Admin::ProductsController.class_eval do
             create_variants_for_product
         end
     end
-
- end
+end

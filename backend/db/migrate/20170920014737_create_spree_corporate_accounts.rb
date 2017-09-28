@@ -1,7 +1,7 @@
 class CreateSpreeCorporateAccounts < ActiveRecord::Migration
   def change
     create_table :spree_corporate_accounts do |t|
-      t.integer :company_id
+      t.string :company_id
       t.string :company_name
       t.string :email
       t.string :password
