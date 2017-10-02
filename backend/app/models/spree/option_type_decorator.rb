@@ -5,6 +5,5 @@ module Spree
 
         belongs_to :parent, :class_name => "Spree::OptionType", :foreign_key => "parent_option_type_id"
         has_many :child_option_types, :class_name => "Spree::OptionType", :foreign_key => "parent_option_type_id"
-
     end
 end

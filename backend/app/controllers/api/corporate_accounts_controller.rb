@@ -9,7 +9,6 @@ module Api
             else
                 invalid_resource!(@corporate_account)
             end
-
         end
 
         def show

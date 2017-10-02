@@ -18,7 +18,12 @@ class ProductSerializer < BaseSerializer
 
   # rubocop:disable Style/PredicateName
   def has_variants
-    object.has_variants?
+    # object.has_variants?
   end
   # rubocop:enable Style/PredicateName
+
+  # def product_price
+  #   40
+  # end
+
 end

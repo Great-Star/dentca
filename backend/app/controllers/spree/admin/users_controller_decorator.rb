@@ -18,7 +18,8 @@ Spree::Admin::UsersController.class_eval do
                                         ship_address_attributes: permitted_address_attributes,
                                         bill_address_attributes: permitted_address_attributes] | [
                                         :doctor,
-                                        :license,])
+                                        :license,
+                                        :corporate_account_id])
         end
 
         def selected_user_roles

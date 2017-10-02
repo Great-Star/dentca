@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927171723) do
+ActiveRecord::Schema.define(version: 20171001142640) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -1156,6 +1156,7 @@ ActiveRecord::Schema.define(version: 20170927171723) do
     t.integer  "corporate_account_id"
     t.string   "doctor"
     t.string   "license"
+    t.integer  "product_price_set_id"
   end
 
   add_index "spree_users", ["bill_address_id"], name: "index_spree_users_on_bill_address_id"

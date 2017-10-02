@@ -1,0 +1,1 @@
+node(:has_variants) {|p| false}

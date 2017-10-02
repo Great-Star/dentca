@@ -14,7 +14,7 @@ class Api::ProductsController < BaseController
                                :browse_mode, :price_min, 
                                :price_max, :properties,
                                :sorting, :per_page, :page).to_s]
-
+    
     render json: @products,
            each_serializer: ProductSerializer,
            root: :products,

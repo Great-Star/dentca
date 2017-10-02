@@ -22,7 +22,7 @@ class Spree::CorporateAccount < Spree::Base
     belongs_to :state, class_name: "Spree::State"
 
     # belongs_to :shipping_categories, class_name: "Spree::ShippingCateogry", :foreign_key => "shipping_category_id"
-    # belongs_to :product_price_sets, class_name: "Spree::ProductPriceSet", :foreign_key => "product_price_set_id"
+    belongs_to :product_price_set, class_name: "Spree::ProductPriceSet", :foreign_key => "product_price_set_id"
 
     has_many :users, class_name: "Spree::User"
     belongs_to :spree_billing_types, :foreign_key => "billing_type_id"
