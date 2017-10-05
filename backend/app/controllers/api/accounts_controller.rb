@@ -6,7 +6,6 @@ class Api::AccountsController < BaseController
   end
 
   def create
-
     if !link_to_corporate_user
       invalid_resource!(false)
       return

@@ -44,7 +44,7 @@ Deface::Override.new(:virtual_path=>"spree/admin/option_types/index",
                         <td><%= option_type.name %></td>
                         <td class='presentation'><%= option_type.presentation %></td>
                         <td class='description'><%= option_type.description %></td>
-                        <td class='option_case'><%= option_type.spree_option_case_id %></td>
+                        <td class='option_case'><%= Spree::OptionCase.find(option_type.spree_option_case_id).name %></td>
                         <td class='actions actions-2 text-right'>
                             <%= link_to_edit(option_type, class: 'admin_edit_option_type', no_text: true) if can?(:edit, option_type) %>
                             <%= link_to_delete(option_type, no_text: true) if can?(:delete, option_type) %>
@@ -52,7 +52,7 @@ Deface::Override.new(:virtual_path=>"spree/admin/option_types/index",
                     </tr>
                 <% end %>
             </tbody>
-        </table>") 
+        </table>")  
 
 #
 Deface::Override.new(:virtual_path => "spree/admin/option_types/_form",
@@ -125,7 +125,6 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
                         <tr>
                             <th ><%= Spree.t(:options) %></th>
                             <th><%= Spree.t(:title) %></th>
-
                         </tr>
                     </thead>
                     <tbody id='child_option_types'>
@@ -384,6 +383,12 @@ Deface::Override.new(:virtual_path => "spree/admin/users/_form",
                     <%= f.field_container :corporate_account_id, class: ['form-group'] do %>
                         <%= f.label :corporate_account_id, Spree.t(:corporate_account) %>
                         <%= f.collection_select(:corporate_account_id, Spree::CorporateAccount.all, :id, :company_name, { :include_blank => 'None' }, { class: 'select2' }) %>
+                    <% end %>
+                <% end %>
+                <% if !@selected_user_roles.include?('corporate user') %>    
+                    <%= f.field_container :product_price_set_id, class: ['form-group'] do %>
+                        <%= f.label :product_price_set_id, Spree.t(:product_price_set) %>
+                        <%= f.collection_select(:product_price_set_id, Spree::ProductPriceSet.all, :id, :name, { }, { class: 'select2' }) %>
                     <% end %>
                 <% end %>
             </div>

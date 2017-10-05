@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171001142640) do
+ActiveRecord::Schema.define(version: 20171004195753) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -502,6 +502,9 @@ ActiveRecord::Schema.define(version: 20171001142640) do
     t.datetime "updated_at",           null: false
   end
 
+  add_index "spree_product_prices", ["product_id"], name: "index_spree_product_prices_on_product_id"
+  add_index "spree_product_prices", ["product_price_set_id"], name: "index_spree_product_prices_on_product_price_set_id"
+
   create_table "spree_product_promotion_rules", force: :cascade do |t|
     t.integer "product_id"
     t.integer "promotion_rule_id"
@@ -530,6 +533,8 @@ ActiveRecord::Schema.define(version: 20171001142640) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  add_index "spree_product_variant_types", ["product_id"], name: "index_spree_product_variant_types_on_product_id"
 
   create_table "spree_product_variant_values", force: :cascade do |t|
     t.string   "name"
@@ -1153,15 +1158,17 @@ ActiveRecord::Schema.define(version: 20171001142640) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.integer  "corporate_account_id"
     t.string   "doctor"
     t.string   "license"
+    t.integer  "corporate_account_id"
     t.integer  "product_price_set_id"
   end
 
   add_index "spree_users", ["bill_address_id"], name: "index_spree_users_on_bill_address_id"
+  add_index "spree_users", ["corporate_account_id"], name: "index_spree_users_on_corporate_account_id"
   add_index "spree_users", ["deleted_at"], name: "index_spree_users_on_deleted_at"
   add_index "spree_users", ["email"], name: "email_idx_unique", unique: true
+  add_index "spree_users", ["product_price_set_id"], name: "index_spree_users_on_product_price_set_id"
   add_index "spree_users", ["ship_address_id"], name: "index_spree_users_on_ship_address_id"
   add_index "spree_users", ["spree_api_key"], name: "index_spree_users_on_spree_api_key"
 
