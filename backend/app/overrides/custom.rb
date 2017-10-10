@@ -15,9 +15,9 @@ Deface::Override.new(:virtual_path => "spree/admin/products/_form",
         <% end %>
       </div>")
 
-# Deface::Override.new(:virtual_path => "spree/admin/products/_form",
-#     :name => "remove_shipping_specs",
-#     :remove => "div#shipping_specs")  
+Deface::Override.new(:virtual_path => "spree/admin/products/_form",
+    :name => "remove_shipping_specs",
+    :remove => "div#shipping_specs")  
 
 #------------------------- option_types view customization ----------------------
 
@@ -220,9 +220,9 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
                 <%= tab :coupons, icon: 'file'  %>
                 </ul>")      
 
-# Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
-#     :name => "remove_product_variant_tab_from_product_admin_tabs",
-#     :remove => "erb[loud]:contains('Spree.t(:variants)')")
+Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
+    :name => "remove_product_variant_tab_from_product_admin_tabs",
+    :remove => "erb[loud]:contains('Spree.t(:variants)')")
 
 Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
     :name => "add_product_variant_type_tab_product_admin_tabs",
@@ -345,9 +345,9 @@ Deface::Override.new(:virtual_path => "spree/admin/products/stock",
 
 #     </tbody>" )   
 
-# Deface::Override.new(:virtual_path => "spree/admin/products/_form",
-#     :name => "remove_variant_manage_form",
-#     :remove => "[data-hook='admin_product_form_multiple_variants']")
+Deface::Override.new(:virtual_path => "spree/admin/products/_form",
+    :name => "remove_variant_manage_form",
+    :remove => "[data-hook='admin_product_form_multiple_variants']")
 
 Deface::Override.new(:virtual_path => "spree/admin/users/_form",
     :name => "relpace_general_setting_fields",

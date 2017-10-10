@@ -23,7 +23,7 @@ module Spree
                 option_type = option_types.find(id)
                 if option_type.spree_option_case_id == 1
                     type = product_variant_types.create(name: option_type.name, presentation: option_type.presentation, product_id: self, option_type_id: id)
-                    auto_create_product_variant_values(type.id)
+                    auto_create_product_variant_values(type.id, id)
                 end
             end
 
@@ -34,12 +34,12 @@ module Spree
             end
         end
 
-        def auto_create_product_variant_values(type_id)
+        def auto_create_product_variant_values(p_type_id, type_id)
             value_ids = product_variant_values.map{|x| x.option_value_id}
-            missing_ids = option_value_ids.reject{|x| value_ids.include? x}
+            missing_ids = option_types.find(type_id).option_value_ids.reject{|x| value_ids.include? x}
             missing_ids.each do |id|
                 option_value = option_values.find(id)
-                Spree::ProductVariantValue.create(name: option_value.name, presentation: option_value.  presentation, product_variant_type_id: type_id, product_id: self.id, option_value_id: id)
+                Spree::ProductVariantValue.create(name: option_value.name, presentation: option_value.  presentation, product_variant_type_id: p_type_id, product_id: self.id, option_value_id: id)
             end
         end
 

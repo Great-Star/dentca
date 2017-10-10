@@ -4,9 +4,9 @@ class CreateSpreeProductVariantType < ActiveRecord::Migration
       t.string :name
       t.string :presentation
       t.references :product, class_name: "Spree::Product", index: true
+      t.references :option_type, class_name: "Spree::OptionType", index: true 
 
       t.timestamps null: false
     end
   end
 end
-

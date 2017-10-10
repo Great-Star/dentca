@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171009094211) do
+ActiveRecord::Schema.define(version: 20171010152437) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -522,9 +522,9 @@ ActiveRecord::Schema.define(version: 20171009094211) do
     t.string   "name"
     t.string   "presentation"
     t.integer  "product_id"
+    t.integer  "option_type_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.integer  "option_type_id"
   end
 
   add_index "spree_product_variant_types", ["option_type_id"], name: "index_spree_product_variant_types_on_option_type_id"
