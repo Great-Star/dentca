@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004195753) do
+ActiveRecord::Schema.define(version: 20171009094211) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -41,14 +41,6 @@ ActiveRecord::Schema.define(version: 20171004195753) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
-
-  create_table "product_variant_types", force: :cascade do |t|
-    t.string   "name"
-    t.string   "presentation"
-    t.integer  "product_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
 
   create_table "spree_addresses", force: :cascade do |t|
     t.string   "firstname"
@@ -530,10 +522,12 @@ ActiveRecord::Schema.define(version: 20171004195753) do
     t.string   "name"
     t.string   "presentation"
     t.integer  "product_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "option_type_id"
   end
 
+  add_index "spree_product_variant_types", ["option_type_id"], name: "index_spree_product_variant_types_on_option_type_id"
   add_index "spree_product_variant_types", ["product_id"], name: "index_spree_product_variant_types_on_product_id"
 
   create_table "spree_product_variant_values", force: :cascade do |t|
@@ -544,10 +538,15 @@ ActiveRecord::Schema.define(version: 20171004195753) do
     t.integer  "product_variant_type_id"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.integer  "option_value_id"
   end
 
+  add_index "spree_product_variant_values", ["option_value_id"], name: "index_spree_product_variant_values_on_option_value_id"
+  add_index "spree_product_variant_values", ["product_id"], name: "index_spree_product_variant_values_on_product_id"
+  add_index "spree_product_variant_values", ["product_variant_type_id"], name: "index_spree_product_variant_values_on_product_variant_type_id"
+
   create_table "spree_products", force: :cascade do |t|
-    t.string   "name",                  default: "",    null: false
+    t.string   "name",                  default: "",   null: false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -556,13 +555,13 @@ ActiveRecord::Schema.define(version: 20171004195753) do
     t.string   "meta_keywords"
     t.integer  "tax_category_id"
     t.integer  "shipping_category_id"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.boolean  "promotionable",         default: true
     t.string   "meta_title"
     t.datetime "discontinue_on"
     t.text     "order_info_option_ids"
-    t.boolean  "file_up_load",          default: false
+    t.string   "adj_sku"
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on"
@@ -1173,24 +1172,26 @@ ActiveRecord::Schema.define(version: 20171004195753) do
   add_index "spree_users", ["spree_api_key"], name: "index_spree_users_on_spree_api_key"
 
   create_table "spree_variants", force: :cascade do |t|
-    t.string   "sku",                                        default: "",    null: false
-    t.decimal  "weight",            precision: 8,  scale: 2, default: 0.0
-    t.decimal  "height",            precision: 8,  scale: 2
-    t.decimal  "width",             precision: 8,  scale: 2
-    t.decimal  "depth",             precision: 8,  scale: 2
+    t.string   "sku",                                               default: "",    null: false
+    t.decimal  "weight",                   precision: 8,  scale: 2, default: 0.0
+    t.decimal  "height",                   precision: 8,  scale: 2
+    t.decimal  "width",                    precision: 8,  scale: 2
+    t.decimal  "depth",                    precision: 8,  scale: 2
     t.datetime "deleted_at"
-    t.boolean  "is_master",                                  default: false
+    t.boolean  "is_master",                                         default: false
     t.integer  "product_id"
-    t.decimal  "cost_price",        precision: 10, scale: 2
+    t.decimal  "cost_price",               precision: 10, scale: 2
     t.integer  "position"
     t.string   "cost_currency"
-    t.boolean  "track_inventory",                            default: true
+    t.boolean  "track_inventory",                                   default: true
     t.integer  "tax_category_id"
     t.datetime "updated_at"
-    t.integer  "stock_items_count",                          default: 0,     null: false
+    t.integer  "stock_items_count",                                 default: 0,     null: false
     t.datetime "discontinue_on"
     t.integer  "order_info_id"
-    t.boolean  "is_clone",                                   default: false
+    t.boolean  "is_clone",                                          default: false
+    t.boolean  "is_present",                                        default: false
+    t.integer  "product_variant_value_id"
   end
 
   add_index "spree_variants", ["deleted_at"], name: "index_spree_variants_on_deleted_at"

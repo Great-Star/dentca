@@ -1577,7 +1577,7 @@ var ProductDetailsComponent = (function () {
         console.log("product", this.product);
         this.description = this.product.description;
         this.images = this.product.master.images;
-        this.variantId = this.product.variants[0].id;
+        this.variantId = this.product.master.id;
         this.customOptionTypesHash = this.variantParser
             .getOptionsToDisplay(this.product.variants, this.product.option_types);
         console.log("custom_option_type_hash", this.customOptionTypesHash);
@@ -1600,7 +1600,7 @@ var ProductDetailsComponent = (function () {
         this.currentSelectedOptions = result.newSelectedoptions;
         var newVariant = result.variant;
         console.log("curent", this.currentSelectedOptions);
-        this.variantId = this.product.variants[0].id;
+        this.variantId = this.product.master.id;
         this.variants = [];
         var temp = this.getProductPrice(this.product, this.user);
         var _loop_1 = function (key) {
@@ -1640,8 +1640,8 @@ var ProductDetailsComponent = (function () {
     };
     ProductDetailsComponent.prototype.addToCart = function (product) {
         console.log("send cart");
+        console.log(this.variantId, this.variants, this.product_price);
         this.store.dispatch(this.checkoutActions.addToCart(this.variantId, this.variants, this.product_price));
-        // this.router.navigate(['/checkout/cart']);
     };
     ProductDetailsComponent.prototype.getProductPrice = function (product, user) {
         if (user == false)

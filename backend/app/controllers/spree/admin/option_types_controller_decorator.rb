@@ -51,7 +51,7 @@ Spree::Admin::OptionTypesController.class_eval do
 
     private
         def save_child_ids
-            @option_type.child_option_type_ids=[@option_type.child_one_id, @option_type.child_two_id]
+            # @option_type.child_option_type_ids=[@option_type.child_one_id, @option_type.child_two_id]
         end
 
     protected

@@ -6755,10 +6755,7 @@ var CheckoutEffects = (function () {
         // tslint:disable-next-line:member-ordering
         this.AddToCart$ = this.actions$
             .ofType(__WEBPACK_IMPORTED_MODULE_1__actions_checkout_actions__["a" /* CheckoutActions */].ADD_TO_CART)
-            .switchMap(function (action) {
-            console.log("send service----------");
-            return _this.checkoutService.createNewLineItem(action.payload);
-        })
+            .switchMap(function (action) { return _this.checkoutService.createNewLineItem(action.payload); })
             .map(function (lineItem) { return _this.actions.addToCartSuccess(lineItem); });
     }
     CheckoutEffects.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["a" /* Actions */] }, { type: __WEBPACK_IMPORTED_MODULE_0__core_services_checkout_service__["a" /* CheckoutService */] }, { type: __WEBPACK_IMPORTED_MODULE_1__actions_checkout_actions__["a" /* CheckoutActions */] }]; };
@@ -7352,7 +7349,9 @@ var CheckoutService = (function () {
      */
     CheckoutService.prototype.changeOrderState = function () {
         var _this = this;
-        return this.http.put("spree/api/v1/checkouts/" + this.orderNumber + "/next.json?order_token=" + this.getOrderToken(), {}).map(function (res) {
+        console.log(this.orderNumber, this.getOrderToken);
+        return this.http.put("spree/api/v1/checkouts/" + this.orderNumber + "/next.json?order_token=" + this.getOrderToken(), {})
+            .map(function (res) {
             var order = res.json();
             _this.store.dispatch(_this.actions.changeOrderStateSuccess(order));
         });
@@ -8922,11 +8921,19 @@ var UserActions = (function () {
     UserActions.prototype.getUserOrdersSuccess = function (orders) {
         return { type: UserActions.GET_USER_ORDERS_SUCCESS, payload: orders };
     };
+    UserActions.prototype.getUser = function () {
+        return { type: UserActions.GET_CURRENT_USER };
+    };
+    UserActions.prototype.getUserSuccess = function (user) {
+        return { type: UserActions.GET_CURRENT_USER_SUCCESS, payload: user };
+    };
     return UserActions;
 }());
 
 UserActions.GET_USER_ORDERS = 'GET_USER_ORDERS';
 UserActions.GET_USER_ORDERS_SUCCESS = 'GET_USER_ORDERS_SUCCESS';
+UserActions.GET_CURRENT_USER = 'GET_CURRENT_USER';
+UserActions.GET_CURRENT_USER_SUCCESS = 'GET_CURRENT_USER_SUCCESS';
 //# sourceMappingURL=user.actions.js.map
 
 /***/ }),
@@ -8966,6 +8973,11 @@ var UserEffects = (function () {
             .switchMap(function () { return _this.userService.getOrders(); })
             .filter(function (orders) { return orders.length > 0; })
             .map(function (orders) { return _this.userActions.getUserOrdersSuccess(orders); });
+        this.GetUser$ = this.actions$
+            .ofType(__WEBPACK_IMPORTED_MODULE_3__actions_user_actions__["a" /* UserActions */].GET_CURRENT_USER)
+            .switchMap(function () { return _this.userService.getUser(); })
+            .filter(function (user) { return user != undefined; })
+            .map(function (user) { return _this.userActions.getUserSuccess(user); });
     }
     UserEffects.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_1__ngrx_effects__["a" /* Actions */] }, { type: __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] }, { type: __WEBPACK_IMPORTED_MODULE_3__actions_user_actions__["a" /* UserActions */] }]; };
     return UserEffects;
@@ -8975,7 +8987,11 @@ __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ngrx_effects__["b" /* Effect */])(),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"]) === "function" && _a || Object)
 ], UserEffects.prototype, "GetUserOrders$", void 0);
-var _a;
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ngrx_effects__["b" /* Effect */])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"]) === "function" && _b || Object)
+], UserEffects.prototype, "GetUser$", void 0);
+var _a, _b;
 //# sourceMappingURL=user.effects.js.map
 
 /***/ }),
@@ -8996,7 +9012,11 @@ var userReducer = function (state, _a) {
     var type = _a.type, payload = _a.payload;
     switch (type) {
         case __WEBPACK_IMPORTED_MODULE_1__actions_user_actions__["a" /* UserActions */].GET_USER_ORDERS_SUCCESS:
+            console.log("current state", type, payload);
             return state.merge({ orders: payload });
+        case __WEBPACK_IMPORTED_MODULE_1__actions_user_actions__["a" /* UserActions */].GET_CURRENT_USER_SUCCESS:
+            console.log("current state", type, payload);
+            return state.merge({ user: payload });
         default:
             return state;
     }
@@ -9046,8 +9066,8 @@ var UserService = (function () {
      * @memberof UserService
      */
     UserService.prototype.getOrders = function () {
-        return this.http.get('api/orders')
-            .map(function (res) { return res.json(); });
+        return this.http.get('spree/api/v1/orders/mine')
+            .map(function (res) { console.log(res.json()); return res.json().orders; });
     };
     /**
      *

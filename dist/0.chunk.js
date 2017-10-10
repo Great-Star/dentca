@@ -2242,7 +2242,7 @@ var LineItemComponent = (function () {
         this.name = this.lineItem.variant.name;
         this.quantity = this.lineItem.quantity;
         this.amount = this.lineItem.display_amount;
-        this.context = this.lineItem.order_infos[0].context;
+        // this.context = this.lineItem.order_infos[0].context;
         console.log("LineItem", this.lineItem);
     };
     // Change this method once angular releases RC4

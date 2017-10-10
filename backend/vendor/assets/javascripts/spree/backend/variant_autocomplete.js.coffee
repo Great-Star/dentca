@@ -30,8 +30,7 @@ $.fn.variantAutocomplete = ->
         window.variants = data["variants"]
         result =[]
         for key, variant of data["variants"]
-          if variant.is_clone
-            console.log variant
+          if variant.is_master
             result.push(variant)
         results: result
 

@@ -27,7 +27,7 @@ Spree::Api::V1::LineItemsController.class_eval do
        
         if variants
             variants.each do |id|
-                context += "#{Spree::Variant.find(id).options_text} "
+                context += "#{Spree::Variant.find(id).options_text}"
             end
         end
 
