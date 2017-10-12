@@ -3673,7 +3673,7 @@ var Actions = (function (_super) {
     };
     Actions = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__ngrx_store__["b" /* Dispatcher */])),
+        __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__ngrx_store__["c" /* Dispatcher */])),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"]])
     ], Actions);
     return Actions;
@@ -3912,22 +3912,804 @@ function toPayload(action) {
 
 /***/ }),
 
+/***/ "../../../../@ngrx/store-devtools/src/actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ActionTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreDevtoolActions; });
+var ActionTypes = {
+    PERFORM_ACTION: 'PERFORM_ACTION',
+    RESET: 'RESET',
+    ROLLBACK: 'ROLLBACK',
+    COMMIT: 'COMMIT',
+    SWEEP: 'SWEEP',
+    TOGGLE_ACTION: 'TOGGLE_ACTION',
+    SET_ACTIONS_ACTIVE: 'SET_ACTIONS_ACTIVE',
+    JUMP_TO_STATE: 'JUMP_TO_STATE',
+    IMPORT_STATE: 'IMPORT_STATE'
+};
+/**
+* Action creators to change the History state.
+*/
+var StoreDevtoolActions = {
+    performAction: function (action) {
+        if (typeof action.type === 'undefined') {
+            throw new Error('Actions may not have an undefined "type" property. ' +
+                'Have you misspelled a constant?');
+        }
+        return { type: ActionTypes.PERFORM_ACTION, action: action, timestamp: Date.now() };
+    },
+    reset: function () {
+        return { type: ActionTypes.RESET, timestamp: Date.now() };
+    },
+    rollback: function () {
+        return { type: ActionTypes.ROLLBACK, timestamp: Date.now() };
+    },
+    commit: function () {
+        return { type: ActionTypes.COMMIT, timestamp: Date.now() };
+    },
+    sweep: function () {
+        return { type: ActionTypes.SWEEP };
+    },
+    toggleAction: function (id) {
+        return { type: ActionTypes.TOGGLE_ACTION, id: id };
+    },
+    setActionsActive: function (start, end, active) {
+        if (active === void 0) { active = true; }
+        return { type: ActionTypes.SET_ACTIONS_ACTIVE, start: start, end: end, active: active };
+    },
+    jumpToState: function (index) {
+        return { type: ActionTypes.JUMP_TO_STATE, index: index };
+    },
+    importState: function (nextLiftedState) {
+        return { type: ActionTypes.IMPORT_STATE, nextLiftedState: nextLiftedState };
+    }
+};
+//# sourceMappingURL=actions.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngrx/store-devtools/src/config.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return STORE_DEVTOOLS_CONFIG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return INITIAL_OPTIONS; });
+
+var STORE_DEVTOOLS_CONFIG = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["OpaqueToken"]('@ngrx/devtools Options');
+var INITIAL_OPTIONS = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["OpaqueToken"]('@ngrx/devtools Initial Config');
+//# sourceMappingURL=config.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngrx/store-devtools/src/devtools.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject__ = __webpack_require__("../../../../rxjs/ReplaySubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map__ = __webpack_require__("../../../../rxjs/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_merge__ = __webpack_require__("../../../../rxjs/operator/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_merge__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_observeOn__ = __webpack_require__("../../../../rxjs/operator/observeOn.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_observeOn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_observeOn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_scan__ = __webpack_require__("../../../../rxjs/operator/scan.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_scan___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_scan__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_skip__ = __webpack_require__("../../../../rxjs/operator/skip.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_skip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_operator_skip__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_withLatestFrom__ = __webpack_require__("../../../../rxjs/operator/withLatestFrom.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_withLatestFrom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_operator_withLatestFrom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_scheduler_queue__ = __webpack_require__("../../../../rxjs/scheduler/queue.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_scheduler_queue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_scheduler_queue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__extension__ = __webpack_require__("../../../../@ngrx/store-devtools/src/extension.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils__ = __webpack_require__("../../../../@ngrx/store-devtools/src/utils.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__reducer__ = __webpack_require__("../../../../@ngrx/store-devtools/src/reducer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__actions__ = __webpack_require__("../../../../@ngrx/store-devtools/src/actions.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__config__ = __webpack_require__("../../../../@ngrx/store-devtools/src/config.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DevtoolsDispatcher; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return StoreDevtools; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var DevtoolsDispatcher = (function (_super) {
+    __extends(DevtoolsDispatcher, _super);
+    function DevtoolsDispatcher() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return DevtoolsDispatcher;
+}(__WEBPACK_IMPORTED_MODULE_1__ngrx_store__["c" /* Dispatcher */]));
+
+DevtoolsDispatcher.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+DevtoolsDispatcher.ctorParameters = function () { return []; };
+var StoreDevtools = (function () {
+    function StoreDevtools(dispatcher, actions$, reducers$, extension, initialState, config) {
+        var liftedInitialState = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__reducer__["a" /* liftInitialState */])(initialState, config.monitor);
+        var liftReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__reducer__["b" /* liftReducerWith */])(initialState, liftedInitialState, config.monitor, {
+            maxAge: config.maxAge
+        });
+        var liftedAction$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__utils__["a" /* applyOperators */])(actions$, [
+            [__WEBPACK_IMPORTED_MODULE_7_rxjs_operator_skip__["skip"], 1],
+            [__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_merge__["merge"], extension.actions$],
+            [__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map__["map"], __WEBPACK_IMPORTED_MODULE_11__utils__["b" /* liftAction */]],
+            [__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_merge__["merge"], dispatcher, extension.liftedActions$],
+            [__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_observeOn__["observeOn"], __WEBPACK_IMPORTED_MODULE_9_rxjs_scheduler_queue__["queue"]]
+        ]);
+        var liftedReducer$ = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map__["map"].call(reducers$, liftReducer);
+        var liftedStateSubject = new __WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject__["ReplaySubject"](1);
+        var liftedStateSubscription = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__utils__["a" /* applyOperators */])(liftedAction$, [
+            [__WEBPACK_IMPORTED_MODULE_8_rxjs_operator_withLatestFrom__["withLatestFrom"], liftedReducer$],
+            [__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_scan__["scan"], function (liftedState, _a) {
+                    var action = _a[0], reducer = _a[1];
+                    var nextState = reducer(liftedState, action);
+                    extension.notify(action, nextState);
+                    return nextState;
+                }, liftedInitialState]
+        ]).subscribe(liftedStateSubject);
+        var liftedState$ = liftedStateSubject.asObservable();
+        var state$ = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map__["map"].call(liftedState$, __WEBPACK_IMPORTED_MODULE_11__utils__["c" /* unliftState */]);
+        this.stateSubscription = liftedStateSubscription;
+        this.dispatcher = dispatcher;
+        this.liftedState = liftedState$;
+        this.state = state$;
+    }
+    StoreDevtools.prototype.dispatch = function (action) {
+        this.dispatcher.dispatch(action);
+    };
+    StoreDevtools.prototype.next = function (action) {
+        this.dispatcher.dispatch(action);
+    };
+    StoreDevtools.prototype.error = function (error) { };
+    StoreDevtools.prototype.complete = function () { };
+    StoreDevtools.prototype.performAction = function (action) {
+        this.dispatch(__WEBPACK_IMPORTED_MODULE_13__actions__["a" /* StoreDevtoolActions */].performAction(action));
+    };
+    StoreDevtools.prototype.reset = function () {
+        this.dispatch(__WEBPACK_IMPORTED_MODULE_13__actions__["a" /* StoreDevtoolActions */].reset());
+    };
+    StoreDevtools.prototype.rollback = function () {
+        this.dispatch(__WEBPACK_IMPORTED_MODULE_13__actions__["a" /* StoreDevtoolActions */].rollback());
+    };
+    StoreDevtools.prototype.commit = function () {
+        this.dispatch(__WEBPACK_IMPORTED_MODULE_13__actions__["a" /* StoreDevtoolActions */].commit());
+    };
+    StoreDevtools.prototype.sweep = function () {
+        this.dispatch(__WEBPACK_IMPORTED_MODULE_13__actions__["a" /* StoreDevtoolActions */].sweep());
+    };
+    StoreDevtools.prototype.toggleAction = function (id) {
+        this.dispatch(__WEBPACK_IMPORTED_MODULE_13__actions__["a" /* StoreDevtoolActions */].toggleAction(id));
+    };
+    StoreDevtools.prototype.jumpToState = function (index) {
+        this.dispatch(__WEBPACK_IMPORTED_MODULE_13__actions__["a" /* StoreDevtoolActions */].jumpToState(index));
+    };
+    StoreDevtools.prototype.importState = function (nextLiftedState) {
+        this.dispatch(__WEBPACK_IMPORTED_MODULE_13__actions__["a" /* StoreDevtoolActions */].importState(nextLiftedState));
+    };
+    return StoreDevtools;
+}());
+
+StoreDevtools.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+StoreDevtools.ctorParameters = function () { return [
+    { type: DevtoolsDispatcher, },
+    { type: __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["c" /* Dispatcher */], },
+    { type: __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["b" /* Reducer */], },
+    { type: __WEBPACK_IMPORTED_MODULE_10__extension__["b" /* DevtoolsExtension */], },
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_1__ngrx_store__["f" /* INITIAL_STATE */],] },] },
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_14__config__["b" /* STORE_DEVTOOLS_CONFIG */],] },] },
+]; };
+//# sourceMappingURL=devtools.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngrx/store-devtools/src/extension.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_empty__ = __webpack_require__("../../../../rxjs/observable/empty.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_empty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_empty__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__ = __webpack_require__("../../../../rxjs/operator/filter.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__("../../../../rxjs/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_share__ = __webpack_require__("../../../../rxjs/operator/share.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_share__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_switchMap__ = __webpack_require__("../../../../rxjs/operator/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_switchMap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_takeUntil__ = __webpack_require__("../../../../rxjs/operator/takeUntil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_operator_takeUntil__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__("../../../../@ngrx/store-devtools/src/utils.js");
+/* unused harmony export ExtensionActionTypes */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return REDUX_DEVTOOLS_EXTENSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DevtoolsExtension; });
+
+
+
+
+
+
+
+
+
+var ExtensionActionTypes = {
+    START: 'START',
+    DISPATCH: 'DISPATCH',
+    STOP: 'STOP',
+    ACTION: 'ACTION'
+};
+var REDUX_DEVTOOLS_EXTENSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["OpaqueToken"]('Redux Devtools Extension');
+var DevtoolsExtension = (function () {
+    function DevtoolsExtension(devtoolsExtension) {
+        this.instanceId = "ngrx-store-" + Date.now();
+        this.devtoolsExtension = devtoolsExtension;
+        this.createActionStreams();
+    }
+    DevtoolsExtension.prototype.notify = function (action, state) {
+        if (!this.devtoolsExtension) {
+            return;
+        }
+        this.devtoolsExtension.send(null, state, false, this.instanceId);
+    };
+    DevtoolsExtension.prototype.createChangesObservable = function () {
+        var _this = this;
+        if (!this.devtoolsExtension) {
+            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_empty__["empty"])();
+        }
+        return new __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"](function (subscriber) {
+            var connection = _this.devtoolsExtension.connect({ instanceId: _this.instanceId });
+            connection.subscribe(function (change) { return subscriber.next(change); });
+            return connection.unsubscribe;
+        });
+    };
+    DevtoolsExtension.prototype.createActionStreams = function () {
+        var _this = this;
+        // Listens to all changes based on our instanceId
+        var changes$ = __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_share__["share"].call(this.createChangesObservable());
+        // Listen for the start action
+        var start$ = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__["filter"].call(changes$, function (change) { return change.type === ExtensionActionTypes.START; });
+        // Listen for the stop action
+        var stop$ = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__["filter"].call(changes$, function (change) { return change.type === ExtensionActionTypes.STOP; });
+        // Listen for lifted actions
+        var liftedActions$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__utils__["a" /* applyOperators */])(changes$, [
+            [__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__["filter"], function (change) { return change.type === ExtensionActionTypes.DISPATCH; }],
+            [__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"], function (change) { return _this.unwrapAction(change.payload); }]
+        ]);
+        // Listen for unlifted actions
+        var actions$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__utils__["a" /* applyOperators */])(changes$, [
+            [__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__["filter"], function (change) { return change.type === ExtensionActionTypes.ACTION; }],
+            [__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"], function (change) { return _this.unwrapAction(change.payload); }]
+        ]);
+        var actionsUntilStop$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_takeUntil__["takeUntil"].call(actions$, stop$);
+        var liftedUntilStop$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_takeUntil__["takeUntil"].call(liftedActions$, stop$);
+        // Only take the action sources between the start/stop events
+        this.actions$ = __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_switchMap__["switchMap"].call(start$, function () { return actionsUntilStop$; });
+        this.liftedActions$ = __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_switchMap__["switchMap"].call(start$, function () { return liftedUntilStop$; });
+    };
+    DevtoolsExtension.prototype.unwrapAction = function (action) {
+        return typeof action === 'string' ? eval("(" + action + ")") : action;
+    };
+    return DevtoolsExtension;
+}());
+
+DevtoolsExtension.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+DevtoolsExtension.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [REDUX_DEVTOOLS_EXTENSION,] },] },
+]; };
+//# sourceMappingURL=extension.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngrx/store-devtools/src/instrument.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devtools__ = __webpack_require__("../../../../@ngrx/store-devtools/src/devtools.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__("../../../../@ngrx/store-devtools/src/config.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__extension__ = __webpack_require__("../../../../@ngrx/store-devtools/src/extension.js");
+/* harmony export (immutable) */ __webpack_exports__["b"] = _createReduxDevtoolsExtension;
+/* harmony export (immutable) */ __webpack_exports__["d"] = _createState;
+/* harmony export (immutable) */ __webpack_exports__["a"] = _createReducer;
+/* unused harmony export _createStateIfExtension */
+/* unused harmony export _createReducerIfExtension */
+/* unused harmony export noMonitor */
+/* harmony export (immutable) */ __webpack_exports__["c"] = _createOptions;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return StoreDevtoolsModule; });
+
+
+
+
+
+function _createReduxDevtoolsExtension() {
+    var legacyExtensionKey = 'devToolsExtension';
+    var extensionKey = '__REDUX_DEVTOOLS_EXTENSION__';
+    if (typeof window === 'object' && typeof window[legacyExtensionKey] !== 'undefined') {
+        return window[legacyExtensionKey];
+    }
+    else if (typeof window === 'object' && typeof window[extensionKey] !== 'undefined') {
+        return window[extensionKey];
+    }
+    else {
+        return null;
+    }
+}
+function _createState(devtools) {
+    return devtools.state;
+}
+function _createReducer(dispatcher, reducer) {
+    return new __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["b" /* Reducer */](dispatcher, reducer);
+}
+function _createStateIfExtension(extension, injector, initialState) {
+    if (!!extension) {
+        var devtools = injector.get(__WEBPACK_IMPORTED_MODULE_2__devtools__["b" /* StoreDevtools */]);
+        return _createState(devtools);
+    }
+    else {
+        var dispatcher = injector.get(__WEBPACK_IMPORTED_MODULE_1__ngrx_store__["c" /* Dispatcher */]);
+        var reducer = injector.get(__WEBPACK_IMPORTED_MODULE_1__ngrx_store__["b" /* Reducer */]);
+        return new __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["d" /* State */](initialState, dispatcher, reducer);
+    }
+}
+function _createReducerIfExtension(extension, injector, reducer) {
+    if (!!extension) {
+        var devtoolsDispatcher = injector.get(__WEBPACK_IMPORTED_MODULE_2__devtools__["a" /* DevtoolsDispatcher */]);
+        return _createReducer(devtoolsDispatcher, reducer);
+    }
+    else {
+        var dispatcher = injector.get(__WEBPACK_IMPORTED_MODULE_1__ngrx_store__["c" /* Dispatcher */]);
+        return new __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["b" /* Reducer */](dispatcher, reducer);
+    }
+}
+function noMonitor() {
+    return null;
+}
+function _createOptions(_options) {
+    var DEFAULT_OPTIONS = { monitor: noMonitor };
+    var options = typeof _options === 'function' ? _options() : _options;
+    options = Object.assign({}, DEFAULT_OPTIONS, options);
+    if (options.maxAge && options.maxAge < 2) {
+        throw new Error("Devtools 'maxAge' cannot be less than 2, got " + options.maxAge);
+    }
+    return options;
+}
+var StoreDevtoolsModule = (function () {
+    function StoreDevtoolsModule() {
+    }
+    StoreDevtoolsModule.instrumentStore = function (_options) {
+        if (_options === void 0) { _options = {}; }
+        return {
+            ngModule: StoreDevtoolsModule,
+            providers: [
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["d" /* State */],
+                    deps: [__WEBPACK_IMPORTED_MODULE_2__devtools__["b" /* StoreDevtools */]],
+                    useFactory: _createState
+                },
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_3__config__["a" /* INITIAL_OPTIONS */],
+                    useValue: _options
+                },
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["b" /* Reducer */],
+                    deps: [__WEBPACK_IMPORTED_MODULE_2__devtools__["a" /* DevtoolsDispatcher */], __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["e" /* INITIAL_REDUCER */]],
+                    useFactory: _createReducer
+                },
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_3__config__["b" /* STORE_DEVTOOLS_CONFIG */],
+                    deps: [__WEBPACK_IMPORTED_MODULE_3__config__["a" /* INITIAL_OPTIONS */]],
+                    useFactory: _createOptions
+                }
+            ]
+        };
+    };
+    StoreDevtoolsModule.instrumentOnlyWithExtension = function (_options) {
+        if (_options === void 0) { _options = {}; }
+        return {
+            ngModule: StoreDevtoolsModule,
+            providers: [
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["d" /* State */],
+                    deps: [__WEBPACK_IMPORTED_MODULE_4__extension__["a" /* REDUX_DEVTOOLS_EXTENSION */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injector"], __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["f" /* INITIAL_STATE */]],
+                    useFactory: _createStateIfExtension
+                },
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["b" /* Reducer */],
+                    deps: [__WEBPACK_IMPORTED_MODULE_4__extension__["a" /* REDUX_DEVTOOLS_EXTENSION */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injector"], __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["e" /* INITIAL_REDUCER */]],
+                    useFactory: _createReducerIfExtension
+                },
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_3__config__["a" /* INITIAL_OPTIONS */],
+                    useValue: _options
+                },
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_3__config__["b" /* STORE_DEVTOOLS_CONFIG */],
+                    deps: [__WEBPACK_IMPORTED_MODULE_3__config__["a" /* INITIAL_OPTIONS */]],
+                    useFactory: _createOptions
+                }
+            ]
+        };
+    };
+    return StoreDevtoolsModule;
+}());
+
+StoreDevtoolsModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                imports: [
+                    __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["g" /* StoreModule */]
+                ],
+                providers: [
+                    __WEBPACK_IMPORTED_MODULE_4__extension__["b" /* DevtoolsExtension */],
+                    __WEBPACK_IMPORTED_MODULE_2__devtools__["a" /* DevtoolsDispatcher */],
+                    __WEBPACK_IMPORTED_MODULE_2__devtools__["b" /* StoreDevtools */],
+                    {
+                        provide: __WEBPACK_IMPORTED_MODULE_4__extension__["a" /* REDUX_DEVTOOLS_EXTENSION */],
+                        useFactory: _createReduxDevtoolsExtension
+                    }
+                ]
+            },] },
+];
+/** @nocollapse */
+StoreDevtoolsModule.ctorParameters = function () { return []; };
+//# sourceMappingURL=instrument.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngrx/store-devtools/src/reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__("../../../../@ngrx/store-devtools/src/utils.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__("../../../../@ngrx/store-devtools/src/actions.js");
+/* unused harmony export INIT_ACTION */
+/* harmony export (immutable) */ __webpack_exports__["a"] = liftInitialState;
+/* harmony export (immutable) */ __webpack_exports__["b"] = liftReducerWith;
+
+
+
+var INIT_ACTION = { type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["c" /* Dispatcher */].INIT };
+/**
+* Computes the next entry in the log by applying an action.
+*/
+function computeNextEntry(reducer, action, state, error) {
+    if (error) {
+        return {
+            state: state,
+            error: 'Interrupted by an error up the chain'
+        };
+    }
+    var nextState = state;
+    var nextError;
+    try {
+        nextState = reducer(state, action);
+    }
+    catch (err) {
+        nextError = err.toString();
+        console.error(err.stack || err);
+    }
+    return {
+        state: nextState,
+        error: nextError
+    };
+}
+/**
+* Runs the reducer on invalidated actions to get a fresh computation log.
+*/
+function recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds) {
+    // Optimization: exit early and return the same reference
+    // if we know nothing could have changed.
+    if (minInvalidatedStateIndex >= computedStates.length &&
+        computedStates.length === stagedActionIds.length) {
+        return computedStates;
+    }
+    var nextComputedStates = computedStates.slice(0, minInvalidatedStateIndex);
+    for (var i = minInvalidatedStateIndex; i < stagedActionIds.length; i++) {
+        var actionId = stagedActionIds[i];
+        var action = actionsById[actionId].action;
+        var previousEntry = nextComputedStates[i - 1];
+        var previousState = previousEntry ? previousEntry.state : committedState;
+        var previousError = previousEntry ? previousEntry.error : undefined;
+        var shouldSkip = skippedActionIds.indexOf(actionId) > -1;
+        var entry = shouldSkip ?
+            previousEntry :
+            computeNextEntry(reducer, action, previousState, previousError);
+        nextComputedStates.push(entry);
+    }
+    return nextComputedStates;
+}
+function liftInitialState(initialCommittedState, monitorReducer) {
+    return {
+        monitorState: monitorReducer(undefined, {}),
+        nextActionId: 1,
+        actionsById: { 0: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* liftAction */])(INIT_ACTION) },
+        stagedActionIds: [0],
+        skippedActionIds: [],
+        committedState: initialCommittedState,
+        currentStateIndex: 0,
+        computedStates: []
+    };
+}
+/**
+* Creates a history state reducer from an app's reducer.
+*/
+function liftReducerWith(initialCommittedState, initialLiftedState, monitorReducer, options) {
+    if (options === void 0) { options = {}; }
+    /**
+    * Manages how the history actions modify the history state.
+    */
+    return function (reducer) { return function (liftedState, liftedAction) {
+        var _a = liftedState || initialLiftedState, monitorState = _a.monitorState, actionsById = _a.actionsById, nextActionId = _a.nextActionId, stagedActionIds = _a.stagedActionIds, skippedActionIds = _a.skippedActionIds, committedState = _a.committedState, currentStateIndex = _a.currentStateIndex, computedStates = _a.computedStates;
+        if (!liftedState) {
+            // Prevent mutating initialLiftedState
+            actionsById = Object.create(actionsById);
+        }
+        function commitExcessActions(n) {
+            // Auto-commits n-number of excess actions.
+            var excess = n;
+            var idsToDelete = stagedActionIds.slice(1, excess + 1);
+            for (var i = 0; i < idsToDelete.length; i++) {
+                if (computedStates[i + 1].error) {
+                    // Stop if error is found. Commit actions up to error.
+                    excess = i;
+                    idsToDelete = stagedActionIds.slice(1, excess + 1);
+                    break;
+                }
+                else {
+                    delete actionsById[idsToDelete[i]];
+                }
+            }
+            skippedActionIds = skippedActionIds.filter(function (id) { return idsToDelete.indexOf(id) === -1; });
+            stagedActionIds = [0].concat(stagedActionIds.slice(excess + 1));
+            committedState = computedStates[excess].state;
+            computedStates = computedStates.slice(excess);
+            currentStateIndex = currentStateIndex > excess
+                ? currentStateIndex - excess
+                : 0;
+        }
+        // By default, agressively recompute every state whatever happens.
+        // This has O(n) performance, so we'll override this to a sensible
+        // value whenever we feel like we don't have to recompute the states.
+        var minInvalidatedStateIndex = 0;
+        switch (liftedAction.type) {
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].RESET: {
+                // Get back to the state the store was created with.
+                actionsById = { 0: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* liftAction */])(INIT_ACTION) };
+                nextActionId = 1;
+                stagedActionIds = [0];
+                skippedActionIds = [];
+                committedState = initialCommittedState;
+                currentStateIndex = 0;
+                computedStates = [];
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].COMMIT: {
+                // Consider the last committed state the new starting point.
+                // Squash any staged actions into a single committed state.
+                actionsById = { 0: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* liftAction */])(INIT_ACTION) };
+                nextActionId = 1;
+                stagedActionIds = [0];
+                skippedActionIds = [];
+                committedState = computedStates[currentStateIndex].state;
+                currentStateIndex = 0;
+                computedStates = [];
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].ROLLBACK: {
+                // Forget about any staged actions.
+                // Start again from the last committed state.
+                actionsById = { 0: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* liftAction */])(INIT_ACTION) };
+                nextActionId = 1;
+                stagedActionIds = [0];
+                skippedActionIds = [];
+                currentStateIndex = 0;
+                computedStates = [];
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].TOGGLE_ACTION: {
+                // Toggle whether an action with given ID is skipped.
+                // Being skipped means it is a no-op during the computation.
+                var actionId_1 = liftedAction.id;
+                var index = skippedActionIds.indexOf(actionId_1);
+                if (index === -1) {
+                    skippedActionIds = [actionId_1].concat(skippedActionIds);
+                }
+                else {
+                    skippedActionIds = skippedActionIds.filter(function (id) { return id !== actionId_1; });
+                }
+                // Optimization: we know history before this action hasn't changed
+                minInvalidatedStateIndex = stagedActionIds.indexOf(actionId_1);
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].SET_ACTIONS_ACTIVE: {
+                // Toggle whether an action with given ID is skipped.
+                // Being skipped means it is a no-op during the computation.
+                var start = liftedAction.start, end = liftedAction.end, active = liftedAction.active;
+                var actionIds = [];
+                for (var i = start; i < end; i++)
+                    actionIds.push(i);
+                if (active) {
+                    skippedActionIds = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["d" /* difference */])(skippedActionIds, actionIds);
+                }
+                else {
+                    skippedActionIds = skippedActionIds.concat(actionIds);
+                }
+                // Optimization: we know history before this action hasn't changed
+                minInvalidatedStateIndex = stagedActionIds.indexOf(start);
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].JUMP_TO_STATE: {
+                // Without recomputing anything, move the pointer that tell us
+                // which state is considered the current one. Useful for sliders.
+                currentStateIndex = liftedAction.index;
+                // Optimization: we know the history has not changed.
+                minInvalidatedStateIndex = Infinity;
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].SWEEP: {
+                // Forget any actions that are currently being skipped.
+                stagedActionIds = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["d" /* difference */])(stagedActionIds, skippedActionIds);
+                skippedActionIds = [];
+                currentStateIndex = Math.min(currentStateIndex, stagedActionIds.length - 1);
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].PERFORM_ACTION: {
+                // Auto-commit as new actions come in.
+                if (options.maxAge && stagedActionIds.length === options.maxAge) {
+                    commitExcessActions(1);
+                }
+                if (currentStateIndex === stagedActionIds.length - 1) {
+                    currentStateIndex++;
+                }
+                var actionId = nextActionId++;
+                // Mutation! This is the hottest path, and we optimize on purpose.
+                // It is safe because we set a new key in a cache dictionary.
+                actionsById[actionId] = liftedAction;
+                stagedActionIds = stagedActionIds.concat([actionId]);
+                // Optimization: we know that only the new action needs computing.
+                minInvalidatedStateIndex = stagedActionIds.length - 1;
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* ActionTypes */].IMPORT_STATE: {
+                // Completely replace everything.
+                (_b = liftedAction.nextLiftedState, monitorState = _b.monitorState, actionsById = _b.actionsById, nextActionId = _b.nextActionId, stagedActionIds = _b.stagedActionIds, skippedActionIds = _b.skippedActionIds, committedState = _b.committedState, currentStateIndex = _b.currentStateIndex, computedStates = _b.computedStates);
+                break;
+            }
+            case __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["b" /* Reducer */].REPLACE:
+            case __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["c" /* Dispatcher */].INIT: {
+                // Always recompute states on hot reload and init.
+                minInvalidatedStateIndex = 0;
+                if (options.maxAge && stagedActionIds.length > options.maxAge) {
+                    // States must be recomputed before committing excess.
+                    computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds);
+                    commitExcessActions(stagedActionIds.length - options.maxAge);
+                    // Avoid double computation.
+                    minInvalidatedStateIndex = Infinity;
+                }
+                break;
+            }
+            default: {
+                // If the action is not recognized, it's a monitor action.
+                // Optimization: a monitor action can't change history.
+                minInvalidatedStateIndex = Infinity;
+                break;
+            }
+        }
+        computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds);
+        monitorState = monitorReducer(monitorState, liftedAction);
+        return {
+            monitorState: monitorState,
+            actionsById: actionsById,
+            nextActionId: nextActionId,
+            stagedActionIds: stagedActionIds,
+            skippedActionIds: skippedActionIds,
+            committedState: committedState,
+            currentStateIndex: currentStateIndex,
+            computedStates: computedStates
+        };
+        var _b;
+    }; };
+}
+//# sourceMappingURL=reducer.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngrx/store-devtools/src/utils.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actions__ = __webpack_require__("../../../../@ngrx/store-devtools/src/actions.js");
+/* harmony export (immutable) */ __webpack_exports__["d"] = difference;
+/* harmony export (immutable) */ __webpack_exports__["c"] = unliftState;
+/* unused harmony export unliftAction */
+/* harmony export (immutable) */ __webpack_exports__["b"] = liftAction;
+/* harmony export (immutable) */ __webpack_exports__["a"] = applyOperators;
+
+function difference(first, second) {
+    return first.filter(function (item) { return second.indexOf(item) < 0; });
+}
+/**
+ * Provides an app's view into the state of the lifted store.
+ */
+function unliftState(liftedState) {
+    var computedStates = liftedState.computedStates, currentStateIndex = liftedState.currentStateIndex;
+    var state = computedStates[currentStateIndex].state;
+    return state;
+}
+function unliftAction(liftedState) {
+    return liftedState.actionsById[liftedState.nextActionId - 1];
+}
+/**
+* Lifts an app's action into an action on the lifted store.
+*/
+function liftAction(action) {
+    return __WEBPACK_IMPORTED_MODULE_0__actions__["a" /* StoreDevtoolActions */].performAction(action);
+}
+function applyOperators(input$, operators) {
+    return operators.reduce(function (source$, _a) {
+        var operator = _a[0], args = _a.slice(1);
+        return operator.apply(source$, args);
+    }, input$);
+}
+//# sourceMappingURL=utils.js.map
+
+/***/ }),
+
 /***/ "../../../../@ngrx/store/index.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_dispatcher__ = __webpack_require__("../../../../@ngrx/store/src/dispatcher.js");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__src_dispatcher__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__src_dispatcher__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_ng2__ = __webpack_require__("../../../../@ngrx/store/src/ng2.js");
-/* unused harmony namespace reexport */
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__src_ng2__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_1__src_ng2__["f"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_1__src_ng2__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_reducer__ = __webpack_require__("../../../../@ngrx/store/src/reducer.js");
-/* unused harmony namespace reexport */
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__src_reducer__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_state__ = __webpack_require__("../../../../@ngrx/store/src/state.js");
-/* unused harmony namespace reexport */
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__src_state__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_store__ = __webpack_require__("../../../../@ngrx/store/src/store.js");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_4__src_store__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_utils__ = __webpack_require__("../../../../@ngrx/store/src/utils.js");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_5__src_utils__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_5__src_utils__["a"]; });
 
 
 
@@ -3986,14 +4768,14 @@ var Dispatcher = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__state__ = __webpack_require__("../../../../@ngrx/store/src/state.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils__ = __webpack_require__("../../../../@ngrx/store/src/utils.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return INITIAL_REDUCER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return INITIAL_STATE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return INITIAL_STATE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _INITIAL_REDUCER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return _INITIAL_STATE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _INITIAL_STATE; });
 /* harmony export (immutable) */ __webpack_exports__["d"] = _initialReducerFactory;
-/* harmony export (immutable) */ __webpack_exports__["h"] = _initialStateFactory;
-/* harmony export (immutable) */ __webpack_exports__["j"] = _storeFactory;
-/* harmony export (immutable) */ __webpack_exports__["i"] = _stateFactory;
-/* harmony export (immutable) */ __webpack_exports__["e"] = _reducerFactory;
+/* harmony export (immutable) */ __webpack_exports__["g"] = _initialStateFactory;
+/* harmony export (immutable) */ __webpack_exports__["h"] = _storeFactory;
+/* unused harmony export _stateFactory */
+/* unused harmony export _reducerFactory */
 /* unused harmony export provideStore */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -13760,6 +14542,115 @@ exports.OuterSubscriber = OuterSubscriber;
 
 /***/ }),
 
+/***/ "../../../../rxjs/ReplaySubject.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subject_1 = __webpack_require__("../../../../rxjs/Subject.js");
+var queue_1 = __webpack_require__("../../../../rxjs/scheduler/queue.js");
+var Subscription_1 = __webpack_require__("../../../../rxjs/Subscription.js");
+var observeOn_1 = __webpack_require__("../../../../rxjs/operator/observeOn.js");
+var ObjectUnsubscribedError_1 = __webpack_require__("../../../../rxjs/util/ObjectUnsubscribedError.js");
+var SubjectSubscription_1 = __webpack_require__("../../../../rxjs/SubjectSubscription.js");
+/**
+ * @class ReplaySubject<T>
+ */
+var ReplaySubject = (function (_super) {
+    __extends(ReplaySubject, _super);
+    function ReplaySubject(bufferSize, windowTime, scheduler) {
+        if (bufferSize === void 0) { bufferSize = Number.POSITIVE_INFINITY; }
+        if (windowTime === void 0) { windowTime = Number.POSITIVE_INFINITY; }
+        _super.call(this);
+        this.scheduler = scheduler;
+        this._events = [];
+        this._bufferSize = bufferSize < 1 ? 1 : bufferSize;
+        this._windowTime = windowTime < 1 ? 1 : windowTime;
+    }
+    ReplaySubject.prototype.next = function (value) {
+        var now = this._getNow();
+        this._events.push(new ReplayEvent(now, value));
+        this._trimBufferThenGetEvents();
+        _super.prototype.next.call(this, value);
+    };
+    ReplaySubject.prototype._subscribe = function (subscriber) {
+        var _events = this._trimBufferThenGetEvents();
+        var scheduler = this.scheduler;
+        var subscription;
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        else if (this.hasError) {
+            subscription = Subscription_1.Subscription.EMPTY;
+        }
+        else if (this.isStopped) {
+            subscription = Subscription_1.Subscription.EMPTY;
+        }
+        else {
+            this.observers.push(subscriber);
+            subscription = new SubjectSubscription_1.SubjectSubscription(this, subscriber);
+        }
+        if (scheduler) {
+            subscriber.add(subscriber = new observeOn_1.ObserveOnSubscriber(subscriber, scheduler));
+        }
+        var len = _events.length;
+        for (var i = 0; i < len && !subscriber.closed; i++) {
+            subscriber.next(_events[i].value);
+        }
+        if (this.hasError) {
+            subscriber.error(this.thrownError);
+        }
+        else if (this.isStopped) {
+            subscriber.complete();
+        }
+        return subscription;
+    };
+    ReplaySubject.prototype._getNow = function () {
+        return (this.scheduler || queue_1.queue).now();
+    };
+    ReplaySubject.prototype._trimBufferThenGetEvents = function () {
+        var now = this._getNow();
+        var _bufferSize = this._bufferSize;
+        var _windowTime = this._windowTime;
+        var _events = this._events;
+        var eventsCount = _events.length;
+        var spliceCount = 0;
+        // Trim events that fall out of the time window.
+        // Start at the front of the list. Break early once
+        // we encounter an event that falls within the window.
+        while (spliceCount < eventsCount) {
+            if ((now - _events[spliceCount].time) < _windowTime) {
+                break;
+            }
+            spliceCount++;
+        }
+        if (eventsCount > _bufferSize) {
+            spliceCount = Math.max(spliceCount, eventsCount - _bufferSize);
+        }
+        if (spliceCount > 0) {
+            _events.splice(0, spliceCount);
+        }
+        return _events;
+    };
+    return ReplaySubject;
+}(Subject_1.Subject));
+exports.ReplaySubject = ReplaySubject;
+var ReplayEvent = (function () {
+    function ReplayEvent(time, value) {
+        this.time = time;
+        this.value = value;
+    }
+    return ReplayEvent;
+}());
+//# sourceMappingURL=ReplaySubject.js.map
+
+/***/ }),
+
 /***/ "../../../../rxjs/Scheduler.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15911,6 +16802,17 @@ var ScalarObservable = (function (_super) {
 }(Observable_1.Observable));
 exports.ScalarObservable = ScalarObservable;
 //# sourceMappingURL=ScalarObservable.js.map
+
+/***/ }),
+
+/***/ "../../../../rxjs/observable/empty.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var EmptyObservable_1 = __webpack_require__("../../../../rxjs/observable/EmptyObservable.js");
+exports.empty = EmptyObservable_1.EmptyObservable.create;
+//# sourceMappingURL=empty.js.map
 
 /***/ }),
 
@@ -18548,6 +19450,64 @@ function share() {
 exports.share = share;
 ;
 //# sourceMappingURL=share.js.map
+
+/***/ }),
+
+/***/ "../../../../rxjs/operator/skip.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subscriber_1 = __webpack_require__("../../../../rxjs/Subscriber.js");
+/**
+ * Returns an Observable that skips the first `count` items emitted by the source Observable.
+ *
+ * <img src="./img/skip.png" width="100%">
+ *
+ * @param {Number} count - The number of times, items emitted by source Observable should be skipped.
+ * @return {Observable} An Observable that skips values emitted by the source Observable.
+ *
+ * @method skip
+ * @owner Observable
+ */
+function skip(count) {
+    return this.lift(new SkipOperator(count));
+}
+exports.skip = skip;
+var SkipOperator = (function () {
+    function SkipOperator(total) {
+        this.total = total;
+    }
+    SkipOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new SkipSubscriber(subscriber, this.total));
+    };
+    return SkipOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var SkipSubscriber = (function (_super) {
+    __extends(SkipSubscriber, _super);
+    function SkipSubscriber(destination, total) {
+        _super.call(this, destination);
+        this.total = total;
+        this.count = 0;
+    }
+    SkipSubscriber.prototype._next = function (x) {
+        if (++this.count > this.total) {
+            this.destination.next(x);
+        }
+    };
+    return SkipSubscriber;
+}(Subscriber_1.Subscriber));
+//# sourceMappingURL=skip.js.map
 
 /***/ }),
 

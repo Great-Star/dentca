@@ -17,7 +17,7 @@ Spree::Api::ApiHelpers.class_eval do
   class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:order_info_id))
   class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:is_clone))
 
-  class_variable_set(:@@line_item_attributes, class_variable_get(:@@line_item_attributes).push(:order_infos))
+  class_variable_set(:@@line_item_attributes, class_variable_get(:@@line_item_attributes).push(:order_info))
   class_variable_set(:@@option_value_attributes, class_variable_get(:@@option_value_attributes).push(:image))
   
   class_variable_set(:@@user_attributes, class_variable_get(:@@user_attributes).push(:doctor))

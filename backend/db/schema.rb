@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171010152437) do
+ActiveRecord::Schema.define(version: 20171012015307) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -340,6 +340,7 @@ ActiveRecord::Schema.define(version: 20171010152437) do
     t.integer  "line_item_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "adj_slug"
   end
 
   create_table "spree_order_promotions", force: :cascade do |t|

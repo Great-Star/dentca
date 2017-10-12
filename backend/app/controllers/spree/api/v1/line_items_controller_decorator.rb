@@ -11,7 +11,7 @@ Spree::Api::V1::LineItemsController.class_eval do
             line_item_params[:options] || {}
         )
 
-        creat_order_info(variant, params[:line_item][:variants], params[:line_item][:price]);
+        creat_order_info(variant, params[:line_item][:variants] || {}, params[:line_item][:price]);
 
         if @line_item.errors.empty?
             respond_with(@line_item, status: 201, default_template: :show)
@@ -21,23 +21,20 @@ Spree::Api::V1::LineItemsController.class_eval do
     end
 
     def creat_order_info(master, variants, price)
-        order_info = @line_item.order_infos.build
-        
         context = ""
-       
-        if variants
-            variants.each do |id|
-                context += "#{Spree::Variant.find(id).options_text}"
+        variants.each do |id|
+            context += "#{Spree::Variant.find(id).options_text}"
+        end
+        
+        adj_slug =""
+        Spree::Product.all.each do |product|
+            if product.sku = Spree::Product.find(master.product_id).adj_sku
+                adj_slug = product.slug
             end
         end
 
-        order_info.context = context
-        order_info.price = price
-        
+        order_info = Spree::OrderInfo.create(context: context, price: price, line_item_id: @line_item.id, adj_slug: adj_slug)
+
         @line_item.price = price
-        
-        @line_item.order_infos.clear
-        @line_item.order_infos << order_info
-        @line_item.save
     end
 end

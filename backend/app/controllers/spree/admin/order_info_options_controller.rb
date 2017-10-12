@@ -18,9 +18,9 @@ class Spree::Admin::OrderInfoOptionsController < Spree::Admin::ResourceControlle
 
     def location_after_save
         if @order_info_option.created_at == @order_info_option.updated_at
-        edit_admin_option_type_url(@order_info_option)
+            edit_admin_option_type_url(@order_info_option)
         else
-        admin_order_info_option_url
+            admin_order_info_option_url
         end
     end
 

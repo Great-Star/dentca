@@ -5,8 +5,18 @@
 #------------------------- Product form customization -----------------------
 
 Deface::Override.new(:virtual_path => "spree/admin/products/_form",
+    :name => "modify_variant_manage_form",
+    :replace => "[data-hook='admin_product_form_multiple_variants']",
+    :text => "<div data-hook='admin_product_form_sku'>
+          <%= f.field_container :sku, class: ['form-group'] do %>
+            <%= f.label :sku, Spree.t(:sku) %>
+            <%= f.text_field :sku, size: 16, class: 'form-control' %>
+          <% end %>
+        </div>")
+
+Deface::Override.new(:virtual_path => "spree/admin/products/_form",
     :name => "add_adj_sku",
-    :insert_before => "[data-hook='admin_product_form_promotionable']",
+    :insert_after => "[data-hook='admin_product_form_sku']",
     :text => "<div data-hook='admin_product_form_adj_sku'>
         <%= f.field_container :adj_sku, class: ['form-group'] do %>
           <%= f.label :adj_sku, Spree.t(:adjustment_sku) %>
@@ -344,10 +354,6 @@ Deface::Override.new(:virtual_path => "spree/admin/products/stock",
 #         </tr>
 
 #     </tbody>" )   
-
-Deface::Override.new(:virtual_path => "spree/admin/products/_form",
-    :name => "remove_variant_manage_form",
-    :remove => "[data-hook='admin_product_form_multiple_variants']")
 
 Deface::Override.new(:virtual_path => "spree/admin/users/_form",
     :name => "relpace_general_setting_fields",
