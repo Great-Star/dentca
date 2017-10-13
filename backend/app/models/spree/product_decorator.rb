@@ -51,5 +51,9 @@ module Spree
                 variants.create(price: variant_value.price, option_value_ids: [id], product_variant_value_id: variant_value.id)
             end
         end
+        
+        def build_variants_from_option_values_hash
+
+        end
     end
 end

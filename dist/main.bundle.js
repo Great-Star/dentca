@@ -6663,10 +6663,10 @@ var CheckoutActions = (function () {
             payload: order
         };
     };
-    CheckoutActions.prototype.addToCart = function (variant_id, variants, price) {
+    CheckoutActions.prototype.addToCart = function (variant_id, variants, price, origin) {
         return {
             type: CheckoutActions.ADD_TO_CART,
-            payload: { variant_id: variant_id, variants: variants, price: price }
+            payload: { variant_id: variant_id, variants: variants, price: price, origin: origin }
         };
     };
     CheckoutActions.prototype.addToCartSuccess = function (lineItem) {
@@ -6717,6 +6717,12 @@ var CheckoutActions = (function () {
     CheckoutActions.prototype.orderCompleteSuccess = function () {
         return { type: CheckoutActions.ORDER_COMPLETE_SUCCESS };
     };
+    CheckoutActions.prototype.updateAdjustmentOrder = function (adj_order) {
+        return {
+            type: CheckoutActions.UPDATE_ADJUSTMENT_ORDER,
+            payload: adj_order
+        };
+    };
     return CheckoutActions;
 }());
 
@@ -6733,6 +6739,7 @@ CheckoutActions.CHANGE_ORDER_STATE_SUCCESS = 'CHANGE_ORDER_STATE_SUCCESS';
 CheckoutActions.UPDATE_ORDER = 'UPDATE_ORDER';
 CheckoutActions.UPDATE_ORDER_SUCCESS = 'UPDATE_ORDER_SUCCESS';
 CheckoutActions.ORDER_COMPLETE_SUCCESS = 'ORDER_COMPLETE_SUCCESS';
+CheckoutActions.UPDATE_ADJUSTMENT_ORDER = 'UPDATE_ADJUSTMENT_ORDER';
 //# sourceMappingURL=checkout.actions.js.map
 
 /***/ }),
@@ -6815,7 +6822,7 @@ var initialState = new __WEBPACK_IMPORTED_MODULE_1__checkout_state__["a" /* Chec
 var checkoutReducer = function (state, _a) {
     if (state === void 0) { state = initialState; }
     var type = _a.type, payload = _a.payload;
-    var _lineItems, _lineItemEntities, _lineItemIds, _lineItem, _lineItemEntity, _lineItemId, _totalCartItems = 0, _totalCartValue, _ship_address, _bill_address, _orderState;
+    var _lineItems, _lineItemEntities, _lineItemIds, _lineItem, _lineItemEntity, _lineItemId, _totalCartItems = 0, _totalCartValue, _ship_address, _bill_address, _orderState, _adjustmentOrder;
     switch (type) {
         case __WEBPACK_IMPORTED_MODULE_0__actions_checkout_actions__["a" /* CheckoutActions */].FETCH_CURRENT_ORDER_SUCCESS:
             var _orderNumber = payload.number;
@@ -6897,6 +6904,11 @@ var checkoutReducer = function (state, _a) {
                 shipAddress: _ship_address,
                 billAddress: _bill_address
             });
+        case __WEBPACK_IMPORTED_MODULE_0__actions_checkout_actions__["a" /* CheckoutActions */].UPDATE_ADJUSTMENT_ORDER:
+            _adjustmentOrder = payload;
+            return state.merge({
+                adjustmentOrder: _adjustmentOrder
+            });
         case __WEBPACK_IMPORTED_MODULE_0__actions_checkout_actions__["a" /* CheckoutActions */].ORDER_COMPLETE_SUCCESS:
             return initialState;
         default:
@@ -6924,7 +6936,8 @@ var CheckoutStateRecord = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immu
     totalCartItems: 0,
     totalCartValue: 0,
     billAddress: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immutable__["fromJS"])({}),
-    shipAddress: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immutable__["fromJS"])({})
+    shipAddress: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immutable__["fromJS"])({}),
+    adjustmentOrder: null
 });
 //# sourceMappingURL=checkout.state.js.map
 
@@ -6944,13 +6957,15 @@ var CheckoutStateRecord = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immu
 /* unused harmony export fetchShipAddress */
 /* unused harmony export fetchBillAddress */
 /* unused harmony export fetchOrderState */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getLineItems; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getOrderNumber; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getTotalCartItems; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getTotalCartValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getShipAddress; });
+/* unused harmony export fetchAdjustmentOrderState */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getLineItems; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getOrderNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getTotalCartItems; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getTotalCartValue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getShipAddress; });
 /* unused harmony export getBillAddress */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getOrderState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getOrderState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getAdjustmentOrder; });
 
 // Base Cart State function
 function getCheckoutState(state) {
@@ -6980,6 +6995,9 @@ function fetchBillAddress(state) {
 function fetchOrderState(state) {
     return state.orderState;
 }
+function fetchAdjustmentOrderState(state) {
+    return state.adjustmentOrder;
+}
 // *************************** PUBLIC API's ****************************
 var getLineItems = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchLineItems);
 var getOrderNumber = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchOrderNumber);
@@ -6988,6 +7006,7 @@ var getTotalCartValue = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_resele
 var getShipAddress = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchShipAddress);
 var getBillAddress = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchBillAddress);
 var getOrderState = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchOrderState);
+var getAdjustmentOrder = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchAdjustmentOrderState);
 //# sourceMappingURL=selectors.js.map
 
 /***/ }),
@@ -7254,7 +7273,7 @@ var CheckoutService = (function () {
         this.http = http;
         this.actions = actions;
         this.store = store;
-        this.store.select(__WEBPACK_IMPORTED_MODULE_0__checkout_reducers_selectors__["d" /* getOrderNumber */])
+        this.store.select(__WEBPACK_IMPORTED_MODULE_0__checkout_reducers_selectors__["e" /* getOrderNumber */])
             .subscribe(function (number) { return _this.orderNumber = number; });
     }
     //  Change below methods once angular releases RC4, so that this methods can be called from effects
@@ -7269,14 +7288,14 @@ var CheckoutService = (function () {
      */
     CheckoutService.prototype.createNewLineItem = function (params) {
         // console.log(`spree/api/v1/orders/${this.orderNumber}/line_items?order_token=${this.getOrderToken()}`);
-        console.log("variants", params.variants);
+        console.log("original order", params.origin);
         return this.http.post("spree/api/v1/orders/" + this.orderNumber + "/line_items?order_token=" + this.getOrderToken(), {
             line_item: {
                 variant_id: params.variant_id,
                 quantity: 1,
                 variants: params.variants,
                 price: params.price,
-                options: "this is option"
+                original_line_item: params.origin
             }
         }).map(function (res) {
             var lineItem = res.json();
@@ -8586,7 +8605,7 @@ var HeaderComponent = (function () {
     HeaderComponent.prototype.ngOnInit = function () {
         this.store.dispatch(this.authActions.authorize());
         this.isAuthenticated = this.store.select(__WEBPACK_IMPORTED_MODULE_4__auth_reducers_selectors__["a" /* getAuthStatus */]);
-        this.totalCartItems = this.store.select(__WEBPACK_IMPORTED_MODULE_2__checkout_reducers_selectors__["b" /* getTotalCartItems */]);
+        this.totalCartItems = this.store.select(__WEBPACK_IMPORTED_MODULE_2__checkout_reducers_selectors__["c" /* getTotalCartItems */]);
     };
     HeaderComponent.prototype.selectTaxon = function (taxon) {
         this.router.navigateByUrl('/');

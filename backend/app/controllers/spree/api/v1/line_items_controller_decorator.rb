@@ -11,8 +11,7 @@ Spree::Api::V1::LineItemsController.class_eval do
             line_item_params[:options] || {}
         )
 
-        creat_order_info(variant, params[:line_item][:variants] || {}, params[:line_item][:price]);
-
+        creat_order_info(variant, params[:line_item][:variants] || {}, params[:line_item][:price], params[:line_item][:original_line_item]);
         if @line_item.errors.empty?
             respond_with(@line_item, status: 201, default_template: :show)
         else
@@ -20,7 +19,7 @@ Spree::Api::V1::LineItemsController.class_eval do
         end
     end
 
-    def creat_order_info(master, variants, price)
+    def creat_order_info(master, variants, price, origin)
         context = ""
         variants.each do |id|
             context += "#{Spree::Variant.find(id).options_text}"
@@ -28,12 +27,13 @@ Spree::Api::V1::LineItemsController.class_eval do
         
         adj_slug =""
         Spree::Product.all.each do |product|
-            if product.sku = Spree::Product.find(master.product_id).adj_sku
+            if product.sku == Spree::Product.find(master.product_id).adj_sku
                 adj_slug = product.slug
             end
         end
 
-        order_info = Spree::OrderInfo.create(context: context, price: price, line_item_id: @line_item.id, adj_slug: adj_slug)
+        order_info = Spree::OrderInfo.create(context: context, price: price, line_item_id: @line_item.id, adj_slug: adj_slug, original_line_item: origin)
+        Rails.logger.warn "-------------------------OrderInfo #{origin}--------------------------------"
 
         @line_item.price = price
     end

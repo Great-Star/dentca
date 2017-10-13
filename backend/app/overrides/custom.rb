@@ -29,6 +29,10 @@ Deface::Override.new(:virtual_path => "spree/admin/products/_form",
     :name => "remove_shipping_specs",
     :remove => "div#shipping_specs")  
 
+Deface::Override.new(:virtual_path => "spree/admin/products/new",
+    :name => "remove_product_prototype_field",
+    :remove => "[data-hook='product-from-prototype']")    
+
 #------------------------- option_types view customization ----------------------
 
 Deface::Override.new(:virtual_path=>"spree/admin/option_types/index",
@@ -219,9 +223,9 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
     :name => "_main_menu_remove_tab_promotions",
     :remove => "erb[loud]:contains('.t(:promotions)')")    
 
-# Deface::Override.new(:virtual_path => "spree/layouts/spree_application",
-#     :name => "_login_header_remove",
-#     :remove => "erb[loud]:contains('spree/shared/header')")
+Deface::Override.new(:virtual_path => "spree/layouts/spree_application",
+    :name => "_login_header_remove",
+    :remove => "erb[loud]:contains('spree/shared/header')")
 
 Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
     :name => "_main_menu_add_tab_coupon",
@@ -429,4 +433,4 @@ Deface::Override.new(:virtual_path => "spree/admin/bookkeeping_documents/index",
                 <th><%= sort_link @search, :email, Spree.t(:email, scope: [:spree, :print_invoice]) %></th>
                 <th><%= sort_link @search, :total, Spree.t(:total, scope: [:spree, :print_invoice]) %></th>
                 <th data-hook='admin_orders_index_header_actions' class='actions'></th>
-            </tr>")            
+            </tr>")        

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012015307) do
+ActiveRecord::Schema.define(version: 20171013022327) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -63,6 +63,16 @@ ActiveRecord::Schema.define(version: 20171012015307) do
   add_index "spree_addresses", ["firstname"], name: "index_addresses_on_firstname"
   add_index "spree_addresses", ["lastname"], name: "index_addresses_on_lastname"
   add_index "spree_addresses", ["state_id"], name: "index_spree_addresses_on_state_id"
+
+  create_table "spree_adjust_order_line_items", force: :cascade do |t|
+    t.integer  "spree_order_id"
+    t.integer  "spree_line_item_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "spree_adjust_order_line_items", ["spree_line_item_id"], name: "index_spree_adjust_order_line_items_on_spree_line_item_id"
+  add_index "spree_adjust_order_line_items", ["spree_order_id"], name: "index_spree_adjust_order_line_items_on_spree_order_id"
 
   create_table "spree_adjustments", force: :cascade do |t|
     t.integer  "source_id"
@@ -247,6 +257,7 @@ ActiveRecord::Schema.define(version: 20171012015307) do
     t.decimal  "pre_tax_amount",               precision: 12, scale: 4, default: 0.0, null: false
     t.decimal  "taxable_adjustment_total",     precision: 10, scale: 2, default: 0.0, null: false
     t.decimal  "non_taxable_adjustment_total", precision: 10, scale: 2, default: 0.0, null: false
+    t.string   "adjust_order_number"
   end
 
   add_index "spree_line_items", ["order_id"], name: "index_spree_line_items_on_order_id"
@@ -338,9 +349,10 @@ ActiveRecord::Schema.define(version: 20171012015307) do
     t.string   "context"
     t.float    "price"
     t.integer  "line_item_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "adj_slug"
+    t.string   "original_line_item"
   end
 
   create_table "spree_order_promotions", force: :cascade do |t|
@@ -388,6 +400,7 @@ ActiveRecord::Schema.define(version: 20171012015307) do
     t.integer  "state_lock_version",                                               default: 0,       null: false
     t.decimal  "taxable_adjustment_total",                precision: 10, scale: 2, default: 0.0,     null: false
     t.decimal  "non_taxable_adjustment_total",            precision: 10, scale: 2, default: 0.0,     null: false
+    t.string   "original_line_item"
   end
 
   add_index "spree_orders", ["approver_id"], name: "index_spree_orders_on_approver_id"

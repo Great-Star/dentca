@@ -1554,10 +1554,12 @@ var ProductDetailPageComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__checkout_actions_checkout_actions__ = __webpack_require__("../../../../../src/app/checkout/actions/checkout.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_variant_retriver_service__ = __webpack_require__("../../../../../src/app/core/services/variant-retriver.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_variant_parser_service__ = __webpack_require__("../../../../../src/app/core/services/variant-parser.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__checkout_reducers_selectors__ = __webpack_require__("../../../../../src/app/checkout/reducers/selectors.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_variant_retriver_service__ = __webpack_require__("../../../../../src/app/core/services/variant-retriver.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_variant_parser_service__ = __webpack_require__("../../../../../src/app/core/services/variant-parser.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailsComponent; });
+
 
 
 
@@ -1574,18 +1576,20 @@ var ProductDetailsComponent = (function () {
         this.variants = [];
     }
     ProductDetailsComponent.prototype.ngOnInit = function () {
-        console.log("product", this.product);
+        var _this = this;
+        // console.log("product", this.product);
         this.description = this.product.description;
         this.images = this.product.master.images;
         this.variantId = this.product.master.id;
         this.customOptionTypesHash = this.variantParser
             .getOptionsToDisplay(this.product.variants, this.product.option_types);
-        console.log("custom_option_type_hash", this.customOptionTypesHash);
+        // console.log("custom_option_type_hash", this.customOptionTypesHash);
         this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
-        console.log("mainOptions", this.mainOptions);
+        // console.log("mainOptions", this.mainOptions);
         this.correspondingOptions = this.mainOptions;
         this.product_price = this.getProductPrice(this.product, this.user);
-        console.log("user", this.user);
+        this.store.select(__WEBPACK_IMPORTED_MODULE_2__checkout_reducers_selectors__["a" /* getAdjustmentOrder */]).subscribe(function (res) { return _this.original_line_item = res; });
+        // console.log("user", this.user);
     };
     /**
      * @param: option: { key: "small",
@@ -1594,7 +1598,7 @@ var ProductDetailsComponent = (function () {
      */
     ProductDetailsComponent.prototype.onOptionClick = function (option) {
         var _this = this;
-        var result = new __WEBPACK_IMPORTED_MODULE_2__core_services_variant_retriver_service__["a" /* VariantRetriverService */]()
+        var result = new __WEBPACK_IMPORTED_MODULE_3__core_services_variant_retriver_service__["a" /* VariantRetriverService */]()
             .getVariant(this.currentSelectedOptions, this.customOptionTypesHash, option, this.product);
         this.createNewCorrespondingOptions(result.newCorrespondingOptions, option.value.optionValue.option_type_name);
         this.currentSelectedOptions = result.newSelectedoptions;
@@ -1641,7 +1645,7 @@ var ProductDetailsComponent = (function () {
     ProductDetailsComponent.prototype.addToCart = function (product) {
         console.log("send cart");
         console.log(this.variantId, this.variants, this.product_price);
-        this.store.dispatch(this.checkoutActions.addToCart(this.variantId, this.variants, this.product_price));
+        this.store.dispatch(this.checkoutActions.addToCart(this.variantId, this.variants, this.product_price, this.original_line_item));
     };
     ProductDetailsComponent.prototype.getProductPrice = function (product, user) {
         if (user == false)
@@ -1653,7 +1657,7 @@ var ProductDetailsComponent = (function () {
         }
         return parseFloat(this.product.price);
     };
-    ProductDetailsComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_3__core_services_variant_parser_service__["a" /* VariantParserService */] }, { type: __WEBPACK_IMPORTED_MODULE_2__core_services_variant_retriver_service__["a" /* VariantRetriverService */] }, { type: __WEBPACK_IMPORTED_MODULE_1__checkout_actions_checkout_actions__["a" /* CheckoutActions */] }, { type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["a" /* Store */] }, { type: __WEBPACK_IMPORTED_MODULE_4__angular_router__["d" /* Router */] }]; };
+    ProductDetailsComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_4__core_services_variant_parser_service__["a" /* VariantParserService */] }, { type: __WEBPACK_IMPORTED_MODULE_3__core_services_variant_retriver_service__["a" /* VariantRetriverService */] }, { type: __WEBPACK_IMPORTED_MODULE_1__checkout_actions_checkout_actions__["a" /* CheckoutActions */] }, { type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["a" /* Store */] }, { type: __WEBPACK_IMPORTED_MODULE_5__angular_router__["d" /* Router */] }]; };
     return ProductDetailsComponent;
 }());
 

@@ -1966,9 +1966,9 @@ var AddressComponent = (function () {
         this.store = store;
         this.checkoutService = checkoutService;
         this.router = router;
-        this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["d" /* getOrderNumber */]);
-        this.shipAddress$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["c" /* getShipAddress */]);
-        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["e" /* getOrderState */])
+        this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["e" /* getOrderNumber */]);
+        this.shipAddress$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["d" /* getShipAddress */]);
+        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["f" /* getOrderState */])
             .subscribe(function (state) { return _this.orderState = state; });
     }
     AddressComponent.prototype.ngOnInit = function () {
@@ -2050,8 +2050,8 @@ var DeliveryOptionsComponent = (function () {
         this.checkoutService = checkoutService;
         this.store = store;
         this.shippingRates = [];
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["a" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["b" /* getTotalCartItems */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["b" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["c" /* getTotalCartItems */]);
     }
     DeliveryOptionsComponent.prototype.ngOnInit = function () {
         // this.setOrder();
@@ -2142,8 +2142,8 @@ var AddressService = (function () {
 var CartComponent = (function () {
     function CartComponent(store) {
         this.store = store;
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["a" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["b" /* getTotalCartItems */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["b" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["c" /* getTotalCartItems */]);
     }
     CartComponent.prototype.ngOnInit = function () {
     };
@@ -2203,7 +2203,7 @@ var LineItemListComponent = (function () {
     function LineItemListComponent(store, actions) {
         this.store = store;
         this.actions = actions;
-        this.lineItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["f" /* getLineItems */]);
+        this.lineItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["g" /* getLineItems */]);
     }
     LineItemListComponent.prototype.ngOnInit = function () {
     };
@@ -2282,7 +2282,7 @@ var OrderTotalSummaryComponent = (function () {
         this.actions = actions;
         this.checkoutService = checkoutService;
         this.router = router;
-        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["e" /* getOrderState */])
+        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["f" /* getOrderState */])
             .subscribe(function (state) { return _this.orderState = state; });
     }
     OrderTotalSummaryComponent.prototype.ngOnInit = function () {
@@ -2454,10 +2454,10 @@ var PaymentModesListComponent = (function () {
 var PaymentComponent = (function () {
     function PaymentComponent(store) {
         this.store = store;
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["a" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["b" /* getTotalCartItems */]);
-        this.address$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["c" /* getShipAddress */]);
-        this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["d" /* getOrderNumber */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["b" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["c" /* getTotalCartItems */]);
+        this.address$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["d" /* getShipAddress */]);
+        this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["e" /* getOrderNumber */]);
     }
     PaymentComponent.prototype.ngOnInit = function () {
     };
