@@ -1173,12 +1173,10 @@ var OrderDetailComponent = (function () {
             var orders = res;
             orders.forEach(function (order) {
                 if (order.original_line_item == id) {
-                    alert(order.number);
                     _this.router.navigate(['/user', 'orders', 'detail', order.number]);
                 }
             });
         });
-        // alert(id);
     };
     OrderDetailComponent.prototype.ngOnDestroy = function () {
         this.routeSubscription$.unsubscribe();
