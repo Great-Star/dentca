@@ -27,7 +27,7 @@ Spree::Api::V1::LineItemsController.class_eval do
         
         adj_slug =""
         Spree::Product.all.each do |product|
-            if product.sku == Spree::Product.find(master.product_id).adj_sku
+            if product.sku == Spree::Product.find(master.product_id).adj_sku && product.sku != ""
                 adj_slug = product.slug
             end
         end

@@ -95,12 +95,13 @@ var ProductDescriptionComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_core_services_variant_parser_service__ = __webpack_require__("../../../../../src/app/core/services/variant-parser.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_core_services_variant_retriver_service__ = __webpack_require__("../../../../../src/app/core/services/variant-retriver.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_checkout_actions_checkout_actions__ = __webpack_require__("../../../../../src/app/checkout/actions/checkout.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngrx_store_src_store__ = __webpack_require__("../../../../@ngrx/store/src/store.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_product_components_product_detail_page_product_detail_page_component__ = __webpack_require__("../../../../../src/app/product/components/product-detail-page/product-detail-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_core_services_product_service__ = __webpack_require__("../../../../../src/app/core/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_user_services_user_service__ = __webpack_require__("../../../../../src/app/user/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_core_services_checkout_service__ = __webpack_require__("../../../../../src/app/core/services/checkout.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngrx_store_src_store__ = __webpack_require__("../../../../@ngrx/store/src/store.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_detail_page_component__ = __webpack_require__("../../../../../src/app/product/components/product-detail-page/product-detail-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_core_services_product_service__ = __webpack_require__("../../../../../src/app/core/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_user_services_user_service__ = __webpack_require__("../../../../../src/app/user/services/user.service.ts");
 /* unused harmony export RenderType_ProductDetailPageComponent */
 /* unused harmony export View_ProductDetailPageComponent_0 */
 /* unused harmony export View_ProductDetailPageComponent_Host_0 */
@@ -124,13 +125,15 @@ var ProductDescriptionComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_
 
 
 
+
 var styles_ProductDetailPageComponent = [__WEBPACK_IMPORTED_MODULE_0__product_detail_page_component_css_shim_ngstyle__["a" /* styles */]];
 var RenderType_ProductDetailPageComponent = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵcrt"]({ encapsulation: 0,
     styles: styles_ProductDetailPageComponent, data: {} });
 function View_ProductDetailPageComponent_1(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-details', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_details_product_details_component_ngfactory__["a" /* View_ProductDetailsComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_details_product_details_component_ngfactory__["b" /* RenderType_ProductDetailsComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_details_product_details_component__["a" /* ProductDetailsComponent */], [__WEBPACK_IMPORTED_MODULE_4__app_core_services_variant_parser_service__["a" /* VariantParserService */], __WEBPACK_IMPORTED_MODULE_5__app_core_services_variant_retriver_service__["a" /* VariantRetriverService */],
-            __WEBPACK_IMPORTED_MODULE_6__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */], __WEBPACK_IMPORTED_MODULE_7__ngrx_store_src_store__["a" /* Store */], __WEBPACK_IMPORTED_MODULE_8__angular_router__["d" /* Router */]], { product: [0, 'product'], user: [1, 'user'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n']))], function (_ck, _v) {
+            __WEBPACK_IMPORTED_MODULE_6__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */], __WEBPACK_IMPORTED_MODULE_7__app_core_services_checkout_service__["a" /* CheckoutService */], __WEBPACK_IMPORTED_MODULE_8__ngrx_store_src_store__["a" /* Store */], __WEBPACK_IMPORTED_MODULE_9__angular_router__["d" /* Router */]], { product: [0, 'product'],
+            user: [1, 'user'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.product$;
         var currVal_1 = _co.currentUser$;
@@ -138,7 +141,7 @@ function View_ProductDetailPageComponent_1(_l) {
     }, null);
 }
 function View_ProductDetailPageComponent_0(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductDetailPageComponent_1)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_9__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"],
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductDetailPageComponent_1)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_10__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null)], function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = ((_co.product$ != null) && (_co.currentUser$ != null));
@@ -146,12 +149,12 @@ function View_ProductDetailPageComponent_0(_l) {
     }, null);
 }
 function View_ProductDetailPageComponent_Host_0(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-detail-page', [], null, null, null, View_ProductDetailPageComponent_0, RenderType_ProductDetailPageComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_10__app_product_components_product_detail_page_product_detail_page_component__["a" /* ProductDetailPageComponent */], [__WEBPACK_IMPORTED_MODULE_11__app_core_services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_8__angular_router__["e" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_12__app_user_services_user_service__["a" /* UserService */]], null, null)], function (_ck, _v) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-detail-page', [], null, null, null, View_ProductDetailPageComponent_0, RenderType_ProductDetailPageComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](245760, null, 0, __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_detail_page_component__["a" /* ProductDetailPageComponent */], [__WEBPACK_IMPORTED_MODULE_12__app_core_services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_9__angular_router__["e" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_13__app_user_services_user_service__["a" /* UserService */]], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
     }, null);
 }
-var ProductDetailPageComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-detail-page', __WEBPACK_IMPORTED_MODULE_10__app_product_components_product_detail_page_product_detail_page_component__["a" /* ProductDetailPageComponent */], View_ProductDetailPageComponent_Host_0, {}, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LWRldGFpbC1wYWdlLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQudHMuUHJvZHVjdERldGFpbFBhZ2VDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICpuZ0lmPVwicHJvZHVjdCQgIT0gbnVsbCAmJiBjdXJyZW50VXNlciQgIT0gbnVsbFwiPlxyXG4gIDxhcHAtcHJvZHVjdC1kZXRhaWxzIFtwcm9kdWN0XT1cInByb2R1Y3QkXCIgW3VzZXJdPVwiY3VycmVudFVzZXIkXCI+PC9hcHAtcHJvZHVjdC1kZXRhaWxzPlxyXG48L2Rpdj4iLCI8YXBwLXByb2R1Y3QtZGV0YWlsLXBhZ2U+PC9hcHAtcHJvZHVjdC1kZXRhaWwtcGFnZT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUEsd0VBQXNEO2FBQUEsMEJBQ3BEO01BQUE7NkVBQUEsVUFBQTtNQUFBOytDQUFBO01BQUEsZUFBc0Y7O0lBQWpFO0lBQXFCO0lBQTFDLFdBQXFCLFVBQXFCLFNBQTFDOzs7O29CQURGO01BQUEsMkNBQUE7b0JBQUE7O0lBQUs7SUFBTCxXQUFLLFNBQUw7Ozs7b0JDQUE7TUFBQTsyQ0FBQSxVQUFBO01BQUE7O1FBQUE7Ozs7In0=
+var ProductDetailPageComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-detail-page', __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_detail_page_component__["a" /* ProductDetailPageComponent */], View_ProductDetailPageComponent_Host_0, {}, {}, []);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LWRldGFpbC1wYWdlLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQudHMuUHJvZHVjdERldGFpbFBhZ2VDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICpuZ0lmPVwicHJvZHVjdCQgIT0gbnVsbCAmJiBjdXJyZW50VXNlciQgIT0gbnVsbFwiPlxyXG4gIDxhcHAtcHJvZHVjdC1kZXRhaWxzIFtwcm9kdWN0XT1cInByb2R1Y3QkXCIgW3VzZXJdPVwiY3VycmVudFVzZXIkXCI+PC9hcHAtcHJvZHVjdC1kZXRhaWxzPlxyXG48L2Rpdj4iLCI8YXBwLXByb2R1Y3QtZGV0YWlsLXBhZ2U+PC9hcHAtcHJvZHVjdC1kZXRhaWwtcGFnZT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBLHdFQUFzRDthQUFBLDBCQUNwRDtNQUFBOzZFQUFBLFVBQUE7TUFBQTtrRUFBQTtVQUFBLGdDQUFzRjs7O1FBQWpFO1FBQXFCO1FBQTFDLFdBQXFCLFVBQXFCLFNBQTFDOzs7O29CQURGO01BQUEsMkNBQUE7b0JBQUE7O0lBQUs7SUFBTCxXQUFLLFNBQUw7Ozs7b0JDQUE7TUFBQTsyQ0FBQSxVQUFBO01BQUE7O1FBQUE7Ozs7In0=
 //# sourceMappingURL=product-detail-page.component.ngfactory.js.map
 
 /***/ }),
@@ -175,8 +178,9 @@ var ProductDetailPageComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_c
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_core_services_variant_parser_service__ = __webpack_require__("../../../../../src/app/core/services/variant-parser.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_core_services_variant_retriver_service__ = __webpack_require__("../../../../../src/app/core/services/variant-retriver.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_checkout_actions_checkout_actions__ = __webpack_require__("../../../../../src/app/checkout/actions/checkout.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ngrx_store_src_store__ = __webpack_require__("../../../../@ngrx/store/src/store.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_core_services_checkout_service__ = __webpack_require__("../../../../../src/app/core/services/checkout.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ngrx_store_src_store__ = __webpack_require__("../../../../@ngrx/store/src/store.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return RenderType_ProductDetailsComponent; });
 /* harmony export (immutable) */ __webpack_exports__["a"] = View_ProductDetailsComponent_0;
 /* unused harmony export View_ProductDetailsComponent_Host_0 */
@@ -187,6 +191,7 @@ var ProductDetailPageComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_c
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
+
 
 
 
@@ -269,14 +274,14 @@ function View_ProductDetailsComponent_0(_l) {
     }, null);
 }
 function View_ProductDetailsComponent_Host_0(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-details', [], null, null, null, View_ProductDetailsComponent_0, RenderType_ProductDetailsComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_details_product_details_component__["a" /* ProductDetailsComponent */], [__WEBPACK_IMPORTED_MODULE_12__app_core_services_variant_parser_service__["a" /* VariantParserService */], __WEBPACK_IMPORTED_MODULE_13__app_core_services_variant_retriver_service__["a" /* VariantRetriverService */], __WEBPACK_IMPORTED_MODULE_14__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */], __WEBPACK_IMPORTED_MODULE_15__ngrx_store_src_store__["a" /* Store */],
-            __WEBPACK_IMPORTED_MODULE_16__angular_router__["d" /* Router */]], null, null)], function (_ck, _v) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-details', [], null, null, null, View_ProductDetailsComponent_0, RenderType_ProductDetailsComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_details_product_details_component__["a" /* ProductDetailsComponent */], [__WEBPACK_IMPORTED_MODULE_12__app_core_services_variant_parser_service__["a" /* VariantParserService */], __WEBPACK_IMPORTED_MODULE_13__app_core_services_variant_retriver_service__["a" /* VariantRetriverService */], __WEBPACK_IMPORTED_MODULE_14__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */], __WEBPACK_IMPORTED_MODULE_15__app_core_services_checkout_service__["a" /* CheckoutService */],
+            __WEBPACK_IMPORTED_MODULE_16__ngrx_store_src_store__["a" /* Store */], __WEBPACK_IMPORTED_MODULE_17__angular_router__["d" /* Router */]], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
     }, null);
 }
 var ProductDetailsComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-details', __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_details_product_details_component__["a" /* ProductDetailsComponent */], View_ProductDetailsComponent_Host_0, { product: 'product',
     user: 'user' }, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LWRldGFpbHMvcHJvZHVjdC1kZXRhaWxzLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQudHMuUHJvZHVjdERldGFpbHNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICpuZ0lmPVwicHJvZHVjdCAhPSBudWxsXCIgY2xhc3M9XCJyb3cgcGFkZGluZy10b3BcIj5cclxuICA8ZGl2IGNsYXNzPVwiY29sLW1kLTZcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgICAgPGFwcC1pbWFnZS1jb250YWluZXIgW2ltYWdlc109XCJpbWFnZXNcIiBbc2VsZWN0ZWRJbWFnZV09XCJpbWFnZXNbMF1cIiBjbGFzcz1cImNvbC1tZC0xMlwiPlxyXG4gICAgICA8L2FwcC1pbWFnZS1jb250YWluZXI+XHJcbiAgICA8L2Rpdj5cclxuICA8L2Rpdj5cclxuXHJcbiAgPGRpdiBjbGFzcz1cImNvbC1tZC02XCI+XHJcblxyXG4gICAgPGFwcC1wcm9kdWN0LXByaWNlLWluZm8gW3Byb2R1Y3RdPVwicHJvZHVjdFwiIFtwcmljZV09XCJwcm9kdWN0X3ByaWNlXCIgY2xhc3M9XCJyb3dcIj5cclxuICAgIDwvYXBwLXByb2R1Y3QtcHJpY2UtaW5mbz5cclxuICAgIDxhcHAtcHJvZHVjdC1kZXNjcmlwdGlvbiBbZGVzY3JpcHRpb25dPVwicHJvZHVjdC5kZXNjcmlwdGlvblwiIGNsYXNzPVwicm93XCI+XHJcbiAgICA8L2FwcC1wcm9kdWN0LWRlc2NyaXB0aW9uPlxyXG4gIDwvZGl2PlxyXG4gIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgIDwhLS0gPGFwcC1wcm9kdWN0LW9yZGVyLWluZm8gW29wdGlvblR5cGVzXT1cInByb2R1Y3Qub3B0aW9uX3R5cGVzXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgIDwvYXBwLXByb2R1Y3Qtb3JkZXItaW5mbz4gLS0+XHJcbiAgICA8IS0tIDxhcHAtcHJvZHVjdC11cGxvYWQtZmlsZSAqbmdJZj1cInByb2R1Y3QuZmlsZV91cF9sb2FkXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgIDwvYXBwLXByb2R1Y3QtdXBsb2FkLWZpbGU+IC0tPlxyXG4gICAgPGFwcC1wcm9kdWN0LXZhcmlhbnRzIFtjdXN0b21PcHRpb25UeXBlc0hhc2hdPVwiY3VzdG9tT3B0aW9uVHlwZXNIYXNoXCIgW2N1cnJlbnRTZWxlY3RlZE9wdGlvbnNdPVwiY3VycmVudFNlbGVjdGVkT3B0aW9uc1wiIFtvcHRpb25UeXBlc109XCJwcm9kdWN0Lm9wdGlvbl90eXBlc1wiIChvbk9wdGlvbkNsaWNrRXZlbnQpPVwib25PcHRpb25DbGljaygkZXZlbnQpXCJcclxuICAgICAgW2NvcnJlc3BvbmRpbmdPcHRpb25zXT1cImNvcnJlc3BvbmRpbmdPcHRpb25zXCIgW21haW5PcHRpb25zXT1cIm1haW5PcHRpb25zXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj48L2FwcC1wcm9kdWN0LXZhcmlhbnRzPlxyXG4gICAgPGRpdiBzdHlsZT1cInBhZGRpbmctcmlnaHQ6IDIwJTsgcGFkZGluZy1sZWZ0OiAyMCU7XCI+XHJcbiAgICAgIDxidXR0b24gKGNsaWNrKT1cImFkZFRvQ2FydCgpXCIgY2xhc3M9XCJwZHAtYWRkLXRvLWJhZyBwZHAtYnV0dG9uXCIgc3R5bGU9XCJtYXJnaW4tdG9wOjQwcHg7XCI+QUREIFRPIEJBRzwvYnV0dG9uPlxyXG4gICAgPC9kaXY+XHJcbiAgPC9kaXY+XHJcbjwvZGl2PlxyXG5cclxuIiwiPGFwcC1wcm9kdWN0LWRldGFpbHM+PC9hcHAtcHJvZHVjdC1kZXRhaWxzPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7TUFBQSxnQkFBcUQseUNBQ25EO01BQUE7TUFBQSw4QkFBc0IsMkNBQ3BCO2FBQUE7VUFBQSwwREFBaUI7TUFBQSxlQUNmO01BQUE7MENBQUEsVUFBQTtNQUFBO01BQXFGLDZDQUMvRDtNQUNsQix5Q0FDRjtNQUVOO1VBQUE7TUFBc0IsNkNBRXBCO1VBQUE7VUFBQTthQUFBO1VBQUEsNkNBQWdGO1VBQUEsYUFDdkQsMkNBQ3pCO1VBQUE7VUFBQTttREFBQSxVQUFBO1VBQUE7VUFBQSxlQUF5RSwyQ0FDL0M7VUFBQSxXQUN0Qix5Q0FDTjtVQUFBO1VBQUEsOEJBQWlCO01BRWMsMkNBRUM7TUFDOUI7VUFBQTtnQkFBQTtRQUFBO1FBQUE7UUFBNko7VUFBQTtVQUFBO1FBQUE7UUFBN0o7TUFBQTthQUFBO1VBQUE7VUFBQTtVQUFBO01BQ3FILDJDQUNySDtVQUFBO1VBQUEsMERBQW9EO1VBQUEsZUFDbEQ7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUFRO2NBQUE7Y0FBQTtZQUFBO1lBQVI7VUFBQSxnQ0FBeUY7TUFBbUIsMkNBQ3hHO01BQ0Y7O0lBdEJtQjtJQUFrQjtJQUF2QyxXQUFxQixVQUFrQixTQUF2QztJQU9zQjtJQUFvQjtJQUE1QyxZQUF3QixVQUFvQixTQUE1QztJQUV5QjtJQUF6QixZQUF5QixTQUF6QjtJQVFzQjtJQUFnRDtJQUN0QjtJQUE5QztJQURzSDtJQUF4SCxZQUFzQixVQUFnRCxVQUN0QixVQUE5QyxVQURzSCxTQUF4SDs7OztvQkFwQko7TUFBQSx3Q0FBQTtvQkFBQSxtQ0EwQk07TUFBQTs7SUExQkQ7SUFBTCxXQUFLLFNBQUw7Ozs7b0JDQUE7TUFBQTt3Q0FBQSxVQUFBO01BQUE7b0JBQUE7SUFBQTs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LWRldGFpbHMvcHJvZHVjdC1kZXRhaWxzLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQudHMuUHJvZHVjdERldGFpbHNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICpuZ0lmPVwicHJvZHVjdCAhPSBudWxsXCIgY2xhc3M9XCJyb3cgcGFkZGluZy10b3BcIj5cclxuICA8ZGl2IGNsYXNzPVwiY29sLW1kLTZcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgICAgPGFwcC1pbWFnZS1jb250YWluZXIgW2ltYWdlc109XCJpbWFnZXNcIiBbc2VsZWN0ZWRJbWFnZV09XCJpbWFnZXNbMF1cIiBjbGFzcz1cImNvbC1tZC0xMlwiPlxyXG4gICAgICA8L2FwcC1pbWFnZS1jb250YWluZXI+XHJcbiAgICA8L2Rpdj5cclxuICA8L2Rpdj5cclxuXHJcbiAgPGRpdiBjbGFzcz1cImNvbC1tZC02XCI+XHJcblxyXG4gICAgPGFwcC1wcm9kdWN0LXByaWNlLWluZm8gW3Byb2R1Y3RdPVwicHJvZHVjdFwiIFtwcmljZV09XCJwcm9kdWN0X3ByaWNlXCIgY2xhc3M9XCJyb3dcIj5cclxuICAgIDwvYXBwLXByb2R1Y3QtcHJpY2UtaW5mbz5cclxuICAgIDxhcHAtcHJvZHVjdC1kZXNjcmlwdGlvbiBbZGVzY3JpcHRpb25dPVwicHJvZHVjdC5kZXNjcmlwdGlvblwiIGNsYXNzPVwicm93XCI+XHJcbiAgICA8L2FwcC1wcm9kdWN0LWRlc2NyaXB0aW9uPlxyXG4gIDwvZGl2PlxyXG4gIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgIDwhLS0gPGFwcC1wcm9kdWN0LW9yZGVyLWluZm8gW29wdGlvblR5cGVzXT1cInByb2R1Y3Qub3B0aW9uX3R5cGVzXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgIDwvYXBwLXByb2R1Y3Qtb3JkZXItaW5mbz4gLS0+XHJcbiAgICA8IS0tIDxhcHAtcHJvZHVjdC11cGxvYWQtZmlsZSAqbmdJZj1cInByb2R1Y3QuZmlsZV91cF9sb2FkXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgIDwvYXBwLXByb2R1Y3QtdXBsb2FkLWZpbGU+IC0tPlxyXG4gICAgPGFwcC1wcm9kdWN0LXZhcmlhbnRzIFtjdXN0b21PcHRpb25UeXBlc0hhc2hdPVwiY3VzdG9tT3B0aW9uVHlwZXNIYXNoXCIgW2N1cnJlbnRTZWxlY3RlZE9wdGlvbnNdPVwiY3VycmVudFNlbGVjdGVkT3B0aW9uc1wiIFtvcHRpb25UeXBlc109XCJwcm9kdWN0Lm9wdGlvbl90eXBlc1wiIChvbk9wdGlvbkNsaWNrRXZlbnQpPVwib25PcHRpb25DbGljaygkZXZlbnQpXCJcclxuICAgICAgW2NvcnJlc3BvbmRpbmdPcHRpb25zXT1cImNvcnJlc3BvbmRpbmdPcHRpb25zXCIgW21haW5PcHRpb25zXT1cIm1haW5PcHRpb25zXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj48L2FwcC1wcm9kdWN0LXZhcmlhbnRzPlxyXG4gICAgPGRpdiBzdHlsZT1cInBhZGRpbmctcmlnaHQ6IDIwJTsgcGFkZGluZy1sZWZ0OiAyMCU7XCI+XHJcbiAgICAgIDxidXR0b24gKGNsaWNrKT1cImFkZFRvQ2FydCgpXCIgY2xhc3M9XCJwZHAtYWRkLXRvLWJhZyBwZHAtYnV0dG9uXCIgc3R5bGU9XCJtYXJnaW4tdG9wOjQwcHg7XCI+QUREIFRPIEJBRzwvYnV0dG9uPlxyXG4gICAgPC9kaXY+XHJcbiAgPC9kaXY+XHJcbjwvZGl2PlxyXG5cclxuIiwiPGFwcC1wcm9kdWN0LWRldGFpbHM+PC9hcHAtcHJvZHVjdC1kZXRhaWxzPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBO01BQUEsZ0JBQXFELHlDQUNuRDtNQUFBO01BQUEsOEJBQXNCLDJDQUNwQjthQUFBO1VBQUEsMERBQWlCO01BQUEsZUFDZjtNQUFBOzBDQUFBLFVBQUE7TUFBQTtNQUFxRiw2Q0FDL0Q7TUFDbEIseUNBQ0Y7TUFFTjtVQUFBO01BQXNCLDZDQUVwQjtVQUFBO1VBQUE7YUFBQTtVQUFBLDZDQUFnRjtVQUFBLGFBQ3ZELDJDQUN6QjtVQUFBO1VBQUE7bURBQUEsVUFBQTtVQUFBO1VBQUEsZUFBeUUsMkNBQy9DO1VBQUEsV0FDdEIseUNBQ047VUFBQTtVQUFBLDhCQUFpQjtNQUVjLDJDQUVDO01BQzlCO1VBQUE7Z0JBQUE7UUFBQTtRQUFBO1FBQTZKO1VBQUE7VUFBQTtRQUFBO1FBQTdKO01BQUE7YUFBQTtVQUFBO1VBQUE7VUFBQTtNQUNxSCwyQ0FDckg7VUFBQTtVQUFBLDBEQUFvRDtVQUFBLGVBQ2xEO1VBQUE7VUFBQTtZQUFBO1lBQUE7WUFBUTtjQUFBO2NBQUE7WUFBQTtZQUFSO1VBQUEsZ0NBQXlGO01BQW1CLDJDQUN4RztNQUNGOztJQXRCbUI7SUFBa0I7SUFBdkMsV0FBcUIsVUFBa0IsU0FBdkM7SUFPc0I7SUFBb0I7SUFBNUMsWUFBd0IsVUFBb0IsU0FBNUM7SUFFeUI7SUFBekIsWUFBeUIsU0FBekI7SUFRc0I7SUFBZ0Q7SUFDdEI7SUFBOUM7SUFEc0g7SUFBeEgsWUFBc0IsVUFBZ0QsVUFDdEIsVUFBOUMsVUFEc0gsU0FBeEg7Ozs7b0JBcEJKO01BQUEsd0NBQUE7b0JBQUEsbUNBMEJNO01BQUE7O0lBMUJEO0lBQUwsV0FBSyxTQUFMOzs7O29CQ0FBO01BQUE7d0NBQUEsVUFBQTtNQUFBOzhCQUFBO0lBQUE7Ozs7OyJ9
 //# sourceMappingURL=product-details.component.ngfactory.js.map
 
 /***/ }),
@@ -1517,7 +1522,7 @@ var ProductDetailPageComponent = (function () {
          * */
         this.actionsSubscription = this.route.params.subscribe(function (params) {
             _this.productId = params['id'];
-            _this.productService
+            _this.productSubs = _this.productService
                 .getProduct(_this.productId)
                 .subscribe(function (response) { return _this.product$ = response; });
         });
@@ -1532,6 +1537,12 @@ var ProductDetailPageComponent = (function () {
     }
     ;
     ProductDetailPageComponent.prototype.ngOnInit = function () {
+    };
+    ProductDetailPageComponent.prototype.ngOnDestroy = function () {
+        if (this.actionsSubscription)
+            this.actionsSubscription.unsubscribe();
+        if (this.productSubs)
+            this.productSubs.unsubscribe();
     };
     /**
      * Action To be dispatched
@@ -1558,6 +1569,7 @@ var ProductDetailPageComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_services_variant_retriver_service__ = __webpack_require__("../../../../../src/app/core/services/variant-retriver.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_variant_parser_service__ = __webpack_require__("../../../../../src/app/core/services/variant-parser.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_services_checkout_service__ = __webpack_require__("../../../../../src/app/core/services/checkout.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailsComponent; });
 
 
@@ -1565,11 +1577,13 @@ var ProductDetailPageComponent = (function () {
 
 
 
+
 var ProductDetailsComponent = (function () {
-    function ProductDetailsComponent(variantParser, variantRetriver, checkoutActions, store, router) {
+    function ProductDetailsComponent(variantParser, variantRetriver, checkoutActions, checkoutService, store, router) {
         this.variantParser = variantParser;
         this.variantRetriver = variantRetriver;
         this.checkoutActions = checkoutActions;
+        this.checkoutService = checkoutService;
         this.store = store;
         this.router = router;
         this.currentSelectedOptions = {};
@@ -1577,19 +1591,15 @@ var ProductDetailsComponent = (function () {
     }
     ProductDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        // console.log("product", this.product);
         this.description = this.product.description;
         this.images = this.product.master.images;
         this.variantId = this.product.master.id;
         this.customOptionTypesHash = this.variantParser
             .getOptionsToDisplay(this.product.variants, this.product.option_types);
-        // console.log("custom_option_type_hash", this.customOptionTypesHash);
         this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
-        // console.log("mainOptions", this.mainOptions);
         this.correspondingOptions = this.mainOptions;
         this.product_price = this.getProductPrice(this.product, this.user);
         this.store.select(__WEBPACK_IMPORTED_MODULE_2__checkout_reducers_selectors__["a" /* getAdjustmentOrder */]).subscribe(function (res) { return _this.original_line_item = res; });
-        // console.log("user", this.user);
     };
     /**
      * @param: option: { key: "small",
@@ -1603,7 +1613,6 @@ var ProductDetailsComponent = (function () {
         this.createNewCorrespondingOptions(result.newCorrespondingOptions, option.value.optionValue.option_type_name);
         this.currentSelectedOptions = result.newSelectedoptions;
         var newVariant = result.variant;
-        console.log("curent", this.currentSelectedOptions);
         this.variantId = this.product.master.id;
         this.variants = [];
         var temp = this.getProductPrice(this.product, this.user);
@@ -1622,8 +1631,6 @@ var ProductDetailsComponent = (function () {
             _loop_1(key);
         }
         this.product_price = Number(temp);
-        console.log("variants", this.variants);
-        console.log("variant", this.variantId);
     };
     ProductDetailsComponent.prototype.makeGlobalOptinTypesHash = function (customOptionTypes) {
         var temp = {};
@@ -1643,9 +1650,23 @@ var ProductDetailsComponent = (function () {
         }
     };
     ProductDetailsComponent.prototype.addToCart = function (product) {
+        var _this = this;
         console.log("send cart");
-        console.log(this.variantId, this.variants, this.product_price);
-        this.store.dispatch(this.checkoutActions.addToCart(this.variantId, this.variants, this.product_price, this.original_line_item));
+        // console.log(this.variantId, this.variants, this.product_price);
+        // this.store.dispatch(this.checkoutActions.addToCart(this.variantId, this.variants, this.product_price, this.original_line_item));
+        var line_item = {
+            variant_id: this.variantId,
+            variants: this.variants,
+            price: this.product_price,
+            original_line_item: this.original_line_item
+        };
+        this.checkoutService.createNewLineItem(line_item)
+            .subscribe(function (line_item) {
+            return _this.store.dispatch(_this.checkoutActions.addToCartSuccess(line_item));
+        })
+            .add(function () {
+            _this.router.navigate(['/checkout', 'cart']);
+        });
     };
     ProductDetailsComponent.prototype.getProductPrice = function (product, user) {
         if (user == false)
@@ -1657,7 +1678,7 @@ var ProductDetailsComponent = (function () {
         }
         return parseFloat(this.product.price);
     };
-    ProductDetailsComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_4__core_services_variant_parser_service__["a" /* VariantParserService */] }, { type: __WEBPACK_IMPORTED_MODULE_3__core_services_variant_retriver_service__["a" /* VariantRetriverService */] }, { type: __WEBPACK_IMPORTED_MODULE_1__checkout_actions_checkout_actions__["a" /* CheckoutActions */] }, { type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["a" /* Store */] }, { type: __WEBPACK_IMPORTED_MODULE_5__angular_router__["d" /* Router */] }]; };
+    ProductDetailsComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_4__core_services_variant_parser_service__["a" /* VariantParserService */] }, { type: __WEBPACK_IMPORTED_MODULE_3__core_services_variant_retriver_service__["a" /* VariantRetriverService */] }, { type: __WEBPACK_IMPORTED_MODULE_1__checkout_actions_checkout_actions__["a" /* CheckoutActions */] }, { type: __WEBPACK_IMPORTED_MODULE_6__core_services_checkout_service__["a" /* CheckoutService */] }, { type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["a" /* Store */] }, { type: __WEBPACK_IMPORTED_MODULE_5__angular_router__["d" /* Router */] }]; };
     return ProductDetailsComponent;
 }());
 
