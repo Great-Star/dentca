@@ -12,7 +12,7 @@ module Spree
 
         def empty_option_values?
             options.empty? || options.any? do |opt|
-                opt.option_type.option_values.empty? && opt.option_type.spree_option_case_id == 1
+                opt.option_type.option_values.empty? && opt.option_type.option_case.name == "Selection"
             end
         end
 
@@ -21,7 +21,7 @@ module Spree
             missing_ids = option_type_ids.reject{|x| type_ids.include? x}
             missing_ids.each do |id|
                 option_type = option_types.find(id)
-                if option_type.spree_option_case_id == 1
+                if option_type.option_case.name == "Selection"
                     type = product_variant_types.create(name: option_type.name, presentation: option_type.presentation, product_id: self, option_type_id: id)
                     auto_create_product_variant_values(type.id, id)
                 end

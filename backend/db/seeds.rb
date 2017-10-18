@@ -19,6 +19,7 @@ Spree::OptionCase.create({"name" => "Description"})
 Spree::OptionCase.create({"name" => "Image"})
 Spree::OptionCase.create({"name" => "Option Select"})
 Spree::OptionCase.create({"name" => "Button"})
+Spree::OptionCase.create({"name" => "Option Group"})
 
 Spree::Role.create(name: "corporate user")
 Spree::Role.create(name: "doctor")

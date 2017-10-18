@@ -8,7 +8,7 @@ Spree::Admin::OptionTypesController.class_eval do
 
     def update_product_variant
 
-        if @option_type.spree_option_case_id != 1
+        if @option_type.option_case.name != "Selection"
             return
         end
 
@@ -30,14 +30,14 @@ Spree::Admin::OptionTypesController.class_eval do
     end
 
     def load_data
-        @option_cases=Spree::OptionCase.order(:name)
+        @option_cases=Spree::OptionCase.all
     end
 
     def load_types
         @type_values=[]
 
         Spree::OptionType.all.each do |ot|
-            if ot.id != @option_type.id && ot.spree_option_case_id != 1
+            if ot.id != @option_type.id && ot.option_case.name != "Selection"
                 @type_values << ot
             end
         end
@@ -51,13 +51,16 @@ Spree::Admin::OptionTypesController.class_eval do
 
     private
         def save_child_ids
-            # @option_type.child_option_type_ids=[@option_type.child_one_id, @option_type.child_two_id]
+            Rails.logger.warn "**************PARAM*-#{params[:option_type][:child_ids]}--*******************************"
+            if params[:option_type][:child_ids].present?
+                params[:option_type][:child_ids] = params[:option_type][:child_ids].split(',')
+            end
         end
 
     protected
         def location_after_save
             
-            if @option_type.spree_option_case_id != 1
+            if @option_type.option_case.name != "Selection"
                 @option_type.option_values.delete_all
             end
 

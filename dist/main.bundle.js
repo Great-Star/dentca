@@ -18,7 +18,7 @@ var map = {
 	],
 	"./checkout/checkout.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/checkout/checkout.module.ngfactory.ts",
-		0
+		1
 	],
 	"./dashboard/dashboard.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/dashboard/dashboard.module.ngfactory.ts",
@@ -46,7 +46,7 @@ var map = {
 	],
 	"./product/index.ngfactory": [
 		"../../../../../src/$$_gendir/app/product/index.ngfactory.ts",
-		1
+		0
 	],
 	"./products/products.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/products/products.module.ngfactory.ts",
@@ -7748,6 +7748,45 @@ var ProductService = (function () {
 var VariantParserService = (function () {
     function VariantParserService() {
     }
+    VariantParserService.prototype.getOptionHash = function (optionTypes) {
+        var optionHash = {};
+        Object.assign(optionHash, this.makeOptionHash({}, optionTypes, optionTypes));
+        return optionHash;
+    };
+    VariantParserService.prototype.makeOptionHash = function (innerOption, optionTypes, parentOptions) {
+        var _this = this;
+        optionTypes.forEach(function (optionType) {
+            if (!optionType.parent_id) {
+                // console.log("1", optionType.name);
+                var childOption = {};
+                if (optionType.children) {
+                    Object.assign(childOption, _this.makeOptionHash(childOption, optionType.children, parentOptions));
+                }
+                innerOption[optionType.name] = Object.assign({}, {
+                    optionCase: optionType.option_case.name,
+                    childOptions: childOption
+                });
+            }
+            else if (!optionType.children) {
+                // console.log("2", optionType.name, !optionType.children);
+                var option = _this.getValidateOption(optionType, parentOptions);
+                if (option)
+                    innerOption[option.name] = Object.assign({}, {
+                        optionCase: option.option_case.name,
+                        childOptions: {}
+                    });
+            }
+            // console.log("3", optionType.name);
+        });
+        return innerOption;
+    };
+    VariantParserService.prototype.getValidateOption = function (option, optionTypes) {
+        for (var i = 0; i < optionTypes.length; i++) {
+            if (optionTypes[i].name == option.name)
+                return optionTypes[i];
+        }
+        return null;
+    };
     /**
      *
      *

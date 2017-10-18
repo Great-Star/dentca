@@ -2,13 +2,17 @@ Spree::Api::ApiHelpers.class_eval do
   
   #Add description and option case to option type
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:description))
-  class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:spree_option_case_id))
+  # class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:spree_option_case_id))
+  class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:option_case))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:mandatory))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:image))
+  class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:children))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:child_option_types))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:child_one_id))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:child_two_id))
-  
+  class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:child_ids))
+  class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:parent_id))
+    
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:adj_sku))
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:spree_product_variant_types))
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_prices))

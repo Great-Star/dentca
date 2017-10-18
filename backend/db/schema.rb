@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171013022327) do
+ActiveRecord::Schema.define(version: 20171017202514) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -257,7 +257,6 @@ ActiveRecord::Schema.define(version: 20171013022327) do
     t.decimal  "pre_tax_amount",               precision: 12, scale: 4, default: 0.0, null: false
     t.decimal  "taxable_adjustment_total",     precision: 10, scale: 2, default: 0.0, null: false
     t.decimal  "non_taxable_adjustment_total", precision: 10, scale: 2, default: 0.0, null: false
-    t.string   "adjust_order_number"
   end
 
   add_index "spree_line_items", ["order_id"], name: "index_spree_line_items_on_order_id"
@@ -305,9 +304,13 @@ ActiveRecord::Schema.define(version: 20171013022327) do
     t.integer  "parent_option_type_id"
     t.integer  "child_one_id"
     t.integer  "child_two_id"
+    t.integer  "parent_id"
+    t.integer  "option_case_id"
   end
 
   add_index "spree_option_types", ["name"], name: "index_spree_option_types_on_name"
+  add_index "spree_option_types", ["option_case_id"], name: "index_spree_option_types_on_option_case_id"
+  add_index "spree_option_types", ["parent_id"], name: "index_spree_option_types_on_parent_id"
   add_index "spree_option_types", ["position"], name: "index_spree_option_types_on_position"
   add_index "spree_option_types", ["spree_option_case_id"], name: "index_spree_option_types_on_spree_option_case_id"
 

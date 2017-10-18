@@ -15,6 +15,7 @@ $.fn.variantAutocomplete = ->
     placeholder: Spree.translations.variant_placeholder
     minimumInputLength: 3
     initSelection: (element, callback) ->
+      console.log("here")
       $.get Spree.routes.variants_api + "/" + element.val(), { token: Spree.api_key }, (data) ->
         callback data
     ajax:
@@ -22,6 +23,7 @@ $.fn.variantAutocomplete = ->
       quietMillis: 200
       datatype: "json"
       data: (term, page) ->
+        console.log(Spree.routes.variants_api)
         q:
           product_name_or_sku_cont: term
         token: Spree.api_key
@@ -29,6 +31,7 @@ $.fn.variantAutocomplete = ->
       results: (data, page) ->
         window.variants = data["variants"]
         result =[]
+        console.log(Spree.routes.varinats_api)
         for key, variant of data["variants"]
           if variant.is_master
             result.push(variant)
