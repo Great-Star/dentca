@@ -634,17 +634,10 @@ var OrderListItemComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core_
 var styles_OrdersComponent = [__WEBPACK_IMPORTED_MODULE_0__orders_component_scss_shim_ngstyle__["a" /* styles */]];
 var RenderType_OrdersComponent = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵcrt"]({ encapsulation: 0,
     styles: styles_OrdersComponent, data: {} });
-function View_OrdersComponent_3(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-order-list-item', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__order_list_item_order_list_item_component_ngfactory__["a" /* View_OrderListItemComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__order_list_item_order_list_item_component_ngfactory__["b" /* RenderType_OrderListItemComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_user_components_orders_order_list_item_order_list_item_component__["a" /* OrderListItemComponent */], [], { order: [0, 'order'] }, null)], function (_ck, _v) {
-        var currVal_0 = _v.parent.context.$implicit;
-        _ck(_v, 1, 0, currVal_0);
-    }, null);
-}
 function View_OrdersComponent_2(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_OrdersComponent_3)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_4__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  ']))], function (_ck, _v) {
-        var currVal_0 = (_v.context.$implicit.original_line_item == null);
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-order-list-item', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__order_list_item_order_list_item_component_ngfactory__["a" /* View_OrderListItemComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__order_list_item_order_list_item_component_ngfactory__["b" /* RenderType_OrderListItemComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_user_components_orders_order_list_item_order_list_item_component__["a" /* OrderListItemComponent */], [], { order: [0, 'order'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  ']))], function (_ck, _v) {
+        var currVal_0 = _v.context.$implicit;
         _ck(_v, 3, 0, currVal_0);
     }, null);
 }
@@ -656,7 +649,7 @@ function View_OrdersComponent_1(_l) {
         _ck(_v, 3, 0, currVal_0);
     }, null);
 }
-function View_OrdersComponent_4(_l) {
+function View_OrdersComponent_3(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 10, 'div', [['class', 'cart-empty']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [['class', 'empty-cart-icon']], null, null, null, null, null)),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'div', [['class', 'empty-cart-message']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['You have\'nt ordered anything yet.'])),
@@ -681,7 +674,7 @@ function View_OrdersComponent_4(_l) {
 function View_OrdersComponent_0(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 2, null, View_OrdersComponent_1)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_4__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'], ngIfElse: [1, 'ngIfElse'] }, null), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpid"](131072, __WEBPACK_IMPORTED_MODULE_4__angular_common__["AsyncPipe"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectorRef"]]), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['    \n'])),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](0, [['elseBlock', 2]], null, 0, null, View_OrdersComponent_4)),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](0, [['elseBlock', 2]], null, 0, null, View_OrdersComponent_3)),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['  \n']))], function (_ck, _v) {
         var _co = _v.component;
         var tmp_0_0 = null;
@@ -697,7 +690,7 @@ function View_OrdersComponent_Host_0(_l) {
     }, null);
 }
 var OrdersComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-orders', __WEBPACK_IMPORTED_MODULE_6__app_user_components_orders_orders_component__["a" /* OrdersComponent */], View_OrdersComponent_Host_0, {}, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvdXNlci9jb21wb25lbnRzL29yZGVycy9vcmRlcnMuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvdXNlci9jb21wb25lbnRzL29yZGVycy9vcmRlcnMuY29tcG9uZW50LnRzIiwibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC91c2VyL2NvbXBvbmVudHMvb3JkZXJzL29yZGVycy5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvdXNlci9jb21wb25lbnRzL29yZGVycy9vcmRlcnMuY29tcG9uZW50LnRzLk9yZGVyc0NvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgKm5nSWY9XCIob3JkZXJzJCB8IGFzeW5jKT8ubGVuZ3RoOyBlbHNlIGVsc2VCbG9ja1wiPlxyXG4gIDxkaXYgKm5nRm9yPVwibGV0IG9yZGVyIG9mIChvcmRlcnMkIHwgYXN5bmMpXCI+XHJcbiAgICA8YXBwLW9yZGVyLWxpc3QtaXRlbSBbb3JkZXJdPVwib3JkZXJcIiAqbmdJZj1cIm9yZGVyLm9yaWdpbmFsX2xpbmVfaXRlbSA9PSBudWxsXCI+PC9hcHAtb3JkZXItbGlzdC1pdGVtPlxyXG4gIDwvZGl2PiAgXHJcbjwvZGl2PiAgICBcclxuPG5nLXRlbXBsYXRlICNlbHNlQmxvY2s+XHJcbiAgPGRpdiBjbGFzcz1cImNhcnQtZW1wdHlcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJlbXB0eS1jYXJ0LWljb25cIj48L2Rpdj5cclxuICAgIDxkaXYgY2xhc3M9XCJlbXB0eS1jYXJ0LW1lc3NhZ2VcIj5Zb3UgaGF2ZSdudCBvcmRlcmVkIGFueXRoaW5nIHlldC48L2Rpdj5cclxuICAgIDxhIGNsYXNzPVwiZW1wdHktd2lzaGxpc3QtbGlua1wiIHJvdXRlckxpbms9XCIvaG9tZVwiPlN0YXJ0IFNob3BwaW5nPC9hPlxyXG4gIDwvZGl2PlxyXG48L25nLXRlbXBsYXRlPiAgXHJcbiIsIjxhcHAtb3JkZXJzPjwvYXBwLW9yZGVycz4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDRUk7TUFBQTswQ0FBQSxVQUFBO01BQUE7SUFBcUI7SUFBckIsV0FBcUIsU0FBckI7Ozs7b0JBREY7TUFBQSx3RUFBNkM7YUFBQSw0QkFDM0M7TUFBQSxnREFBQTtNQUFBLHNFQUFvRzthQUFBO0lBQS9EO0lBQXJDLFdBQXFDLFNBQXJDOzs7O29CQUZKO01BQUEsd0VBQXVEO2FBQUEsMEJBQ3JEO01BQUEsZ0RBQUE7TUFBQTtNQUFBLHNCQUFLLDZDQUVDO01BQUE7O0lBRkQ7SUFBTCxXQUFLLFNBQUw7Ozs7b0JBSXNCLHlDQUN0QjtNQUFBO01BQUEsNENBQXdCO01BQ3RCO1VBQUE7TUFBbUMsMkNBQ25DO1VBQUE7VUFBQSw4QkFBZ0M7TUFBdUMsMkNBQ3ZFO1VBQUE7Y0FBQTtZQUFBO1lBQUE7Y0FBQTtrQkFBQTtjQUFBO1lBQUE7WUFBQTtVQUFBLHVDQUFBO1VBQUE7VUFBQSxlQUFrRCxtREFBa0I7aUJBQUEsMEJBQ2hFOztRQUQyQjtRQUEvQixXQUErQixTQUEvQjs7UUFBQTtRQUFBO1FBQUEsV0FBQSxtQkFBQTs7OztvQkFUSjtNQUFBLGdDQUFBO29CQUFBLGtFQUFLO21CQUFBLHdCQUlDO01BQ047TUFNYzs7SUFYVDtJQUFBO0lBQUE7SUFBTCxXQUFLLG1CQUFMOzs7O29CQ0FBO01BQUE7YUFBQTtVQUFBO0lBQUE7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvdXNlci9jb21wb25lbnRzL29yZGVycy9vcmRlcnMuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvdXNlci9jb21wb25lbnRzL29yZGVycy9vcmRlcnMuY29tcG9uZW50LnRzIiwibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC91c2VyL2NvbXBvbmVudHMvb3JkZXJzL29yZGVycy5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvdXNlci9jb21wb25lbnRzL29yZGVycy9vcmRlcnMuY29tcG9uZW50LnRzLk9yZGVyc0NvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgKm5nSWY9XCIob3JkZXJzJCB8IGFzeW5jKT8ubGVuZ3RoOyBlbHNlIGVsc2VCbG9ja1wiPlxyXG4gIDxkaXYgKm5nRm9yPVwibGV0IG9yZGVyIG9mIChvcmRlcnMkIHwgYXN5bmMpXCI+XHJcbiAgICA8YXBwLW9yZGVyLWxpc3QtaXRlbSBbb3JkZXJdPVwib3JkZXJcIj48L2FwcC1vcmRlci1saXN0LWl0ZW0+XHJcbiAgPC9kaXY+ICBcclxuPC9kaXY+ICAgIFxyXG48bmctdGVtcGxhdGUgI2Vsc2VCbG9jaz5cclxuICA8ZGl2IGNsYXNzPVwiY2FydC1lbXB0eVwiPlxyXG4gICAgPGRpdiBjbGFzcz1cImVtcHR5LWNhcnQtaWNvblwiPjwvZGl2PlxyXG4gICAgPGRpdiBjbGFzcz1cImVtcHR5LWNhcnQtbWVzc2FnZVwiPllvdSBoYXZlJ250IG9yZGVyZWQgYW55dGhpbmcgeWV0LjwvZGl2PlxyXG4gICAgPGEgY2xhc3M9XCJlbXB0eS13aXNobGlzdC1saW5rXCIgcm91dGVyTGluaz1cIi9ob21lXCI+U3RhcnQgU2hvcHBpbmc8L2E+XHJcbiAgPC9kaXY+XHJcbjwvbmctdGVtcGxhdGU+ICBcclxuIiwiPGFwcC1vcmRlcnM+PC9hcHAtb3JkZXJzPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNDRTtNQUFBLHdFQUE2QzthQUFBLDRCQUMzQztNQUFBOzJFQUFBLFVBQUE7TUFBQTtNQUFBLGVBQTJEO0lBQXRDO0lBQXJCLFdBQXFCLFNBQXJCOzs7O29CQUZKO01BQUEsd0VBQXVEO2FBQUEsMEJBQ3JEO01BQUEsZ0RBQUE7TUFBQTtNQUFBLHNCQUFLLDZDQUVDO01BQUE7O0lBRkQ7SUFBTCxXQUFLLFNBQUw7Ozs7b0JBSXNCLHlDQUN0QjtNQUFBO01BQUEsNENBQXdCO01BQ3RCO1VBQUE7TUFBbUMsMkNBQ25DO1VBQUE7VUFBQSw4QkFBZ0M7TUFBdUMsMkNBQ3ZFO1VBQUE7Y0FBQTtZQUFBO1lBQUE7Y0FBQTtrQkFBQTtjQUFBO1lBQUE7WUFBQTtVQUFBLHVDQUFBO1VBQUE7VUFBQSxlQUFrRCxtREFBa0I7aUJBQUEsMEJBQ2hFOztRQUQyQjtRQUEvQixXQUErQixTQUEvQjs7UUFBQTtRQUFBO1FBQUEsV0FBQSxtQkFBQTs7OztvQkFUSjtNQUFBLGdDQUFBO29CQUFBLGtFQUFLO21CQUFBLHdCQUlDO01BQ047TUFNYzs7SUFYVDtJQUFBO0lBQUE7SUFBTCxXQUFLLG1CQUFMOzs7O29CQ0FBO01BQUE7YUFBQTtVQUFBO0lBQUE7Ozs7In0=
 //# sourceMappingURL=orders.component.ngfactory.js.map
 
 /***/ }),
@@ -1191,6 +1184,7 @@ var OrderListItemComponent = (function () {
     function OrderListItemComponent() {
     }
     OrderListItemComponent.prototype.ngOnInit = function () {
+        console.log("order", this.order);
     };
     OrderListItemComponent.prototype.getProductImageUrl = function (url) {
         return __WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].API_ENDPOINT + url;
