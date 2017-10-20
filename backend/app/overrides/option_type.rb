@@ -146,7 +146,7 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
                         </tr>                        
                         <tr>
                             <td><%= Spree.t(:second_option) %></td>
-                            <td><%= f.collection_select(:second_child_id, @second_childs, :id, :name, {}, { class: 'select2' }) %></td>
+                            <td><%= f.collection_select(:child_ids, @second_childs, :id, :name, {}, { class: 'select2' }) %></td>
                         </tr>
                     </tbody>
                 </table>
