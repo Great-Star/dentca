@@ -36,11 +36,20 @@ Spree::Admin::OptionTypesController.class_eval do
     def load_types
         @type_values=[]
 
-        Spree::OptionType.all.each do |ot|
-            if ot.id != @option_type.id && ot.option_case.name != "Selection"
-                @type_values << ot
-            end
+        @type_values = Spree::OptionType.all.reject{|type| 
+            type.option_case.name != "Selection"
+        }
+
+        if !@option_type.first_child_id
+            @option_type.first_child_id = @type_values[0].id
         end
+        
+        @second_childs = Spree::OptionType.all.reject{|type|
+            type.option_case.name == "Selection" ||
+            type.option_case.name == "Option Select" ||
+            type.option_case.name == "Option Group"
+        }
+
     end
 
     def value_index_includes
@@ -51,12 +60,10 @@ Spree::Admin::OptionTypesController.class_eval do
 
     private
         def save_child_ids
-            Rails.logger.warn "**************PARAM*-#{params[:option_type][:child_ids]}--*******************************"
             if params[:option_type][:child_ids].present?
                 params[:option_type][:child_ids] = params[:option_type][:child_ids].split(',')
             end
         end
-
     protected
         def location_after_save
             

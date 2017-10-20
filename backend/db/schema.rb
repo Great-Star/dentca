@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017202514) do
+ActiveRecord::Schema.define(version: 20171020051312) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -294,7 +294,6 @@ ActiveRecord::Schema.define(version: 20171017202514) do
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
     t.boolean  "comment",                           default: false
-    t.integer  "spree_option_case_id"
     t.string   "description"
     t.boolean  "mandatory",                         default: false
     t.string   "image_file_name"
@@ -302,17 +301,17 @@ ActiveRecord::Schema.define(version: 20171017202514) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "parent_option_type_id"
-    t.integer  "child_one_id"
-    t.integer  "child_two_id"
     t.integer  "parent_id"
     t.integer  "option_case_id"
+    t.integer  "first_child_id"
+    t.integer  "second_child_id"
+    t.integer  "show_option_value"
   end
 
   add_index "spree_option_types", ["name"], name: "index_spree_option_types_on_name"
   add_index "spree_option_types", ["option_case_id"], name: "index_spree_option_types_on_option_case_id"
   add_index "spree_option_types", ["parent_id"], name: "index_spree_option_types_on_parent_id"
   add_index "spree_option_types", ["position"], name: "index_spree_option_types_on_position"
-  add_index "spree_option_types", ["spree_option_case_id"], name: "index_spree_option_types_on_spree_option_case_id"
 
   create_table "spree_option_value_variants", force: :cascade do |t|
     t.integer "variant_id"
