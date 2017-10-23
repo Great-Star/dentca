@@ -1,4 +1,4 @@
-webpackJsonp([15],{
+webpackJsonp([16],{
 
 /***/ "../../../../../src/$$_gendir async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -6,70 +6,72 @@ webpackJsonp([15],{
 var map = {
 	"./aboutus/aboutus.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/aboutus/aboutus.module.ngfactory.ts",
-		14
+		15
 	],
 	"./auth/auth.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/auth/auth.module.ngfactory.ts",
-		3
+		4
 	],
 	"./blog/blog.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/blog.module.ngfactory.ts",
-		13
+		14
 	],
 	"./checkout/checkout.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/checkout/checkout.module.ngfactory.ts",
-		1
+		2
 	],
 	"./dashboard/dashboard.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/dashboard/dashboard.module.ngfactory.ts",
-		5
+		6
 	],
 	"./dentca-3d/dentca-3d.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/dentca-3d/dentca-3d.module.ngfactory.ts",
-		12
+		13
 	],
 	"./doctors/doctors.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/doctors/doctors.module.ngfactory.ts",
-		11
+		12
 	],
 	"./home/index.ngfactory": [
 		"../../../../../src/$$_gendir/app/home/index.ngfactory.ts",
-		4
+		5
 	],
 	"./news/news.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/news/news.module.ngfactory.ts",
-		10
+		11
 	],
 	"./order/order.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/order/order.module.ngfactory.ts",
-		9
+		10
 	],
 	"./product/index.ngfactory": [
 		"../../../../../src/$$_gendir/app/product/index.ngfactory.ts",
-		0
+		0,
+		1
 	],
 	"./products/products.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/products/products.module.ngfactory.ts",
-		8
+		9
 	],
 	"./resources/resources.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/resources/resources.module.ngfactory.ts",
-		7
+		8
 	],
 	"./user/index.ngfactory": [
 		"../../../../../src/$$_gendir/app/user/index.ngfactory.ts",
-		2
+		3,
+		0
 	],
 	"./welcome/welcome.module.ngfactory": [
 		"../../../../../src/$$_gendir/app/blog/welcome/welcome.module.ngfactory.ts",
-		6
+		7
 	]
 };
 function webpackAsyncContext(req) {
 	var ids = map[req];
 	if(!ids)
 		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(ids[0]);
 	});
 };
@@ -384,15 +386,15 @@ var AppComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_118__app_core_services_http__ = __webpack_require__("../../../../../src/app/core/services/http.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_119__app_core_index__ = __webpack_require__("../../../../../src/app/core/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__ = __webpack_require__("../../../../../src/app/auth/actions/auth.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_121__app_core_services_auth_service__ = __webpack_require__("../../../../../src/app/core/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_122__app_auth_effects_auth_effects__ = __webpack_require__("../../../../../src/app/auth/effects/auth.effects.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_123__app_core_services_product_service__ = __webpack_require__("../../../../../src/app/core/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_124__app_product_actions_product_actions__ = __webpack_require__("../../../../../src/app/product/actions/product-actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_125__app_product_effects_product_effects__ = __webpack_require__("../../../../../src/app/product/effects/product.effects.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_126__app_checkout_actions_checkout_actions__ = __webpack_require__("../../../../../src/app/checkout/actions/checkout.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_127__app_core_services_checkout_service__ = __webpack_require__("../../../../../src/app/core/services/checkout.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_128__app_checkout_effects_checkout_effects__ = __webpack_require__("../../../../../src/app/checkout/effects/checkout.effects.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_129__app_user_actions_user_actions__ = __webpack_require__("../../../../../src/app/user/actions/user.actions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_121__app_user_actions_user_actions__ = __webpack_require__("../../../../../src/app/user/actions/user.actions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_122__app_core_services_auth_service__ = __webpack_require__("../../../../../src/app/core/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_123__app_auth_effects_auth_effects__ = __webpack_require__("../../../../../src/app/auth/effects/auth.effects.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_124__app_core_services_product_service__ = __webpack_require__("../../../../../src/app/core/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_125__app_product_actions_product_actions__ = __webpack_require__("../../../../../src/app/product/actions/product-actions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_126__app_product_effects_product_effects__ = __webpack_require__("../../../../../src/app/product/effects/product.effects.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_127__app_checkout_actions_checkout_actions__ = __webpack_require__("../../../../../src/app/checkout/actions/checkout.actions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_128__app_core_services_checkout_service__ = __webpack_require__("../../../../../src/app/core/services/checkout.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_129__app_checkout_effects_checkout_effects__ = __webpack_require__("../../../../../src/app/checkout/effects/checkout.effects.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_130__app_user_services_user_service__ = __webpack_require__("../../../../../src/app/user/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_131__app_user_effects_user_effects__ = __webpack_require__("../../../../../src/app/user/effects/user.effects.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_132__ngrx_effects_src_effects_module__ = __webpack_require__("../../../../@ngrx/effects/src/effects.module.js");
@@ -683,19 +685,20 @@ var AppModuleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵcmf"](__
             __WEBPACK_IMPORTED_MODULE_115__ngrx_store_devtools_src_config__["b" /* STORE_DEVTOOLS_CONFIG */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](1024, __WEBPACK_IMPORTED_MODULE_116__ngrx_store_src_state__["a" /* State */], __WEBPACK_IMPORTED_MODULE_113__ngrx_store_devtools_src_instrument__["d" /* _createState */], [__WEBPACK_IMPORTED_MODULE_110__ngrx_store_devtools_src_devtools__["b" /* StoreDevtools */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](1024, __WEBPACK_IMPORTED_MODULE_63__ngrx_store_src_store__["a" /* Store */], __WEBPACK_IMPORTED_MODULE_101__ngrx_store_src_ng2__["h" /* _storeFactory */], [__WEBPACK_IMPORTED_MODULE_109__ngrx_store_src_dispatcher__["a" /* Dispatcher */],
             __WEBPACK_IMPORTED_MODULE_112__ngrx_store_src_reducer__["a" /* Reducer */], __WEBPACK_IMPORTED_MODULE_116__ngrx_store_src_state__["a" /* State */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */], __WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */], [__WEBPACK_IMPORTED_MODULE_109__ngrx_store_src_dispatcher__["a" /* Dispatcher */]]),
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_48__angular_http__["f" /* BrowserXhr */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["f" /* BrowserXhr */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_48__angular_http__["g" /* ResponseOptions */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["h" /* BaseResponseOptions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](1024, __WEBPACK_IMPORTED_MODULE_48__angular_http__["i" /* XSRFStrategy */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["j" /* ɵb */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_48__angular_http__["c" /* XHRBackend */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["c" /* XHRBackend */], [__WEBPACK_IMPORTED_MODULE_48__angular_http__["f" /* BrowserXhr */],
-            __WEBPACK_IMPORTED_MODULE_48__angular_http__["g" /* ResponseOptions */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["i" /* XSRFStrategy */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_48__angular_http__["d" /* RequestOptions */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["k" /* BaseRequestOptions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](1024, __WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_119__app_core_index__["a" /* httpInterceptor */], [__WEBPACK_IMPORTED_MODULE_48__angular_http__["c" /* XHRBackend */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["d" /* RequestOptions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__["a" /* AuthActions */], __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__["a" /* AuthActions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_121__app_core_services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_121__app_core_services_auth_service__["a" /* AuthService */], [__WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__["a" /* AuthActions */], __WEBPACK_IMPORTED_MODULE_63__ngrx_store_src_store__["a" /* Store */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_122__app_auth_effects_auth_effects__["a" /* AuthenticationEffects */], __WEBPACK_IMPORTED_MODULE_122__app_auth_effects_auth_effects__["a" /* AuthenticationEffects */], [__WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */],
-            __WEBPACK_IMPORTED_MODULE_121__app_core_services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__["a" /* AuthActions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_123__app_core_services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_123__app_core_services_product_service__["a" /* ProductService */], [__WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_124__app_product_actions_product_actions__["a" /* ProductActions */], __WEBPACK_IMPORTED_MODULE_124__app_product_actions_product_actions__["a" /* ProductActions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_125__app_product_effects_product_effects__["a" /* ProductEffects */], __WEBPACK_IMPORTED_MODULE_125__app_product_effects_product_effects__["a" /* ProductEffects */], [__WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */], __WEBPACK_IMPORTED_MODULE_123__app_core_services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_124__app_product_actions_product_actions__["a" /* ProductActions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_126__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */], __WEBPACK_IMPORTED_MODULE_126__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_127__app_core_services_checkout_service__["a" /* CheckoutService */], __WEBPACK_IMPORTED_MODULE_127__app_core_services_checkout_service__["a" /* CheckoutService */], [__WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_126__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */],
-            __WEBPACK_IMPORTED_MODULE_63__ngrx_store_src_store__["a" /* Store */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_128__app_checkout_effects_checkout_effects__["a" /* CheckoutEffects */], __WEBPACK_IMPORTED_MODULE_128__app_checkout_effects_checkout_effects__["a" /* CheckoutEffects */], [__WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */], __WEBPACK_IMPORTED_MODULE_127__app_core_services_checkout_service__["a" /* CheckoutService */], __WEBPACK_IMPORTED_MODULE_126__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_129__app_user_actions_user_actions__["a" /* UserActions */], __WEBPACK_IMPORTED_MODULE_129__app_user_actions_user_actions__["a" /* UserActions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_130__app_user_services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_130__app_user_services_user_service__["a" /* UserService */], [__WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_129__app_user_actions_user_actions__["a" /* UserActions */], __WEBPACK_IMPORTED_MODULE_63__ngrx_store_src_store__["a" /* Store */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_131__app_user_effects_user_effects__["a" /* UserEffects */], __WEBPACK_IMPORTED_MODULE_131__app_user_effects_user_effects__["a" /* UserEffects */], [__WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */], __WEBPACK_IMPORTED_MODULE_130__app_user_services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_129__app_user_actions_user_actions__["a" /* UserActions */]]),
-        __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](1024, __WEBPACK_IMPORTED_MODULE_59__ngrx_effects_src_effects_subscription__["b" /* effects */], function (p0_0, p1_0, p2_0, p3_0) {
+            __WEBPACK_IMPORTED_MODULE_48__angular_http__["g" /* ResponseOptions */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["i" /* XSRFStrategy */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_48__angular_http__["d" /* RequestOptions */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["k" /* BaseRequestOptions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](1024, __WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_119__app_core_index__["a" /* httpInterceptor */], [__WEBPACK_IMPORTED_MODULE_48__angular_http__["c" /* XHRBackend */], __WEBPACK_IMPORTED_MODULE_48__angular_http__["d" /* RequestOptions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__["a" /* AuthActions */], __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__["a" /* AuthActions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_121__app_user_actions_user_actions__["a" /* UserActions */], __WEBPACK_IMPORTED_MODULE_121__app_user_actions_user_actions__["a" /* UserActions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_122__app_core_services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_122__app_core_services_auth_service__["a" /* AuthService */], [__WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__["a" /* AuthActions */], __WEBPACK_IMPORTED_MODULE_63__ngrx_store_src_store__["a" /* Store */], __WEBPACK_IMPORTED_MODULE_121__app_user_actions_user_actions__["a" /* UserActions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_123__app_auth_effects_auth_effects__["a" /* AuthenticationEffects */], __WEBPACK_IMPORTED_MODULE_123__app_auth_effects_auth_effects__["a" /* AuthenticationEffects */], [__WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */],
+            __WEBPACK_IMPORTED_MODULE_122__app_core_services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_120__app_auth_actions_auth_actions__["a" /* AuthActions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_124__app_core_services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_124__app_core_services_product_service__["a" /* ProductService */], [__WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_125__app_product_actions_product_actions__["a" /* ProductActions */], __WEBPACK_IMPORTED_MODULE_125__app_product_actions_product_actions__["a" /* ProductActions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_126__app_product_effects_product_effects__["a" /* ProductEffects */], __WEBPACK_IMPORTED_MODULE_126__app_product_effects_product_effects__["a" /* ProductEffects */], [__WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */], __WEBPACK_IMPORTED_MODULE_124__app_core_services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_125__app_product_actions_product_actions__["a" /* ProductActions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_127__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */], __WEBPACK_IMPORTED_MODULE_127__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_128__app_core_services_checkout_service__["a" /* CheckoutService */], __WEBPACK_IMPORTED_MODULE_128__app_core_services_checkout_service__["a" /* CheckoutService */], [__WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_127__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */],
+            __WEBPACK_IMPORTED_MODULE_63__ngrx_store_src_store__["a" /* Store */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_129__app_checkout_effects_checkout_effects__["a" /* CheckoutEffects */], __WEBPACK_IMPORTED_MODULE_129__app_checkout_effects_checkout_effects__["a" /* CheckoutEffects */], [__WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */], __WEBPACK_IMPORTED_MODULE_128__app_core_services_checkout_service__["a" /* CheckoutService */], __WEBPACK_IMPORTED_MODULE_127__app_checkout_actions_checkout_actions__["a" /* CheckoutActions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_130__app_user_services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_130__app_user_services_user_service__["a" /* UserService */], [__WEBPACK_IMPORTED_MODULE_118__app_core_services_http__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_121__app_user_actions_user_actions__["a" /* UserActions */],
+            __WEBPACK_IMPORTED_MODULE_63__ngrx_store_src_store__["a" /* Store */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_131__app_user_effects_user_effects__["a" /* UserEffects */], __WEBPACK_IMPORTED_MODULE_131__app_user_effects_user_effects__["a" /* UserEffects */], [__WEBPACK_IMPORTED_MODULE_117__ngrx_effects_src_actions__["a" /* Actions */],
+            __WEBPACK_IMPORTED_MODULE_130__app_user_services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_121__app_user_actions_user_actions__["a" /* UserActions */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](1024, __WEBPACK_IMPORTED_MODULE_59__ngrx_effects_src_effects_subscription__["b" /* effects */], function (p0_0, p1_0, p2_0, p3_0) {
             return [p0_0, p1_0, p2_0, p3_0];
-        }, [__WEBPACK_IMPORTED_MODULE_122__app_auth_effects_auth_effects__["a" /* AuthenticationEffects */], __WEBPACK_IMPORTED_MODULE_125__app_product_effects_product_effects__["a" /* ProductEffects */], __WEBPACK_IMPORTED_MODULE_128__app_checkout_effects_checkout_effects__["a" /* CheckoutEffects */], __WEBPACK_IMPORTED_MODULE_131__app_user_effects_user_effects__["a" /* UserEffects */]]),
+        }, [__WEBPACK_IMPORTED_MODULE_123__app_auth_effects_auth_effects__["a" /* AuthenticationEffects */], __WEBPACK_IMPORTED_MODULE_126__app_product_effects_product_effects__["a" /* ProductEffects */], __WEBPACK_IMPORTED_MODULE_129__app_checkout_effects_checkout_effects__["a" /* CheckoutEffects */], __WEBPACK_IMPORTED_MODULE_131__app_user_effects_user_effects__["a" /* UserEffects */]]),
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](131584, __WEBPACK_IMPORTED_MODULE_59__ngrx_effects_src_effects_subscription__["a" /* EffectsSubscription */], __WEBPACK_IMPORTED_MODULE_59__ngrx_effects_src_effects_subscription__["a" /* EffectsSubscription */], [__WEBPACK_IMPORTED_MODULE_63__ngrx_store_src_store__["a" /* Store */],
             [3, __WEBPACK_IMPORTED_MODULE_59__ngrx_effects_src_effects_subscription__["a" /* EffectsSubscription */]], [2, __WEBPACK_IMPORTED_MODULE_59__ngrx_effects_src_effects_subscription__["b" /* effects */]]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_132__ngrx_effects_src_effects_module__["a" /* EffectsModule */], __WEBPACK_IMPORTED_MODULE_132__ngrx_effects_src_effects_module__["a" /* EffectsModule */], [__WEBPACK_IMPORTED_MODULE_59__ngrx_effects_src_effects_subscription__["a" /* EffectsSubscription */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_119__app_core_index__["b" /* CoreModule */], __WEBPACK_IMPORTED_MODULE_119__app_core_index__["b" /* CoreModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_133__app_blog_welcome_welcome_module__["a" /* WelcomeModule */], __WEBPACK_IMPORTED_MODULE_133__app_blog_welcome_welcome_module__["a" /* WelcomeModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_134__app_blog_resources_resources_module__["a" /* ResourcesModule */], __WEBPACK_IMPORTED_MODULE_134__app_blog_resources_resources_module__["a" /* ResourcesModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_135__app_blog_aboutus_aboutus_module__["a" /* AboutusModule */], __WEBPACK_IMPORTED_MODULE_135__app_blog_aboutus_aboutus_module__["a" /* AboutusModule */], []),
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_136__app_blog_news_news_module__["a" /* NewsModule */], __WEBPACK_IMPORTED_MODULE_136__app_blog_news_news_module__["a" /* NewsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_137__app_blog_dentca_3d_dentca_3d_module__["a" /* Dentca3dModule */], __WEBPACK_IMPORTED_MODULE_137__app_blog_dentca_3d_dentca_3d_module__["a" /* Dentca3dModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_138__app_blog_doctors_doctors_module__["a" /* DoctorsModule */], __WEBPACK_IMPORTED_MODULE_138__app_blog_doctors_doctors_module__["a" /* DoctorsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_139__app_blog_products_products_module__["a" /* ProductsModule */], __WEBPACK_IMPORTED_MODULE_139__app_blog_products_products_module__["a" /* ProductsModule */], []),
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_140__app_blog_order_order_module__["a" /* OrderModule */], __WEBPACK_IMPORTED_MODULE_140__app_blog_order_order_module__["a" /* OrderModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_141__app_blog_blog_module__["a" /* BlogModule */], __WEBPACK_IMPORTED_MODULE_141__app_blog_blog_module__["a" /* BlogModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_46__angular_platform_browser_animations__["e" /* NoopAnimationsModule */], __WEBPACK_IMPORTED_MODULE_46__angular_platform_browser_animations__["e" /* NoopAnimationsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_113__ngrx_store_devtools_src_instrument__["e" /* StoreDevtoolsModule */], __WEBPACK_IMPORTED_MODULE_113__ngrx_store_devtools_src_instrument__["e" /* StoreDevtoolsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_1__app_app_module__["a" /* AppModule */], __WEBPACK_IMPORTED_MODULE_1__app_app_module__["a" /* AppModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](256, __WEBPACK_IMPORTED_MODULE_44__angular_material__["_22" /* MD_MENU_DEFAULT_OPTIONS */], { overlapTrigger: true,
             xPosition: 'after', yPosition: 'below' }, []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](256, __WEBPACK_IMPORTED_MODULE_142_ngx_bootstrap_dropdown_bs_dropdown_config__["a" /* BsDropdownConfig */], { autoClose: true }, [])]);
 });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvYXBwLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L2RlbnRjYXdlYi9mcm9udGVuZC9zcmMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvYXBwLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L2RlbnRjYXdlYi9mcm9udGVuZC9zcmMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
 //# sourceMappingURL=app.module.ngfactory.js.map
 
 /***/ }),
@@ -7070,7 +7073,9 @@ var CoreModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__http__ = __webpack_require__("../../../../../src/app/core/services/http.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_actions_auth_actions__ = __webpack_require__("../../../../../src/app/auth/actions/auth.actions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__user_actions_user_actions__ = __webpack_require__("../../../../../src/app/user/actions/user.actions.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+
 
 
 
@@ -7083,10 +7088,11 @@ var AuthService = (function () {
      *
      * @memberof AuthService
      */
-    function AuthService(http, actions, store) {
+    function AuthService(http, actions, store, userActions) {
         this.http = http;
         this.actions = actions;
         this.store = store;
+        this.userActions = userActions;
     }
     /**
      *
@@ -7105,6 +7111,7 @@ var AuthService = (function () {
                 console.log(res.json());
                 _this.setTokenInLocalStorage(data);
                 _this.store.dispatch(_this.actions.loginSuccess());
+                _this.store.dispatch(_this.userActions.getUser());
             }
             else {
                 _this.http.loading.next({
@@ -7139,6 +7146,7 @@ var AuthService = (function () {
                 // Setting token after login
                 _this.setTokenInLocalStorage(res.json());
                 _this.store.dispatch(_this.actions.loginSuccess());
+                _this.store.dispatch(_this.userActions.getUser());
             }
             else {
                 _this.http.loading.next({
@@ -7184,6 +7192,7 @@ var AuthService = (function () {
             // Setting token after login
             localStorage.removeItem('user');
             _this.store.dispatch(_this.actions.logoutSuccess());
+            _this.store.dispatch(_this.userActions.logoutUser());
             return res.json();
         });
     };
@@ -7228,7 +7237,7 @@ var AuthService = (function () {
         var jsonData = JSON.stringify(user_data);
         localStorage.setItem('user', jsonData);
     };
-    AuthService.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_0__http__["a" /* HttpService */] }, { type: __WEBPACK_IMPORTED_MODULE_2__auth_actions_auth_actions__["a" /* AuthActions */] }, { type: __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["a" /* Store */] }]; };
+    AuthService.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_0__http__["a" /* HttpService */] }, { type: __WEBPACK_IMPORTED_MODULE_2__auth_actions_auth_actions__["a" /* AuthActions */] }, { type: __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["a" /* Store */] }, { type: __WEBPACK_IMPORTED_MODULE_3__user_actions_user_actions__["a" /* UserActions */] }]; };
     return AuthService;
 }());
 
@@ -8200,7 +8209,7 @@ var FilterPipe = (function () {
                 if (priceSet == set.id)
                     productPresent2 = true;
             });
-            if (priceSet == undefined)
+            if (priceSet == undefined || priceSet == 1)
                 productPresent2 = true;
             return productPresent && productPresent2;
         });
@@ -8632,8 +8641,10 @@ var HeaderComponent = (function () {
         this.isAuthenticated = this.store.select(__WEBPACK_IMPORTED_MODULE_4__auth_reducers_selectors__["a" /* getAuthStatus */]);
         this.totalCartItems = this.store.select(__WEBPACK_IMPORTED_MODULE_2__checkout_reducers_selectors__["c" /* getTotalCartItems */]);
         this.isAuthenticated.subscribe(function (res) {
-            if (res == true)
+            if (res == true) {
+                _this.store.dispatch(_this.userActions.getUser());
                 _this.store.dispatch(_this.userActions.getUserOrders());
+            }
         });
     };
     HeaderComponent.prototype.selectTaxon = function (taxon) {
@@ -8991,6 +9002,9 @@ var UserActions = (function () {
     UserActions.prototype.getUserSuccess = function (user) {
         return { type: UserActions.GET_CURRENT_USER_SUCCESS, payload: user };
     };
+    UserActions.prototype.logoutUser = function () {
+        return { type: UserActions.LOGOUT_USER };
+    };
     return UserActions;
 }());
 
@@ -8998,6 +9012,7 @@ UserActions.GET_USER_ORDERS = 'GET_USER_ORDERS';
 UserActions.GET_USER_ORDERS_SUCCESS = 'GET_USER_ORDERS_SUCCESS';
 UserActions.GET_CURRENT_USER = 'GET_CURRENT_USER';
 UserActions.GET_CURRENT_USER_SUCCESS = 'GET_CURRENT_USER_SUCCESS';
+UserActions.LOGOUT_USER = 'LOGOUT_USER';
 //# sourceMappingURL=user.actions.js.map
 
 /***/ }),
@@ -9076,11 +9091,11 @@ var userReducer = function (state, _a) {
     var type = _a.type, payload = _a.payload;
     switch (type) {
         case __WEBPACK_IMPORTED_MODULE_1__actions_user_actions__["a" /* UserActions */].GET_USER_ORDERS_SUCCESS:
-            console.log("current state", type, payload);
             return state.merge({ orders: payload });
         case __WEBPACK_IMPORTED_MODULE_1__actions_user_actions__["a" /* UserActions */].GET_CURRENT_USER_SUCCESS:
-            console.log("current state", type, payload);
             return state.merge({ user: payload });
+        case __WEBPACK_IMPORTED_MODULE_1__actions_user_actions__["a" /* UserActions */].LOGOUT_USER:
+            return initialState;
         default:
             return state;
     }

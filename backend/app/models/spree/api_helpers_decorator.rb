@@ -13,6 +13,7 @@ Spree::Api::ApiHelpers.class_eval do
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:child_ids))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:parent_id))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:show_option_value))
+  class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:hide_option_value))
 
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:adj_sku))
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:spree_product_variant_types))

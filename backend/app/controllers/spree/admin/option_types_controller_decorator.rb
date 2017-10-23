@@ -49,7 +49,6 @@ Spree::Admin::OptionTypesController.class_eval do
             type.option_case.name == "Option Select" ||
             type.option_case.name == "Option Group"
         }
-
     end
 
     def value_index_includes
@@ -62,6 +61,10 @@ Spree::Admin::OptionTypesController.class_eval do
         def save_child_ids
             if params[:option_type][:child_ids].present?
                 params[:option_type][:child_ids] = params[:option_type][:child_ids].split(',')
+            end
+
+            if params[:option_type][:second_child_id]
+                params[:option_type][:child_ids] = [params[:option_type][:second_child_id]]
             end
         end
     protected
@@ -77,5 +80,4 @@ Spree::Admin::OptionTypesController.class_eval do
                 admin_option_types_url
             end
         end
-
 end

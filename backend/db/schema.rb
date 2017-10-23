@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020051312) do
+ActiveRecord::Schema.define(version: 20171022144740) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -306,6 +306,7 @@ ActiveRecord::Schema.define(version: 20171020051312) do
     t.integer  "first_child_id"
     t.integer  "second_child_id"
     t.integer  "show_option_value"
+    t.integer  "hide_option_value"
   end
 
   add_index "spree_option_types", ["name"], name: "index_spree_option_types_on_name"

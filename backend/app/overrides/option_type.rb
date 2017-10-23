@@ -117,7 +117,7 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
 Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
     :name => "add_local_variable",
     :insert_before => "erb[loud]:contains('form_for')",
-    :text => "<% t_or_v = 'ca' %>")
+    :text => "<% t_or_v = 'va' %>")
 
 Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
     :name => "child_option_types_if_select_options",
@@ -139,14 +139,21 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
                                 <span id='<%= t_or_v %>type'>     
                                     <%= f.collection_select :first_child_id, @type_values, :id, :name, {}, { class: 'select2' } %></td>
                                 </span>
+                            </td>
                             <td>
-                                <span id='<%= t_or_v %>value'> 
-                                    <%= f.collection_select :show_option_value, Spree::OptionType.find(@option_type.first_child_id).option_values, :id, :name, {}, { class: 'select2' } %></td>
+                                <span id='<%= t_or_v %>value1'> 
+                                    <%= f.collection_select :show_option_value, Spree::OptionType.find(@option_type.first_child_id).option_values, :id, :name, { include_blank: true }, { class: 'select2' } %></td>
                                 </span>
+                            </td>
+                            <td>
+                                <span id='<%= t_or_v %>value2'> 
+                                    <%= f.collection_select :hide_option_value, Spree::OptionType.find(@option_type.first_child_id).option_values, :id, :name, { include_blank: true }, { class: 'select2' } %></td>
+                                </span>
+                            </td>
                         </tr>                        
                         <tr>
                             <td><%= Spree.t(:second_option) %></td>
-                            <td><%= f.collection_select(:child_ids, @second_childs, :id, :name, {}, { class: 'select2' }) %></td>
+                            <td><%= f.collection_select :second_child_id, @second_childs, :id, :name, {}, { class: 'select2' } %></td>
                         </tr>
                     </tbody>
                 </table>
@@ -154,7 +161,9 @@ Deface::Override.new(:virtual_path => "spree/admin/option_types/edit",
             <% content_for :head do %>
                 <%= javascript_tag do %>
                     $(document).ready(function(){
-                    $('span#<%= t_or_v %>type .select2').on('change', function() { update_value('<%= t_or_v %>'); });
+                        $('span#<%= t_or_v %>type .select2').on('change', function() { update_value('<%= t_or_v %>'); });
+                        $('span#<%= t_or_v %>value1 .select2').on('select2-selecting', function(e) { update_hide_value('<%= t_or_v %>'); });
+                        $('span#<%= t_or_v %>value2 .select2').on('select2-selecting', function(e) { update_show_value('<%= t_or_v %>'); });
                     });
                 <% end %>
             <% end %>")     
