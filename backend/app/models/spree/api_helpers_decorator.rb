@@ -2,8 +2,7 @@ Spree::Api::ApiHelpers.class_eval do
   
   #Add description and option case to option type
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:description))
-  # class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:spree_option_case_id))
-  class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:option_case))
+  class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:option_case_id))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:mandatory))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:image))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:children))

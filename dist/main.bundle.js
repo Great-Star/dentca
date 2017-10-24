@@ -7741,6 +7741,18 @@ var ProductService = (function () {
         return this.http.get("/spree/api/v1/products")
             .map(function (res) { return res.json(); });
     };
+    /**
+     *
+     *
+     * @returns {*}
+     *
+     * @memberof ProductService
+     */
+    ProductService.prototype.getOptionCases = function () {
+        console.log("getting options");
+        return this.http.get('api/option_cases')
+            .map(function (res) { return res.json(); });
+    };
     ProductService.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_0__http__["a" /* HttpService */] }]; };
     return ProductService;
 }());
@@ -7772,7 +7784,7 @@ var VariantParserService = (function () {
                     Object.assign(childOption, _this.makeOptionHash(childOption, optionType.children, parentOptions));
                 }
                 innerOption[optionType.name] = Object.assign({}, {
-                    optionCase: optionType.option_case.name,
+                    optionCase: optionType.option_case_id,
                     childOptions: childOption
                 });
             }
@@ -7781,7 +7793,7 @@ var VariantParserService = (function () {
                 var option = _this.getValidateOption(optionType, parentOptions);
                 if (option)
                     innerOption[option.name] = Object.assign({}, {
-                        optionCase: option.option_case.name,
+                        optionCase: option.option_case_id,
                         childOptions: {}
                     });
             }
@@ -8122,12 +8134,7 @@ var DashboardComponent = (function () {
         this.store.dispatch(this.authActions.authorize());
         this.isAuthenticated = this.store.select(__WEBPACK_IMPORTED_MODULE_4__auth_reducers_selectors__["a" /* getAuthStatus */]);
         console.log("isAuthenticated", this.isAuthenticated);
-        // if (isAuthenticated)
-        // window.location.href='http://34.211.157.52:3000/spree/admin';
         window.location.href = this.httpService.getFullUrl('spree/admin');
-        // window.location.href='http://localhost:3000/spree/admin';
-        // else 
-        //   this.router.navigateByUrl('/');
     };
     DashboardComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["a" /* Store */] }, { type: __WEBPACK_IMPORTED_MODULE_2__core_services_auth_service__["a" /* AuthService */] }, { type: __WEBPACK_IMPORTED_MODULE_1__auth_actions_auth_actions__["a" /* AuthActions */] }, { type: __WEBPACK_IMPORTED_MODULE_3__core_services_http__["a" /* HttpService */] }, { type: __WEBPACK_IMPORTED_MODULE_5__angular_router__["d" /* Router */] }]; };
     return DashboardComponent;
@@ -8209,7 +8216,7 @@ var FilterPipe = (function () {
                 if (priceSet == set.id)
                     productPresent2 = true;
             });
-            if (priceSet == undefined || priceSet == 1)
+            if (priceSet == 1)
                 productPresent2 = true;
             return productPresent && productPresent2;
         });
@@ -8308,6 +8315,7 @@ var HomeComponent = (function () {
         var _this = this;
         this.taxonId = [parseInt(this.route.snapshot.params['id'])];
         this.store.dispatch(this.actions.getAllProducts());
+        this.store.dispatch(this.actions.getAllOptionCases());
         this.products$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__product_reducers_selectors__["b" /* getProducts */]);
         if (localStorage.getItem('user')) {
             this.userService.getUser().subscribe(function (response) {
@@ -8740,6 +8748,15 @@ var ProductActions = (function () {
             payload: taxonomies
         };
     };
+    ProductActions.prototype.getAllOptionCases = function () {
+        return { type: ProductActions.GET_ALL_OPTION_CASES };
+    };
+    ProductActions.prototype.getAllOptionCasesSuccess = function (option_cases) {
+        return {
+            type: ProductActions.GET_ALL_OPTION_CASES_SUCCESS,
+            payload: option_cases
+        };
+    };
     return ProductActions;
 }());
 
@@ -8750,6 +8767,8 @@ ProductActions.GET_PRODUCT_DETAIL_SUCCESS = 'GET_PRODUCT_DETAIL_SUCCESS';
 ProductActions.CLEAR_SELECTED_PRODUCT = 'CLEAR_SELECTED_PRODUCT';
 ProductActions.GET_ALL_TAXONOMIES = 'GET_ALL_TAXONOMIES';
 ProductActions.GET_ALL_TAXONOMIES_SUCCESS = 'GET_ALL_TAXONOMIES_SUCCESS';
+ProductActions.GET_ALL_OPTION_CASES = 'GET_ALL_OPTION_CASES';
+ProductActions.GET_ALL_OPTION_CASES_SUCCESS = 'GET_ALL_OPTION_CASES_SUCCESS';
 //# sourceMappingURL=product-actions.js.map
 
 /***/ }),
@@ -8796,6 +8815,10 @@ var ProductEffects = (function () {
             .ofType(__WEBPACK_IMPORTED_MODULE_0__actions_product_actions__["a" /* ProductActions */].GET_PRODUCT_DETAIL)
             .switchMap(function (action) { return _this.productService.getProduct(action.payload); })
             .map(function (data) { return _this.productActions.getProductDetailSuccess(data); });
+        this.GetAllOptionCaes$ = this.actions$
+            .ofType(__WEBPACK_IMPORTED_MODULE_0__actions_product_actions__["a" /* ProductActions */].GET_ALL_OPTION_CASES)
+            .switchMap(function (action) { return _this.productService.getOptionCases(); })
+            .map(function (data) { return _this.productActions.getAllOptionCasesSuccess({ option_cases: data }); });
     }
     ProductEffects.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["a" /* Actions */] }, { type: __WEBPACK_IMPORTED_MODULE_3__core_services_product_service__["a" /* ProductService */] }, { type: __WEBPACK_IMPORTED_MODULE_0__actions_product_actions__["a" /* ProductActions */] }]; };
     return ProductEffects;
@@ -8813,7 +8836,11 @@ __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["b" /* Effect */])(),
     __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _c || Object)
 ], ProductEffects.prototype, "GetProductDetail$", void 0);
-var _a, _b, _c;
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["b" /* Effect */])(),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _d || Object)
+], ProductEffects.prototype, "GetAllOptionCaes$", void 0);
+var _a, _b, _c, _d;
 //# sourceMappingURL=product.effects.js.map
 
 /***/ }),
@@ -8855,6 +8882,12 @@ var productReducer = function (state, _a) {
             return state.merge({
                 taxonomies: _taxonomies
             });
+        case __WEBPACK_IMPORTED_MODULE_0__actions_product_actions__["a" /* ProductActions */].GET_ALL_OPTION_CASES_SUCCESS:
+            var _option_cases = payload.option_cases;
+            // console.log("option_case", payload)
+            return state.merge({
+                optionCases: _option_cases
+            });
         default:
             return state;
     }
@@ -8876,7 +8909,8 @@ var ProductStateRecord = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immut
     productEntities: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immutable__["Map"])({}),
     selectedProductId: null,
     selectedProduct: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immutable__["Map"])({}),
-    taxonomies: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immutable__["List"])([])
+    taxonomies: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immutable__["List"])([]),
+    optionCases: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immutable__["List"])([])
 });
 //# sourceMappingURL=product-state.js.map
 
@@ -8891,9 +8925,11 @@ var ProductStateRecord = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_immut
 /* unused harmony export getProductState */
 /* unused harmony export fetchProducts */
 /* unused harmony export fetchAllTaxonomies */
+/* unused harmony export fetchAllOptionCases */
 /* unused harmony export getSelectedProduct */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getProducts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getTaxonomies; });
+/* unused harmony export getOptionCases */
 
 // Base product state selector function
 function getProductState(state) {
@@ -8908,6 +8944,9 @@ function fetchProducts(state) {
 function fetchAllTaxonomies(state) {
     return state.taxonomies.toJS();
 }
+function fetchAllOptionCases(state) {
+    return state.optionCases.toJS();
+}
 var fetchSelectedProduct = function (state) {
     return state.selectedProduct;
 };
@@ -8915,6 +8954,7 @@ var fetchSelectedProduct = function (state) {
 var getSelectedProduct = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getProductState, fetchSelectedProduct);
 var getProducts = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getProductState, fetchProducts);
 var getTaxonomies = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getProductState, fetchAllTaxonomies);
+var getOptionCases = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getProductState, fetchAllOptionCases);
 //# sourceMappingURL=selectors.js.map
 
 /***/ }),

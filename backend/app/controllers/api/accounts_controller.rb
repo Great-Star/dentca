@@ -6,9 +6,11 @@ class Api::AccountsController < BaseController
   end
 
   def create
-    if !link_to_corporate_user
-      invalid_resource!(false)
-      return
+    if params.require(:spree_user)['user_type'] == "corporate user" 
+      if !link_to_corporate_user
+        invalid_resource!(false)
+        return
+      end
     end
 
     @user = Spree::User.create(spree_user_params)
@@ -69,7 +71,7 @@ private
         return corp.id
       end
     end
-    return false
+    return nil
   end
 
   def render_user

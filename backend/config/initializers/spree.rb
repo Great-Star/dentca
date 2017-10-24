@@ -19,7 +19,6 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
-# Spree::Store.current.name = "den"
 
 Spree::PrintInvoice::Config.set(logo_path: '/path/to/public/images/company-logo.png')
 Spree::PrintInvoice::Config.set( page_layout: :portrait, page_size: 'A4')
