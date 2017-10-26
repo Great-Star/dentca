@@ -15,7 +15,7 @@ $(document).ready(function () {
           ids: element.val(),
           token: Spree.api_key
         });
-        console.log("collback", element);
+        // console.log("collback", element);
         return $.getJSON(url, null, function (data) {
           return callback(data);
         });
@@ -33,8 +33,18 @@ $(document).ready(function () {
           };
         },
         results: function (data) {
+          let parseData = [];
+          for (let key in data){
+            if (data[key].option_case_id ==  2 ||
+                data[key].option_case_id == 5 ||
+                data[key].option_case_id == 4 || 
+                data[key].option_case_id == 6 ||
+                data[key].option_case_id == 7){
+              parseData.push(data[key]);
+            }
+          }
           return {
-            results: data
+            results: parseData
           };
         }
       },

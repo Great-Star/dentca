@@ -4,6 +4,8 @@ class SmallVariantSerializer < BaseSerializer
              :display_price, :options_text, :total_on_hand, :product_id,
              :images
 
+  # attributes :id, :price, :options_text, :product_id
+
   attributes :in_stock, :is_backorderable, :is_destroyed
 
   has_many :option_values, embed: :objects,

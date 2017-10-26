@@ -21,6 +21,7 @@ Spree::Api::ApiHelpers.class_eval do
 
   class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:order_info_id))
   class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:is_clone))
+  class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:option_values)) #?????
 
   class_variable_set(:@@line_item_attributes, class_variable_get(:@@line_item_attributes).push(:order_info))
   class_variable_set(:@@line_item_attributes, class_variable_get(:@@line_item_attributes).push(:adjust_order_number))
@@ -32,5 +33,8 @@ Spree::Api::ApiHelpers.class_eval do
   class_variable_set(:@@user_attributes, class_variable_get(:@@user_attributes).push(:corporate_account_id))
 
   class_variable_set(:@@order_attributes, class_variable_get(:@@order_attributes).push(:original_line_item))
+
+  class_variable_set(:@@taxon_attributes, class_variable_get(:@@taxon_attributes).push(:description))
+  class_variable_set(:@@taxon_attributes, class_variable_get(:@@taxon_attributes).push(:title))
 
 end

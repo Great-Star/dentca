@@ -12,8 +12,6 @@ module Api
         end
 
         def show
-            # @corporate_account = Spree::CorporateAccount.find(1)
-            # render_corp_account
         end
 
         private

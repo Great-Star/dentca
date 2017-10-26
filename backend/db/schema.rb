@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022144740) do
+ActiveRecord::Schema.define(version: 20171026023614) do
 
   create_table "comment_options", force: :cascade do |t|
     t.string   "name"
@@ -63,16 +63,6 @@ ActiveRecord::Schema.define(version: 20171022144740) do
   add_index "spree_addresses", ["firstname"], name: "index_addresses_on_firstname"
   add_index "spree_addresses", ["lastname"], name: "index_addresses_on_lastname"
   add_index "spree_addresses", ["state_id"], name: "index_spree_addresses_on_state_id"
-
-  create_table "spree_adjust_order_line_items", force: :cascade do |t|
-    t.integer  "spree_order_id"
-    t.integer  "spree_line_item_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-  end
-
-  add_index "spree_adjust_order_line_items", ["spree_line_item_id"], name: "index_spree_adjust_order_line_items_on_spree_line_item_id"
-  add_index "spree_adjust_order_line_items", ["spree_order_id"], name: "index_spree_adjust_order_line_items_on_spree_order_id"
 
   create_table "spree_adjustments", force: :cascade do |t|
     t.integer  "source_id"
@@ -257,6 +247,7 @@ ActiveRecord::Schema.define(version: 20171022144740) do
     t.decimal  "pre_tax_amount",               precision: 12, scale: 4, default: 0.0, null: false
     t.decimal  "taxable_adjustment_total",     precision: 10, scale: 2, default: 0.0, null: false
     t.decimal  "non_taxable_adjustment_total", precision: 10, scale: 2, default: 0.0, null: false
+    t.string   "adjust_order_number"
   end
 
   add_index "spree_line_items", ["order_id"], name: "index_spree_line_items_on_order_id"
@@ -294,6 +285,7 @@ ActiveRecord::Schema.define(version: 20171022144740) do
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
     t.boolean  "comment",                           default: false
+    t.integer  "spree_option_case_id"
     t.string   "description"
     t.boolean  "mandatory",                         default: false
     t.string   "image_file_name"
@@ -313,6 +305,7 @@ ActiveRecord::Schema.define(version: 20171022144740) do
   add_index "spree_option_types", ["option_case_id"], name: "index_spree_option_types_on_option_case_id"
   add_index "spree_option_types", ["parent_id"], name: "index_spree_option_types_on_parent_id"
   add_index "spree_option_types", ["position"], name: "index_spree_option_types_on_position"
+  add_index "spree_option_types", ["spree_option_case_id"], name: "index_spree_option_types_on_spree_option_case_id"
 
   create_table "spree_option_value_variants", force: :cascade do |t|
     t.integer "variant_id"
@@ -1125,6 +1118,7 @@ ActiveRecord::Schema.define(version: 20171022144740) do
     t.string   "meta_description"
     t.string   "meta_keywords"
     t.integer  "depth"
+    t.string   "title"
   end
 
   add_index "spree_taxons", ["lft"], name: "index_spree_taxons_on_lft"

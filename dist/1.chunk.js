@@ -149,12 +149,12 @@ function View_ProductDetailPageComponent_0(_l) {
     }, null);
 }
 function View_ProductDetailPageComponent_Host_0(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-detail-page', [], null, null, null, View_ProductDetailPageComponent_0, RenderType_ProductDetailPageComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](245760, null, 0, __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_detail_page_component__["a" /* ProductDetailPageComponent */], [__WEBPACK_IMPORTED_MODULE_12__app_core_services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_9__angular_router__["e" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_13__app_user_services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_8__ngrx_store_src_store__["a" /* Store */]], null, null)], function (_ck, _v) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-detail-page', [], null, null, null, View_ProductDetailPageComponent_0, RenderType_ProductDetailPageComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](245760, null, 0, __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_detail_page_component__["a" /* ProductDetailPageComponent */], [__WEBPACK_IMPORTED_MODULE_12__app_core_services_product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_9__angular_router__["e" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_13__app_user_services_user_service__["a" /* UserService */]], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
     }, null);
 }
 var ProductDetailPageComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-detail-page', __WEBPACK_IMPORTED_MODULE_11__app_product_components_product_detail_page_product_detail_page_component__["a" /* ProductDetailPageComponent */], View_ProductDetailPageComponent_Host_0, {}, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LWRldGFpbC1wYWdlLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQudHMuUHJvZHVjdERldGFpbFBhZ2VDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICpuZ0lmPVwicHJvZHVjdCQgIT0gbnVsbCAmJiBjdXJyZW50VXNlciQgIT0gbnVsbFwiPlxyXG4gIDxhcHAtcHJvZHVjdC1kZXRhaWxzIFtwcm9kdWN0XT1cInByb2R1Y3QkXCIgW3VzZXJdPVwiY3VycmVudFVzZXIkXCI+PC9hcHAtcHJvZHVjdC1kZXRhaWxzPlxyXG48L2Rpdj4iLCI8YXBwLXByb2R1Y3QtZGV0YWlsLXBhZ2U+PC9hcHAtcHJvZHVjdC1kZXRhaWwtcGFnZT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBLHdFQUFzRDthQUFBLDBCQUNwRDtNQUFBOzZFQUFBLFVBQUE7TUFBQTtrRUFBQTtVQUFBLGdDQUFzRjs7O1FBQWpFO1FBQXFCO1FBQTFDLFdBQXFCLFVBQXFCLFNBQTFDOzs7O29CQURGO01BQUEsMkNBQUE7b0JBQUE7O0lBQUs7SUFBTCxXQUFLLFNBQUw7Ozs7b0JDQUE7TUFBQTsyQ0FBQSxVQUFBO01BQUE7TUFBQTtJQUFBOzs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LWRldGFpbC1wYWdlLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWwtcGFnZS5jb21wb25lbnQudHMuUHJvZHVjdERldGFpbFBhZ2VDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICpuZ0lmPVwicHJvZHVjdCQgIT0gbnVsbCAmJiBjdXJyZW50VXNlciQgIT0gbnVsbFwiPlxyXG4gIDxhcHAtcHJvZHVjdC1kZXRhaWxzIFtwcm9kdWN0XT1cInByb2R1Y3QkXCIgW3VzZXJdPVwiY3VycmVudFVzZXIkXCI+PC9hcHAtcHJvZHVjdC1kZXRhaWxzPlxyXG48L2Rpdj4iLCI8YXBwLXByb2R1Y3QtZGV0YWlsLXBhZ2U+PC9hcHAtcHJvZHVjdC1kZXRhaWwtcGFnZT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBLHdFQUFzRDthQUFBLDBCQUNwRDtNQUFBOzZFQUFBLFVBQUE7TUFBQTtrRUFBQTtVQUFBLGdDQUFzRjs7O1FBQWpFO1FBQXFCO1FBQTFDLFdBQXFCLFVBQXFCLFNBQTFDOzs7O29CQURGO01BQUEsMkNBQUE7b0JBQUE7O0lBQUs7SUFBTCxXQUFLLFNBQUw7Ozs7b0JDQUE7TUFBQTsyQ0FBQSxVQUFBO01BQUE7O1FBQUE7Ozs7In0=
 //# sourceMappingURL=product-detail-page.component.ngfactory.js.map
 
 /***/ }),
@@ -213,7 +213,7 @@ var styles_ProductDetailsComponent = [__WEBPACK_IMPORTED_MODULE_0__product_detai
 var RenderType_ProductDetailsComponent = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵcrt"]({ encapsulation: 0,
     styles: styles_ProductDetailsComponent, data: {} });
 function View_ProductDetailsComponent_1(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 37, 'div', [['class',
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 38, 'div', [['class',
                 'row padding-top']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 8, 'div', [['class', 'col-md-6']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(),
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 5, 'div', [['class', 'row']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 2, 'app-image-container', [['class', 'col-md-12']], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_images_product_images_component_ngfactory__["a" /* View_ProductImagesComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_images_product_images_component_ngfactory__["b" /* RenderType_ProductImagesComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_images_product_images_component__["a" /* ProductImagesComponent */], [], { images: [0, 'images'], selectedImage: [1, 'selectedImage'] }, null),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])),
@@ -221,9 +221,9 @@ function View_ProductDetailsComponent_1(_l) {
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 9, 'div', [['class', 'col-md-6']], null, null, null, null, null)),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 2, 'app-product-price-info', [['class', 'row']], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_price_info_product_price_info_component_ngfactory__["a" /* View_ProductPriceInfoComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_price_info_product_price_info_component_ngfactory__["b" /* RenderType_ProductPriceInfoComponent */])),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_price_info_product_price_info_component__["a" /* ProductPriceInfoComponent */], [], { product: [0,
-                'product'], price: [1, 'price'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 2, 'app-product-description', [['class', 'row']], null, null, null, __WEBPACK_IMPORTED_MODULE_6__product_description_product_description_component_ngfactory__["a" /* View_ProductDescriptionComponent_0 */], __WEBPACK_IMPORTED_MODULE_6__product_description_product_description_component_ngfactory__["b" /* RenderType_ProductDescriptionComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_7__app_product_components_product_detail_page_product_description_product_description_component__["a" /* ProductDescriptionComponent */], [], { description: [0, 'description'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 13, 'div', [['class', 'row']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])),
+                'product'], price: [1, 'price'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 2, 'app-product-description', [['class', 'row']], null, null, null, __WEBPACK_IMPORTED_MODULE_6__product_description_product_description_component_ngfactory__["a" /* View_ProductDescriptionComponent_0 */], __WEBPACK_IMPORTED_MODULE_6__product_description_product_description_component_ngfactory__["b" /* RenderType_ProductDescriptionComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_7__app_product_components_product_detail_page_product_description_product_description_component__["a" /* ProductDescriptionComponent */], [], { description: [0, 'description'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 14, 'div', [['class', 'row']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-option', [['class', 'col-md-12']], null, [[null,
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 2, 'app-product-option', [['class', 'col-md-12']], null, [[null,
                 'onOptionClickEvent']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
@@ -234,12 +234,13 @@ function View_ProductDetailsComponent_1(_l) {
             return ad;
         }, __WEBPACK_IMPORTED_MODULE_8__product_option_product_option_component_ngfactory__["a" /* View_ProductOptionComponent_0 */], __WEBPACK_IMPORTED_MODULE_8__product_option_product_option_component_ngfactory__["b" /* RenderType_ProductOptionComponent */])),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_9__app_product_components_product_detail_page_product_option_product_option_component__["a" /* ProductOptionComponent */], [__WEBPACK_IMPORTED_MODULE_10__app_core_services_variant_parser_service__["a" /* VariantParserService */]], { customOptionTypesHash: [0, 'customOptionTypesHash'], currentSelectedOptions: [1,
-                'currentSelectedOptions'], mainOptions: [2, 'mainOptions'], correspondingOptions: [3,
-                'correspondingOptions'], optionTypes: [4, 'optionTypes'], optionCases: [5,
-                'optionCases'] }, { onOptionClickEvent: 'onOptionClickEvent' }), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [['style',
-                'padding-right: 20%; padding-left: 20%;']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'button', [['class', 'pdp-add-to-bag pdp-button'],
-            ['style', 'margin-top:40px;']], null, [[null, 'click']], function (_v, en, $event) {
+                'currentSelectedOptions'], currentSelectedOptionIds: [2, 'currentSelectedOptionIds'],
+            mainOptions: [3, 'mainOptions'], correspondingOptions: [4, 'correspondingOptions'],
+            optionTypes: [5, 'optionTypes'], optionCases: [6, 'optionCases'] }, { onOptionClickEvent: 'onOptionClickEvent' }),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [['style', 'padding-right: 20%; padding-left: 20%;']], null, null, null, null, null)),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'button', [['class', 'pdp-add-to-bag pdp-button'], ['style',
+                'margin-top:40px;']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('click' === en)) {
@@ -261,11 +262,12 @@ function View_ProductDetailsComponent_1(_l) {
         _ck(_v, 19, 0, currVal_4);
         var currVal_5 = _co.customOptionTypesHash;
         var currVal_6 = _co.currentSelectedOptions;
-        var currVal_7 = _co.mainOptions;
-        var currVal_8 = _co.correspondingOptions;
-        var currVal_9 = _co.product.option_types;
-        var currVal_10 = _co.optionCases;
-        _ck(_v, 29, 0, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10);
+        var currVal_7 = _co.currentSelectedOptionIds;
+        var currVal_8 = _co.mainOptions;
+        var currVal_9 = _co.correspondingOptions;
+        var currVal_10 = _co.product.option_types;
+        var currVal_11 = _co.option_cases;
+        _ck(_v, 29, 0, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11);
     }, null);
 }
 function View_ProductDetailsComponent_0(_l) {
@@ -284,7 +286,7 @@ function View_ProductDetailsComponent_Host_0(_l) {
 }
 var ProductDetailsComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-details', __WEBPACK_IMPORTED_MODULE_12__app_product_components_product_detail_page_product_details_product_details_component__["a" /* ProductDetailsComponent */], View_ProductDetailsComponent_Host_0, { product: 'product',
     user: 'user' }, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LWRldGFpbHMvcHJvZHVjdC1kZXRhaWxzLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQudHMuUHJvZHVjdERldGFpbHNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICpuZ0lmPVwicHJvZHVjdCAhPSBudWxsXCIgY2xhc3M9XCJyb3cgcGFkZGluZy10b3BcIj5cclxuICA8ZGl2IGNsYXNzPVwiY29sLW1kLTZcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgICAgPGFwcC1pbWFnZS1jb250YWluZXIgW2ltYWdlc109XCJpbWFnZXNcIiBbc2VsZWN0ZWRJbWFnZV09XCJpbWFnZXNbMF1cIiBjbGFzcz1cImNvbC1tZC0xMlwiPlxyXG4gICAgICA8L2FwcC1pbWFnZS1jb250YWluZXI+XHJcbiAgICA8L2Rpdj5cclxuICA8L2Rpdj5cclxuXHJcbiAgPGRpdiBjbGFzcz1cImNvbC1tZC02XCI+XHJcblxyXG4gICAgPGFwcC1wcm9kdWN0LXByaWNlLWluZm8gW3Byb2R1Y3RdPVwicHJvZHVjdFwiIFtwcmljZV09XCJwcm9kdWN0X3ByaWNlXCIgY2xhc3M9XCJyb3dcIj5cclxuICAgIDwvYXBwLXByb2R1Y3QtcHJpY2UtaW5mbz5cclxuICAgIDxhcHAtcHJvZHVjdC1kZXNjcmlwdGlvbiBbZGVzY3JpcHRpb25dPVwicHJvZHVjdC5kZXNjcmlwdGlvblwiIGNsYXNzPVwicm93XCI+XHJcbiAgICA8L2FwcC1wcm9kdWN0LWRlc2NyaXB0aW9uPlxyXG4gIDwvZGl2PlxyXG4gIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgIDwhLS0gPGFwcC1wcm9kdWN0LW9yZGVyLWluZm8gW29wdGlvblR5cGVzXT1cInByb2R1Y3Qub3B0aW9uX3R5cGVzXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgIDwvYXBwLXByb2R1Y3Qtb3JkZXItaW5mbz4gLS0+XHJcbiAgICA8IS0tIDxhcHAtcHJvZHVjdC11cGxvYWQtZmlsZSAqbmdJZj1cInByb2R1Y3QuZmlsZV91cF9sb2FkXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgIDwvYXBwLXByb2R1Y3QtdXBsb2FkLWZpbGU+IC0tPlxyXG4gICAgPCEtLSA8YXBwLXByb2R1Y3QtdmFyaWFudHMgW2N1c3RvbU9wdGlvblR5cGVzSGFzaF09XCJjdXN0b21PcHRpb25UeXBlc0hhc2hcIiBbY3VycmVudFNlbGVjdGVkT3B0aW9uc109XCJjdXJyZW50U2VsZWN0ZWRPcHRpb25zXCIgW29wdGlvblR5cGVzXT1cInByb2R1Y3Qub3B0aW9uX3R5cGVzXCIgKG9uT3B0aW9uQ2xpY2tFdmVudCk9XCJvbk9wdGlvbkNsaWNrKCRldmVudClcIlxyXG4gICAgICBbY29ycmVzcG9uZGluZ09wdGlvbnNdPVwiY29ycmVzcG9uZGluZ09wdGlvbnNcIiBbbWFpbk9wdGlvbnNdPVwibWFpbk9wdGlvbnNcIiBjbGFzcz1cImNvbC1tZC0xMlwiPjwvYXBwLXByb2R1Y3QtdmFyaWFudHM+IC0tPlxyXG4gICAgPGFwcC1wcm9kdWN0LW9wdGlvbiBcclxuICAgICAgICBbY3VzdG9tT3B0aW9uVHlwZXNIYXNoXT1cImN1c3RvbU9wdGlvblR5cGVzSGFzaFwiXHJcbiAgICAgICAgW2N1cnJlbnRTZWxlY3RlZE9wdGlvbnNdPVwiY3VycmVudFNlbGVjdGVkT3B0aW9uc1wiXHJcbiAgICAgICAgW29wdGlvblR5cGVzXT1cInByb2R1Y3Qub3B0aW9uX3R5cGVzXCJcclxuICAgICAgICAob25PcHRpb25DbGlja0V2ZW50KT1cIm9uT3B0aW9uQ2xpY2soJGV2ZW50KVwiXHJcbiAgICAgICAgW2NvcnJlc3BvbmRpbmdPcHRpb25zXT1cImNvcnJlc3BvbmRpbmdPcHRpb25zXCJcclxuICAgICAgICBbbWFpbk9wdGlvbnNdPVwibWFpbk9wdGlvbnNcIlxyXG4gICAgICAgIFtvcHRpb25DYXNlc109XCJvcHRpb25DYXNlc1wiXHJcbiAgICAgICAgY2xhc3M9XCJjb2wtbWQtMTJcIj48L2FwcC1wcm9kdWN0LW9wdGlvbj5cclxuICAgIDxkaXYgc3R5bGU9XCJwYWRkaW5nLXJpZ2h0OiAyMCU7IHBhZGRpbmctbGVmdDogMjAlO1wiPlxyXG4gICAgICA8YnV0dG9uIChjbGljayk9XCJhZGRUb0NhcnQoKVwiIGNsYXNzPVwicGRwLWFkZC10by1iYWcgcGRwLWJ1dHRvblwiIHN0eWxlPVwibWFyZ2luLXRvcDo0MHB4O1wiPkFERCBUTyBCQUc8L2J1dHRvbj5cclxuICAgIDwvZGl2PlxyXG4gIDwvZGl2PlxyXG48L2Rpdj5cclxuXHJcbiIsIjxhcHAtcHJvZHVjdC1kZXRhaWxzPjwvYXBwLXByb2R1Y3QtZGV0YWlscz4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQUE7TUFBQTtNQUFBLGdCQUFxRCx5Q0FDbkQ7TUFBQTtNQUFBLDhCQUFzQiwyQ0FDcEI7YUFBQTtVQUFBLDBEQUFpQjtNQUFBLGVBQ2Y7TUFBQTswQ0FBQSxVQUFBO01BQUE7TUFBcUYsNkNBQy9EO01BQ2xCLHlDQUNGO01BRU47VUFBQTtNQUFzQiw2Q0FFcEI7VUFBQTtVQUFBO2FBQUE7VUFBQSw2Q0FBZ0Y7VUFBQSxhQUN2RCwyQ0FDekI7VUFBQTtVQUFBO21EQUFBLFVBQUE7VUFBQTtVQUFBLGVBQXlFLDJDQUMvQztVQUFBLFdBQ3RCLHlDQUNOO1VBQUE7VUFBQSw4QkFBaUI7TUFFYywyQ0FFQztNQUUyRiwyQ0FDekg7VUFBQTtjQUFBO1lBQUE7WUFBQTtZQUlJO2NBQUE7Y0FBQTtZQUFBO1lBSko7VUFBQTthQUFBO1VBQUE7Y0FBQTtjQUFBO2NBQUEsMkRBUTJDO1VBQUEsYUFDM0M7VUFBQTtVQUFBLDhCQUFvRDtNQUNsRDtVQUFBO21CQUFBO1FBQUE7UUFBQTtRQUFRO1VBQUE7VUFBQTtRQUFBO1FBQVI7TUFBQSxnQ0FBeUY7TUFBbUIsMkNBQ3hHO01BQ0Y7O0lBL0JtQjtJQUFrQjtJQUF2QyxXQUFxQixVQUFrQixTQUF2QztJQU9zQjtJQUFvQjtJQUE1QyxZQUF3QixVQUFvQixTQUE1QztJQUV5QjtJQUF6QixZQUF5QixTQUF6QjtJQVdJO0lBQ0E7SUFJQTtJQURBO0lBRkE7SUFJQTtJQVBKLFlBQ0ksVUFDQSxVQUlBLFVBREEsVUFGQSxVQUlBLFVBUEo7Ozs7b0JBdEJKO01BQUEsd0NBQUE7b0JBQUEsbUNBbUNNO01BQUE7O0lBbkNEO0lBQUwsV0FBSyxTQUFMOzs7O29CQ0FBO01BQUE7d0NBQUEsVUFBQTtNQUFBOzhCQUFBO0lBQUE7Ozs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LWRldGFpbHMvcHJvZHVjdC1kZXRhaWxzLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1kZXRhaWxzL3Byb2R1Y3QtZGV0YWlscy5jb21wb25lbnQudHMuUHJvZHVjdERldGFpbHNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2ICpuZ0lmPVwicHJvZHVjdCAhPSBudWxsXCIgY2xhc3M9XCJyb3cgcGFkZGluZy10b3BcIj5cclxuICA8ZGl2IGNsYXNzPVwiY29sLW1kLTZcIj5cclxuICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgICAgPGFwcC1pbWFnZS1jb250YWluZXIgW2ltYWdlc109XCJpbWFnZXNcIiBbc2VsZWN0ZWRJbWFnZV09XCJpbWFnZXNbMF1cIiBjbGFzcz1cImNvbC1tZC0xMlwiPlxyXG4gICAgICA8L2FwcC1pbWFnZS1jb250YWluZXI+XHJcbiAgICA8L2Rpdj5cclxuICA8L2Rpdj5cclxuXHJcbiAgPGRpdiBjbGFzcz1cImNvbC1tZC02XCI+XHJcblxyXG4gICAgPGFwcC1wcm9kdWN0LXByaWNlLWluZm8gW3Byb2R1Y3RdPVwicHJvZHVjdFwiIFtwcmljZV09XCJwcm9kdWN0X3ByaWNlXCIgY2xhc3M9XCJyb3dcIj5cclxuICAgIDwvYXBwLXByb2R1Y3QtcHJpY2UtaW5mbz5cclxuICAgIDxhcHAtcHJvZHVjdC1kZXNjcmlwdGlvbiBbZGVzY3JpcHRpb25dPVwicHJvZHVjdC5kZXNjcmlwdGlvblwiIGNsYXNzPVwicm93XCI+XHJcbiAgICA8L2FwcC1wcm9kdWN0LWRlc2NyaXB0aW9uPlxyXG4gIDwvZGl2PlxyXG4gIDxkaXYgY2xhc3M9XCJyb3dcIj5cclxuICAgIDwhLS0gPGFwcC1wcm9kdWN0LW9yZGVyLWluZm8gW29wdGlvblR5cGVzXT1cInByb2R1Y3Qub3B0aW9uX3R5cGVzXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgIDwvYXBwLXByb2R1Y3Qtb3JkZXItaW5mbz4gLS0+XHJcbiAgICA8IS0tIDxhcHAtcHJvZHVjdC11cGxvYWQtZmlsZSAqbmdJZj1cInByb2R1Y3QuZmlsZV91cF9sb2FkXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj5cclxuICAgIDwvYXBwLXByb2R1Y3QtdXBsb2FkLWZpbGU+IC0tPlxyXG4gICAgPCEtLSA8YXBwLXByb2R1Y3QtdmFyaWFudHMgW2N1c3RvbU9wdGlvblR5cGVzSGFzaF09XCJjdXN0b21PcHRpb25UeXBlc0hhc2hcIiBbY3VycmVudFNlbGVjdGVkT3B0aW9uc109XCJjdXJyZW50U2VsZWN0ZWRPcHRpb25zXCIgW29wdGlvblR5cGVzXT1cInByb2R1Y3Qub3B0aW9uX3R5cGVzXCIgKG9uT3B0aW9uQ2xpY2tFdmVudCk9XCJvbk9wdGlvbkNsaWNrKCRldmVudClcIlxyXG4gICAgICBbY29ycmVzcG9uZGluZ09wdGlvbnNdPVwiY29ycmVzcG9uZGluZ09wdGlvbnNcIiBbbWFpbk9wdGlvbnNdPVwibWFpbk9wdGlvbnNcIiBjbGFzcz1cImNvbC1tZC0xMlwiPjwvYXBwLXByb2R1Y3QtdmFyaWFudHM+IC0tPlxyXG4gICAgPGFwcC1wcm9kdWN0LW9wdGlvbiBcclxuICAgICAgW2N1c3RvbU9wdGlvblR5cGVzSGFzaF09XCJjdXN0b21PcHRpb25UeXBlc0hhc2hcIlxyXG4gICAgICBbY3VycmVudFNlbGVjdGVkT3B0aW9uc109XCJjdXJyZW50U2VsZWN0ZWRPcHRpb25zXCIgXHJcbiAgICAgIFtjdXJyZW50U2VsZWN0ZWRPcHRpb25JZHNdPVwiY3VycmVudFNlbGVjdGVkT3B0aW9uSWRzXCIgXHJcbiAgICAgIFtvcHRpb25UeXBlc109XCJwcm9kdWN0Lm9wdGlvbl90eXBlc1wiIFxyXG4gICAgICAob25PcHRpb25DbGlja0V2ZW50KT1cIm9uT3B0aW9uQ2xpY2soJGV2ZW50KVwiXHJcbiAgICAgIFtjb3JyZXNwb25kaW5nT3B0aW9uc109XCJjb3JyZXNwb25kaW5nT3B0aW9uc1wiIFxyXG4gICAgICBbbWFpbk9wdGlvbnNdPVwibWFpbk9wdGlvbnNcIiBcclxuICAgICAgW29wdGlvbkNhc2VzXT1cIm9wdGlvbl9jYXNlc1wiXHJcbiAgICAgIGNsYXNzPVwiY29sLW1kLTEyXCI+XHJcbiAgICA8L2FwcC1wcm9kdWN0LW9wdGlvbj5cclxuICAgIDxkaXYgc3R5bGU9XCJwYWRkaW5nLXJpZ2h0OiAyMCU7IHBhZGRpbmctbGVmdDogMjAlO1wiPlxyXG4gICAgICA8YnV0dG9uIChjbGljayk9XCJhZGRUb0NhcnQoKVwiIGNsYXNzPVwicGRwLWFkZC10by1iYWcgcGRwLWJ1dHRvblwiIHN0eWxlPVwibWFyZ2luLXRvcDo0MHB4O1wiPkFERCBUTyBCQUc8L2J1dHRvbj5cclxuICAgIDwvZGl2PlxyXG4gIDwvZGl2PlxyXG48L2Rpdj5cclxuXHJcbiIsIjxhcHAtcHJvZHVjdC1kZXRhaWxzPjwvYXBwLXByb2R1Y3QtZGV0YWlscz4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQUE7TUFBQTtNQUFBLGdCQUFxRCx5Q0FDbkQ7TUFBQTtNQUFBLDhCQUFzQiwyQ0FDcEI7YUFBQTtVQUFBLDBEQUFpQjtNQUFBLGVBQ2Y7TUFBQTswQ0FBQSxVQUFBO01BQUE7TUFBcUYsNkNBQy9EO01BQ2xCLHlDQUNGO01BRU47VUFBQTtNQUFzQiw2Q0FFcEI7VUFBQTtVQUFBO2FBQUE7VUFBQSw2Q0FBZ0Y7VUFBQSxhQUN2RCwyQ0FDekI7VUFBQTtVQUFBO21EQUFBLFVBQUE7VUFBQTtVQUFBLGVBQXlFLDJDQUMvQztVQUFBLFdBQ3RCLHlDQUNOO1VBQUE7VUFBQSw4QkFBaUI7TUFFYywyQ0FFQztNQUUyRiwyQ0FDekg7VUFBQTtjQUFBO1lBQUE7WUFBQTtZQUtFO2NBQUE7Y0FBQTtZQUFBO1lBTEY7VUFBQTthQUFBO1VBQUE7Y0FBQTtjQUFBO2NBQUE7TUFTb0IsMkNBQ0M7TUFDckI7VUFBQTtNQUFvRCw2Q0FDbEQ7VUFBQTtjQUFBO29CQUFBO1lBQUE7WUFBQTtZQUFRO2NBQUE7Y0FBQTtZQUFBO1lBQVI7VUFBQSxnQ0FBeUY7TUFBbUIsMkNBQ3hHO01BQ0Y7O0lBakNtQjtJQUFrQjtJQUF2QyxXQUFxQixVQUFrQixTQUF2QztJQU9zQjtJQUFvQjtJQUE1QyxZQUF3QixVQUFvQixTQUE1QztJQUV5QjtJQUF6QixZQUF5QixTQUF6QjtJQVdFO0lBQ0E7SUFDQTtJQUlBO0lBREE7SUFGQTtJQUlBO0lBUkYsWUFDRSxVQUNBLFVBQ0EsVUFJQSxVQURBLFVBRkEsV0FJQSxVQVJGOzs7O29CQXRCSjtNQUFBLHdDQUFBO29CQUFBLG1DQXFDTTtNQUFBOztJQXJDRDtJQUFMLFdBQUssU0FBTDs7OztvQkNBQTtNQUFBO3dDQUFBLFVBQUE7TUFBQTs4QkFBQTtJQUFBOzs7OzsifQ==
 //# sourceMappingURL=product-details.component.ngfactory.js.map
 
 /***/ }),
@@ -606,8 +608,7 @@ var ProductFileUploadComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_c
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__product_file_upload_product_file_upload_component_ngfactory__ = __webpack_require__("../../../../../src/$$_gendir/app/product/components/product-detail-page/product-file-upload/product-file-upload.component.ngfactory.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_file_upload_product_file_upload_component__ = __webpack_require__("../../../../../src/app/product/components/product-detail-page/product-file-upload/product-file-upload.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_shared_pipes_keys_pipe__ = __webpack_require__("../../../../../src/app/shared/pipes/keys.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_product_components_product_detail_page_product_group_product_group_component__ = __webpack_require__("../../../../../src/app/product/components/product-detail-page/product-group/product-group.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_product_components_product_detail_page_product_group_product_group_component__ = __webpack_require__("../../../../../src/app/product/components/product-detail-page/product-group/product-group.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return RenderType_ProductGroupComponent; });
 /* harmony export (immutable) */ __webpack_exports__["a"] = View_ProductGroupComponent_0;
 /* unused harmony export View_ProductGroupComponent_Host_0 */
@@ -626,70 +627,75 @@ var ProductFileUploadComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_c
 
 
 
-
 var styles_ProductGroupComponent = [__WEBPACK_IMPORTED_MODULE_0__product_group_component_scss_shim_ngstyle__["a" /* styles */]];
 var RenderType_ProductGroupComponent = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵcrt"]({ encapsulation: 0,
     styles: styles_ProductGroupComponent, data: {} });
-function View_ProductGroupComponent_4(_l) {
+function View_ProductGroupComponent_2(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0,
-                'type'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              ']))], function (_ck, _v) {
-        var currVal_0 = _v.parent.parent.context.$implicit;
-        _ck(_v, 3, 0, currVal_0);
+                'type'], optionCases: [1, 'optionCases'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _v.parent.context.$implicit;
+        var currVal_1 = _co.optionCases;
+        _ck(_v, 3, 0, currVal_0, currVal_1);
     }, null);
 }
-function View_ProductGroupComponent_5(_l) {
+function View_ProductGroupComponent_3(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-file-upload', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_file_upload_product_file_upload_component_ngfactory__["a" /* View_ProductFileUploadComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_file_upload_product_file_upload_component_ngfactory__["b" /* RenderType_ProductFileUploadComponent */])),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_file_upload_product_file_upload_component__["a" /* ProductFileUploadComponent */], [], { type: [0,
                 'type'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              ']))], function (_ck, _v) {
-        var currVal_0 = _v.parent.parent.context.$implicit;
+        var currVal_0 = _v.parent.context.$implicit;
         _ck(_v, 3, 0, currVal_0);
     }, null);
 }
-function View_ProductGroupComponent_7(_l) {
+function View_ProductGroupComponent_5(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'span', [['style',
                 'color:red;']], null, null, null, null, null)),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['*']))], null, null);
 }
-function View_ProductGroupComponent_6(_l) {
+function View_ProductGroupComponent_4(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 10, 'div', [], null, null, null, null, null)), (_l()(),
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'input', [['class', 'check-option'], ['type', 'checkbox']], [[8, 'checked',
-                0]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 3, 'label', [['style', 'font-size: 18px;']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['', ''])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_7)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(),
+                0]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 3, 'label', [['style', 'font-size: 18px;']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['', ''])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_5)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(),
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML',
                     1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n              ']))], function (_ck, _v) {
-        var currVal_2 = _v.parent.parent.context.$implicit.mandatory;
+        var currVal_2 = _v.parent.context.$implicit.mandatory;
         _ck(_v, 7, 0, currVal_2);
     }, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.isChecked;
         _ck(_v, 2, 0, currVal_0);
-        var currVal_1 = _v.parent.parent.context.$implicit.presentation;
+        var currVal_1 = _v.parent.context.$implicit.presentation;
         _ck(_v, 5, 0, currVal_1);
-        var currVal_3 = _v.parent.parent.context.$implicit.description;
+        var currVal_3 = _v.parent.context.$implicit.description;
         _ck(_v, 9, 0, currVal_3);
     });
 }
+function View_ProductGroupComponent_6(_l) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0,
+                'type'], optionCases: [1, 'optionCases'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _v.parent.context.$implicit;
+        var currVal_1 = _co.optionCases;
+        _ck(_v, 3, 0, currVal_0, currVal_1);
+    }, null);
+}
+function View_ProductGroupComponent_7(_l) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0,
+                'type'], optionCases: [1, 'optionCases'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _v.parent.context.$implicit;
+        var currVal_1 = _co.optionCases;
+        _ck(_v, 3, 0, currVal_0, currVal_1);
+    }, null);
+}
 function View_ProductGroupComponent_8(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0,
-                'type'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              ']))], function (_ck, _v) {
-        var currVal_0 = _v.parent.parent.context.$implicit;
-        _ck(_v, 3, 0, currVal_0);
-    }, null);
-}
-function View_ProductGroupComponent_9(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0,
-                'type'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              ']))], function (_ck, _v) {
-        var currVal_0 = _v.parent.parent.context.$implicit;
-        _ck(_v, 3, 0, currVal_0);
-    }, null);
-}
-function View_ProductGroupComponent_10(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 7, 'div', [['class',
                 'image-wrap'], ['style', 'text-align: center;']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 2, 'img', [['style', 'width: 100%;']], [[8, 'src', 4]], null, null, null, null)),
@@ -697,90 +703,77 @@ function View_ProductGroupComponent_10(_l) {
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["Renderer"]], { ngClass: [0, 'ngClass'] }, null), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpod"]({ 'disabled': 0 }),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n                '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n              ']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_1 = _ck(_v, 4, 0, !_co.getProductImageUrl(_v.parent.parent.context.$implicit.image));
+        var currVal_1 = _ck(_v, 4, 0, !_co.getProductImageUrl(_v.parent.context.$implicit.image));
         _ck(_v, 3, 0, currVal_1);
     }, function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.getProductImageUrl(_v.parent.parent.context.$implicit.image);
+        var currVal_0 = _co.getProductImageUrl(_v.parent.context.$implicit.image);
         _ck(_v, 2, 0, currVal_0);
-        var currVal_2 = _v.parent.parent.context.$implicit.description;
+        var currVal_2 = _v.parent.context.$implicit.description;
         _ck(_v, 6, 0, currVal_2);
     });
 }
-function View_ProductGroupComponent_3(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 19, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_4)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n              '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_5)),
+function View_ProductGroupComponent_1(_l) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 21, 'div', [], null, null, null, null, null)), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n            '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n              '])),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_2)),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n              '])),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_3)),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n              '])),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_4)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
                 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n              '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_6)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n              '])),
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n              '])),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_7)),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n              '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_8)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n              '])),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_9)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n              '])),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_10)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n            ']))], function (_ck, _v) {
-        var _co = _v.component;
-        var currVal_0 = (_co.getOptionCaseById(_v.parent.context.$implicit.option_case_id) == 'Text');
-        _ck(_v, 3, 0, currVal_0);
-        var currVal_1 = (_co.getOptionCaseById(_v.parent.context.$implicit.option_case_id) == 'FileUpLoad');
-        _ck(_v, 6, 0, currVal_1);
-        var currVal_2 = (_co.getOptionCaseById(_v.parent.context.$implicit.option_case_id) == 'Checkbox');
-        _ck(_v, 9, 0, currVal_2);
-        var currVal_3 = (_co.getOptionCaseById(_v.parent.context.$implicit.option_case_id) == 'TextArea');
-        _ck(_v, 12, 0, currVal_3);
-        var currVal_4 = (_co.getOptionCaseById(_v.parent.context.$implicit.option_case_id) == 'Description');
-        _ck(_v, 15, 0, currVal_4);
-        var currVal_5 = (_co.getOptionCaseById(_v.parent.context.$implicit.option_case_id) == 'Image');
-        _ck(_v, 18, 0, currVal_5);
-    }, null);
-}
-function View_ProductGroupComponent_2(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n            '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_3)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null),
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n            '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          ']))], function (_ck, _v) {
-        var currVal_0 = (_v.parent.context.$implicit.key == _v.context.$implicit.name);
-        _ck(_v, 3, 0, currVal_0);
-    }, null);
-}
-function View_ProductGroupComponent_1(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_2)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](802816, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgForOf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["IterableDiffers"]], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.optionTypes;
-        _ck(_v, 3, 0, currVal_0);
+        var currVal_0 = (_co.getOptionCaseById(_v.context.$implicit.option_case_id) == 'Text');
+        _ck(_v, 4, 0, currVal_0);
+        var currVal_1 = (_co.getOptionCaseById(_v.context.$implicit.option_case_id) == 'FileUpLoad');
+        _ck(_v, 7, 0, currVal_1);
+        var currVal_2 = (_co.getOptionCaseById(_v.context.$implicit.option_case_id) == 'Checkbox');
+        _ck(_v, 10, 0, currVal_2);
+        var currVal_3 = (_co.getOptionCaseById(_v.context.$implicit.option_case_id) == 'TextArea');
+        _ck(_v, 13, 0, currVal_3);
+        var currVal_4 = (_co.getOptionCaseById(_v.context.$implicit.option_case_id) == 'Description');
+        _ck(_v, 16, 0, currVal_4);
+        var currVal_5 = (_co.getOptionCaseById(_v.context.$implicit.option_case_id) == 'Image');
+        _ck(_v, 19, 0, currVal_5);
     }, null);
 }
 function View_ProductGroupComponent_0(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpid"](0, __WEBPACK_IMPORTED_MODULE_7__app_shared_pipes_keys_pipe__["a" /* KeysPipe */], []), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 13, 'fieldset', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'legend', [], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['', ''])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 7, 'div', [['class',
-                'content']], null, null, null, null, null)),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 2, null, View_ProductGroupComponent_1)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](802816, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgForOf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["IterableDiffers"]], { ngForOf: [0, 'ngForOf'] }, null), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵppd"](1), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  ']))], function (_ck, _v) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 14, 'fieldset', [], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'legend', [], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['', ''])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 8, 'div', [['class', 'content']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n        '])),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductGroupComponent_1)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](802816, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgForOf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["IterableDiffers"]], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n    '])),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n  ']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_1 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵunv"](_v, 10, 0, _ck(_v, 11, 0, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵnov"](_v, 0), _co.innerHash));
+        var currVal_1 = _co.gType.children;
         _ck(_v, 10, 0, currVal_1);
     }, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.gType.presentation;
-        _ck(_v, 5, 0, currVal_0);
+        _ck(_v, 4, 0, currVal_0);
         var currVal_2 = _co.gType.description;
         _ck(_v, 13, 0, currVal_2);
     });
 }
 function View_ProductGroupComponent_Host_0(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-group', [], null, null, null, View_ProductGroupComponent_0, RenderType_ProductGroupComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_8__app_product_components_product_detail_page_product_group_product_group_component__["a" /* ProductGroupComponent */], [], null, null)], function (_ck, _v) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-group', [], null, null, null, View_ProductGroupComponent_0, RenderType_ProductGroupComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_7__app_product_components_product_detail_page_product_group_product_group_component__["a" /* ProductGroupComponent */], [], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
     }, null);
 }
-var ProductGroupComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-group', __WEBPACK_IMPORTED_MODULE_8__app_product_components_product_detail_page_product_group_product_group_component__["a" /* ProductGroupComponent */], View_ProductGroupComponent_Host_0, { option: 'option', gType: 'gType',
-    optionTypes: 'optionTypes', optionCases: 'optionCases' }, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1ncm91cC9wcm9kdWN0LWdyb3VwLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L2RlbnRjYXdlYi9mcm9udGVuZC9zcmMvYXBwL3Byb2R1Y3QvY29tcG9uZW50cy9wcm9kdWN0LWRldGFpbC1wYWdlL3Byb2R1Y3QtZ3JvdXAvcHJvZHVjdC1ncm91cC5jb21wb25lbnQudHMiLCJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L2RlbnRjYXdlYi9mcm9udGVuZC9zcmMvYXBwL3Byb2R1Y3QvY29tcG9uZW50cy9wcm9kdWN0LWRldGFpbC1wYWdlL3Byb2R1Y3QtZ3JvdXAvcHJvZHVjdC1ncm91cC5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1ncm91cC9wcm9kdWN0LWdyb3VwLmNvbXBvbmVudC50cy5Qcm9kdWN0R3JvdXBDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCIgIDxmaWVsZHNldD5cbiAgICA8bGVnZW5kPnt7Z1R5cGUucHJlc2VudGF0aW9ufX08L2xlZ2VuZD5cbiAgICA8ZGl2IGNsYXNzPVwiY29udGVudFwiPiBcbiAgICAgICAgPGRpdiAqbmdGb3I9XCJsZXQgb3B0aW9uIG9mIChpbm5lckhhc2ggfCBrZXlzKVwiPiBcbiAgICAgICAgICA8ZGl2ICpuZ0Zvcj1cImxldCB0eXBlIG9mIG9wdGlvblR5cGVzXCI+XG4gICAgICAgICAgICA8ZGl2ICpuZ0lmPVwib3B0aW9uLmtleSA9PSB0eXBlLm5hbWVcIj5cbiAgICAgICAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdUZXh0J1wiPlxuICAgICAgICAgICAgICAgIDxhcHAtcHJvZHVjdC10ZXh0IFt0eXBlXT1cInR5cGVcIj48L2FwcC1wcm9kdWN0LXRleHQ+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnRmlsZVVwTG9hZCdcIj5cbiAgICAgICAgICAgICAgICA8YXBwLXByb2R1Y3QtZmlsZS11cGxvYWQgW3R5cGVdPVwidHlwZVwiPjwvYXBwLXByb2R1Y3QtZmlsZS11cGxvYWQ+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnQ2hlY2tib3gnXCI+XG4gICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJjaGVja2JveFwiIFtjaGVja2VkXT1cImlzQ2hlY2tlZFwiIGNsYXNzPSBcImNoZWNrLW9wdGlvblwiLz5cbiAgICAgICAgICAgICAgICA8bGFiZWwgc3R5bGU9XCJmb250LXNpemU6IDE4cHg7XCI+e3t0eXBlLnByZXNlbnRhdGlvbn19PHNwYW4gKm5nSWY9XCJ0eXBlLm1hbmRhdG9yeVwiIHN0eWxlPVwiY29sb3I6cmVkO1wiPio8L3NwYW4+PC9sYWJlbD5cbiAgICAgICAgICAgICAgICA8ZGl2IFtpbm5lckhUTUxdPVwidHlwZS5kZXNjcmlwdGlvblwiPjwvZGl2PiBcbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdUZXh0QXJlYSdcIj5cbiAgICAgICAgICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdEZXNjcmlwdGlvbidcIj5cbiAgICAgICAgICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdJbWFnZSdcIiBjbGFzcyA9XCJpbWFnZS13cmFwXCIgc3R5bGU9XCJ0ZXh0LWFsaWduOiBjZW50ZXI7XCI+XG4gICAgICAgICAgICAgICAgPGltZyBcbiAgICAgICAgICAgICAgICAgICAgICBbbmdDbGFzc109XCJ7J2Rpc2FibGVkJzogIWdldFByb2R1Y3RJbWFnZVVybCh0eXBlLmltYWdlKX1cIlxuICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPVwid2lkdGg6IDEwMCU7XCIgXG4gICAgICAgICAgICAgICAgICAgICAgW3NyY109XCJnZXRQcm9kdWN0SW1hZ2VVcmwodHlwZS5pbWFnZSlcIiAvPlxuICAgICAgICAgICAgICAgIDxkaXYgW2lubmVySFRNTF09XCJ0eXBlLmRlc2NyaXB0aW9uXCI+PC9kaXY+IFxuICAgICAgICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdiBbaW5uZXJIVE1MXT1cImdUeXBlLmRlc2NyaXB0aW9uXCI+PC9kaXY+IFxuICAgIDwvZGl2PlxuICA8L2ZpZWxkc2V0PiIsIjxhcHAtcHJvZHVjdC1ncm91cD48L2FwcC1wcm9kdWN0LWdyb3VwPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNNYztNQUFBLHdFQUE4RDthQUFBLHdDQUM1RDtNQUFBO01BQUE7YUFBQTtVQUFBLHdCQUFtRDs7UUFBakM7UUFBbEIsV0FBa0IsU0FBbEI7Ozs7b0JBR0Y7TUFBQSx3RUFBb0U7YUFBQSx3Q0FDbEU7TUFBQTtNQUFBO2FBQUE7VUFBQSx3QkFBaUU7O1FBQXhDO1FBQXpCLFdBQXlCLFNBQXpCOzs7O29CQUtxRDtNQUFBO01BQWdEOzs7b0JBRnZHO01BQUEsd0VBQWtFO2FBQUEsd0NBQ2hFO01BQUE7VUFBQSw4REFBb0U7TUFBQSx5QkFDcEU7TUFBQTtNQUFBLGdCQUFnQyx3Q0FBcUI7TUFBQSxrRkFBQTtNQUFBO01BQUEsZUFBZ0UsdURBQ3JIO2FBQUE7VUFBQSw4REFBMEM7TUFBQTtJQURpQjtJQUFOLFdBQU0sU0FBTjs7O0lBRDlCO0lBQXZCLFdBQXVCLFNBQXZCO0lBQ2dDO0lBQUE7SUFDM0I7SUFBTCxXQUFLLFNBQUw7Ozs7b0JBR0Y7TUFBQSx3RUFBa0U7YUFBQSx3Q0FDaEU7TUFBQTtNQUFBO2FBQUE7VUFBQSx3QkFBbUQ7O1FBQWpDO1FBQWxCLFdBQWtCLFNBQWxCOzs7O29CQUdGO01BQUEsd0VBQXFFO2FBQUEsd0NBQ25FO01BQUE7TUFBQTthQUFBO1VBQUEsd0JBQW1EOztRQUFqQztRQUFsQixXQUFrQixTQUFsQjs7OztvQkFHRjtNQUFBO01BQUEsOEJBQStHO01BQzdHO1VBQUE7YUFBQTttQ0FBQSxnREFDTTtNQUV5Qyx1REFDL0M7VUFBQTtVQUFBLDhCQUEwQzs7O1FBSHBDO1FBRE4sV0FDTSxTQUROOzs7UUFHTTtRQUhOLFdBR00sU0FITjtRQUlLO1FBQUwsV0FBSyxTQUFMOzs7O29CQTVCSjtNQUFBLHdFQUFxQzthQUFBLHNDQUNuQztNQUFBLG9FQUFBO01BQUE7TUFFTSx1REFFTjtVQUFBO2FBQUE7VUFBQSx3QkFFTTtNQUVOO2FBQUE7VUFBQSx3QkFJTTtNQUVOO2FBQUE7VUFBQSx3QkFFTTtNQUVOO2FBQUE7VUFBQSx3QkFFTTtNQUVOO2FBQUE7VUFBQSx3QkFNTTs7O1FBNUJEO1FBQUwsV0FBSyxTQUFMO1FBSUs7UUFBTCxXQUFLLFNBQUw7UUFJSztRQUFMLFdBQUssU0FBTDtRQU1LO1FBQUwsWUFBSyxTQUFMO1FBSUs7UUFBTCxZQUFLLFNBQUw7UUFJSztRQUFMLFlBQUssU0FBTDs7OztvQkF4Qko7TUFBQSx3RUFBc0M7YUFBQSxvQ0FDcEM7TUFBQSxvRUFBQTtNQUFBO01BK0JNO0lBL0JEO0lBQUwsV0FBSyxTQUFMOzs7O29CQUZKO01BQUEsd0VBQStDO2FBQUEsbUNBQzdDO01BQUEsb0VBQUE7TUFBQTtNQUFBLHVDQWlDTTs7O1FBakNEO1FBQUwsV0FBSyxTQUFMOzs7O3lEQUpWO01BQUEsU0FBRTtNQUFBLHdFQUFVO2FBQUEsNEJBQ1I7TUFBQTtNQUFBLGdCQUFRLHdDQUErQjtNQUFBLGFBQ3ZDO01BQUE7TUFBcUIsZ0RBQ2pCO1VBQUEsb0VBQUE7VUFBQTtVQUFBLDhDQUFLLElBbUNDO1VBQUEsaUJBQ047VUFBQTtNQUEyQyw0Q0FDekM7OztRQXJDRztRQUFMLFlBQUssU0FBTDs7O1FBRkk7UUFBQTtRQXNDQztRQUFMLFlBQUssU0FBTDs7OztvQkN2Q1I7TUFBQTtzQ0FBQSxVQUFBO01BQUE7SUFBQTs7Ozs7In0=
+var ProductGroupComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-group', __WEBPACK_IMPORTED_MODULE_7__app_product_components_product_detail_page_product_group_product_group_component__["a" /* ProductGroupComponent */], View_ProductGroupComponent_Host_0, { gType: 'gType', optionCases: 'optionCases' }, {}, []);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1ncm91cC9wcm9kdWN0LWdyb3VwLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L2RlbnRjYXdlYi9mcm9udGVuZC9zcmMvYXBwL3Byb2R1Y3QvY29tcG9uZW50cy9wcm9kdWN0LWRldGFpbC1wYWdlL3Byb2R1Y3QtZ3JvdXAvcHJvZHVjdC1ncm91cC5jb21wb25lbnQudHMiLCJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L2RlbnRjYXdlYi9mcm9udGVuZC9zcmMvYXBwL3Byb2R1Y3QvY29tcG9uZW50cy9wcm9kdWN0LWRldGFpbC1wYWdlL3Byb2R1Y3QtZ3JvdXAvcHJvZHVjdC1ncm91cC5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1ncm91cC9wcm9kdWN0LWdyb3VwLmNvbXBvbmVudC50cy5Qcm9kdWN0R3JvdXBDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCIgIDxmaWVsZHNldD5cbiAgICA8bGVnZW5kPnt7Z1R5cGUucHJlc2VudGF0aW9ufX08L2xlZ2VuZD5cbiAgICA8ZGl2IGNsYXNzPVwiY29udGVudFwiPiBcbiAgICAgICAgPCEtLSA8ZGl2ICpuZ0Zvcj1cImxldCBvcHRpb24gb2YgKGlubmVySGFzaCB8IGtleXMpXCI+ICAtLT5cbiAgICAgICAgICA8ZGl2ICpuZ0Zvcj1cImxldCB0eXBlIG9mIGdUeXBlLmNoaWxkcmVuXCI+XG4gICAgICAgICAgICA8IS0tIDxkaXYgKm5nSWY9XCJvcHRpb24ua2V5ID09IHR5cGUubmFtZVwiPiAtLT5cbiAgICAgICAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdUZXh0J1wiPlxuICAgICAgICAgICAgICAgIDxhcHAtcHJvZHVjdC10ZXh0IFt0eXBlXT1cInR5cGVcIiBbb3B0aW9uQ2FzZXNdPVwib3B0aW9uQ2FzZXNcIj48L2FwcC1wcm9kdWN0LXRleHQ+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnRmlsZVVwTG9hZCdcIj5cbiAgICAgICAgICAgICAgICA8YXBwLXByb2R1Y3QtZmlsZS11cGxvYWQgW3R5cGVdPVwidHlwZVwiPjwvYXBwLXByb2R1Y3QtZmlsZS11cGxvYWQ+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnQ2hlY2tib3gnXCI+XG4gICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJjaGVja2JveFwiIFtjaGVja2VkXT1cImlzQ2hlY2tlZFwiIGNsYXNzPSBcImNoZWNrLW9wdGlvblwiLz5cbiAgICAgICAgICAgICAgICA8bGFiZWwgc3R5bGU9XCJmb250LXNpemU6IDE4cHg7XCI+e3t0eXBlLnByZXNlbnRhdGlvbn19PHNwYW4gKm5nSWY9XCJ0eXBlLm1hbmRhdG9yeVwiIHN0eWxlPVwiY29sb3I6cmVkO1wiPio8L3NwYW4+PC9sYWJlbD5cbiAgICAgICAgICAgICAgICA8ZGl2IFtpbm5lckhUTUxdPVwidHlwZS5kZXNjcmlwdGlvblwiPjwvZGl2PiBcbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdUZXh0QXJlYSdcIj5cbiAgICAgICAgICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCIgW29wdGlvbkNhc2VzXT1cIm9wdGlvbkNhc2VzXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdEZXNjcmlwdGlvbidcIj5cbiAgICAgICAgICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCIgW29wdGlvbkNhc2VzXT1cIm9wdGlvbkNhc2VzXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdJbWFnZSdcIiBjbGFzcyA9XCJpbWFnZS13cmFwXCIgc3R5bGU9XCJ0ZXh0LWFsaWduOiBjZW50ZXI7XCI+XG4gICAgICAgICAgICAgICAgPGltZyBcbiAgICAgICAgICAgICAgICAgICAgICBbbmdDbGFzc109XCJ7J2Rpc2FibGVkJzogIWdldFByb2R1Y3RJbWFnZVVybCh0eXBlLmltYWdlKX1cIlxuICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPVwid2lkdGg6IDEwMCU7XCIgXG4gICAgICAgICAgICAgICAgICAgICAgW3NyY109XCJnZXRQcm9kdWN0SW1hZ2VVcmwodHlwZS5pbWFnZSlcIiAvPlxuICAgICAgICAgICAgICAgIDxkaXYgW2lubmVySFRNTF09XCJ0eXBlLmRlc2NyaXB0aW9uXCI+PC9kaXY+IFxuICAgICAgICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgICAgIDwhLS0gPC9kaXY+IC0tPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8IS0tIDwvZGl2PiAtLT5cbiAgICAgICAgPGRpdiBbaW5uZXJIVE1MXT1cImdUeXBlLmRlc2NyaXB0aW9uXCI+PC9kaXY+IFxuICAgIDwvZGl2PlxuICA8L2ZpZWxkc2V0PiIsIjxhcHAtcHJvZHVjdC1ncm91cD48L2FwcC1wcm9kdWN0LWdyb3VwPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ01jO01BQUEsd0VBQThEO2FBQUEsd0NBQzVEO01BQUE7TUFBQTthQUFBO1VBQUEsc0RBQStFO1VBQUE7O0lBQTdEO0lBQWM7SUFBaEMsV0FBa0IsVUFBYyxTQUFoQzs7OztvQkFHRjtNQUFBLHdFQUFvRTthQUFBLHdDQUNsRTtNQUFBO01BQUE7YUFBQTtVQUFBLHdCQUFpRTs7UUFBeEM7UUFBekIsV0FBeUIsU0FBekI7Ozs7b0JBS3FEO01BQUE7TUFBZ0Q7OztvQkFGdkc7TUFBQSx3RUFBa0U7YUFBQSx3Q0FDaEU7TUFBQTtVQUFBLDhEQUFvRTtNQUFBLHlCQUNwRTtNQUFBO01BQUEsZ0JBQWdDLHdDQUFxQjtNQUFBLGtGQUFBO01BQUE7TUFBQSxlQUFnRSx1REFDckg7YUFBQTtVQUFBLDhEQUEwQztNQUFBO0lBRGlCO0lBQU4sV0FBTSxTQUFOOzs7SUFEOUI7SUFBdkIsV0FBdUIsU0FBdkI7SUFDZ0M7SUFBQTtJQUMzQjtJQUFMLFdBQUssU0FBTDs7OztvQkFHRjtNQUFBLHdFQUFrRTthQUFBLHdDQUNoRTtNQUFBO01BQUE7YUFBQTtVQUFBLHNEQUErRTtVQUFBOztJQUE3RDtJQUFjO0lBQWhDLFdBQWtCLFVBQWMsU0FBaEM7Ozs7b0JBR0Y7TUFBQSx3RUFBcUU7YUFBQSx3Q0FDbkU7TUFBQTtNQUFBO2FBQUE7VUFBQSxzREFBK0U7VUFBQTs7SUFBN0Q7SUFBYztJQUFoQyxXQUFrQixVQUFjLFNBQWhDOzs7O29CQUdGO01BQUE7TUFBQSw4QkFBK0c7TUFDN0c7VUFBQTthQUFBO21DQUFBLGdEQUNNO01BRXlDLHVEQUMvQztVQUFBO1VBQUEsOEJBQTBDOzs7UUFIcEM7UUFETixXQUNNLFNBRE47OztRQUdNO1FBSE4sV0FHTSxTQUhOO1FBSUs7UUFBTCxXQUFLLFNBQUw7Ozs7b0JBN0JOO01BQUEsd0VBQXlDO2FBQUEsb0NBQ087TUFDNUM7YUFBQTtVQUFBLHdCQUVNO01BRU47YUFBQTtVQUFBLHdCQUVNO01BRU47YUFBQTtVQUFBLHdCQUlNO01BRU47YUFBQTtVQUFBLHdCQUVNO01BRU47YUFBQTtVQUFBLHdCQUVNO01BRU47YUFBQTtVQUFBLHdCQU1NO01BRU87O0lBOUJSO0lBQUwsV0FBSyxTQUFMO0lBSUs7SUFBTCxXQUFLLFNBQUw7SUFJSztJQUFMLFlBQUssU0FBTDtJQU1LO0lBQUwsWUFBSyxTQUFMO0lBSUs7SUFBTCxZQUFLLFNBQUw7SUFJSztJQUFMLFlBQUssU0FBTDs7OztvQkE1QmQsdUNBQUU7TUFBQTtNQUFBLDhCQUFVLDJDQUNSO2FBQUE7VUFBQSwwREFBUTtNQUFBLFVBQStCLDJDQUN2QztNQUFBO01BQUEsOEJBQXFCO01BQ3dDLGlEQUN2RDtVQUFBLG9FQUFBO1VBQUE7VUFBQSx1Q0FpQ007TUFDTywrQ0FDZjtVQUFBO1VBQUEsOEJBQTJDO01BQ3pDOztJQXBDSztJQUFMLFlBQUssU0FBTDs7O0lBSEU7SUFBQTtJQXNDQztJQUFMLFlBQUssU0FBTDs7OztvQkN2Q1I7TUFBQTtzQ0FBQSxVQUFBO01BQUE7SUFBQTs7Ozs7In0=
 //# sourceMappingURL=product-group.component.ngfactory.js.map
 
 /***/ }),
@@ -947,35 +940,35 @@ var ProductImagesComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core_
 var styles_ProductOptionSelectComponent = [__WEBPACK_IMPORTED_MODULE_0__product_option_select_component_scss_shim_ngstyle__["a" /* styles */]];
 var RenderType_ProductOptionSelectComponent = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵcrt"]({ encapsulation: 0,
     styles: styles_ProductOptionSelectComponent, data: {} });
+function View_ProductOptionSelectComponent_1(_l) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.focus_type;
+        _ck(_v, 3, 0, currVal_0);
+    }, null);
+}
 function View_ProductOptionSelectComponent_2(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      ']))], function (_ck, _v) {
-        var _co = _v.component;
-        var currVal_0 = _co.type;
-        _ck(_v, 3, 0, currVal_0);
-    }, null);
-}
-function View_ProductOptionSelectComponent_3(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-file-upload', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_file_upload_product_file_upload_component_ngfactory__["a" /* View_ProductFileUploadComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_file_upload_product_file_upload_component_ngfactory__["b" /* RenderType_ProductFileUploadComponent */])),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-file-upload', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_file_upload_product_file_upload_component_ngfactory__["a" /* View_ProductFileUploadComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_file_upload_product_file_upload_component_ngfactory__["b" /* RenderType_ProductFileUploadComponent */])),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_file_upload_product_file_upload_component__["a" /* ProductFileUploadComponent */], [], { type: [0,
-                'type'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      ']))], function (_ck, _v) {
+                'type'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    ']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.type;
+        var currVal_0 = _co.focus_type;
         _ck(_v, 3, 0, currVal_0);
     }, null);
 }
-function View_ProductOptionSelectComponent_5(_l) {
+function View_ProductOptionSelectComponent_4(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'span', [['style',
                 'color:red;']], null, null, null, null, null)),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['*']))], null, null);
 }
-function View_ProductOptionSelectComponent_4(_l) {
+function View_ProductOptionSelectComponent_3(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 10, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'input', [['class', 'check-option'], ['type', 'checkbox']], [[8, 'checked', 0]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'input', [['class', 'check-option'], ['type', 'checkbox']], [[8, 'checked', 0]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 3, 'label', [['style', 'font-size: 18px;']], null, null, null, null, null)),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['', ''])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_5)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n      ']))], function (_ck, _v) {
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['', ''])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_4)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n    ']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_2 = _co.type.mandatory;
         _ck(_v, 7, 0, currVal_2);
@@ -989,31 +982,31 @@ function View_ProductOptionSelectComponent_4(_l) {
         _ck(_v, 9, 0, currVal_3);
     });
 }
+function View_ProductOptionSelectComponent_5(_l) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.focus_type;
+        _ck(_v, 3, 0, currVal_0);
+    }, null);
+}
 function View_ProductOptionSelectComponent_6(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      ']))], function (_ck, _v) {
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    ']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.type;
+        var currVal_0 = _co.focus_type;
         _ck(_v, 3, 0, currVal_0);
     }, null);
 }
 function View_ProductOptionSelectComponent_7(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_2__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      ']))], function (_ck, _v) {
-        var _co = _v.component;
-        var currVal_0 = _co.type;
-        _ck(_v, 3, 0, currVal_0);
-    }, null);
-}
-function View_ProductOptionSelectComponent_8(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 7, 'div', [['class',
-                'image-wrap'], ['style', 'text-align: center;']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 2, 'img', [['style', 'width: 100%;']], [[8, 'src', 4]], null, null, null, null)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](278528, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgClass"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["IterableDiffers"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["KeyValueDiffers"],
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["Renderer"]], { ngClass: [0, 'ngClass'] }, null), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpod"]({ 'disabled': 0 }),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n      ']))], function (_ck, _v) {
+                'image-wrap'], ['style', 'text-align: center;']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 2, 'img', [['style', 'width: 100%;']], [[8,
+                    'src', 4]], null, null, null, null)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](278528, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgClass"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["IterableDiffers"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["KeyValueDiffers"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"],
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["Renderer"]], { ngClass: [0, 'ngClass'] }, null), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpod"]({ 'disabled': 0 }),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n    ']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_1 = _ck(_v, 4, 0, !_co.getProductImageUrl(_co.type.image));
         _ck(_v, 3, 0, currVal_1);
@@ -1025,49 +1018,43 @@ function View_ProductOptionSelectComponent_8(_l) {
         _ck(_v, 6, 0, currVal_2);
     });
 }
-function View_ProductOptionSelectComponent_1(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 19, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_2)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n      '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_3)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n      '])), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_4)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n      '])), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_6)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n      '])),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_7)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n      '])),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_8)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n    ']))], function (_ck, _v) {
-        var _co = _v.component;
-        var currVal_0 = (_co.getOptionCaseById(_co.type.option_case_id) == 'Text');
-        _ck(_v, 3, 0, currVal_0);
-        var currVal_1 = (_co.getOptionCaseById(_co.type.option_case_id) == 'FileUpLoad');
-        _ck(_v, 6, 0, currVal_1);
-        var currVal_2 = (_co.getOptionCaseById(_co.type.option_case_id) == 'Checkbox');
-        _ck(_v, 9, 0, currVal_2);
-        var currVal_3 = (_co.getOptionCaseById(_co.type.option_case_id) == 'TextArea');
-        _ck(_v, 12, 0, currVal_3);
-        var currVal_4 = (_co.getOptionCaseById(_co.type.option_case_id) == 'Description');
-        _ck(_v, 15, 0, currVal_4);
-        var currVal_5 = (_co.getOptionCaseById(_co.type.option_case_id) == 'Image');
-        _ck(_v, 18, 0, currVal_5);
-    }, null);
-}
 function View_ProductOptionSelectComponent_0(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 6, 'div', [], null, null, null, null, null)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](278528, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgClass"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["IterableDiffers"],
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['  '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 21, 'div', [], null, null, null, null, null)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](278528, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgClass"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["IterableDiffers"],
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["KeyValueDiffers"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["Renderer"]], { ngClass: [0, 'ngClass'] }, null),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpod"]({ 'disabled': 0 }), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_1)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n']))], function (_ck, _v) {
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n    '])), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_2)),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n    '])), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_3)),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n    '])), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_5)),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n    '])), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_6)),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n    '])), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionSelectComponent_7)),
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n  '])), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _ck(_v, 3, 0, _co.IsDisabled());
+        var currVal_0 = _ck(_v, 3, 0, _co.isDisabled());
         _ck(_v, 2, 0, currVal_0);
-        var currVal_1 = (_co.type != undefined);
+        var currVal_1 = (_co.getOptionCaseById(_co.focus_type.option_case_id) == 'Text');
         _ck(_v, 6, 0, currVal_1);
+        var currVal_2 = (_co.getOptionCaseById(_co.focus_type.option_case_id) == 'FileUpLoad');
+        _ck(_v, 9, 0, currVal_2);
+        var currVal_3 = (_co.getOptionCaseById(_co.focus_type.option_case_id) == 'Checkbox');
+        _ck(_v, 12, 0, currVal_3);
+        var currVal_4 = (_co.getOptionCaseById(_co.focus_type.option_case_id) == 'TextArea');
+        _ck(_v, 15, 0, currVal_4);
+        var currVal_5 = (_co.getOptionCaseById(_co.focus_type.option_case_id) == 'Description');
+        _ck(_v, 18, 0, currVal_5);
+        var currVal_6 = (_co.getOptionCaseById(_co.focus_type.option_case_id) == 'Image');
+        _ck(_v, 21, 0, currVal_6);
     }, null);
 }
 function View_ProductOptionSelectComponent_Host_0(_l) {
@@ -1075,10 +1062,10 @@ function View_ProductOptionSelectComponent_Host_0(_l) {
         _ck(_v, 1, 0);
     }, null);
 }
-var ProductOptionSelectComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-option-select', __WEBPACK_IMPORTED_MODULE_7__app_product_components_product_detail_page_product_option_select_product_option_select_component__["a" /* ProductOptionSelectComponent */], View_ProductOptionSelectComponent_Host_0, { gType: 'gType',
-    optionTypes: 'optionTypes', currentSelectedOptions: 'currentSelectedOptions',
-    customOptionTypesHash: 'customOptionTypesHash', optionCases: 'optionCases' }, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24tc2VsZWN0L3Byb2R1Y3Qtb3B0aW9uLXNlbGVjdC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LW9wdGlvbi1zZWxlY3QvcHJvZHVjdC1vcHRpb24tc2VsZWN0LmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24tc2VsZWN0L3Byb2R1Y3Qtb3B0aW9uLXNlbGVjdC5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24tc2VsZWN0L3Byb2R1Y3Qtb3B0aW9uLXNlbGVjdC5jb21wb25lbnQudHMuUHJvZHVjdE9wdGlvblNlbGVjdENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIiAgPGRpdiBbbmdDbGFzc109XCJ7J2Rpc2FibGVkJzogSXNEaXNhYmxlZCgpfVwiPlxuICAgIDxkaXYgKm5nSWY9XCJ0eXBlICE9IHVuZGVmaW5lZFwiPlxuICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdUZXh0J1wiPlxuICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnRmlsZVVwTG9hZCdcIj5cbiAgICAgICAgPGFwcC1wcm9kdWN0LWZpbGUtdXBsb2FkIFt0eXBlXT1cInR5cGVcIj48L2FwcC1wcm9kdWN0LWZpbGUtdXBsb2FkPlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnQ2hlY2tib3gnXCI+XG4gICAgICAgIDxpbnB1dCB0eXBlPVwiY2hlY2tib3hcIiBbY2hlY2tlZF09XCJpc0NoZWNrZWRcIiBjbGFzcz0gXCJjaGVjay1vcHRpb25cIi8+XG4gICAgICAgIDxsYWJlbCBzdHlsZT1cImZvbnQtc2l6ZTogMThweDtcIj57e3R5cGUucHJlc2VudGF0aW9ufX08c3BhbiAqbmdJZj1cInR5cGUubWFuZGF0b3J5XCIgc3R5bGU9XCJjb2xvcjpyZWQ7XCI+Kjwvc3Bhbj48L2xhYmVsPlxuICAgICAgICA8ZGl2IFtpbm5lckhUTUxdPVwidHlwZS5kZXNjcmlwdGlvblwiPjwvZGl2PiBcbiAgICAgIDwvZGl2PlxuXG4gICAgICA8ZGl2ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQodHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ1RleHRBcmVhJ1wiPlxuICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgPC9kaXY+IFxuXG4gICAgICA8ZGl2ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQodHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ0Rlc2NyaXB0aW9uJ1wiPlxuICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgPC9kaXY+IFxuXG4gICAgICA8ZGl2ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQodHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ0ltYWdlJ1wiIGNsYXNzID1cImltYWdlLXdyYXBcIiBzdHlsZT1cInRleHQtYWxpZ246IGNlbnRlcjtcIj5cbiAgICAgICAgPGltZyBcbiAgICAgICAgICAgICAgW25nQ2xhc3NdPVwieydkaXNhYmxlZCc6ICFnZXRQcm9kdWN0SW1hZ2VVcmwodHlwZS5pbWFnZSl9XCJcbiAgICAgICAgICAgICAgc3R5bGU9XCJ3aWR0aDogMTAwJTtcIiBcbiAgICAgICAgICAgICAgW3NyY109XCJnZXRQcm9kdWN0SW1hZ2VVcmwodHlwZS5pbWFnZSlcIiAvPlxuICAgICAgICA8ZGl2IFtpbm5lckhUTUxdPVwidHlwZS5kZXNjcmlwdGlvblwiPjwvZGl2PiBcbiAgICAgIDwvZGl2PiBcbiAgICA8L2Rpdj5cbjwvZGl2PiIsIjxhcHAtcHJvZHVjdC1vcHRpb24tc2VsZWN0PjwvYXBwLXByb2R1Y3Qtb3B0aW9uLXNlbGVjdD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNFTTtNQUFBLHdFQUE4RDthQUFBLGdDQUM1RDtNQUFBO3VFQUFBLFVBQUE7TUFBQTtNQUFtRDs7SUFBakM7SUFBbEIsV0FBa0IsU0FBbEI7Ozs7b0JBR0Y7TUFBQSx3RUFBb0U7YUFBQSxnQ0FDbEU7TUFBQTttRkFBQTthQUFBO1VBQUEsd0JBQWlFOzs7SUFBeEM7SUFBekIsV0FBeUIsU0FBekI7Ozs7b0JBS3FEO01BQUE7TUFBZ0Q7OztvQkFGdkc7TUFBQSx3RUFBa0U7YUFBQSxnQ0FDaEU7TUFBQTtNQUFBLDRDQUFvRTtNQUNwRTtVQUFBO01BQWdDLHdDQUFxQjtVQUFBLDJFQUFBO1VBQUE7VUFBQSxlQUFnRSwrQ0FDckg7VUFBQTtVQUFBLDRDQUEwQztVQUFBOztJQURpQjtJQUFOLFdBQU0sU0FBTjs7O0lBRDlCO0lBQXZCLFdBQXVCLFNBQXZCO0lBQ2dDO0lBQUE7SUFDM0I7SUFBTCxXQUFLLFNBQUw7Ozs7b0JBR0Y7TUFBQSx3RUFBa0U7YUFBQSxnQ0FDaEU7TUFBQTt1RUFBQSxVQUFBO01BQUE7TUFBbUQ7O0lBQWpDO0lBQWxCLFdBQWtCLFNBQWxCOzs7O29CQUdGO01BQUEsd0VBQXFFO2FBQUEsZ0NBQ25FO01BQUE7dUVBQUEsVUFBQTtNQUFBO01BQW1EOztJQUFqQztJQUFsQixXQUFrQixTQUFsQjs7OztvQkFHRjtNQUFBO01BQUEsOEJBQStHO01BQzdHO1VBQUE7YUFBQTttQ0FBQSxnREFDTTtNQUV5QywrQ0FDL0M7VUFBQTtVQUFBLDhCQUEwQzs7O1FBSHBDO1FBRE4sV0FDTSxTQUROOzs7UUFHTTtRQUhOLFdBR00sU0FITjtRQUlLO1FBQUwsV0FBSyxTQUFMOzs7O29CQTVCSjtNQUFBLHdFQUErQjthQUFBLDhCQUM3QjtNQUFBLDJFQUFBO01BQUE7TUFBQSxlQUVNLCtDQUVOO01BQUE7YUFBQTtVQUFBLHdCQUVNLCtDQUVOO2lCQUFBO2FBQUE7VUFBQSx3QkFJTSwrQ0FFTjtpQkFBQTthQUFBO1VBQUEsd0JBRU07TUFFTjthQUFBO1VBQUEsd0JBRU07TUFFTjthQUFBO1VBQUEsd0JBTU07OztJQTVCRDtJQUFMLFdBQUssU0FBTDtJQUlLO0lBQUwsV0FBSyxTQUFMO0lBSUs7SUFBTCxXQUFLLFNBQUw7SUFNSztJQUFMLFlBQUssU0FBTDtJQUlLO0lBQUwsWUFBSyxTQUFMO0lBSUs7SUFBTCxZQUFLLFNBQUw7Ozs7b0JBeEJOLHVDQUFFO01BQUE7TUFBQSxxQ0FBQTtrREFBQTthQUFLLGlCQUF1QywyQ0FDMUM7VUFBQTthQUFBO1VBQUEsd0JBOEJNOztJQS9CSDtJQUFMLFdBQUssU0FBTDtJQUNPO0lBQUwsV0FBSyxTQUFMOzs7O29CQ0RKO01BQUE7NkNBQUEsVUFBQTtNQUFBO0lBQUE7Ozs7Ozs7In0=
+var ProductOptionSelectComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-option-select', __WEBPACK_IMPORTED_MODULE_7__app_product_components_product_detail_page_product_option_select_product_option_select_component__["a" /* ProductOptionSelectComponent */], View_ProductOptionSelectComponent_Host_0, { option: 'option',
+    optionCases: 'optionCases', currentSelectedOptionIds: 'currentSelectedOptionIds',
+    type: 'type' }, {}, []);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24tc2VsZWN0L3Byb2R1Y3Qtb3B0aW9uLXNlbGVjdC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LW9wdGlvbi1zZWxlY3QvcHJvZHVjdC1vcHRpb24tc2VsZWN0LmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24tc2VsZWN0L3Byb2R1Y3Qtb3B0aW9uLXNlbGVjdC5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24tc2VsZWN0L3Byb2R1Y3Qtb3B0aW9uLXNlbGVjdC5jb21wb25lbnQudHMuUHJvZHVjdE9wdGlvblNlbGVjdENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIiAgPGRpdiBbbmdDbGFzc109XCJ7J2Rpc2FibGVkJzogaXNEaXNhYmxlZCgpfVwiPlxuICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZChmb2N1c190eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnVGV4dCdcIj5cbiAgICAgIDxhcHAtcHJvZHVjdC10ZXh0IFt0eXBlXT1cImZvY3VzX3R5cGVcIj48L2FwcC1wcm9kdWN0LXRleHQ+XG4gICAgPC9kaXY+XG5cbiAgICA8ZGl2ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQoZm9jdXNfdHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ0ZpbGVVcExvYWQnXCI+XG4gICAgICA8YXBwLXByb2R1Y3QtZmlsZS11cGxvYWQgW3R5cGVdPVwiZm9jdXNfdHlwZVwiPjwvYXBwLXByb2R1Y3QtZmlsZS11cGxvYWQ+XG4gICAgPC9kaXY+XG5cbiAgICA8ZGl2ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQoZm9jdXNfdHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ0NoZWNrYm94J1wiPlxuICAgICAgPGlucHV0IHR5cGU9XCJjaGVja2JveFwiIFtjaGVja2VkXT1cImlzQ2hlY2tlZFwiIGNsYXNzPSBcImNoZWNrLW9wdGlvblwiLz5cbiAgICAgIDxsYWJlbCBzdHlsZT1cImZvbnQtc2l6ZTogMThweDtcIj57e3R5cGUucHJlc2VudGF0aW9ufX08c3BhbiAqbmdJZj1cInR5cGUubWFuZGF0b3J5XCIgc3R5bGU9XCJjb2xvcjpyZWQ7XCI+Kjwvc3Bhbj48L2xhYmVsPlxuICAgICAgPGRpdiBbaW5uZXJIVE1MXT1cInR5cGUuZGVzY3JpcHRpb25cIj48L2Rpdj4gXG4gICAgPC9kaXY+XG5cbiAgICA8ZGl2ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQoZm9jdXNfdHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ1RleHRBcmVhJ1wiPlxuICAgICAgPGFwcC1wcm9kdWN0LXRleHQgW3R5cGVdPVwiZm9jdXNfdHlwZVwiPjwvYXBwLXByb2R1Y3QtdGV4dD5cbiAgICA8L2Rpdj4gXG5cbiAgICA8ZGl2ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQoZm9jdXNfdHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ0Rlc2NyaXB0aW9uJ1wiPlxuICAgICAgPGFwcC1wcm9kdWN0LXRleHQgW3R5cGVdPVwiZm9jdXNfdHlwZVwiPjwvYXBwLXByb2R1Y3QtdGV4dD5cbiAgICA8L2Rpdj4gXG5cbiAgICA8ZGl2ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQoZm9jdXNfdHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ0ltYWdlJ1wiIGNsYXNzID1cImltYWdlLXdyYXBcIiBzdHlsZT1cInRleHQtYWxpZ246IGNlbnRlcjtcIj5cbiAgICAgIDxpbWcgXG4gICAgICAgICAgICBbbmdDbGFzc109XCJ7J2Rpc2FibGVkJzogIWdldFByb2R1Y3RJbWFnZVVybCh0eXBlLmltYWdlKX1cIlxuICAgICAgICAgICAgc3R5bGU9XCJ3aWR0aDogMTAwJTtcIiBcbiAgICAgICAgICAgIFtzcmNdPVwiZ2V0UHJvZHVjdEltYWdlVXJsKHR5cGUuaW1hZ2UpXCIgLz5cbiAgICAgIDxkaXYgW2lubmVySFRNTF09XCJ0eXBlLmRlc2NyaXB0aW9uXCI+PC9kaXY+IFxuICAgIDwvZGl2PiBcbiAgPC9kaXY+XG4iLCI8YXBwLXByb2R1Y3Qtb3B0aW9uLXNlbGVjdD48L2FwcC1wcm9kdWN0LW9wdGlvbi1zZWxlY3Q+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQ0k7TUFBQSx3RUFBb0U7YUFBQSw4QkFDbEU7TUFBQTt1RUFBQSxVQUFBO01BQUE7TUFBeUQ7O0lBQXZDO0lBQWxCLFdBQWtCLFNBQWxCOzs7O29CQUdGO01BQUEsd0VBQTBFO2FBQUEsOEJBQ3hFO01BQUE7bUZBQUE7YUFBQTtVQUFBLHdCQUF1RTs7O0lBQTlDO0lBQXpCLFdBQXlCLFNBQXpCOzs7O29CQUtxRDtNQUFBO01BQWdEOzs7b0JBRnZHO01BQUEsd0VBQXdFO2FBQUEsOEJBQ3RFO01BQUE7TUFBQSw0Q0FBb0U7TUFDcEU7VUFBQTtNQUFnQyx3Q0FBcUI7VUFBQSwyRUFBQTtVQUFBO1VBQUEsZUFBZ0UsNkNBQ3JIO1VBQUE7VUFBQSw0Q0FBMEM7VUFBQTs7SUFEaUI7SUFBTixXQUFNLFNBQU47OztJQUQ5QjtJQUF2QixXQUF1QixTQUF2QjtJQUNnQztJQUFBO0lBQzNCO0lBQUwsV0FBSyxTQUFMOzs7O29CQUdGO01BQUEsd0VBQXdFO2FBQUEsOEJBQ3RFO01BQUE7dUVBQUEsVUFBQTtNQUFBO01BQXlEOztJQUF2QztJQUFsQixXQUFrQixTQUFsQjs7OztvQkFHRjtNQUFBLHdFQUEyRTthQUFBLDhCQUN6RTtNQUFBO3VFQUFBLFVBQUE7TUFBQTtNQUF5RDs7SUFBdkM7SUFBbEIsV0FBa0IsU0FBbEI7Ozs7b0JBR0Y7TUFBQTtNQUFBLDhCQUFxSCw2Q0FDbkg7YUFBQTtVQUFBLDJFQUFBO01BQUE7cUJBQUEsZ0RBQ007TUFFeUMsNkNBQy9DO1VBQUE7VUFBQSw4QkFBMEM7OztRQUhwQztRQUROLFdBQ00sU0FETjs7O1FBR007UUFITixXQUdNLFNBSE47UUFJSztRQUFMLFdBQUssU0FBTDs7OztvQkE1Qk4sdUNBQUU7TUFBQTtNQUFBLHFDQUFBO2tEQUFBO2FBQUssaUJBQXVDLDJDQUMxQztVQUFBO2FBQUE7VUFBQSx3QkFFTSw2Q0FFTjtpQkFBQTthQUFBO1VBQUEsd0JBRU0sNkNBRU47aUJBQUE7YUFBQTtVQUFBLHdCQUlNLDZDQUVOO2lCQUFBO2FBQUE7VUFBQSx3QkFFTSw4Q0FFTjtpQkFBQTthQUFBO1VBQUEsd0JBRU0sOENBRU47aUJBQUE7YUFBQTtVQUFBLHdCQU1NLDBDQUNGO2lCQUFBOztJQTlCRDtJQUFMLFdBQUssU0FBTDtJQUNPO0lBQUwsV0FBSyxTQUFMO0lBSUs7SUFBTCxXQUFLLFNBQUw7SUFJSztJQUFMLFlBQUssU0FBTDtJQU1LO0lBQUwsWUFBSyxTQUFMO0lBSUs7SUFBTCxZQUFLLFNBQUw7SUFJSztJQUFMLFlBQUssU0FBTDs7OztvQkN2Qko7TUFBQTs2Q0FBQSxVQUFBO01BQUE7SUFBQTs7Ozs7OyJ9
 //# sourceMappingURL=product-option-select.component.ngfactory.js.map
 
 /***/ }),
@@ -1180,10 +1167,12 @@ function View_ProductOptionComponent_4(_l) {
 }
 function View_ProductOptionComponent_5(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'], optionCases: [1,
+                'optionCases'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
+        var _co = _v.component;
         var currVal_0 = _v.parent.parent.context.$implicit;
-        _ck(_v, 3, 0, currVal_0);
+        var currVal_1 = _co.optionCases;
+        _ck(_v, 3, 0, currVal_0, currVal_1);
     }, null);
 }
 function View_ProductOptionComponent_6(_l) {
@@ -1222,18 +1211,22 @@ function View_ProductOptionComponent_7(_l) {
 }
 function View_ProductOptionComponent_9(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'], optionCases: [1,
+                'optionCases'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
+        var _co = _v.component;
         var currVal_0 = _v.parent.parent.context.$implicit;
-        _ck(_v, 3, 0, currVal_0);
+        var currVal_1 = _co.optionCases;
+        _ck(_v, 3, 0, currVal_0, currVal_1);
     }, null);
 }
 function View_ProductOptionComponent_10(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'] }, null),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-text', [], null, null, null, __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["a" /* View_ProductTextComponent_0 */], __WEBPACK_IMPORTED_MODULE_4__product_text_product_text_component_ngfactory__["b" /* RenderType_ProductTextComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_5__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], [], { type: [0, 'type'], optionCases: [1,
+                'optionCases'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
+        var _co = _v.component;
         var currVal_0 = _v.parent.parent.context.$implicit;
-        _ck(_v, 3, 0, currVal_0);
+        var currVal_1 = _co.optionCases;
+        _ck(_v, 3, 0, currVal_0, currVal_1);
     }, null);
 }
 function View_ProductOptionComponent_11(_l) {
@@ -1257,31 +1250,28 @@ function View_ProductOptionComponent_11(_l) {
 function View_ProductOptionComponent_12(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 6, 'div', [], null, null, null, null, null)), (_l()(),
             __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-option-select', [], null, null, null, __WEBPACK_IMPORTED_MODULE_9__product_option_select_product_option_select_component_ngfactory__["a" /* View_ProductOptionSelectComponent_0 */], __WEBPACK_IMPORTED_MODULE_9__product_option_select_product_option_select_component_ngfactory__["b" /* RenderType_ProductOptionSelectComponent */])),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_10__app_product_components_product_detail_page_product_option_select_product_option_select_component__["a" /* ProductOptionSelectComponent */], [], { gType: [0, 'gType'], optionTypes: [1, 'optionTypes'], currentSelectedOptions: [2,
-                'currentSelectedOptions'], customOptionTypesHash: [3, 'customOptionTypesHash'],
-            optionCases: [4, 'optionCases'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n        ']))], function (_ck, _v) {
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_10__app_product_components_product_detail_page_product_option_select_product_option_select_component__["a" /* ProductOptionSelectComponent */], [], { option: [0, 'option'], optionCases: [1, 'optionCases'], currentSelectedOptionIds: [2,
+                'currentSelectedOptionIds'], type: [3, 'type'] }, null), (_l()(),
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n        ']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _v.parent.parent.context.$implicit;
-        var currVal_1 = _co.optionTypes;
-        var currVal_2 = _co.currentSelectedOptions;
-        var currVal_3 = _co.customOptionTypesHash;
-        var currVal_4 = _co.optionCases;
-        _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4);
+        var currVal_0 = _v.parent.parent.context.$implicit.child_option_types;
+        var currVal_1 = _co.optionCases;
+        var currVal_2 = _co.currentSelectedOptionIds;
+        var currVal_3 = _v.parent.parent.context.$implicit;
+        _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3);
     }, function (_ck, _v) {
-        var currVal_5 = _v.parent.parent.context.$implicit.description;
-        _ck(_v, 5, 0, currVal_5);
+        var currVal_4 = _v.parent.parent.context.$implicit.description;
+        _ck(_v, 5, 0, currVal_4);
     });
 }
 function View_ProductOptionComponent_13(_l) {
     return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-group', [], null, null, null, __WEBPACK_IMPORTED_MODULE_11__product_group_product_group_component_ngfactory__["a" /* View_ProductGroupComponent_0 */], __WEBPACK_IMPORTED_MODULE_11__product_group_product_group_component_ngfactory__["b" /* RenderType_ProductGroupComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_12__app_product_components_product_detail_page_product_group_product_group_component__["a" /* ProductGroupComponent */], [], { option: [0, 'option'],
-            gType: [1, 'gType'], optionTypes: [2, 'optionTypes'] }, null), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n          '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 1, 'app-product-group', [], null, null, null, __WEBPACK_IMPORTED_MODULE_11__product_group_product_group_component_ngfactory__["a" /* View_ProductGroupComponent_0 */], __WEBPACK_IMPORTED_MODULE_11__product_group_product_group_component_ngfactory__["b" /* RenderType_ProductGroupComponent */])), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](114688, null, 0, __WEBPACK_IMPORTED_MODULE_12__app_product_components_product_detail_page_product_group_product_group_component__["a" /* ProductGroupComponent */], [], { gType: [0, 'gType'], optionCases: [1,
+                'optionCases'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n        ']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.optionHash[_v.parent.parent.context.$implicit.name].childOptions;
-        var currVal_1 = _v.parent.parent.context.$implicit;
-        var currVal_2 = _co.optionTypes;
-        _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2);
+        var currVal_0 = _v.parent.parent.context.$implicit;
+        var currVal_1 = _co.optionCases;
+        _ck(_v, 3, 0, currVal_0, currVal_1);
     }, null);
 }
 function View_ProductOptionComponent_3(_l) {
@@ -1294,7 +1284,7 @@ function View_ProductOptionComponent_3(_l) {
                 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n        '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionComponent_7)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_8__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n        '])),
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n        '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionComponent_9)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_8__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
                 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n        '])),
@@ -1303,13 +1293,13 @@ function View_ProductOptionComponent_3(_l) {
                 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n        '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionComponent_11)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_8__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n\n        '])),
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n   \n        '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionComponent_12)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_8__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n        '])),
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['  \n\n         '])),
         (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductOptionComponent_13)),
         __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_8__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n\n     ']))], function (_ck, _v) {
+                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['  \n     ']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = (_co.getOptionCaseById(_v.parent.context.$implicit.option_case_id) == 'Selection');
         _ck(_v, 3, 0, currVal_0);
@@ -1362,9 +1352,10 @@ function View_ProductOptionComponent_Host_0(_l) {
     }, null);
 }
 var ProductOptionComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-option', __WEBPACK_IMPORTED_MODULE_14__app_product_components_product_detail_page_product_option_product_option_component__["a" /* ProductOptionComponent */], View_ProductOptionComponent_Host_0, { customOptionTypesHash: 'customOptionTypesHash',
-    currentSelectedOptions: 'currentSelectedOptions', mainOptions: 'mainOptions',
-    correspondingOptions: 'correspondingOptions', optionTypes: 'optionTypes', optionCases: 'optionCases' }, { onOptionClickEvent: 'onOptionClickEvent' }, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24vcHJvZHVjdC1vcHRpb24uY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24vcHJvZHVjdC1vcHRpb24uY29tcG9uZW50LnRzIiwibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LW9wdGlvbi9wcm9kdWN0LW9wdGlvbi5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24vcHJvZHVjdC1vcHRpb24uY29tcG9uZW50LnRzLlByb2R1Y3RPcHRpb25Db21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8IS0tIDxkaXYgKm5nRm9yPVwibGV0IHR5cGUgb2Ygb3B0aW9uVHlwZXNcIiwgY2xhc3M9XCJjb250ZW50XCI+IC0tPlxuIDxkaXYgKm5nRm9yPVwibGV0IG9wdGlvbiBvZiAob3B0aW9uSGFzaCB8IGtleXMpXCI+IFxuICAgPGRpdiAqbmdGb3I9XCJsZXQgdHlwZSBvZiBvcHRpb25UeXBlc1wiPlxuICAgICA8ZGl2ICpuZ0lmPVwib3B0aW9uLmtleSA9PSB0eXBlLm5hbWVcIj5cbiAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdTZWxlY3Rpb24nXCI+XG4gICAgICAgICAgIDxhcHAtcHJvZHVjdC12YXJpYW50cyBbY3VzdG9tT3B0aW9uVHlwZXNIYXNoXT1cImN1c3RvbU9wdGlvblR5cGVzSGFzaFwiIFtjdXJyZW50U2VsZWN0ZWRPcHRpb25zXT1cImN1cnJlbnRTZWxlY3RlZE9wdGlvbnNcIiBbdHlwZV09XCJ0eXBlXCIgKG9uT3B0aW9uQ2xpY2tFdmVudCk9XCJvbk9wdGlvbkNsaWNrKCRldmVudClcIlxuICAgICAgICAgICAgW2NvcnJlc3BvbmRpbmdPcHRpb25zXT1cImNvcnJlc3BvbmRpbmdPcHRpb25zXCIgW21haW5PcHRpb25zXT1cIm1haW5PcHRpb25zXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj48L2FwcC1wcm9kdWN0LXZhcmlhbnRzPiAgIFxuICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdUZXh0J1wiPlxuICAgICAgICAgIDxhcHAtcHJvZHVjdC10ZXh0IFt0eXBlXT1cInR5cGVcIj48L2FwcC1wcm9kdWN0LXRleHQ+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnRmlsZVVwTG9hZCdcIj5cbiAgICAgICAgICA8YXBwLXByb2R1Y3QtZmlsZS11cGxvYWQgW3R5cGVdPVwidHlwZVwiPjwvYXBwLXByb2R1Y3QtZmlsZS11cGxvYWQ+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnQ2hlY2tib3gnXCI+XG4gICAgICAgICAgPGlucHV0IHR5cGU9XCJjaGVja2JveFwiIFtjaGVja2VkXT1cImlzQ2hlY2tlZFwiIGNsYXNzPSBcImNoZWNrLW9wdGlvblwiLz5cbiAgICAgICAgICA8bGFiZWwgc3R5bGU9XCJmb250LXNpemU6IDE4cHg7XCI+e3t0eXBlLnByZXNlbnRhdGlvbn19PHNwYW4gKm5nSWY9XCJ0eXBlLm1hbmRhdG9yeVwiIHN0eWxlPVwiY29sb3I6cmVkO1wiPio8L3NwYW4+PC9sYWJlbD5cbiAgICAgICAgICA8ZGl2IFtpbm5lckhUTUxdPVwidHlwZS5kZXNjcmlwdGlvblwiPjwvZGl2PiBcbiAgICAgICAgPC9kaXY+IFxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnVGV4dEFyZWEnXCI+XG4gICAgICAgICAgPGFwcC1wcm9kdWN0LXRleHQgW3R5cGVdPVwidHlwZVwiPjwvYXBwLXByb2R1Y3QtdGV4dD5cbiAgICAgICAgPC9kaXY+IFxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnRGVzY3JpcHRpb24nXCI+XG4gICAgICAgICAgPGFwcC1wcm9kdWN0LXRleHQgW3R5cGVdPVwidHlwZVwiPjwvYXBwLXByb2R1Y3QtdGV4dD5cbiAgICAgICAgPC9kaXY+IFxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnSW1hZ2UnXCIgY2xhc3MgPVwiaW1hZ2Utd3JhcFwiIHN0eWxlPVwidGV4dC1hbGlnbjogY2VudGVyO1wiPlxuICAgICAgICAgIDxpbWcgXG4gICAgICAgICAgICAgICAgW25nQ2xhc3NdPVwieydkaXNhYmxlZCc6ICFnZXRQcm9kdWN0SW1hZ2VVcmwodHlwZS5pbWFnZSl9XCJcbiAgICAgICAgICAgICAgICBzdHlsZT1cIndpZHRoOiAxMDAlO1wiIFxuICAgICAgICAgICAgICAgIFtzcmNdPVwiZ2V0UHJvZHVjdEltYWdlVXJsKHR5cGUuaW1hZ2UpXCIgLz5cbiAgICAgICAgICA8ZGl2IFtpbm5lckhUTUxdPVwidHlwZS5kZXNjcmlwdGlvblwiPjwvZGl2PiBcbiAgICAgICAgPC9kaXY+IFxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnT3B0aW9uIFNlbGVjdCdcIj5cbiAgICAgICAgICA8YXBwLXByb2R1Y3Qtb3B0aW9uLXNlbGVjdCBbZ1R5cGVdPVwidHlwZVwiIFtvcHRpb25UeXBlc109XCJvcHRpb25UeXBlc1wiIFtjdXJyZW50U2VsZWN0ZWRPcHRpb25zXT1cImN1cnJlbnRTZWxlY3RlZE9wdGlvbnNcIiBbY3VzdG9tT3B0aW9uVHlwZXNIYXNoXT1cImN1c3RvbU9wdGlvblR5cGVzSGFzaFwiIFtvcHRpb25DYXNlc109XCJvcHRpb25DYXNlc1wiID48L2FwcC1wcm9kdWN0LW9wdGlvbi1zZWxlY3Q+XG4gICAgICAgICAgPGRpdiBbaW5uZXJIVE1MXT1cInR5cGUuZGVzY3JpcHRpb25cIj48L2Rpdj4gXG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnT3B0aW9uIEdyb3VwJ1wiPlxuICAgICAgICAgIDxhcHAtcHJvZHVjdC1ncm91cCBbb3B0aW9uXT1cIm9wdGlvbkhhc2hbdHlwZS5uYW1lXS5jaGlsZE9wdGlvbnNcIiBbZ1R5cGVdPVwidHlwZVwiIFtvcHRpb25UeXBlc109XCJvcHRpb25UeXBlc1wiPjwvYXBwLXByb2R1Y3QtZ3JvdXA+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgIDwvZGl2PlxuICAgPC9kaXY+XG4gPC9kaXY+IiwiPGFwcC1wcm9kdWN0LW9wdGlvbj48L2FwcC1wcm9kdWN0LW9wdGlvbj4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0lRO01BQUEsd0VBQW1FO2FBQUEsbUNBQ2hFO01BQUE7VUFBQTtRQUFBO1FBQUE7UUFBc0k7VUFBQTtVQUFBO1FBQUE7UUFBdEk7TUFBQTthQUFBO1VBQUE7VUFBQTtVQUFBLDREQUNvSDtVQUFBOztJQUQ5RjtJQUFnRDtJQUN2QjtJQUE5QztJQUR1SDtJQUF4SCxXQUFzQixVQUFnRCxVQUN2QixVQUE5QyxVQUR1SCxTQUF4SDs7OztvQkFJSDtNQUFBLHdFQUE4RDthQUFBLGtDQUM1RDtNQUFBO3VFQUFBLFVBQUE7TUFBQTtNQUFtRDtJQUFqQztJQUFsQixXQUFrQixTQUFsQjs7OztvQkFHRjtNQUFBLHdFQUFvRTthQUFBLGtDQUNsRTtNQUFBO21GQUFBO2FBQUE7VUFBQSx3QkFBaUU7O1FBQXhDO1FBQXpCLFdBQXlCLFNBQXpCOzs7O29CQUtxRDtNQUFBO01BQWdEOzs7b0JBRnZHO01BQUEsd0VBQWtFO2FBQUEsa0NBQ2hFO01BQUE7TUFBQSw0Q0FBb0U7TUFDcEU7VUFBQTtNQUFnQyx3Q0FBcUI7VUFBQSxxRUFBQTtVQUFBO1VBQUEsZUFBZ0UsaURBQ3JIO2lCQUFBO2NBQUEsOERBQTBDO2lCQUFBO0lBRGlCO0lBQU4sV0FBTSxTQUFOOzs7SUFEOUI7SUFBdkIsV0FBdUIsU0FBdkI7SUFDZ0M7SUFBQTtJQUMzQjtJQUFMLFdBQUssU0FBTDs7OztvQkFHRjtNQUFBLHdFQUFrRTthQUFBLGtDQUNoRTtNQUFBO3VFQUFBLFVBQUE7TUFBQTtNQUFtRDtJQUFqQztJQUFsQixXQUFrQixTQUFsQjs7OztvQkFHRjtNQUFBLHdFQUFxRTthQUFBLGtDQUNuRTtNQUFBO3VFQUFBLFVBQUE7TUFBQTtNQUFtRDtJQUFqQztJQUFsQixXQUFrQixTQUFsQjs7OztvQkFHRjtNQUFBO01BQUEsOEJBQStHO01BQzdHO1VBQUE7YUFBQTttQ0FBQSxnREFDTTtNQUV5QyxpREFDL0M7VUFBQTtVQUFBLDhCQUEwQzs7O1FBSHBDO1FBRE4sV0FDTSxTQUROOzs7UUFHTTtRQUhOLFdBR00sU0FITjtRQUlLO1FBQUwsV0FBSyxTQUFMOzs7O29CQUdGO01BQUEsd0VBQXVFO2FBQUEsa0NBQ3JFO01BQUE7dUZBQUE7YUFBQTtVQUFBO2NBQUE7Y0FBQSw4Q0FBaU87VUFBQSxtQkFDak87VUFBQTtVQUFBLGdCQUEwQzs7SUFEZjtJQUFlO0lBQTRCO0lBQWtEO0lBQWdEO0lBQXhLLFdBQTJCLFVBQWUsVUFBNEIsVUFBa0QsVUFBZ0QsU0FBeEs7O0lBQ0s7SUFBTCxXQUFLLFNBQUw7Ozs7b0JBR0Y7TUFBQSx3RUFBc0U7YUFBQSxrQ0FDcEU7TUFBQTsyRUFBQSxVQUFBO01BQUE7VUFBQSxnRUFBZ0k7YUFBQTs7SUFBN0c7SUFBOEM7SUFBZTtJQUFoRixXQUFtQixVQUE4QyxVQUFlLFNBQWhGOzs7O29CQTFDTDtNQUFBLHdFQUFxQzthQUFBLGdDQUNsQztNQUFBLHFFQUFBO01BQUE7TUFBQSxlQUdNLGtEQUVOO01BQUE7YUFBQTtVQUFBLHdCQUVNO01BRU47YUFBQTtVQUFBLHdCQUVNO01BRU47YUFBQTtVQUFBLHdCQUlNO01BRU47YUFBQTtVQUFBLHdCQUVNO01BRU47YUFBQTtVQUFBLHdCQUVNO01BRU47YUFBQTtVQUFBLHdCQU1NO01BRU47YUFBQTtVQUFBLHdCQUdNO01BRU47YUFBQTtVQUFBLHdCQUVNOzs7SUExQ0Q7SUFBTCxXQUFLLFNBQUw7SUFLSztJQUFMLFdBQUssU0FBTDtJQUlLO0lBQUwsV0FBSyxTQUFMO0lBSUs7SUFBTCxZQUFLLFNBQUw7SUFNSztJQUFMLFlBQUssU0FBTDtJQUlLO0lBQUwsWUFBSyxTQUFMO0lBSUs7SUFBTCxZQUFLLFNBQUw7SUFRSztJQUFMLFlBQUssU0FBTDtJQUtLO0lBQUwsWUFBSyxTQUFMOzs7O29CQTFDTDtNQUFBLHdFQUFzQzthQUFBLDZCQUNwQztNQUFBLHVEQUFBO01BQUE7TUE2Q007SUE3Q0Q7SUFBTCxXQUFLLFNBQUw7Ozs7b0JBRko7TUFBQSx3RUFBZ0Q7YUFBQSw0QkFDOUM7TUFBQSx1REFBQTtNQUFBO1VBQUEsMkJBK0NNOzs7SUEvQ0Q7SUFBTCxXQUFLLFNBQUw7Ozs7MERBRjZEO01BQUEsVUFDL0Q7TUFBQSx1Q0FBQTt1Q0FBQSxnREFBSzs7O1FBQUE7UUFBTCxXQUFLLFNBQUw7Ozs7b0JDREQ7TUFBQTt1Q0FBQSxVQUFBO01BQUE7SUFBQTs7Ozs7OzsifQ==
+    currentSelectedOptions: 'currentSelectedOptions', currentSelectedOptionIds: 'currentSelectedOptionIds',
+    mainOptions: 'mainOptions', correspondingOptions: 'correspondingOptions', optionTypes: 'optionTypes',
+    optionCases: 'optionCases' }, { onOptionClickEvent: 'onOptionClickEvent' }, []);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24vcHJvZHVjdC1vcHRpb24uY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24vcHJvZHVjdC1vcHRpb24uY29tcG9uZW50LnRzIiwibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LW9wdGlvbi9wcm9kdWN0LW9wdGlvbi5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC1vcHRpb24vcHJvZHVjdC1vcHRpb24uY29tcG9uZW50LnRzLlByb2R1Y3RPcHRpb25Db21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8IS0tIDxkaXYgKm5nRm9yPVwibGV0IHR5cGUgb2Ygb3B0aW9uVHlwZXNcIiwgY2xhc3M9XCJjb250ZW50XCI+IC0tPlxuIDxkaXYgKm5nRm9yPVwibGV0IG9wdGlvbiBvZiAob3B0aW9uSGFzaCB8IGtleXMpXCI+IFxuICAgPGRpdiAqbmdGb3I9XCJsZXQgdHlwZSBvZiBvcHRpb25UeXBlc1wiPlxuICAgICA8ZGl2ICpuZ0lmPVwib3B0aW9uLmtleSA9PSB0eXBlLm5hbWVcIj5cbiAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdTZWxlY3Rpb24nXCI+XG4gICAgICAgICAgIDxhcHAtcHJvZHVjdC12YXJpYW50cyBbY3VzdG9tT3B0aW9uVHlwZXNIYXNoXT1cImN1c3RvbU9wdGlvblR5cGVzSGFzaFwiIFtjdXJyZW50U2VsZWN0ZWRPcHRpb25zXT1cImN1cnJlbnRTZWxlY3RlZE9wdGlvbnNcIiBbdHlwZV09XCJ0eXBlXCIgKG9uT3B0aW9uQ2xpY2tFdmVudCk9XCJvbk9wdGlvbkNsaWNrKCRldmVudClcIlxuICAgICAgICAgICAgW2NvcnJlc3BvbmRpbmdPcHRpb25zXT1cImNvcnJlc3BvbmRpbmdPcHRpb25zXCIgW21haW5PcHRpb25zXT1cIm1haW5PcHRpb25zXCIgY2xhc3M9XCJjb2wtbWQtMTJcIj48L2FwcC1wcm9kdWN0LXZhcmlhbnRzPiAgIFxuICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdUZXh0J1wiPlxuICAgICAgICAgIDxhcHAtcHJvZHVjdC10ZXh0IFt0eXBlXT1cInR5cGVcIiBbb3B0aW9uQ2FzZXNdPVwib3B0aW9uQ2FzZXNcIj48L2FwcC1wcm9kdWN0LXRleHQ+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnRmlsZVVwTG9hZCdcIj5cbiAgICAgICAgICA8YXBwLXByb2R1Y3QtZmlsZS11cGxvYWQgW3R5cGVdPVwidHlwZVwiPjwvYXBwLXByb2R1Y3QtZmlsZS11cGxvYWQ+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnQ2hlY2tib3gnXCI+XG4gICAgICAgICAgPGlucHV0IHR5cGU9XCJjaGVja2JveFwiIFtjaGVja2VkXT1cImlzQ2hlY2tlZFwiIGNsYXNzPSBcImNoZWNrLW9wdGlvblwiLz5cbiAgICAgICAgICA8bGFiZWwgc3R5bGU9XCJmb250LXNpemU6IDE4cHg7XCI+e3t0eXBlLnByZXNlbnRhdGlvbn19PHNwYW4gKm5nSWY9XCJ0eXBlLm1hbmRhdG9yeVwiIHN0eWxlPVwiY29sb3I6cmVkO1wiPio8L3NwYW4+PC9sYWJlbD5cbiAgICAgICAgICA8ZGl2IFtpbm5lckhUTUxdPVwidHlwZS5kZXNjcmlwdGlvblwiPjwvZGl2PiBcbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdUZXh0QXJlYSdcIj5cbiAgICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCIgW29wdGlvbkNhc2VzXT1cIm9wdGlvbkNhc2VzXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdEZXNjcmlwdGlvbidcIj5cbiAgICAgICAgICA8YXBwLXByb2R1Y3QtdGV4dCBbdHlwZV09XCJ0eXBlXCIgW29wdGlvbkNhc2VzXT1cIm9wdGlvbkNhc2VzXCI+PC9hcHAtcHJvZHVjdC10ZXh0PlxuICAgICAgICA8L2Rpdj4gXG5cbiAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdJbWFnZSdcIiBjbGFzcyA9XCJpbWFnZS13cmFwXCIgc3R5bGU9XCJ0ZXh0LWFsaWduOiBjZW50ZXI7XCI+XG4gICAgICAgICAgPGltZyBcbiAgICAgICAgICAgICAgICBbbmdDbGFzc109XCJ7J2Rpc2FibGVkJzogIWdldFByb2R1Y3RJbWFnZVVybCh0eXBlLmltYWdlKX1cIlxuICAgICAgICAgICAgICAgIHN0eWxlPVwid2lkdGg6IDEwMCU7XCIgXG4gICAgICAgICAgICAgICAgW3NyY109XCJnZXRQcm9kdWN0SW1hZ2VVcmwodHlwZS5pbWFnZSlcIiAvPlxuICAgICAgICAgIDxkaXYgW2lubmVySFRNTF09XCJ0eXBlLmRlc2NyaXB0aW9uXCI+PC9kaXY+IFxuICAgICAgICA8L2Rpdj4gXG4gICBcbiAgICAgICAgPGRpdiAqbmdJZj1cImdldE9wdGlvbkNhc2VCeUlkKHR5cGUub3B0aW9uX2Nhc2VfaWQpID09ICdPcHRpb24gU2VsZWN0J1wiPlxuICAgICAgICAgIDxhcHAtcHJvZHVjdC1vcHRpb24tc2VsZWN0IFxuICAgICAgICAgICAgW29wdGlvbl09XCJ0eXBlLmNoaWxkX29wdGlvbl90eXBlc1wiIFxuICAgICAgICAgICAgW29wdGlvbkNhc2VzXT1cIm9wdGlvbkNhc2VzXCJcbiAgICAgICAgICAgIFtjdXJyZW50U2VsZWN0ZWRPcHRpb25JZHNdPVwiY3VycmVudFNlbGVjdGVkT3B0aW9uSWRzXCJcbiAgICAgICAgICAgIFt0eXBlXT1cInR5cGVcIj48L2FwcC1wcm9kdWN0LW9wdGlvbi1zZWxlY3Q+XG4gICAgICAgICAgPGRpdiBbaW5uZXJIVE1MXT1cInR5cGUuZGVzY3JpcHRpb25cIj48L2Rpdj4gXG4gICAgICAgIDwvZGl2PiAgXG5cbiAgICAgICAgIDxkaXYgKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnT3B0aW9uIEdyb3VwJ1wiPlxuICAgICAgICAgIDxhcHAtcHJvZHVjdC1ncm91cCBbZ1R5cGVdPVwidHlwZVwiIFtvcHRpb25DYXNlc109XCJvcHRpb25DYXNlc1wiPjwvYXBwLXByb2R1Y3QtZ3JvdXA+XG4gICAgICAgIDwvZGl2PiAgXG4gICAgIDwvZGl2PlxuICAgPC9kaXY+XG4gPC9kaXY+IiwiPGFwcC1wcm9kdWN0LW9wdGlvbj48L2FwcC1wcm9kdWN0LW9wdGlvbj4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0lRO01BQUEsd0VBQW1FO2FBQUEsbUNBQ2hFO01BQUE7VUFBQTtRQUFBO1FBQUE7UUFBc0k7VUFBQTtVQUFBO1FBQUE7UUFBdEk7TUFBQTthQUFBO1VBQUE7VUFBQTtVQUFBLDREQUNvSDtVQUFBOztJQUQ5RjtJQUFnRDtJQUN2QjtJQUE5QztJQUR1SDtJQUF4SCxXQUFzQixVQUFnRCxVQUN2QixVQUE5QyxVQUR1SCxTQUF4SDs7OztvQkFJSDtNQUFBLHdFQUE4RDthQUFBLGtDQUM1RDtNQUFBO3VFQUFBLFVBQUE7TUFBQTtVQUFBLCtCQUErRTs7O1FBQTdEO1FBQWM7UUFBaEMsV0FBa0IsVUFBYyxTQUFoQzs7OztvQkFHRjtNQUFBLHdFQUFvRTthQUFBLGtDQUNsRTtNQUFBO21GQUFBO2FBQUE7VUFBQSx3QkFBaUU7O1FBQXhDO1FBQXpCLFdBQXlCLFNBQXpCOzs7O29CQUtxRDtNQUFBO01BQWdEOzs7b0JBRnZHO01BQUEsd0VBQWtFO2FBQUEsa0NBQ2hFO01BQUE7TUFBQSw0Q0FBb0U7TUFDcEU7VUFBQTtNQUFnQyx3Q0FBcUI7VUFBQSxxRUFBQTtVQUFBO1VBQUEsZUFBZ0UsaURBQ3JIO2lCQUFBO2NBQUEsOERBQTBDO2lCQUFBO0lBRGlCO0lBQU4sV0FBTSxTQUFOOzs7SUFEOUI7SUFBdkIsV0FBdUIsU0FBdkI7SUFDZ0M7SUFBQTtJQUMzQjtJQUFMLFdBQUssU0FBTDs7OztvQkFHRjtNQUFBLHdFQUFrRTthQUFBLGtDQUNoRTtNQUFBO3VFQUFBLFVBQUE7TUFBQTtVQUFBLCtCQUErRTs7O1FBQTdEO1FBQWM7UUFBaEMsV0FBa0IsVUFBYyxTQUFoQzs7OztvQkFHRjtNQUFBLHdFQUFxRTthQUFBLGtDQUNuRTtNQUFBO3VFQUFBLFVBQUE7TUFBQTtVQUFBLCtCQUErRTs7O1FBQTdEO1FBQWM7UUFBaEMsV0FBa0IsVUFBYyxTQUFoQzs7OztvQkFHRjtNQUFBO01BQUEsOEJBQStHO01BQzdHO1VBQUE7YUFBQTttQ0FBQSxnREFDTTtNQUV5QyxpREFDL0M7VUFBQTtVQUFBLDhCQUEwQzs7O1FBSHBDO1FBRE4sV0FDTSxTQUROOzs7UUFHTTtRQUhOLFdBR00sU0FITjtRQUlLO1FBQUwsV0FBSyxTQUFMOzs7O29CQUdGO01BQUEsd0VBQXVFO2FBQUEsa0NBQ3JFO01BQUE7dUZBQUE7YUFBQTtVQUFBO2NBQUEsNERBSTRDO2lCQUFBLGtDQUM1QztVQUFBO1VBQUEsOEJBQTBDOzs7UUFKeEM7UUFDQTtRQUNBO1FBQ0E7UUFKRixXQUNFLFVBQ0EsVUFDQSxVQUNBLFNBSkY7O1FBS0s7UUFBTCxXQUFLLFNBQUw7Ozs7b0JBR0Q7TUFBQSx3RUFBc0U7YUFBQSxrQ0FDckU7TUFBQTsyRUFBQSxVQUFBO01BQUE7VUFBQSwrQkFBa0Y7OztRQUEvRDtRQUFlO1FBQWxDLFdBQW1CLFVBQWUsU0FBbEM7Ozs7b0JBOUNMO01BQUEsd0VBQXFDO2FBQUEsZ0NBQ2xDO01BQUEscUVBQUE7TUFBQTtNQUFBLGVBR00sa0RBRU47TUFBQTthQUFBO1VBQUEsd0JBRU07TUFFTjthQUFBO1VBQUEsd0JBRU07TUFFTjthQUFBO1VBQUEsd0JBSU07TUFFTjthQUFBO1VBQUEsd0JBRU07TUFFTjthQUFBO1VBQUEsd0JBRU07TUFFTjthQUFBO1VBQUEsd0JBTU07TUFFTjthQUFBO1VBQUEsd0JBT007TUFFTDthQUFBO1VBQUEsd0JBRUs7OztJQTlDRDtJQUFMLFdBQUssU0FBTDtJQUtLO0lBQUwsV0FBSyxTQUFMO0lBSUs7SUFBTCxXQUFLLFNBQUw7SUFJSztJQUFMLFlBQUssU0FBTDtJQU1LO0lBQUwsWUFBSyxTQUFMO0lBSUs7SUFBTCxZQUFLLFNBQUw7SUFJSztJQUFMLFlBQUssU0FBTDtJQVFLO0lBQUwsWUFBSyxTQUFMO0lBU007SUFBTCxZQUFLLFNBQUw7Ozs7b0JBOUNOO01BQUEsd0VBQXNDO2FBQUEsNkJBQ3BDO01BQUEsdURBQUE7TUFBQTtNQWdETTtJQWhERDtJQUFMLFdBQUssU0FBTDs7OztvQkFGSjtNQUFBLHdFQUFnRDthQUFBLDRCQUM5QztNQUFBLHVEQUFBO01BQUE7VUFBQSwyQkFrRE07OztJQWxERDtJQUFMLFdBQUssU0FBTDs7OzswREFGNkQ7TUFBQSxVQUMvRDtNQUFBLHVDQUFBO3VDQUFBLGdEQUFLOzs7UUFBQTtRQUFMLFdBQUssU0FBTDs7OztvQkNERDtNQUFBO3VDQUFBLFVBQUE7TUFBQTtJQUFBOzs7Ozs7OyJ9
 //# sourceMappingURL=product-option.component.ngfactory.js.map
 
 /***/ }),
@@ -1509,27 +1500,24 @@ function View_ProductTextComponent_3(_l) {
     });
 }
 function View_ProductTextComponent_0(_l) {
-    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 15, 'div', [], null, null, null, null, null)), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'p', [['style', 'font-size: 20px']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['', ' '])), (_l()(),
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductTextComponent_1)),
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductTextComponent_2)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"],
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductTextComponent_3)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"],
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n    '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)),
-        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n']))], function (_ck, _v) {
+    return __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 4, 'p', [['style',
+                'font-size: 20px']], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['', ' '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductTextComponent_1)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' '])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' \n'])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductTextComponent_2)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"],
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n'])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"](16777216, null, null, 1, null, View_ProductTextComponent_3)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"](16384, null, 0, __WEBPACK_IMPORTED_MODULE_2__angular_common__["NgIf"], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"],
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]], { ngIf: [0, 'ngIf'] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, ['\n'])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"](0, null, null, 0, 'div', [], [[8, 'innerHTML', 1]], null, null, null, null)),
+        (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"](null, [' ']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_1 = _co.type.mandatory;
-        _ck(_v, 5, 0, currVal_1);
+        _ck(_v, 3, 0, currVal_1);
         var currVal_2 = (_co.getOptionCaseById(_co.type.option_case_id) == 'Text');
-        _ck(_v, 9, 0, currVal_2);
+        _ck(_v, 7, 0, currVal_2);
         var currVal_3 = (_co.getOptionCaseById(_co.type.option_case_id) == 'TextArea');
-        _ck(_v, 12, 0, currVal_3);
+        _ck(_v, 10, 0, currVal_3);
     }, function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = _co.type.presentation;
-        _ck(_v, 3, 0, currVal_0);
+        _ck(_v, 1, 0, currVal_0);
         var currVal_4 = _co.type.description;
-        _ck(_v, 14, 0, currVal_4);
+        _ck(_v, 12, 0, currVal_4);
     });
 }
 function View_ProductTextComponent_Host_0(_l) {
@@ -1538,7 +1526,7 @@ function View_ProductTextComponent_Host_0(_l) {
     }, null);
 }
 var ProductTextComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]('app-product-text', __WEBPACK_IMPORTED_MODULE_3__app_product_components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */], View_ProductTextComponent_Host_0, { type: 'type', optionCases: 'optionCases' }, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC10ZXh0L3Byb2R1Y3QtdGV4dC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LXRleHQvcHJvZHVjdC10ZXh0LmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC10ZXh0L3Byb2R1Y3QtdGV4dC5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC10ZXh0L3Byb2R1Y3QtdGV4dC5jb21wb25lbnQudHMuUHJvZHVjdFRleHRDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2PlxuICAgIDxwIHN0eWxlPVwiZm9udC1zaXplOiAyMHB4XCI+e3t0eXBlLnByZXNlbnRhdGlvbn19IDxzcGFuICpuZ0lmPVwidHlwZS5tYW5kYXRvcnlcIiBzdHlsZT1cImNvbG9yOnJlZDtcIj4qPC9zcGFuPiA8L3A+IFxuICAgIDxpbnB1dCB0eXBlPVwidGV4dFwiIGNsYXNzPXt7dHlwZS5uYW1lfX0gcGxhY2Vob2xkZXI9e3t0eXBlLnByZXNlbnRhdGlvbn19IGF1dG9jb21wbGV0ZT1cIm9mZlwiICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQodHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ1RleHQnXCIvPlxuICAgIDx0ZXh0YXJlYSBjbGFzcz17e3R5cGUubmFtZX19ICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQodHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ1RleHRBcmVhJ1wiPjwvdGV4dGFyZWE+XG4gICAgPGRpdiBbaW5uZXJIVE1MXT1cInR5cGUuZGVzY3JpcHRpb25cIj48L2Rpdj5cbjwvZGl2PiIsIjxhcHAtcHJvZHVjdC10ZXh0PjwvYXBwLXByb2R1Y3QtdGV4dD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7O29CQ0NxRDtNQUFBO01BQWdEOzs7b0JBQ2pHO01BQUE7TUFBQTs7SUFBbUI7SUFBb0I7SUFBdkMsV0FBbUIsVUFBb0IsU0FBdkM7Ozs7b0JBQ0E7TUFBQTs7O1FBQVU7UUFBVixXQUFVLFNBQVY7Ozs7b0JBSEo7TUFBQSx3RUFBSzthQUFBLDRCQUNEO01BQUE7TUFBQSw4QkFBMkIseUNBQXNCO2FBQUE7YUFBQTtVQUFBLHdCQUF3RCxzQ0FBSztVQUFBLGNBQzlHO1VBQUEscUNBQUE7d0JBQUEsbUNBQXNKO1VBQUEsYUFDdEo7VUFBQSxxQ0FBQTt3QkFBQSxtQ0FBc0c7VUFBQSxhQUN0RztVQUFBO01BQTBDOztJQUhhO0lBQU4sV0FBTSxTQUFOO0lBQzJDO0lBQTVGLFdBQTRGLFNBQTVGO0lBQzhCO0lBQTlCLFlBQThCLFNBQTlCOzs7SUFGMkI7SUFBQTtJQUd0QjtJQUFMLFlBQUssU0FBTDs7OztvQkNKSjtNQUFBO3FDQUFBLFVBQUE7TUFBQTtJQUFBOzs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC10ZXh0L3Byb2R1Y3QtdGV4dC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9ncmVhdC1zdGFyL2dpdC9kZW50Y2F3ZWIvZnJvbnRlbmQvc3JjL2FwcC9wcm9kdWN0L2NvbXBvbmVudHMvcHJvZHVjdC1kZXRhaWwtcGFnZS9wcm9kdWN0LXRleHQvcHJvZHVjdC10ZXh0LmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC10ZXh0L3Byb2R1Y3QtdGV4dC5jb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvZGVudGNhd2ViL2Zyb250ZW5kL3NyYy9hcHAvcHJvZHVjdC9jb21wb25lbnRzL3Byb2R1Y3QtZGV0YWlsLXBhZ2UvcHJvZHVjdC10ZXh0L3Byb2R1Y3QtdGV4dC5jb21wb25lbnQudHMuUHJvZHVjdFRleHRDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8cCBzdHlsZT1cImZvbnQtc2l6ZTogMjBweFwiPnt7dHlwZS5wcmVzZW50YXRpb259fSA8c3BhbiAqbmdJZj1cInR5cGUubWFuZGF0b3J5XCIgc3R5bGU9XCJjb2xvcjpyZWQ7XCI+Kjwvc3Bhbj4gPC9wPiBcbjxpbnB1dCB0eXBlPVwidGV4dFwiIGNsYXNzPXt7dHlwZS5uYW1lfX0gcGxhY2Vob2xkZXI9e3t0eXBlLnByZXNlbnRhdGlvbn19IGF1dG9jb21wbGV0ZT1cIm9mZlwiICpuZ0lmPVwiZ2V0T3B0aW9uQ2FzZUJ5SWQodHlwZS5vcHRpb25fY2FzZV9pZCkgPT0gJ1RleHQnXCIvPlxuPHRleHRhcmVhIGNsYXNzPXt7dHlwZS5uYW1lfX0gKm5nSWY9XCJnZXRPcHRpb25DYXNlQnlJZCh0eXBlLm9wdGlvbl9jYXNlX2lkKSA9PSAnVGV4dEFyZWEnXCI+PC90ZXh0YXJlYT5cbjxkaXYgW2lubmVySFRNTF09XCJ0eXBlLmRlc2NyaXB0aW9uXCI+PC9kaXY+ICIsIjxhcHAtcHJvZHVjdC10ZXh0PjwvYXBwLXByb2R1Y3QtdGV4dD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7O29CQ0FpRDtNQUFBO01BQWdEOzs7b0JBQ2pHO01BQUE7TUFBQTs7SUFBbUI7SUFBb0I7SUFBdkMsV0FBbUIsVUFBb0IsU0FBdkM7Ozs7b0JBQ0E7TUFBQTs7O1FBQVU7UUFBVixXQUFVLFNBQVY7Ozs7b0JBRkE7TUFBQTtNQUFBLGdCQUEyQix5Q0FBc0I7TUFBQSxpRkFBQTtNQUFBO01BQUEsZUFBd0Qsc0NBQUs7TUFBQSxVQUM5RztNQUFBLHFDQUFBO29CQUFBLG1DQUFzSjtNQUFBLFNBQ3RKO01BQUEscUNBQUE7b0JBQUEsbUNBQXNHO01BQUEsU0FDdEc7TUFBQTtNQUEwQzs7SUFIYTtJQUFOLFdBQU0sU0FBTjtJQUMyQztJQUE1RixXQUE0RixTQUE1RjtJQUM4QjtJQUE5QixZQUE4QixTQUE5Qjs7O0lBRjJCO0lBQUE7SUFHdEI7SUFBTCxZQUFLLFNBQUw7Ozs7b0JDSEE7TUFBQTtxQ0FBQSxVQUFBO01BQUE7SUFBQTs7Ozs7In0=
 //# sourceMappingURL=product-text.component.ngfactory.js.map
 
 /***/ }),
@@ -1765,7 +1753,7 @@ var ProductModuleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵcmf"
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](4608, __WEBPACK_IMPORTED_MODULE_7__angular_common__["NgLocalization"], __WEBPACK_IMPORTED_MODULE_7__angular_common__["NgLocaleLocalization"], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](4608, __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_positioning_positioning_service__["a" /* PositioningService */], __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_positioning_positioning_service__["a" /* PositioningService */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](4608, __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_component_loader_component_loader_factory__["a" /* ComponentLoaderFactory */], __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_component_loader_component_loader_factory__["a" /* ComponentLoaderFactory */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ComponentFactoryResolver"],
             __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injector"], __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_positioning_positioning_service__["a" /* PositioningService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ApplicationRef"]]),
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](4608, __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_dropdown_bs_dropdown_state__["a" /* BsDropdownState */], __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_dropdown_bs_dropdown_state__["a" /* BsDropdownState */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_6__angular_forms__["c" /* ɵba */], __WEBPACK_IMPORTED_MODULE_6__angular_forms__["c" /* ɵba */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_6__angular_forms__["d" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_6__angular_forms__["d" /* FormsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_6__angular_forms__["e" /* ReactiveFormsModule */], __WEBPACK_IMPORTED_MODULE_6__angular_forms__["e" /* ReactiveFormsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_7__angular_common__["CommonModule"], __WEBPACK_IMPORTED_MODULE_7__angular_common__["CommonModule"], []),
-        __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_dropdown_bs_dropdown_module__["a" /* BsDropdownModule */], __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_dropdown_bs_dropdown_module__["a" /* BsDropdownModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_12__app_shared_index__["a" /* SharedModule */], __WEBPACK_IMPORTED_MODULE_12__app_shared_index__["a" /* SharedModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_13__angular_router__["x" /* RouterModule */], __WEBPACK_IMPORTED_MODULE_13__angular_router__["x" /* RouterModule */], [[2, __WEBPACK_IMPORTED_MODULE_13__angular_router__["k" /* ɵa */]], [2, __WEBPACK_IMPORTED_MODULE_13__angular_router__["d" /* Router */]]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_14_ngx_file_drop_lib_ngx_drop_file_drop_module__["a" /* FileDropModule */], __WEBPACK_IMPORTED_MODULE_14_ngx_file_drop_lib_ngx_drop_file_drop_module__["a" /* FileDropModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_15_ng2_file_upload_file_upload_file_upload_module__["FileUploadModule"], __WEBPACK_IMPORTED_MODULE_15_ng2_file_upload_file_upload_file_upload_module__["FileUploadModule"], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_1__app_product_index__["a" /* ProductModule */], __WEBPACK_IMPORTED_MODULE_1__app_product_index__["a" /* ProductModule */], []),
+        __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_dropdown_bs_dropdown_module__["a" /* BsDropdownModule */], __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_dropdown_bs_dropdown_module__["a" /* BsDropdownModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_12__app_shared_index__["a" /* SharedModule */], __WEBPACK_IMPORTED_MODULE_12__app_shared_index__["a" /* SharedModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_13__angular_router__["x" /* RouterModule */], __WEBPACK_IMPORTED_MODULE_13__angular_router__["x" /* RouterModule */], [[2, __WEBPACK_IMPORTED_MODULE_13__angular_router__["m" /* ɵa */]], [2, __WEBPACK_IMPORTED_MODULE_13__angular_router__["d" /* Router */]]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_14_ngx_file_drop_lib_ngx_drop_file_drop_module__["a" /* FileDropModule */], __WEBPACK_IMPORTED_MODULE_14_ngx_file_drop_lib_ngx_drop_file_drop_module__["a" /* FileDropModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_15_ng2_file_upload_file_upload_file_upload_module__["FileUploadModule"], __WEBPACK_IMPORTED_MODULE_15_ng2_file_upload_file_upload_file_upload_module__["FileUploadModule"], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](512, __WEBPACK_IMPORTED_MODULE_1__app_product_index__["a" /* ProductModule */], __WEBPACK_IMPORTED_MODULE_1__app_product_index__["a" /* ProductModule */], []),
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](256, __WEBPACK_IMPORTED_MODULE_16_ngx_bootstrap_dropdown_bs_dropdown_config__["a" /* BsDropdownConfig */], { autoClose: true }, []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵmpd"](1024, __WEBPACK_IMPORTED_MODULE_13__angular_router__["t" /* ROUTES */], function () {
             return [[{ path: '', component: __WEBPACK_IMPORTED_MODULE_17__app_product_product_component__["a" /* ProductComponent */], pathMatch: 'full' },
                     { path: ':id', component: __WEBPACK_IMPORTED_MODULE_18__app_product_components_product_detail_page_product_detail_page_component__["a" /* ProductDetailPageComponent */] }]];
@@ -1944,21 +1932,16 @@ var ProductDescriptionComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_product_service__ = __webpack_require__("../../../../../src/app/core/services/product.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_services_user_service__ = __webpack_require__("../../../../../src/app/user/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user_reducers_selector__ = __webpack_require__("../../../../../src/app/user/reducers/selector.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailPageComponent; });
 
 
 
-
-
 var ProductDetailPageComponent = (function () {
-    function ProductDetailPageComponent(productService, route, userService, store) {
+    function ProductDetailPageComponent(productService, route, userService) {
         var _this = this;
         this.productService = productService;
         this.route = route;
         this.userService = userService;
-        this.store = store;
         this.product$ = null;
         /**On Init
          * 1. Parse route params
@@ -1971,14 +1954,14 @@ var ProductDetailPageComponent = (function () {
                 .getProduct(_this.productId)
                 .subscribe(function (response) { return _this.product$ = response; });
         });
-        // if (localStorage.getItem('user')){
-        //   this.userService.getUser().subscribe(response => {
-        //     this.currentUser$ = response;
-        //   });
-        // } else{
-        //   this.currentUser$ = false;
-        // }this.s
-        this.currentUser$ = this.store.select(__WEBPACK_IMPORTED_MODULE_4__user_reducers_selector__["a" /* getUser */]);
+        if (localStorage.getItem('user')) {
+            this.userService.getUser().subscribe(function (response) {
+                _this.currentUser$ = response;
+            });
+        }
+        else {
+            this.currentUser$ = false;
+        }
     }
     ;
     ProductDetailPageComponent.prototype.ngOnInit = function () {
@@ -1989,7 +1972,14 @@ var ProductDetailPageComponent = (function () {
         if (this.productSubs)
             this.productSubs.unsubscribe();
     };
-    ProductDetailPageComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_1__core_services_product_service__["a" /* ProductService */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_router__["e" /* ActivatedRoute */] }, { type: __WEBPACK_IMPORTED_MODULE_2__user_services_user_service__["a" /* UserService */] }, { type: __WEBPACK_IMPORTED_MODULE_3__ngrx_store__["a" /* Store */] }]; };
+    /**
+     * Action To be dispatched
+     * when added to cart
+     */
+    // addToCart(){
+    //   return;
+    // }
+    ProductDetailPageComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_1__core_services_product_service__["a" /* ProductService */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_router__["e" /* ActivatedRoute */] }, { type: __WEBPACK_IMPORTED_MODULE_2__user_services_user_service__["a" /* UserService */] }]; };
     return ProductDetailPageComponent;
 }());
 
@@ -2025,9 +2015,9 @@ var ProductDetailsComponent = (function () {
         this.store = store;
         this.router = router;
         this.currentSelectedOptions = {};
+        this.currentSelectedOptionIds = [];
         this.variants = [];
-        // this.optionCases = this.store.select(getOptionCases);
-        this.optionCases = [
+        this.option_cases = [
             { "id": 1, "name": "Selection" },
             { "id": 2, "name": "Text" },
             { "id": 3, "name": "FileUpLoad" },
@@ -2050,7 +2040,7 @@ var ProductDetailsComponent = (function () {
         this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
         this.correspondingOptions = this.mainOptions;
         this.product_price = this.getProductPrice(this.product, this.user);
-        this.store.select(__WEBPACK_IMPORTED_MODULE_2__checkout_reducers_selectors__["a" /* getAdjustmentOrder */]).subscribe(function (res) {
+        this.store.select(__WEBPACK_IMPORTED_MODULE_2__checkout_reducers_selectors__["g" /* getAdjustmentOrder */]).subscribe(function (res) {
             _this.original_line_item = res;
             console.log("original-----", res);
         });
@@ -2065,19 +2055,21 @@ var ProductDetailsComponent = (function () {
         var result = new __WEBPACK_IMPORTED_MODULE_3__core_services_variant_retriver_service__["a" /* VariantRetriverService */]()
             .getVariant(this.currentSelectedOptions, this.customOptionTypesHash, option, this.product);
         console.log("product", this.product);
+        console.log("current", result);
         this.createNewCorrespondingOptions(result.newCorrespondingOptions, option.value.optionValue.option_type_name);
         this.currentSelectedOptions = result.newSelectedoptions;
-        console.log("current", this.currentSelectedOptions);
         var newVariant = result.variant;
         this.variantId = this.product.master.id;
         this.variants = [];
-        var total_price = this.getProductPrice(this.product, this.user);
+        this.currentSelectedOptionIds = [];
+        var temp = this.getProductPrice(this.product, this.user);
         var _loop_1 = function (key) {
             this_1.product.variants.forEach(function (variant) {
                 if (variant.option_values.length == 1) {
                     if (variant.option_values[0].option_type_name == key && _this.currentSelectedOptions[key] == variant.option_values[0].name) {
                         _this.variants.push(variant.id);
-                        total_price += parseFloat(variant.price);
+                        _this.currentSelectedOptionIds.push(variant.option_values[0].id);
+                        temp += parseFloat(variant.price);
                     }
                 }
             });
@@ -2086,7 +2078,7 @@ var ProductDetailsComponent = (function () {
         for (var key in this.currentSelectedOptions) {
             _loop_1(key);
         }
-        this.product_price = Number(total_price);
+        this.product_price = Number(temp);
     };
     ProductDetailsComponent.prototype.makeGlobalOptinTypesHash = function (customOptionTypes) {
         var temp = {};
@@ -2133,6 +2125,8 @@ var ProductDetailsComponent = (function () {
             }
         }
         return parseFloat(this.product.price);
+    };
+    ProductDetailsComponent.prototype.getSelectedOptionIds = function () {
     };
     ProductDetailsComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_4__core_services_variant_parser_service__["a" /* VariantParserService */] }, { type: __WEBPACK_IMPORTED_MODULE_3__core_services_variant_retriver_service__["a" /* VariantRetriverService */] }, { type: __WEBPACK_IMPORTED_MODULE_1__checkout_actions_checkout_actions__["a" /* CheckoutActions */] }, { type: __WEBPACK_IMPORTED_MODULE_6__core_services_checkout_service__["a" /* CheckoutService */] }, { type: __WEBPACK_IMPORTED_MODULE_0__ngrx_store__["a" /* Store */] }, { type: __WEBPACK_IMPORTED_MODULE_5__angular_router__["d" /* Router */] }]; };
     return ProductDetailsComponent;
@@ -2184,12 +2178,12 @@ var ProductGroupComponent = (function () {
     function ProductGroupComponent() {
     }
     ProductGroupComponent.prototype.ngOnInit = function () {
-        this.innerHash = this.option;
+        // this.innerHash = this.option;
     };
-    ProductGroupComponent.prototype.isDisabled = function (arrayTocheck, value) {
-        if (arrayTocheck)
-            return (arrayTocheck.indexOf(value) === -1);
-    };
+    // isDisabled(arrayTocheck, value) {
+    //   if (arrayTocheck)
+    //     return (arrayTocheck.indexOf(value) === -1);
+    // }
     ProductGroupComponent.prototype.getProductImageUrl = function (url) {
         var temp = url + "";
         if (temp.charAt(temp.length - 1) == '/')
@@ -2198,10 +2192,7 @@ var ProductGroupComponent = (function () {
             return __WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].API_ENDPOINT + url;
     };
     ProductGroupComponent.prototype.getOptionCaseById = function (id) {
-        if (!this.optionCases)
-            return;
-        else
-            return this.optionCases.find(function (optionCase) { return optionCase.id == id; }).name;
+        return this.optionCases.find(function (optionCase) { return optionCase.id == id; }).name;
     };
     ProductGroupComponent.ctorParameters = function () { return []; };
     return ProductGroupComponent;
@@ -2251,24 +2242,8 @@ var ProductOptionSelectComponent = (function () {
     function ProductOptionSelectComponent() {
     }
     ProductOptionSelectComponent.prototype.ngOnInit = function () {
-        // console.log(this.type, this.optionTypes, this.currentSelectedOptions);
-        this.type = this.gType.children[0];
-        this.control_type = {};
-        for (var key in this.customOptionTypesHash) {
-            var type = this.customOptionTypesHash[key];
-            // console.log("type", key);
-            for (var key2 in type) {
-                // console.log("value", key2);
-                if (type[key2].optionValue.id == this.gType.show_option_value || type[key2].optionValue.id == this.gType.hide_option_value) {
-                    var obj = {};
-                    obj[key] = key2;
-                    Object.assign(this.control_type, obj);
-                }
-            }
-        }
-        // console.log("control type", this.control_type);
-        // console.log("####", this.type);
-        // console.log("####", this.customOptionTypesHash);
+        if (this.type.children.length != 0)
+            this.focus_type = this.type.children[0];
     };
     ProductOptionSelectComponent.prototype.getProductImageUrl = function (url) {
         var temp = url + "";
@@ -2277,26 +2252,20 @@ var ProductOptionSelectComponent = (function () {
         else
             return __WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].API_ENDPOINT + url;
     };
-    ProductOptionSelectComponent.prototype.IsDisabled = function () {
-        var is_disabled;
-        if (this.gType.show_option_value)
-            is_disabled = true;
-        else if (this.gType.hide_option_value)
-            is_disabled = false;
-        for (var key in this.currentSelectedOptions) {
-            for (var key2 in this.control_type) {
-                if (key == key2 && this.currentSelectedOptions[key] == this.control_type[key2]) {
-                    return !is_disabled;
-                }
-            }
-        }
-        return is_disabled;
-    };
     ProductOptionSelectComponent.prototype.getOptionCaseById = function (id) {
-        if (!this.optionCases)
-            return;
-        else
-            return this.optionCases.find(function (optionCase) { return optionCase.id == id; }).name;
+        return this.optionCases.find(function (optionCase) { return optionCase.id == id; }).name;
+    };
+    ProductOptionSelectComponent.prototype.isDisabled = function () {
+        for (var i = 0; i < this.currentSelectedOptionIds.length; i++) {
+            if (this.type.show_option_value == this.currentSelectedOptionIds[i])
+                return false;
+            else if (this.type.hide_option_value == this.currentSelectedOptionIds[i])
+                return true;
+        }
+        if (this.type.show_option_value)
+            return true;
+        else if (this.type.hide_option_value)
+            return false;
     };
     ProductOptionSelectComponent.ctorParameters = function () { return []; };
     return ProductOptionSelectComponent;
@@ -2324,6 +2293,9 @@ var ProductOptionComponent = (function () {
         this.onOptionClickEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     ProductOptionComponent.prototype.ngOnInit = function () {
+        // console.log("customOptionTypesHash", this.customOptionTypesHash);
+        // console.log("mainOptions", this.mainOptions);
+        // console.log("optionTypes", this.optionTypes);
         console.log("mineHash", this.variantParserService.getOptionHash(this.optionTypes));
         this.optionHash = this.variantParserService.getOptionHash(this.optionTypes);
     };
@@ -2342,10 +2314,7 @@ var ProductOptionComponent = (function () {
             return __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].API_ENDPOINT + url;
     };
     ProductOptionComponent.prototype.getOptionCaseById = function (id) {
-        if (this.optionCases.length == 0)
-            return;
-        else
-            return this.optionCases.find(function (optionCase) { return optionCase.id == id; }).name;
+        return this.optionCases.find(function (optionCase) { return optionCase.id == id; }).name;
     };
     ProductOptionComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_1__core_services_variant_parser_service__["a" /* VariantParserService */] }]; };
     return ProductOptionComponent;
@@ -2384,10 +2353,7 @@ var ProductTextComponent = (function () {
     ProductTextComponent.prototype.ngOnInit = function () {
     };
     ProductTextComponent.prototype.getOptionCaseById = function (id) {
-        if (!this.optionCases)
-            return;
-        else
-            return this.optionCases.find(function (optionCase) { return optionCase.id == id; }).name;
+        return this.optionCases.find(function (optionCase) { return optionCase.id == id; }).name;
     };
     ProductTextComponent.ctorParameters = function () { return []; };
     return ProductTextComponent;
@@ -2414,9 +2380,9 @@ var ProductVariantsComponent = (function () {
         this.isChecked = false;
     }
     ProductVariantsComponent.prototype.ngOnInit = function () {
-        // console.log("customOptionTypesHash", this.customOptionTypesHash);
-        // console.log("mainOptions", this.mainOptions);
-        // console.log("type---", this.type.name);
+        console.log("customOptionTypesHash", this.customOptionTypesHash);
+        console.log("mainOptions", this.mainOptions);
+        console.log("type---", this.type.name);
     };
     ProductVariantsComponent.prototype.onOptionClick = function (option) {
         this.onOptionClickEvent.emit(option);
@@ -3785,6 +3751,60 @@ var TimerObservable = (function (_super) {
 }(Observable_1.Observable));
 exports.TimerObservable = TimerObservable;
 //# sourceMappingURL=TimerObservable.js.map
+
+/***/ }),
+
+/***/ "../../../../rxjs/scheduler/async.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var AsyncAction_1 = __webpack_require__("../../../../rxjs/scheduler/AsyncAction.js");
+var AsyncScheduler_1 = __webpack_require__("../../../../rxjs/scheduler/AsyncScheduler.js");
+/**
+ *
+ * Async Scheduler
+ *
+ * <span class="informal">Schedule task as if you used setTimeout(task, duration)</span>
+ *
+ * `async` scheduler schedules tasks asynchronously, by putting them on the JavaScript
+ * event loop queue. It is best used to delay tasks in time or to schedule tasks repeating
+ * in intervals.
+ *
+ * If you just want to "defer" task, that is to perform it right after currently
+ * executing synchronous code ends (commonly achieved by `setTimeout(deferredTask, 0)`),
+ * better choice will be the {@link asap} scheduler.
+ *
+ * @example <caption>Use async scheduler to delay task</caption>
+ * const task = () => console.log('it works!');
+ *
+ * Rx.Scheduler.async.schedule(task, 2000);
+ *
+ * // After 2 seconds logs:
+ * // "it works!"
+ *
+ *
+ * @example <caption>Use async scheduler to repeat task in intervals</caption>
+ * function task(state) {
+ *   console.log(state);
+ *   this.schedule(state + 1, 1000); // `this` references currently executing Action,
+ *                                   // which we reschedule with new state and delay
+ * }
+ *
+ * Rx.Scheduler.async.schedule(task, 3000, 0);
+ *
+ * // Logs:
+ * // 0 after 3s
+ * // 1 after 4s
+ * // 2 after 5s
+ * // 3 after 6s
+ *
+ * @static true
+ * @name async
+ * @owner Scheduler
+ */
+exports.async = new AsyncScheduler_1.AsyncScheduler(AsyncAction_1.AsyncAction);
+//# sourceMappingURL=async.js.map
 
 /***/ }),
 
