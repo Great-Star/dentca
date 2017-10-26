@@ -4305,8 +4305,8 @@ var UserService = (function () {
 // The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false,
-    // API_ENDPOINT: 'http://34.211.157.52:3000/',
-    API_ENDPOINT: 'http://localhost:3000/',
+    API_ENDPOINT: 'http://34.211.157.52:3000/',
+    // API_ENDPOINT: 'http://localhost:3000/',
     AppName: 'Dentca'
 };
 //# sourceMappingURL=environment.js.map
