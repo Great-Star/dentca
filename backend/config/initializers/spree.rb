@@ -13,9 +13,17 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+    # config.override_actionmailer_config = false
+    # config.mails_from = "no-reply@yourdomain.com" 
+  # config.action_view.raise_on_missing_translations = true
 end
 
 Spree.user_class = "Spree::User"
 
+Spree::PrintInvoice::Config.set(logo_path: '/path/to/public/images/company-logo.png')
+Spree::PrintInvoice::Config.set( page_layout: :portrait, page_size: 'A4')
+Spree::PrintInvoice::Config.set(store_pdf: true) # Default: false
+Spree::PrintInvoice::Config.set(storage_path: 'pdfs/orders') # Default: tmp/order_prints
+# Spree::PrintInvoice::Config.set(print_buttons: 'invoice')
+
 Spree::Api::Config[:requires_authentication] = false
-Spree::PermittedAttributes.line_item_attributes << :variants

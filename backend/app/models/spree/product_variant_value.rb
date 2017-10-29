@@ -1,10 +1,13 @@
-module Spree
-    class ProductVariantValue < Spree::Base
-        belongs_to :spree_products, :foreign_key => 'product_id'
-        belongs_to :product_variant_type, touch: true
+class Spree::ProductVariantValue < ActiveRecord::Base
 
-        delegate :name, :presentation, to: :product_variant_type, prefix: true, allow_nil: true
+    belongs_to :product_variant_type, class_name: "Spree::ProductVariantType"
+    belongs_to :option_value, class_name: "Spree::OptionValue"
+    belongs_to :product, class_name: "Spree::Product"
+    has_one :variant, class_name: "Spree::Variant", dependent: :destroy
 
-        self.whitelisted_ransackable_attributes = ['presentation']
-    end
+
+    # delegate :name, :presentation, to: :product_variant_type, prefix: true, allow_nil: true
+
+    # self.whitelisted_ransackable_attributes = ['presentation']
 end
+

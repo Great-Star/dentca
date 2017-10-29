@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   # mount Spree::Core::Engine, at: '/spree'
   
+  root :to => 'spree/admin/root#index'
+
   # Main application routes
   scope '/api', module: 'api', defaults: {format: :json} do
     resources :taxonomies, only: :index
@@ -26,6 +28,8 @@ Rails.application.routes.draw do
     resources :addresses, only: :destroy
     resources :countries, only: :index
     resources :orders, only: %i(index show)
+    resource :corporate_accounts
+    resources :option_cases
   end
 
   mount Spree::Core::Engine, at: '/spree'
@@ -42,6 +46,9 @@ Rails.application.routes.draw do
         end
         resources :product_variant_values 
       end
+      resources :corporate_accounts
+      resources :product_price_sets
+      resources :product_prices
     end
   end
 

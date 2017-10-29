@@ -14,16 +14,17 @@ class Api::ProductsController < BaseController
                                :browse_mode, :price_min, 
                                :price_max, :properties,
                                :sorting, :per_page, :page).to_s]
-
+    
     render json: @products,
+           include: '**',
            each_serializer: ProductSerializer,
            root: :products,
            meta: {
              count: @products.count,
              total_count: @products.total_count,
-             current_page: (params[:page] || 1).to_i,
-             per_page: params[:per_page] || Spree::Config.products_per_page,
-             pages: @products.num_pages
+            #  current_page: (params[:page] || 1).to_i,
+            #  per_page: params[:per_page] || Spree::Config.products_per_page,
+            #  pages: @products.num_pages
            }
   end
 
@@ -31,6 +32,7 @@ class Api::ProductsController < BaseController
     @product = product_scope.find_by!(slug: params[:id])
 
     render json: @product,
+           include: '**',
            root: false,
            serializer: ProductSerializer
   end

@@ -80,4 +80,13 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   Paperclip.options.merge!(:command_path => "/usr/bin")
+  
+  ActionMailer::Base.smtp_settings = {
+    :address => "localhost",
+    :port => 1025,
+    :authentication => :plain,
+    :domain => 'localhost',
+    :user_name => 'sung@test.com',
+    :password => 'sung123'
+  }
 end

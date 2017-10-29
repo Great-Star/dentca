@@ -55,7 +55,11 @@ protected
   end
 
   def invalid_resource!(resource)
-    render json: { errors: resource.errors.messages }, status: 422
+    if resource
+      render json: { errors: resource.errors.messages }, status: 422
+    else
+      render json: { errors: "Invalid coporate Id or Password" }, status: 422
+    end
   end
 
 end
