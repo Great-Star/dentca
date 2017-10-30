@@ -5,8 +5,8 @@ class ProductSerializer < BaseSerializer
 
   has_one :master, serializer: SmallVariantSerializer
 
-  # has_many :variants, embed: :objects,
-  #                     serializer: SmallVariantSerializer
+  has_many :variants, embed: :objects,
+                      serializer: SmallVariantSerializer
 
   has_many :option_types, serializer: OptionTypeSerializer
 
