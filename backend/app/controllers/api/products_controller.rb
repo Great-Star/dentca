@@ -17,7 +17,7 @@ class Api::ProductsController < BaseController
     
     render json: @products,
            include: '**',
-           each_serializer: ProductSerializer,
+           each_serializer: LiteProductSerializer,
            root: :products,
            meta: {
              count: @products.count,

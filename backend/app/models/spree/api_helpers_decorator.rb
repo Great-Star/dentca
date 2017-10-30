@@ -1,5 +1,5 @@
 Spree::Api::ApiHelpers.class_eval do
-  
+
   #Add description and option case to option type
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:description))
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:option_case_id))
@@ -15,9 +15,10 @@ Spree::Api::ApiHelpers.class_eval do
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:hide_option_value))
 
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:adj_sku))
-  class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:spree_product_variant_types))
+  # class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_variant_types))
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_prices))
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_price_sets))
+  # class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_))
 
   class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:order_info_id))
   class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:is_clone))

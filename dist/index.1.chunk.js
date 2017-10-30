@@ -480,7 +480,7 @@ var ProductListComponent = (function () {
         return __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].API_ENDPOINT + url;
     };
     ProductListComponent.prototype.addToCart = function (product) {
-        var variant_id = product.master.id;
+        // const variant_id = product.master.id;
         // this.store.dispatch(this.checkoutActions.addToCart(variant_id, []));
     };
     ProductListComponent.prototype.getMargin = function () {
