@@ -18,10 +18,6 @@ class ProductSerializer < BaseSerializer
 
   has_many :product_variant_types, embed: :objects,
                              serializer: ProductVariantTypeSerializer
-
-  # has_many :product_variant_values, embed: :objects,
-  #                       serializer: ProductVariantValueSerializer
-
   def has_variants
     object.has_variants?
   end
