@@ -1,6 +1,6 @@
 <%= render partial: 'spree/admin/shared/product_tabs', locals: {current: :product_variant_types} %>
 
-<% if @product.empty_option_values? %>
+<!-- <% if @product.empty_option_values? %>
   <% if can?(:modify, Spree::ProductVariantType) %>
     <p class='first_add_option_types no-objects-found' data-hook="first_add_option_types">
       <%= Spree.t(:to_add_variants_you_must_first_define) %>
@@ -12,7 +12,7 @@
     </p>
   <% end %>
 <% else %>
-<% end %>
+<% end %> -->
 
 <% if @product_variant_types.any? %>
   <table class="table sortable" >

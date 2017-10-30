@@ -1,4 +1,4 @@
-class CountriesController < BaseController
+class Api::CountriesController < BaseController
   def index
     @countries = Spree::Country.includes(:states).order(:name)
 

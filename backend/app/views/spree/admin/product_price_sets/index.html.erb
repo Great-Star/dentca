@@ -1,0 +1,40 @@
+<%= render partial: 'spree/admin/shared/corp_sidebar', locals: { current: :price } %>
+
+<% content_for :page_title do %>
+    <%= Spree.t(:product_price_set) %>
+<% end %>
+
+<% content_for :page_actions do %>
+    <span id="new_ps_link">
+      <%= button_link_to  Spree.t(:new_price_set), new_object_url, {class: "btn-success", icon: 'add', id: 'new_product_price_set_link'} %>
+    </span>
+<% end if can?(:create, Spree::ProductPriceSet) %>
+
+
+<% if @product_price_sets.any? %>
+  <table class="table" id="listing_product_price_sets" data-hook>
+    <thead>
+      <tr data-hook="admin_product_price_sets_index_headers">
+        <th><%= Spree.t(:name) %></th>
+        <th data-hook="admin_product_price_sets_index_header_actions" class="actions"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @product_price_sets.each do |product_price_set| %>
+        <tr id="<%= spree_dom_id product_price_set %>" data-hook="admin_product_price_sets_index_rows">
+          <td class='product_price_set_name'><%=link_to product_price_set.name, edit_admin_product_price_set_url(product_price_set) %></td>
+                    
+          <td data-hook="admin_product_price_sets_index_row_actions" class="actions actions-2 text-right">
+            <%= link_to_edit product_price_set, no_text: true if can?(:edit, product_price_set) %>
+            <%= link_to_delete product_price_set, no_text: true if can?(:delete, product_price_set) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="alert alert-info no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::ProductPriceSet)) %>,
+    <%= link_to Spree.t(:add_one), new_object_url %>!
+  </div>
+<% end %>

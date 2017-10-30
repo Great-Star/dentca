@@ -1,0 +1,23 @@
+<% content_for :page_title do %>
+  <%= link_to Spree.t(:corporate_accounts), spree.admin_corporate_accounts_url %> /
+  <%= @corporate_account.email %>
+<% end %>
+
+<div data-hook="admin_corporate_account_edit_general_settings" class="panel panel-default">
+
+  <div class="panel-body">
+    <div data-hook="admin_corporate_account_edit_form_header">
+      <%= render partial: 'spree/admin/shared/error_messages', locals: { target: @corporate_account } %>
+    </div>
+
+    <div data-hook="admin_corporate_account_edit_form">
+      <%= form_for [:admin, @corporate_account], as: :corporate_account, url: spree.admin_corporate_account_url(@corporate_account), method: :put do |f| %>
+        <%= render partial: 'form', locals: { f: f } %>
+
+        <div data-hook="admin_corporate_account_edit_form_button">
+          <%= render partial: 'spree/admin/shared/edit_resource_links', locals: { collection_url: spree.admin_corporate_accounts_url } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

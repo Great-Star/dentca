@@ -1,0 +1,8 @@
+<tr class="product_price fields" id="spree_<%= dom_id(f.object) %>" data-hook="product_price">
+
+  <td class="price_product">
+      <%= f.collection_select :product_id, Spree::Product.all, :id, :name, {include_blank: true}, {class: 'select2'} %>
+  </td>
+  <td class="price"><%= f.text_field :price, class: "form-control" %></td>
+  <td class="actions actions-1 text-center"><%= link_to_icon_remove_fields f %></td>
+</tr>
