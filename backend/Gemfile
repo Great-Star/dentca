@@ -41,6 +41,8 @@ gem 'active_model_serializers'
 gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: 'master'
 gem 'spree_print_invoice', github: 'spree-contrib/spree_print_invoice', branch: 'master'
 
+gem 'spree_editor', github: 'spree-contrib/spree_editor'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

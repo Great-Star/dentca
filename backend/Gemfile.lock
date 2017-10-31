@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/spree-contrib/spree_editor.git
+  revision: b5ca8f486eee1576cfe71010d6093450df875728
+  specs:
+    spree_editor (3.3.1)
+      ckeditor (~> 4.2.0)
+      spree_backend (>= 3.1.0, < 4.0)
+      spree_core (>= 3.1.0, < 4.0)
+      spree_extension
+      tinymce-rails (~> 4.2.5)
+
+GIT
   remote: git://github.com/spree-contrib/spree_mail_settings.git
   revision: 78079efe4463a5ba3904af7cd9229a81967fbe6c
   branch: master
@@ -108,6 +119,9 @@ GEM
       activesupport (>= 3.0.0)
     case_transform (0.2)
       activesupport
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
     cldr-plurals-runtime-rb (1.0.1)
     climate_control (0.2.0)
     cocaine (0.5.8)
@@ -383,6 +397,8 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
+    tinymce-rails (4.2.8)
+      railties (>= 3.1.1)
     truncate_html (0.9.3)
     ttfunk (1.5.1)
     turbolinks (5.0.1)
@@ -434,6 +450,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree (~> 3.1.0)
   spree_auth_devise (~> 3.1.0)
+  spree_editor!
   spree_gateway (~> 3.1.0)
   spree_mail_settings!
   spree_print_invoice!

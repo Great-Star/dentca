@@ -1,0 +1,18 @@
+<% content_for :page_title do %>
+    <%= plural_resource_name(Spree::MaintainableMenu) %>
+<% end %>
+
+<% content_for :page_actions do %>
+    <% button_link_to Spree.t(:new_maintainable_menu), new_object_url, class: "btn-success", icon: 'add', id: 'admin_new_maintainable_menu' %>
+<% end if can?(:create, Spree::MaintainableMenu) %>
+
+<% if @maintainable_menus.any? %>
+    <div id="list-maintainable-menus" data-hook>
+        <% render 'list' %>
+    </div>
+<% else %>
+    <div class="alert alert-info no-objects-found">
+        <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::MaintainableMenu)) %>
+        <%= link_to Spree.t(:add_one), new_object_url if can?(:create, Spree::MaintainableMenu) %>!
+  </div>
+<% end %>

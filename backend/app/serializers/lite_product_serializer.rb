@@ -4,4 +4,5 @@ class LiteProductSerializer < ActiveModel::Serializer
              :shipping_category_id, :taxon_ids, :master, :product_price_sets, :product_prices
 
   has_one :master, serializer: SmallVariantSerializer
+
 end
