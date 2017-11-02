@@ -1,0 +1,12 @@
+<% content_for :page_title do %>
+    <%= link_to Spree.t(:maintainable_pages), spree.admin_maintainable_pages_url %> /
+    <%= Spree.t(:new_maintainable_page) %>
+<% end %>
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @maintainable_page } %>
+
+<%= form_for [:admin, @maintainable_page] do |f| %>
+    <fieldset>
+        <%= render partial: 'form', locals: { f: f } %>
+        <%= render partial: 'spree/admin/shared/new_resource_links' %>
+    </fieldset>
+<% end %>

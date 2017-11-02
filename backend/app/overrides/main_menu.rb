@@ -37,8 +37,8 @@ Deface::Override.new(:virtual_path => "spree/layouts/spree_application",
 #                 </ul>")      
 
 Deface::Override.new(:virtual_path => "spree/admin/shared/_main_menu",
-    :name => "_main_menu_add_tab_maintenance",
+    :name => "_main_menu_add_tab_drop_downs",
     :insert_after => "[data-hook='corporate_account_tab']",
     :text => "<ul class='nav nav-sidebar'>
-                <%= tab :maintainable_menus, icon: 'file' %>
+                <%= tab :maintainable_pages, icon: 'file' %>
             </ul>")

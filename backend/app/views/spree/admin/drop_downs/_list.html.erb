@@ -1,0 +1,19 @@
+<table class="table sortable" id="listing_dropdowns" data-hook>
+    <thead>
+        <tr data-hook="drop_downs_header">
+            <th><%= Spree.t(:name) %></th>
+            <th class="actions"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @drop_downs.each do |drop_down| %>
+            <tr id="<%= spree_dom_id drop_down %>" data-hook="drop_down_row">
+                <td><%= drop_down.presentation %></td>
+                <td class="actions actions-2 text-right">
+                    <%= link_to_edit drop_down.id, no_text: true if can?(:edit, drop_down) %>
+                    <%= link_to_delete drop_down, no_text: true if can?(:delete, drop_down) %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

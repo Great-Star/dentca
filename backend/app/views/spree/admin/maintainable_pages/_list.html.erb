@@ -1,0 +1,19 @@
+<table class="table sortable" id="listing_maintainable_pages" data-hook>
+    <thead>
+        <tr data-hook="maintainable_pages_header">
+            <th><%= Spree.t(:name) %></th>
+            <th class="actions"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @maintainable_pages.each do |maintainable_page| %>
+            <tr id="<%= spree_dom_id maintainable_page %>" data-hook="maintainable_page_row">
+                <td><%= maintainable_page.name %></td>
+                <td class="actions actions-2 text-right">
+                    <%= link_to_edit maintainable_page.id, no_text: true if can?(:edit, maintainable_page) %>
+                    <%= link_to_delete maintainable_page, no_text: true if can?(:delete, maintainable_page) %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

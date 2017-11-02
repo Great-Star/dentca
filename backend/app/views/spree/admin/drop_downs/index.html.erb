@@ -1,0 +1,20 @@
+<%= render partial: 'spree/admin/shared/maintain_sidebar', locals: { current: :menu } %>
+
+<% content_for :page_title do %>
+    <%= Spree.t(:drop_downs) %>
+<% end %>
+
+<% content_for :page_actions do %>
+    <%= button_link_to Spree.t(:new_drop_down), new_object_url, class: "btn-success", icon: "add", id: "admin_new_drop_down_id" %>
+<% end %>
+
+<% if @drop_downs.any? %> 
+    <div id="list-dropdowns" data-hook>
+        <%= render 'list' %>
+    </div>
+<% else %>
+    <div class="alert alert-info no-objects-found">
+        <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::DropDown)) %>
+        <%= link_to Spree.t(:add_one), new_object_url if can?(:create, Spree::DropDown) %>!
+    </div>      
+<% end %> 

@@ -1,0 +1,51 @@
+<% content_for :page_title do %>
+    <%= link_to Spree.t(:drop_downs), spree.admin_drop_downs_url %> /
+    <%= @drop_down.name %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <span id="new_drop_down_item" data-hook>
+    <%= button_link_to Spree.t(:add_item), "javascript:;", { icon: 'add', :'data-target' => "tbody#drop_down_items", class: 'btn-success add_new_drop_down_item' } %>
+  </span>
+<% end %>
+
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @option_type } %>
+
+<%= form_for [:admin, @drop_down] do |f| %>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title">
+                <%= Spree.t(:drop_down_items) %>
+            </h1>
+        </div>
+        <div class="panel-body">
+            <%= render partial: 'form', locals: { f: f } %>
+        </div>
+        <table class="table table-condensed table-bordered sortable" data-hook>
+            <thead data-hook="option_header">
+                <tr>
+                    <th><%= Spree.t(:name) %> <span class="required">*</span></th>
+                    <th><%= Spree.t(:presentation) %> <span class="required">*</span></th>
+                    <th><%= f.label :maintainable_page_ids, Spree.t(:page) %></th>
+                    <th class="actions"></th>
+                </tr>
+            </thead>
+            <tbody id="drop_down_items">
+                <% if @drop_down.drop_down_items.empty? %>
+                    <tr id="none" data-hook="option_none">
+                        <td colspan="2"><%= Spree.t(:none) %></td>
+                        <td class="actions text-center"></td>
+                    </tr>
+                <% else %>
+                    <%= f.fields_for :drop_down_items do |drop_down_item_form| %>
+                        <%= render partial: 'drop_down_item_fields', locals: { f: drop_down_item_form } %>
+                    <% end %>
+                <% end %>
+            </tbody>
+        </table>
+        <div class="panel-footer text-center">
+            <%= render partial: 'spree/admin/shared/edit_resource_links' %>
+        </div>
+    </div>
+<% end %>
+

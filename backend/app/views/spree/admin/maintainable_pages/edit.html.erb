@@ -1,0 +1,20 @@
+<% content_for :page_title do %>
+    <%= link_to Spree.t(:maintainable_pages), spree.admin_maintainable_pages_url %> /
+    <%= @maintainable_page.name %>
+<% end %>
+
+<%= form_for [:admin, @maintainable_page] do |f| %>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title">
+                <%= Spree.t(:maintainable_page) %>
+            </h1>
+        </div>
+        <div class="panel-body">
+            <%= render partial: 'form', locals: { f: f } %>
+        </div>
+        <div class="panel-footer text-center">
+            <%= render partial: 'spree/admin/shared/edit_resource_links' %>
+        </div>
+    </div>
+<% end %>

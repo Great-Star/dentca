@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171031090338) do
+ActiveRecord::Schema.define(version: 20171101175102) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -212,6 +212,23 @@ ActiveRecord::Schema.define(version: 20171031090338) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "spree_drop_down_items", force: :cascade do |t|
+    t.string   "name"
+    t.string   "presentation"
+    t.integer  "drop_down_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "spree_drop_down_items", ["drop_down_id"], name: "index_spree_drop_down_items_on_drop_down_id"
+
+  create_table "spree_drop_downs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "presentation"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "spree_gateways", force: :cascade do |t|
     t.string   "type"
     t.string   "name"
@@ -278,10 +295,18 @@ ActiveRecord::Schema.define(version: 20171031090338) do
 
   add_index "spree_log_entries", ["source_id", "source_type"], name: "index_spree_log_entries_on_source_id_and_source_type"
 
-  create_table "spree_maintainable_menus", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "spree_maintainable_pages", force: :cascade do |t|
+    t.string   "name"
+    t.text     "content"
+    t.string   "link"
+    t.integer  "drop_down_item_id"
+    t.integer  "drop_down_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
+
+  add_index "spree_maintainable_pages", ["drop_down_id"], name: "index_spree_maintainable_pages_on_drop_down_id"
+  add_index "spree_maintainable_pages", ["drop_down_item_id"], name: "index_spree_maintainable_pages_on_drop_down_item_id"
 
   create_table "spree_option_cases", force: :cascade do |t|
     t.string   "name"

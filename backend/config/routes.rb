@@ -31,6 +31,16 @@ Rails.application.routes.draw do
     resources :orders, only: %i(index show)
     resource :corporate_accounts
     resources :option_cases
+    resources :drop_downs do
+      member do
+        get :jstree
+      end
+      resources :drop_down_items do
+        member do
+          get :jstree
+        end
+      end
+    end
   end
 
   mount Spree::Core::Engine, at: '/spree'
@@ -50,7 +60,8 @@ Rails.application.routes.draw do
       resources :corporate_accounts
       resources :product_price_sets
       resources :product_prices
-      resources :maintainable_menus
+      resources :drop_downs
+      resources :drop_down_items
       resources :maintainable_pages
     end
   end
