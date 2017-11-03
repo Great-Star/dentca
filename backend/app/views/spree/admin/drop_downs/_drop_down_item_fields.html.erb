@@ -1,4 +1,8 @@
-<tr class="drop_down_items fields" data-hook="drop_down_items">
+<tr class="drop_down_item fields" id="spree_<%= dom_id(f.object)%>" data-hook="drop_down_items">
+  <td class="move-handle text-center">
+    <span class="icon icon-move handle"</span>
+      <%= f.hidden_field :id %>
+  </td>
   <td class="name"><%= f.text_field :name, class: "form-control" %></td>
   <td class="presentation"><%= f.text_field :presentation, class: "form-control" %></td>
   <td><%= f.collection_select(:maintainable_page_ids, @available_pages, :id, :name, { include_blank: Spree.t('match_choices.none') }, { class: 'select2 maintain_page' }) %></td>

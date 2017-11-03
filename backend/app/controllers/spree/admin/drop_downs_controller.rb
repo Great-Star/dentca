@@ -2,6 +2,16 @@ module Spree
     module Admin
         class DropDownsController < ResourceController
             before_action :setup_new_drop_down_item, :only => [:edit, :update]
+
+            def update_items_positions
+                params[:positions].each do |id, index|
+                    Spree::DropDownItem.where(id: id).update_all(position: index)
+                end
+
+                respond_to do |format|
+                    format.js {render plain: 'Ok'}
+                end
+            end
             
             private
                 def setup_new_drop_down_item

@@ -21,9 +21,10 @@
         <div class="panel-body">
             <%= render partial: 'form', locals: { f: f } %>
         </div>
-        <table class="table table-condensed table-bordered sortable" data-hook>
+        <table class="table table-condensed table-bordered sortable" data-hook data-sortable-link="<%= update_items_positions_admin_drop_downs_path %>">
             <thead data-hook="option_header">
                 <tr>
+                    <th class="no-border"></th>
                     <th><%= Spree.t(:name) %> <span class="required">*</span></th>
                     <th><%= Spree.t(:presentation) %> <span class="required">*</span></th>
                     <th><%= f.label :maintainable_page_ids, Spree.t(:page) %></th>

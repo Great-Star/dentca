@@ -60,7 +60,12 @@ Rails.application.routes.draw do
       resources :corporate_accounts
       resources :product_price_sets
       resources :product_prices
-      resources :drop_downs
+      resources :drop_downs do
+        collection do
+          post :update_positions
+          post :update_items_positions
+        end
+      end
       resources :drop_down_items
       resources :maintainable_pages
     end
