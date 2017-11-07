@@ -26,4 +26,11 @@ Spree::PrintInvoice::Config.set(store_pdf: true) # Default: false
 Spree::PrintInvoice::Config.set(storage_path: 'pdfs/orders') # Default: tmp/order_prints
 # Spree::PrintInvoice::Config.set(print_buttons: 'invoice')
 
+SpreeEditor::Config.tap do |config|
+  config.ids = 'product_description maintainable-page-content'
+
+  # change the editor to CKEditor
+  config.current_editor = 'CKEditor'
+end
+
 Spree::Api::Config[:requires_authentication] = false

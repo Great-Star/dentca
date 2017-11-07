@@ -41,6 +41,7 @@ Rails.application.routes.draw do
         end
       end
     end
+    resources :maintainable_pages
   end
 
   mount Spree::Core::Engine, at: '/spree'

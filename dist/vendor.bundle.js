@@ -41,7 +41,7 @@ function View_BsDropdownContainerComponent_Host_0(_l) {
             __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]], null, null)], null, null);
 }
 var BsDropdownContainerComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵccf"]('bs-dropdown-container', __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_dropdown_bs_dropdown_container_component__["a" /* BsDropdownContainerComponent */], View_BsDropdownContainerComponent_Host_0, {}, {}, ['*']);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZ3JlYXQtc3Rhci9naXQvc2FsZXMtc3RvcmUvZnJvbnRlbmQvbm9kZV9tb2R1bGVzL25neC1ib290c3RyYXAvZHJvcGRvd24vYnMtZHJvcGRvd24tY29udGFpbmVyLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9ob21lL2dyZWF0LXN0YXIvZ2l0L3NhbGVzLXN0b3JlL2Zyb250ZW5kL25vZGVfbW9kdWxlcy9uZ3gtYm9vdHN0cmFwL2Ryb3Bkb3duL2JzLWRyb3Bkb3duLWNvbnRhaW5lci5jb21wb25lbnQuZC50cyIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvc2FsZXMtc3RvcmUvZnJvbnRlbmQvbm9kZV9tb2R1bGVzL25neC1ib290c3RyYXAvZHJvcGRvd24vYnMtZHJvcGRvd24tY29udGFpbmVyLmNvbXBvbmVudC5kLnRzLkJzRHJvcGRvd25Db250YWluZXJDb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZ3JlYXQtc3Rhci9naXQvc2FsZXMtc3RvcmUvZnJvbnRlbmQvbm9kZV9tb2R1bGVzL25neC1ib290c3RyYXAvZHJvcGRvd24vYnMtZHJvcGRvd24tY29udGFpbmVyLmNvbXBvbmVudC5kLnRzLkJzRHJvcGRvd25Db250YWluZXJDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCJcbiAgICA8ZGl2IFtjbGFzcy5kcm9wdXBdPVwiZGlyZWN0aW9uID09PSAndXAnXCJcbiAgICAgICAgIFtjbGFzcy5kcm9wZG93bl09XCJkaXJlY3Rpb24gPT09ICdkb3duJ1wiXG4gICAgICAgICBbY2xhc3Muc2hvd109XCJpc09wZW5cIlxuICAgICAgICAgW2NsYXNzLm9wZW5dPVwiaXNPcGVuXCI+PG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PjwvZGl2PlxuICAiLCI8YnMtZHJvcGRvd24tY29udGFpbmVyPjwvYnMtZHJvcGRvd24tY29udGFpbmVyPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7OztvQkNBQSwyQ0FDSTtNQUFBO1VBQUE7TUFBQSxtREFHMkIsa0JBQStCO2FBQUE7O0lBSHJEO0lBQ0E7SUFDQTtJQUNBO0lBSEwsV0FBSyxVQUNBLFVBQ0EsVUFDQSxTQUhMOzs7O29CQ0RKO01BQUE7TUFBQTthQUFBOzhCQUFBOzs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2Rldi93b3Jrcy9naXQvc2FsZXMtc3RvcmUvZnJvbnRlbmQvbm9kZV9tb2R1bGVzL25neC1ib290c3RyYXAvZHJvcGRvd24vYnMtZHJvcGRvd24tY29udGFpbmVyLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9kZXYvd29ya3MvZ2l0L3NhbGVzLXN0b3JlL2Zyb250ZW5kL25vZGVfbW9kdWxlcy9uZ3gtYm9vdHN0cmFwL2Ryb3Bkb3duL2JzLWRyb3Bkb3duLWNvbnRhaW5lci5jb21wb25lbnQuZC50cyIsIm5nOi8vL1VzZXJzL2Rldi93b3Jrcy9naXQvc2FsZXMtc3RvcmUvZnJvbnRlbmQvbm9kZV9tb2R1bGVzL25neC1ib290c3RyYXAvZHJvcGRvd24vYnMtZHJvcGRvd24tY29udGFpbmVyLmNvbXBvbmVudC5kLnRzLkJzRHJvcGRvd25Db250YWluZXJDb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL2Rldi93b3Jrcy9naXQvc2FsZXMtc3RvcmUvZnJvbnRlbmQvbm9kZV9tb2R1bGVzL25neC1ib290c3RyYXAvZHJvcGRvd24vYnMtZHJvcGRvd24tY29udGFpbmVyLmNvbXBvbmVudC5kLnRzLkJzRHJvcGRvd25Db250YWluZXJDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCJcbiAgICA8ZGl2IFtjbGFzcy5kcm9wdXBdPVwiZGlyZWN0aW9uID09PSAndXAnXCJcbiAgICAgICAgIFtjbGFzcy5kcm9wZG93bl09XCJkaXJlY3Rpb24gPT09ICdkb3duJ1wiXG4gICAgICAgICBbY2xhc3Muc2hvd109XCJpc09wZW5cIlxuICAgICAgICAgW2NsYXNzLm9wZW5dPVwiaXNPcGVuXCI+PG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PjwvZGl2PlxuICAiLCI8YnMtZHJvcGRvd24tY29udGFpbmVyPjwvYnMtZHJvcGRvd24tY29udGFpbmVyPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7OztvQkNBQSwyQ0FDSTtNQUFBO1VBQUE7TUFBQSxtREFHMkIsa0JBQStCO2FBQUE7O0lBSHJEO0lBQ0E7SUFDQTtJQUNBO0lBSEwsV0FBSyxVQUNBLFVBQ0EsVUFDQSxTQUhMOzs7O29CQ0RKO01BQUE7TUFBQTthQUFBOzhCQUFBOzs7OyJ9
 //# sourceMappingURL=bs-dropdown-container.component.ngfactory.js.map
 
 /***/ }),
@@ -1685,6 +1685,2130 @@ function combineReducers(reducers) {
     };
 }
 //# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/components/custom-marker.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomMarker; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_debounceTime__ = __webpack_require__("../../../../rxjs/operator/debounceTime.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_debounceTime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_ngui_map__ = __webpack_require__("../../../../@ngui/map/dist/services/ngui-map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+
+
+var INPUTS = [
+    'position'
+];
+// to avoid DOM event conflicts map_*
+var OUTPUTS = [
+    'animationChanged', 'click', 'clickableChanged', 'cursorChanged', 'dblclick', 'drag', 'dragend', 'draggableChanged',
+    'dragstart', 'flatChanged', 'iconChanged', 'mousedown', 'mouseout', 'mouseover', 'mouseup', 'positionChanged', 'rightclick',
+    'shapeChanged', 'titleChanged', 'visibleChanged', 'zindexChanged',
+    'map_click', 'map_mouseover', 'map_mouseout', 'map_mouseup', 'map_mousedown', 'map_drag', 'map_dragend'
+];
+/**
+ * Wrapper to a create extend OverlayView at runtime, only after google maps is loaded.
+ * Otherwise throws a google is unknown error.
+ */
+function getCustomMarkerOverlayView(htmlEl, position) {
+    var CustomMarkerOverlayView = /** @class */ (function (_super) {
+        __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](CustomMarkerOverlayView, _super);
+        function CustomMarkerOverlayView(htmlEl, position) {
+            var _this = _super.call(this) || this;
+            _this.visible = true;
+            _this.setPosition = function (position) {
+                _this.htmlEl.style.visibility = 'hidden';
+                if (position.constructor.name === 'Array') {
+                    _this.position = new google.maps.LatLng(position[0], position[1]);
+                }
+                else if (typeof position === 'string') {
+                    var geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({ address: position }, function (results, status) {
+                        if (status === google.maps.GeocoderStatus.OK) {
+                            _this.setPosition(results[0].geometry.location);
+                        }
+                        else {
+                        }
+                    });
+                }
+                else if (position && typeof position.lng === 'function') {
+                    _this.position = position;
+                }
+                if (_this.getProjection() && typeof _this.position.lng === 'function') {
+                    var positionOnMap_1 = function () {
+                        var posPixel = _this.getProjection().fromLatLngToDivPixel(_this.position);
+                        var x = Math.round(posPixel.x - (_this.htmlEl.offsetWidth / 2));
+                        var y = Math.round(posPixel.y - _this.htmlEl.offsetHeight / 2);
+                        _this.htmlEl.style.left = x + 'px';
+                        _this.htmlEl.style.top = y + 'px';
+                        _this.htmlEl.style.visibility = 'visible';
+                    };
+                    if (_this.htmlEl.offsetWidth && _this.htmlEl.offsetHeight) {
+                        positionOnMap_1();
+                    }
+                    else {
+                        setTimeout(function () { return positionOnMap_1(); });
+                    }
+                }
+            };
+            _this.htmlEl = htmlEl;
+            _this.position = position;
+            return _this;
+        }
+        CustomMarkerOverlayView.prototype.onAdd = function () {
+            this.getPanes().overlayMouseTarget.appendChild(this.htmlEl);
+            // required for correct display inside google maps container
+            this.htmlEl.style.position = 'absolute';
+        };
+        CustomMarkerOverlayView.prototype.draw = function () {
+            this.setPosition(this.position);
+            this.setZIndex(this.zIndex);
+            this.setVisible(this.visible);
+        };
+        CustomMarkerOverlayView.prototype.onRemove = function () {
+            //
+        };
+        CustomMarkerOverlayView.prototype.getPosition = function () {
+            return this.position;
+        };
+        CustomMarkerOverlayView.prototype.setZIndex = function (zIndex) {
+            zIndex && (this.zIndex = zIndex); /* jshint ignore:line */
+            this.htmlEl.style.zIndex = this.zIndex;
+        };
+        CustomMarkerOverlayView.prototype.setVisible = function (visible) {
+            this.htmlEl.style.display = visible ? 'inline-block' : 'none';
+            this.visible = visible;
+        };
+        return CustomMarkerOverlayView;
+    }(google.maps.OverlayView));
+    return new CustomMarkerOverlayView(htmlEl, position);
+}
+var CustomMarker = /** @class */ (function () {
+    function CustomMarker(nguiMapComponent, elementRef, nguiMap) {
+        var _this = this;
+        this.nguiMapComponent = nguiMapComponent;
+        this.elementRef = elementRef;
+        this.nguiMap = nguiMap;
+        this.initialized$ = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.inputChanges$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
+        this.elementRef.nativeElement.style.display = 'none';
+        OUTPUTS.forEach(function (output) { return _this[output] = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"](); });
+    }
+    // Initialize this map object when map is ready
+    CustomMarker.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.nguiMapComponent.mapIdledOnce) {
+            this.initialize();
+        }
+        else {
+            this.nguiMapComponent.mapReady$.subscribe(function (map) { return _this.initialize(); });
+        }
+    };
+    CustomMarker.prototype.ngOnChanges = function (changes) {
+        this.inputChanges$.next(changes);
+    };
+    CustomMarker.prototype.ngOnDestroy = function () {
+        this.inputChanges$.complete();
+        this.nguiMapComponent.removeFromMapObjectGroup('CustomMarker', this.mapObject);
+        if (this.mapObject) {
+            this.nguiMap.clearObjectEvents(OUTPUTS, this, 'mapObject');
+        }
+    };
+    CustomMarker.prototype.initialize = function () {
+        var _this = this;
+        this.el = this.elementRef.nativeElement;
+        this.mapObject = getCustomMarkerOverlayView(this.el, this['position']);
+        this.mapObject.setMap(this.nguiMapComponent.map);
+        // set google events listeners and emits to this outputs listeners
+        this.nguiMap.setObjectEvents(OUTPUTS, this, 'mapObject');
+        // update object when input changes
+        __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_debounceTime__["debounceTime"].call(this.inputChanges$, 1000)
+            .subscribe(function (changes) { return _this.nguiMap.updateGoogleObject(_this.mapObject, changes); });
+        this.nguiMapComponent.addToMapObjectGroup('CustomMarker', this.mapObject);
+        this.initialized$.emit(this.mapObject);
+    };
+    CustomMarker.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
+                    selector: 'ngui-map > custom-marker',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                    template: "\n    <ng-content></ng-content>\n  ",
+                },] },
+    ];
+    /** @nocollapse */
+    CustomMarker.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_5__ngui_map_component__["a" /* NguiMapComponent */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_4__services_ngui_map__["a" /* NguiMap */], },
+    ]; };
+    CustomMarker.propDecorators = {
+        'initialized$': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] },],
+    };
+    return CustomMarker;
+}());
+
+//# sourceMappingURL=custom-marker.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/components/info-window.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InfoWindow; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_debounceTime__ = __webpack_require__("../../../../rxjs/operator/debounceTime.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operator_debounceTime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_ngui_map__ = __webpack_require__("../../../../@ngui/map/dist/services/ngui-map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+
+var INPUTS = [
+    'content', 'disableAutoPan', 'maxWidth', 'pixelOffset', 'position', 'zIndex', 'options'
+];
+var OUTPUTS = [
+    'closeclick', 'content_changed', 'domready', 'position_changed', 'zindex_changed'
+];
+var InfoWindow = /** @class */ (function () {
+    function InfoWindow(elementRef, nguiMap, nguiMapComponent) {
+        var _this = this;
+        this.elementRef = elementRef;
+        this.nguiMap = nguiMap;
+        this.nguiMapComponent = nguiMapComponent;
+        this.initialized$ = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.objectOptions = {};
+        this.inputChanges$ = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["Subject"]();
+        this.elementRef.nativeElement.style.display = 'none';
+        OUTPUTS.forEach(function (output) { return _this[output] = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"](); });
+    }
+    // Initialize this map object when map is ready
+    InfoWindow.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.nguiMapComponent.mapIdledOnce) {
+            this.initialize();
+        }
+        else {
+            this.nguiMapComponent.mapReady$.subscribe(function (map) { return _this.initialize(); });
+        }
+    };
+    InfoWindow.prototype.ngOnChanges = function (changes) {
+        this.inputChanges$.next(changes);
+    };
+    // called when map is ready
+    InfoWindow.prototype.initialize = function () {
+        var _this = this;
+        this.objectOptions = this.nguiMapComponent.optionBuilder.googlizeAllInputs(INPUTS, this);
+        this.infoWindow = new google.maps.InfoWindow(this.objectOptions);
+        this.infoWindow['mapObjectName'] = 'InfoWindow';
+        // register infoWindow ids to NguiMap, so that it can be opened by id
+        if (this.elementRef.nativeElement.id) {
+            this.nguiMapComponent.infoWindows[this.elementRef.nativeElement.id] = this;
+        }
+        else {
+            console.error('An InfoWindow must have an id. e.g. id="detail"');
+        }
+        // set google events listeners and emits to this outputs listeners
+        this.nguiMap.setObjectEvents(OUTPUTS, this, 'infoWindow');
+        // update object when input changes
+        __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_debounceTime__["debounceTime"].call(this.inputChanges$, 1000)
+            .subscribe(function (changes) { return _this.nguiMap.updateGoogleObject(_this.infoWindow, changes); });
+        this.nguiMapComponent.addToMapObjectGroup('InfoWindow', this.infoWindow);
+        this.initialized$.emit(this.infoWindow);
+    };
+    InfoWindow.prototype.open = function (anchor) {
+        // set content and open it
+        this.infoWindow.setContent(this.template.element.nativeElement);
+        this.infoWindow.open(this.nguiMapComponent.map, anchor);
+    };
+    InfoWindow.prototype.close = function () {
+        // check if infoWindow exists, and closes it
+        if (this.infoWindow)
+            this.infoWindow.close();
+    };
+    InfoWindow.prototype.ngOnDestroy = function () {
+        this.inputChanges$.complete();
+        if (this.infoWindow) {
+            this.nguiMap.clearObjectEvents(OUTPUTS, this, 'infoWindow');
+            delete this.infoWindow;
+        }
+    };
+    InfoWindow.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                    selector: 'ngui-map > info-window',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                    template: "<div #template><ng-content></ng-content></div>",
+                },] },
+    ];
+    /** @nocollapse */
+    InfoWindow.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_3__services_ngui_map__["a" /* NguiMap */], },
+        { type: __WEBPACK_IMPORTED_MODULE_4__ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    InfoWindow.propDecorators = {
+        'initialized$': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        'template': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"], args: ['template', { read: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] },] },],
+    };
+    return InfoWindow;
+}());
+
+//# sourceMappingURL=info-window.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/components/ngui-map.component.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NguiMapComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_option_builder__ = __webpack_require__("../../../../@ngui/map/dist/services/option-builder.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_navigator_geolocation__ = __webpack_require__("../../../../@ngui/map/dist/services/navigator-geolocation.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_geo_coder__ = __webpack_require__("../../../../@ngui/map/dist/services/geo-coder.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_ngui_map__ = __webpack_require__("../../../../@ngui/map/dist/services/ngui-map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_api_loader__ = __webpack_require__("../../../../@ngui/map/dist/services/api-loader.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_Subject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_debounceTime__ = __webpack_require__("../../../../rxjs/operator/debounceTime.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_operator_debounceTime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_util__ = __webpack_require__("../../../../@ngui/map/dist/services/util.js");
+
+
+
+
+
+
+
+
+
+var INPUTS = [
+    'backgroundColor', 'center', 'disableDefaultUI', 'disableDoubleClickZoom', 'draggable', 'draggableCursor',
+    'draggingCursor', 'heading', 'keyboardShortcuts', 'mapMaker', 'mapTypeControl', 'mapTypeId', 'maxZoom', 'minZoom',
+    'noClear', 'overviewMapControl', 'panControl', 'panControlOptions', 'rotateControl', 'scaleControl', 'scrollwheel',
+    'streetView', 'styles', 'tilt', 'zoom', 'streetViewControl', 'zoomControl', 'zoomControlOptions', 'mapTypeControlOptions',
+    'overviewMapControlOptions', 'rotateControlOptions', 'scaleControlOptions', 'streetViewControlOptions', 'fullscreenControl', 'fullscreenControlOptions',
+    'options',
+    // ngui-map-specific inputs
+    'geoFallbackCenter'
+];
+var OUTPUTS = [
+    'bounds_changed', 'center_changed', 'click', 'dblclick', 'drag', 'dragend', 'dragstart', 'heading_changed', 'idle',
+    'typeid_changed', 'mousemove', 'mouseout', 'mouseover', 'projection_changed', 'resize', 'rightclick',
+    'tilesloaded', 'tile_changed', 'zoom_changed',
+    // to avoid DOM event conflicts
+    'mapClick', 'mapMouseover', 'mapMouseout', 'mapMousemove', 'mapDrag', 'mapDragend', 'mapDragstart'
+];
+var NguiMapComponent = /** @class */ (function () {
+    function NguiMapComponent(optionBuilder, elementRef, geolocation, geoCoder, nguiMap, apiLoader, zone) {
+        var _this = this;
+        this.optionBuilder = optionBuilder;
+        this.elementRef = elementRef;
+        this.geolocation = geolocation;
+        this.geoCoder = geoCoder;
+        this.nguiMap = nguiMap;
+        this.apiLoader = apiLoader;
+        this.zone = zone;
+        this.mapReady$ = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.mapOptions = {};
+        this.inputChanges$ = new __WEBPACK_IMPORTED_MODULE_6_rxjs_Subject__["Subject"]();
+        // map objects by group
+        this.infoWindows = {};
+        // map has been fully initialized
+        this.mapIdledOnce = false;
+        this.initializeMapAfterDisplayed = false;
+        apiLoader.load();
+        // all outputs needs to be initialized,
+        // http://stackoverflow.com/questions/37765519/angular2-directive-cannot-read-property-subscribe-of-undefined-with-outputs
+        OUTPUTS.forEach(function (output) { return _this[output] = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"](); });
+    }
+    NguiMapComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.apiLoaderSub = this.apiLoader.api$.subscribe(function () { return _this.initializeMap(); });
+    };
+    NguiMapComponent.prototype.ngAfterViewChecked = function () {
+        if (this.initializeMapAfterDisplayed && this.el && this.el.offsetWidth > 0) {
+            this.initializeMap();
+        }
+    };
+    NguiMapComponent.prototype.ngOnChanges = function (changes) {
+        this.inputChanges$.next(changes);
+    };
+    NguiMapComponent.prototype.initializeMap = function () {
+        var _this = this;
+        this.el = this.elementRef.nativeElement.querySelector('.google-map');
+        if (this.el && this.el.offsetWidth === 0) {
+            this.initializeMapAfterDisplayed = true;
+            return;
+        }
+        this.initializeMapAfterDisplayed = false;
+        this.mapOptions = this.optionBuilder.googlizeAllInputs(INPUTS, this);
+        this.mapOptions.zoom = this.mapOptions.zoom || 15;
+        typeof this.mapOptions.center === 'string' && (delete this.mapOptions.center);
+        this.zone.runOutsideAngular(function () {
+            _this.map = new google.maps.Map(_this.el, _this.mapOptions);
+            _this.map['mapObjectName'] = 'NguiMapComponent';
+            if (!_this.mapOptions.center) {
+                _this.setCenter();
+            }
+            // set google events listeners and emits to this outputs listeners
+            _this.nguiMap.setObjectEvents(OUTPUTS, _this, 'map');
+            _this.map.addListener('idle', function () {
+                if (!_this.mapIdledOnce) {
+                    _this.mapIdledOnce = true;
+                    setTimeout(function () {
+                        _this.mapReady$.emit(_this.map);
+                    });
+                }
+            });
+            // update map when input changes
+            __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_debounceTime__["debounceTime"].call(_this.inputChanges$, 1000)
+                .subscribe(function (changes) { return _this.nguiMap.updateGoogleObject(_this.map, changes); });
+            if (typeof window !== 'undefined' && window['nguiMapRef']) {
+                // expose map object for test and debugging on (<any>window)
+                window['nguiMapRef'].map = _this.map;
+            }
+        });
+    };
+    NguiMapComponent.prototype.setCenter = function () {
+        var _this = this;
+        if (!this['center']) {
+            this.geolocation.getCurrentPosition().subscribe(function (position) {
+                var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                _this.map.setCenter(latLng);
+            }, function (error) {
+                console.error('ngui-map: Error finding the current position');
+                _this.map.setCenter(_this.mapOptions['geoFallbackCenter'] || new google.maps.LatLng(0, 0));
+            });
+        }
+        else if (typeof this['center'] === 'string') {
+            this.geoCoder.geocode({ address: this['center'] }).subscribe(function (results) {
+                _this.map.setCenter(results[0].geometry.location);
+            }, function (error) {
+                _this.map.setCenter(_this.mapOptions['geoFallbackCenter'] || new google.maps.LatLng(0, 0));
+            });
+        }
+    };
+    NguiMapComponent.prototype.openInfoWindow = function (id, anchor) {
+        this.infoWindows[id].open(anchor);
+    };
+    NguiMapComponent.prototype.closeInfoWindow = function (id) {
+        // if infoWindow for id exists, close the infoWindow
+        if (this.infoWindows[id])
+            this.infoWindows[id].close();
+    };
+    NguiMapComponent.prototype.ngOnDestroy = function () {
+        this.inputChanges$.complete();
+        if (this.el && !this.initializeMapAfterDisplayed) {
+            this.nguiMap.clearObjectEvents(OUTPUTS, this, 'map');
+        }
+        if (this.apiLoaderSub) {
+            this.apiLoaderSub.unsubscribe();
+        }
+    };
+    // map.markers, map.circles, map.heatmapLayers.. etc
+    NguiMapComponent.prototype.addToMapObjectGroup = function (mapObjectName, mapObject) {
+        var groupName = Object(__WEBPACK_IMPORTED_MODULE_8__services_util__["c" /* toCamelCase */])(mapObjectName.toLowerCase()) + 's'; // e.g. markers
+        this.map[groupName] = this.map[groupName] || [];
+        this.map[groupName].push(mapObject);
+    };
+    NguiMapComponent.prototype.removeFromMapObjectGroup = function (mapObjectName, mapObject) {
+        var groupName = Object(__WEBPACK_IMPORTED_MODULE_8__services_util__["c" /* toCamelCase */])(mapObjectName.toLowerCase()) + 's'; // e.g. markers
+        if (this.map && this.map[groupName]) {
+            var index = this.map[groupName].indexOf(mapObject);
+            (index > -1) && this.map[groupName].splice(index, 1);
+        }
+    };
+    NguiMapComponent.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                    selector: 'ngui-map',
+                    providers: [__WEBPACK_IMPORTED_MODULE_4__services_ngui_map__["a" /* NguiMap */], __WEBPACK_IMPORTED_MODULE_1__services_option_builder__["a" /* OptionBuilder */], __WEBPACK_IMPORTED_MODULE_3__services_geo_coder__["a" /* GeoCoder */], __WEBPACK_IMPORTED_MODULE_2__services_navigator_geolocation__["a" /* NavigatorGeolocation */]],
+                    styles: ["\n    ngui-map {display: block; height: 300px;}\n    .google-map {width: 100%; height: 100%}\n  "],
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                    encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
+                    template: "\n    <div class=\"google-map\"></div>\n    <ng-content></ng-content>\n  ",
+                },] },
+    ];
+    /** @nocollapse */
+    NguiMapComponent.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_1__services_option_builder__["a" /* OptionBuilder */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_2__services_navigator_geolocation__["a" /* NavigatorGeolocation */], },
+        { type: __WEBPACK_IMPORTED_MODULE_3__services_geo_coder__["a" /* GeoCoder */], },
+        { type: __WEBPACK_IMPORTED_MODULE_4__services_ngui_map__["a" /* NguiMap */], },
+        { type: __WEBPACK_IMPORTED_MODULE_5__services_api_loader__["a" /* NgMapApiLoader */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+    ]; };
+    NguiMapComponent.propDecorators = {
+        'mapReady$': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    };
+    return NguiMapComponent;
+}());
+
+//# sourceMappingURL=ngui-map.component.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/base-map-directive.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseMapDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
+var BaseMapDirective = /** @class */ (function () {
+    function BaseMapDirective(nguiMapComponent, mapObjectName, inputs, outputs) {
+        var _this = this;
+        this.nguiMapComponent = nguiMapComponent;
+        this.mapObjectName = mapObjectName;
+        this.inputs = inputs;
+        this.outputs = outputs;
+        // this should be redefined on each childr directive
+        this.initialized$ = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this._subscriptions = [];
+        this.nguiMap = this.nguiMapComponent['nguiMap'];
+        this.optionBuilder = this.nguiMapComponent['optionBuilder'];
+        // all outputs must be initialized
+        this.outputs.forEach(function (output) { return _this[output] = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"](); });
+        this.mapObjectName = mapObjectName;
+    }
+    // Initialize this map object when map is ready
+    BaseMapDirective.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.nguiMapComponent.mapIdledOnce) {
+            this.initialize();
+        }
+        else {
+            this.nguiMapComponent.mapReady$.subscribe(function (map) { return _this.initialize(); });
+        }
+    };
+    // only called when map is ready
+    BaseMapDirective.prototype.initialize = function () {
+        this.objectOptions = this.optionBuilder.googlizeAllInputs(this.inputs, this);
+        // will be set after geocoded
+        typeof this.objectOptions.position === 'string' && (delete this.objectOptions.position);
+        typeof this.objectOptions.center === 'string' && (delete this.objectOptions.center);
+        // noinspection TypeScriptUnresolvedFunction
+        if (this.libraryName) {
+            this.mapObject = new google.maps[this.libraryName][this.mapObjectName](this.objectOptions);
+        }
+        else {
+            this.mapObject = new google.maps[this.mapObjectName](this.objectOptions);
+        }
+        this.mapObject.setMap(this.nguiMapComponent.map);
+        this.mapObject['mapObjectName'] = this.mapObjectName;
+        this.mapObject['nguiMapComponent'] = this.nguiMapComponent;
+        // set google events listeners and emits to this outputs listeners
+        this.nguiMap.setObjectEvents(this.outputs, this, 'mapObject');
+        this.nguiMapComponent.addToMapObjectGroup(this.mapObjectName, this.mapObject);
+        this.initialized$.emit(this.mapObject);
+    };
+    // When input is changed, update object too.
+    // e.g., when map center is changed by user, update center on the map
+    BaseMapDirective.prototype.ngOnChanges = function (changes) {
+        this.nguiMap.updateGoogleObject(this.mapObject, changes);
+    };
+    // When destroyed, remove event listener, and delete this object to prevent memory leak
+    BaseMapDirective.prototype.ngOnDestroy = function () {
+        this._subscriptions.map(function (subscription) { return subscription.unsubscribe(); });
+        this.nguiMapComponent.removeFromMapObjectGroup(this.mapObjectName, this.mapObject);
+        if (this.mapObject) {
+            this.nguiMap.clearObjectEvents(this.outputs, this, 'mapObject');
+        }
+    };
+    BaseMapDirective.propDecorators = {
+        'initialized$': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    };
+    return BaseMapDirective;
+}());
+
+//# sourceMappingURL=base-map-directive.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/bicycling-layer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BicyclingLayer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = [];
+var OUTPUTS = [];
+var BicyclingLayer = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](BicyclingLayer, _super);
+    // declare INPUTS for AOT compiler
+    // declare OUTPUTS for AOT compiler
+    function BicyclingLayer(nguiMapComp) {
+        return _super.call(this, nguiMapComp, 'BicyclingLayer', INPUTS, OUTPUTS) || this;
+    }
+    BicyclingLayer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > bicycling-layer',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    BicyclingLayer.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return BicyclingLayer;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=bicycling-layer.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/circle.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Circle; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = [
+    'center', 'clickable', 'draggable', 'editable', 'fillColor', 'fillOpacity', 'map', 'radius',
+    'strokeColor', 'strokeOpacity', 'strokePosition', 'strokeWeight', 'visible', 'zIndex', 'options',
+    // ngui-map specific inputs
+    'geoFallbackCenter'
+];
+var OUTPUTS = [
+    'centerChanged', 'click', 'dblclick', 'drag', 'dragend', 'dragstart',
+    'mousedown', 'mousemove', 'mouseout', 'mouseover', 'mouseup', 'radiusChanged', 'rightclick',
+];
+var Circle = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Circle, _super);
+    function Circle(nguiMapComp) {
+        var _this = _super.call(this, nguiMapComp, 'Circle', INPUTS, OUTPUTS) || this;
+        _this.nguiMapComp = nguiMapComp;
+        _this.objectOptions = {};
+        return _this;
+    }
+    Circle.prototype.initialize = function () {
+        _super.prototype.initialize.call(this);
+        this.setCenter();
+    };
+    Circle.prototype.setCenter = function () {
+        var _this = this;
+        if (!this['center']) {
+            this._subscriptions.push(this.nguiMapComp.geolocation.getCurrentPosition().subscribe(function (center) {
+                var latLng = new google.maps.LatLng(center.coords.latitude, center.coords.longitude);
+                _this.mapObject.setCenter(latLng);
+            }, function (error) {
+                console.error('ngui-map, error in finding the current position');
+                _this.mapObject.setCenter(_this.objectOptions['geoFallbackCenter'] || new google.maps.LatLng(0, 0));
+            }));
+        }
+        else if (typeof this['center'] === 'string') {
+            this._subscriptions.push(this.nguiMapComp.geoCoder.geocode({ address: this['center'] }).subscribe(function (results) {
+                _this.mapObject.setCenter(results[0].geometry.location);
+            }, function (error) {
+                console.error('ngui-map, error in finding location from', _this['center']);
+                _this.mapObject.setCenter(_this.objectOptions['geoFallbackCenter'] || new google.maps.LatLng(0, 0));
+            }));
+        }
+    };
+    Circle.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map>circle, ngui-map>map-circle',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    Circle.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return Circle;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=circle.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/data-layer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataLayer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = ['controlPosition', 'controls', 'drawingMode', 'featureFactory', 'style', 'geoJson', 'geoJsonUrl'];
+var OUTPUTS = [
+    'addfeature', 'click', 'dblclick', 'mousedown', 'mouseout', 'mouseover',
+    'mouseup', 'removefeature', 'removeproperty', 'rightclick', 'setgeometry', 'setproperty'
+];
+var DataLayer = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DataLayer, _super);
+    function DataLayer(nguiMapComponent) {
+        return _super.call(this, nguiMapComponent, 'Data', INPUTS, OUTPUTS) || this;
+    }
+    // only called when map is ready
+    DataLayer.prototype.initialize = function () {
+        if (this['geoJson']) {
+            // addGeoJson from an object
+            this.nguiMapComponent.map.data.addGeoJson(this['geoJson']);
+        }
+        else if (this['geoJsonUrl']) {
+            // loadGeoJson from a URL
+            this.nguiMapComponent.map.data.loadGeoJson(this['geoJsonUrl']);
+        }
+        else {
+            this.objectOptions = this.optionBuilder.googlizeAllInputs(this.inputs, this);
+            this.nguiMapComponent.map.data.add(this.objectOptions);
+        }
+        // unlike others, data belongs to map. e.g., map.data.loadGeoJson(), map.data.add()
+        this.mapObject = this.nguiMapComponent.map.data;
+        // set google events listeners and emits to this outputs listeners
+        this.nguiMap.setObjectEvents(this.outputs, this, 'mapObject');
+        this.nguiMapComponent.addToMapObjectGroup(this.mapObjectName, this.mapObject);
+        this.initialized$.emit(this.mapObject);
+    };
+    DataLayer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > data-layer',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    DataLayer.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return DataLayer;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=data-layer.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/directions-renderer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DirectionsRenderer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_navigator_geolocation__ = __webpack_require__("../../../../@ngui/map/dist/services/navigator-geolocation.js");
+
+
+
+
+
+var INPUTS = [
+    'directions', 'draggable', 'hideRouteList', 'infoWindow', 'panel', 'markerOptions',
+    'polylineOptions', 'preserveViewport', 'routeIndex', 'suppressBicyclingLayer',
+    'suppressInfoWindows', 'suppressMarkers', 'suppressPolylines'
+];
+var OUTPUTS = ['directions_changed'];
+var DirectionsRenderer = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DirectionsRenderer, _super);
+    function DirectionsRenderer(nguiMapComponent, geolocation) {
+        var _this = _super.call(this, nguiMapComponent, 'DirectionsRenderer', INPUTS, OUTPUTS) || this;
+        _this.geolocation = geolocation;
+        return _this;
+    }
+    // only called when map is ready
+    DirectionsRenderer.prototype.initialize = function () {
+        this.objectOptions = this.optionBuilder.googlizeAllInputs(this.inputs, this);
+        if (typeof this.objectOptions['panel'] === 'string') {
+            this.objectOptions['panel'] = document.querySelector(this.objectOptions['panel']);
+        }
+        this.directionsService = new google.maps.DirectionsService();
+        this.directionsRenderer = new google.maps.DirectionsRenderer(this.objectOptions);
+        this.directionsRenderer.setMap(this.nguiMapComponent.map);
+        // set google events listeners and emidirectionsRenderer to this outputs listeners
+        this.showDirections(this.directionsRequest);
+        this.nguiMap.setObjectEvents(this.outputs, this, 'directionsRenderer');
+        this.nguiMapComponent.addToMapObjectGroup(this.mapObjectName, this.mapObject);
+        this.initialized$.emit(this.directionsRenderer);
+    };
+    DirectionsRenderer.prototype.ngOnChanges = function (changes) {
+        var newOptions = {};
+        for (var key in changes) {
+            if (this.inputs.indexOf(key) !== -1) {
+                newOptions[key] = this.optionBuilder.googlize(changes[key].currentValue);
+            }
+        }
+        if (changes['directionsRequest'] && this.directionsRenderer) {
+            this.directionsService && this.showDirections(this.directionsRequest);
+        }
+    };
+    DirectionsRenderer.prototype.showDirections = function (directionsRequest) {
+        var _this = this;
+        this.directionsService.route(directionsRequest, function (response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
+                _this.directionsRenderer.setDirections(response);
+            }
+            else {
+                console.error('Directions request failed due to ' + status);
+            }
+        });
+    };
+    DirectionsRenderer.prototype.ngOnDestroy = function () {
+        _super.prototype.ngOnDestroy.call(this);
+        this.nguiMap.clearObjectEvents(this.outputs, this, 'directionsRenderer');
+    };
+    DirectionsRenderer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > directions-renderer',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    DirectionsRenderer.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+        { type: __WEBPACK_IMPORTED_MODULE_4__services_navigator_geolocation__["a" /* NavigatorGeolocation */], },
+    ]; };
+    DirectionsRenderer.propDecorators = {
+        'directionsRequest': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"], args: ['directions-request',] },],
+    };
+    return DirectionsRenderer;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=directions-renderer.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/drawing-manager.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DrawingManager; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = [
+    'options',
+    'circleOptions', 'drawingControl', 'drawingControlOptions', 'drawingMode',
+    'map', 'markerOptions', 'polygonOptions', 'polylineOptions', 'rectangleOptions'
+];
+var OUTPUTS = [
+    'circlecomplete', 'markercomplete', 'overlaycomplete',
+    'polygoncomplete', 'polylinecomplete', 'rectanglecomplete'
+];
+var DrawingManager = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](DrawingManager, _super);
+    function DrawingManager(nguiMapComp) {
+        var _this = _super.call(this, nguiMapComp, 'DrawingManager', INPUTS, OUTPUTS) || this;
+        _this.libraryName = 'drawing';
+        return _this;
+    }
+    DrawingManager.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > drawing-manager',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    DrawingManager.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return DrawingManager;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=drawing-manager.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/ground-overlay.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GroundOverlay; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = ['url', 'bounds', 'clickable', 'opacity'];
+var OUTPUTS = ['click', 'dblclick'];
+var GroundOverlay = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](GroundOverlay, _super);
+    function GroundOverlay(nguiMapComp) {
+        var _this = _super.call(this, nguiMapComp, 'GroundOverlay', INPUTS, OUTPUTS) || this;
+        _this.objectOptions = {};
+        return _this;
+    }
+    // re-declaring initialize function. called when map is ready
+    GroundOverlay.prototype.initialize = function () {
+        // url, bounds are not the options of GroundOverlay
+        this.objectOptions = this.optionBuilder.googlizeAllInputs(['clickable', 'opacity'], this);
+        // noinspection TypeScriptUnresolvedFunction
+        this.mapObject = new google.maps.GroundOverlay(this['url'], this['bounds'], this.objectOptions);
+        this.mapObject.setMap(this.nguiMapComponent.map);
+        this.mapObject['mapObjectName'] = this.mapObjectName;
+        // set google events listeners and emits to this outputs listeners
+        this.nguiMap.setObjectEvents(this.outputs, this, 'mapObject');
+        this.nguiMapComponent.addToMapObjectGroup(this.mapObjectName, this.mapObject);
+        this.initialized$.emit(this.mapObject);
+    };
+    GroundOverlay.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > ground-overlay',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    GroundOverlay.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return GroundOverlay;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=ground-overlay.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/heatmap-layer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeatmapLayer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = ['data', 'dissipating', 'gradient', 'maxIntensity', 'opacity', 'radius', 'options'];
+var OUTPUTS = [];
+var HeatmapLayer = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](HeatmapLayer, _super);
+    function HeatmapLayer(nguiMapComp) {
+        var _this = _super.call(this, nguiMapComp, 'HeatmapLayer', INPUTS, OUTPUTS) || this;
+        // declare OUTPUTS for AOT compiler
+        _this.libraryName = 'visualization';
+        return _this;
+    }
+    HeatmapLayer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > heatmap-layer',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    HeatmapLayer.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return HeatmapLayer;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=heatmap-layer.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/kml-layer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KmlLayer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = ['clickable', 'preserveViewport', 'screenOverlays', 'suppressInfoWindows', 'url', 'zIndex', 'options'];
+var OUTPUTS = ['click', 'defaultviewport_changed', 'status_changed'];
+var KmlLayer = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](KmlLayer, _super);
+    function KmlLayer(nguiMapComp) {
+        return _super.call(this, nguiMapComp, 'KmlLayer', INPUTS, OUTPUTS) || this;
+    }
+    KmlLayer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > kml-layer',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    KmlLayer.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return KmlLayer;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=kml-layer.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/marker.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Marker; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = [
+    'anchorPoint', 'animation', 'clickable', 'cursor', 'draggable', 'icon', 'label', 'opacity',
+    'optimized', 'place', 'position', 'shape', 'title', 'visible', 'zIndex', 'options',
+    // ngui-map specific inputs
+    'geoFallbackPosition'
+];
+var OUTPUTS = [
+    'animationChanged', 'click', 'clickableChanged', 'cursorChanged', 'dblclick', 'drag', 'dragend', 'draggableChanged',
+    'dragstart', 'flatChanged', 'iconChanged', 'mousedown', 'mouseout', 'mouseover', 'mouseup', 'positionChanged', 'rightclick',
+    'shapeChanged', 'titleChanged', 'visibleChanged', 'zindexChanged'
+];
+var Marker = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Marker, _super);
+    function Marker(nguiMapComp) {
+        var _this = _super.call(this, nguiMapComp, 'Marker', INPUTS, OUTPUTS) || this;
+        _this.nguiMapComp = nguiMapComp;
+        _this.objectOptions = {};
+        return _this;
+    }
+    // Initialize this map object when map is ready
+    Marker.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.nguiMapComponent.mapIdledOnce) {
+            this.initialize();
+        }
+        else {
+            this.nguiMapComponent.mapReady$.subscribe(function (map) { return _this.initialize(); });
+        }
+    };
+    Marker.prototype.initialize = function () {
+        _super.prototype.initialize.call(this);
+        this.setPosition();
+    };
+    Marker.prototype.setPosition = function () {
+        var _this = this;
+        if (!this['position']) {
+            this._subscriptions.push(this.nguiMapComp.geolocation.getCurrentPosition().subscribe(function (position) {
+                var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                _this.mapObject.setPosition(latLng);
+            }, function (error) {
+                console.error('ngui-map, error finding the current location');
+                _this.mapObject.setPosition(_this.objectOptions['geoFallbackPosition'] || new google.maps.LatLng(0, 0));
+            }));
+        }
+        else if (typeof this['position'] === 'string') {
+            this._subscriptions.push(this.nguiMapComp.geoCoder.geocode({ address: this['position'] }).subscribe(function (results) {
+                _this.mapObject.setPosition(results[0].geometry.location);
+            }, function (error) {
+                console.error('ngui-map, error finding the location from', _this['position']);
+                _this.mapObject.setPosition(_this.objectOptions['geoFallbackPosition'] || new google.maps.LatLng(0, 0));
+            }));
+        }
+    };
+    Marker.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > marker',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    Marker.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return Marker;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=marker.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/places-auto-complete.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacesAutoComplete; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_loader__ = __webpack_require__("../../../../@ngui/map/dist/services/api-loader.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_option_builder__ = __webpack_require__("../../../../@ngui/map/dist/services/option-builder.js");
+
+
+
+var PlacesAutoComplete = /** @class */ (function () {
+    function PlacesAutoComplete(optionBuilder, elementRef, apiLoader) {
+        var _this = this;
+        this.optionBuilder = optionBuilder;
+        this.elementRef = elementRef;
+        this.apiLoader = apiLoader;
+        this.place_changed = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.initialized$ = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        // only called when map is ready
+        this.initialize = function () {
+            _this.objectOptions =
+                _this.optionBuilder.googlizeAllInputs(['bounds', 'componentRestrictions', 'types'], _this);
+            _this.autocomplete = new google.maps.places.Autocomplete(_this.elementRef.nativeElement, _this.objectOptions);
+            _this.autocomplete.addListener('place_changed', function (place) {
+                _this.place_changed.emit(_this.autocomplete.getPlace());
+            });
+            _this.initialized$.emit(_this.autocomplete);
+        };
+        apiLoader.load();
+        apiLoader.api$.subscribe(function () { return _this.initialize(); });
+    }
+    PlacesAutoComplete.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                    selector: '[places-auto-complete]'
+                },] },
+    ];
+    /** @nocollapse */
+    PlacesAutoComplete.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_2__services_option_builder__["a" /* OptionBuilder */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__services_api_loader__["a" /* NgMapApiLoader */], },
+    ]; };
+    PlacesAutoComplete.propDecorators = {
+        'bounds': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['bounds',] },],
+        'componentRestrictions': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['componentRestrictions',] },],
+        'types': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['types',] },],
+        'place_changed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"], args: ['place_changed',] },],
+        'initialized$': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+    };
+    return PlacesAutoComplete;
+}());
+
+//# sourceMappingURL=places-auto-complete.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/polygon.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Polygon; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = [
+    'clickable', 'draggable', 'editable', 'fillColor', 'fillOpacity', 'geodesic', 'paths',
+    'strokeColor', 'strokeOpacity', 'strokePosition', 'strokeWeight', 'visible', 'zIndex', 'options',
+];
+var OUTPUTS = [
+    'click', 'dblclick', 'drag', 'dragend', 'dragstart', 'mousedown',
+    'mousemove', 'mouseout', 'mouseover', 'mouseup', 'rightclick',
+];
+var Polygon = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Polygon, _super);
+    function Polygon(nguiMapComp) {
+        return _super.call(this, nguiMapComp, 'Polygon', INPUTS, OUTPUTS) || this;
+    }
+    Polygon.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map>polygon, ngui-map>map-polygon',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    Polygon.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return Polygon;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=polygon.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/polyline.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Polyline; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = [
+    'clickable', 'draggable', 'editable', 'geodesic', 'icons', 'path', 'strokeColor',
+    'strokeOpacity', 'strokeWeight', 'visible', 'zIndex', 'options'
+];
+var OUTPUTS = [
+    'click', 'dblclick', 'drag', 'dragend', 'dragstart', 'mousedown',
+    'mousemove', 'mouseout', 'mouseover', 'mouseup', 'rightclick'
+];
+var Polyline = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](Polyline, _super);
+    function Polyline(nguiMapComp) {
+        return _super.call(this, nguiMapComp, 'Polyline', INPUTS, OUTPUTS) || this;
+    }
+    Polyline.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > polyline',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    Polyline.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return Polyline;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=polyline.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/street-view-panorama.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StreetViewPanorama; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = [
+    'selector', 'options',
+    'addressControl', 'addressControlOptions', 'clickToGo', 'disableDefaultUI', 'disableDoubleClickZoom',
+    'enableCloseButton', 'fullscreenControl', 'fullscreenControlOptions', 'imageDateControl', 'linksControl',
+    'motionTracking', 'motionTrackingControl', 'panControl', 'panControlOptions', 'pano',
+    'position', 'pov', 'scrollwheel', 'showRoadLabels', 'visible', 'zoomControl', 'zoomControlOptions'
+];
+var OUTPUTS = [
+    'closeclick', 'pano_changed', 'position_changed', 'pov_changed', 'resize', 'status_changed',
+    'visible_changed', 'zoom_changed'
+];
+var StreetViewPanorama = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](StreetViewPanorama, _super);
+    function StreetViewPanorama(nguiMapComp) {
+        return _super.call(this, nguiMapComp, 'StreetViewPanorama', INPUTS, OUTPUTS) || this;
+    }
+    // only called when map is ready
+    StreetViewPanorama.prototype.initialize = function () {
+        this.objectOptions = this.optionBuilder.googlizeAllInputs(this.inputs, this);
+        var element;
+        if (this.objectOptions.selector) {
+            // noinspection TypeScriptValidateTypes
+            element = document.querySelector(this['selector']);
+            delete this.objectOptions.selector;
+        }
+        else {
+            element = this.nguiMapComponent.el;
+        }
+        // will be set after geocoded
+        typeof this.objectOptions.position === 'string' && (delete this.objectOptions.position);
+        this.mapObject = new google.maps[this.mapObjectName](element, this.objectOptions);
+        this.mapObject['mapObjectName'] = this.mapObjectName;
+        this.mapObject['nguiMapComponent'] = this.nguiMapComponent;
+        // set google events listeners and emits to this outputs listeners
+        this.nguiMap.setObjectEvents(this.outputs, this, 'mapObject');
+        this.nguiMapComponent.addToMapObjectGroup(this.mapObjectName, this.mapObject);
+        this.initialized$.emit(this.mapObject);
+    };
+    // When destroyed, remove event listener, and delete this object to prevent memory leak
+    StreetViewPanorama.prototype.ngOnDestroy = function () {
+        if (this.nguiMapComponent.el) {
+            this.nguiMap.clearObjectEvents(this.outputs, this, 'mapObject');
+        }
+    };
+    StreetViewPanorama.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > street-view-panorama',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    StreetViewPanorama.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return StreetViewPanorama;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=street-view-panorama.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/traffic-layer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrafficLayer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = ['autoRefresh', 'options'];
+var OUTPUTS = [];
+var TrafficLayer = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](TrafficLayer, _super);
+    // declare OUTPUTS for AOT compiler
+    function TrafficLayer(nguiMapComp) {
+        return _super.call(this, nguiMapComp, 'TrafficLayer', INPUTS, OUTPUTS) || this;
+    }
+    TrafficLayer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > traffic-layer',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    TrafficLayer.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return TrafficLayer;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=traffic-layer.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/directives/transit-layer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransitLayer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__base_map_directive__ = __webpack_require__("../../../../@ngui/map/dist/directives/base-map-directive.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+
+
+
+
+var INPUTS = [];
+var OUTPUTS = [];
+var TransitLayer = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](TransitLayer, _super);
+    // declare INPUTS for AOT compiler
+    // declare OUTPUTS for AOT compiler
+    function TransitLayer(nguiMapComp) {
+        return _super.call(this, nguiMapComp, 'TransitLayer', INPUTS, OUTPUTS) || this;
+    }
+    TransitLayer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: 'ngui-map > transit-layer',
+                    inputs: INPUTS,
+                    outputs: OUTPUTS,
+                },] },
+    ];
+    /** @nocollapse */
+    TransitLayer.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_3__components_ngui_map_component__["a" /* NguiMapComponent */], },
+    ]; };
+    return TransitLayer;
+}(__WEBPACK_IMPORTED_MODULE_2__base_map_directive__["a" /* BaseMapDirective */]));
+
+//# sourceMappingURL=transit-layer.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/ngui-map.module.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NguiMapModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_option_builder__ = __webpack_require__("../../../../@ngui/map/dist/services/option-builder.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_geo_coder__ = __webpack_require__("../../../../@ngui/map/dist/services/geo-coder.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_navigator_geolocation__ = __webpack_require__("../../../../@ngui/map/dist/services/navigator-geolocation.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_config__ = __webpack_require__("../../../../@ngui/map/dist/services/config.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_api_loader__ = __webpack_require__("../../../../@ngui/map/dist/services/api-loader.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_ngui_map_component__ = __webpack_require__("../../../../@ngui/map/dist/components/ngui-map.component.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_info_window__ = __webpack_require__("../../../../@ngui/map/dist/components/info-window.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_custom_marker__ = __webpack_require__("../../../../@ngui/map/dist/components/custom-marker.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__directives_bicycling_layer__ = __webpack_require__("../../../../@ngui/map/dist/directives/bicycling-layer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_circle__ = __webpack_require__("../../../../@ngui/map/dist/directives/circle.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__directives_data_layer__ = __webpack_require__("../../../../@ngui/map/dist/directives/data-layer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__directives_directions_renderer__ = __webpack_require__("../../../../@ngui/map/dist/directives/directions-renderer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__directives_drawing_manager__ = __webpack_require__("../../../../@ngui/map/dist/directives/drawing-manager.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__directives_ground_overlay__ = __webpack_require__("../../../../@ngui/map/dist/directives/ground-overlay.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__directives_heatmap_layer__ = __webpack_require__("../../../../@ngui/map/dist/directives/heatmap-layer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__directives_kml_layer__ = __webpack_require__("../../../../@ngui/map/dist/directives/kml-layer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__directives_marker__ = __webpack_require__("../../../../@ngui/map/dist/directives/marker.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_ngui_map__ = __webpack_require__("../../../../@ngui/map/dist/services/ngui-map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__directives_places_auto_complete__ = __webpack_require__("../../../../@ngui/map/dist/directives/places-auto-complete.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__directives_polygon__ = __webpack_require__("../../../../@ngui/map/dist/directives/polygon.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__directives_polyline__ = __webpack_require__("../../../../@ngui/map/dist/directives/polyline.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__directives_street_view_panorama__ = __webpack_require__("../../../../@ngui/map/dist/directives/street-view-panorama.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__directives_traffic_layer__ = __webpack_require__("../../../../@ngui/map/dist/directives/traffic-layer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__directives_transit_layer__ = __webpack_require__("../../../../@ngui/map/dist/directives/transit-layer.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var COMPONENTS_DIRECTIVES = [
+    __WEBPACK_IMPORTED_MODULE_7__components_ngui_map_component__["a" /* NguiMapComponent */], __WEBPACK_IMPORTED_MODULE_8__components_info_window__["a" /* InfoWindow */],
+    __WEBPACK_IMPORTED_MODULE_18__directives_marker__["a" /* Marker */], __WEBPACK_IMPORTED_MODULE_11__directives_circle__["a" /* Circle */], __WEBPACK_IMPORTED_MODULE_9__components_custom_marker__["a" /* CustomMarker */], __WEBPACK_IMPORTED_MODULE_21__directives_polygon__["a" /* Polygon */], __WEBPACK_IMPORTED_MODULE_8__components_info_window__["a" /* InfoWindow */], __WEBPACK_IMPORTED_MODULE_22__directives_polyline__["a" /* Polyline */], __WEBPACK_IMPORTED_MODULE_15__directives_ground_overlay__["a" /* GroundOverlay */],
+    __WEBPACK_IMPORTED_MODULE_25__directives_transit_layer__["a" /* TransitLayer */], __WEBPACK_IMPORTED_MODULE_24__directives_traffic_layer__["a" /* TrafficLayer */], __WEBPACK_IMPORTED_MODULE_16__directives_heatmap_layer__["a" /* HeatmapLayer */], __WEBPACK_IMPORTED_MODULE_10__directives_bicycling_layer__["a" /* BicyclingLayer */], __WEBPACK_IMPORTED_MODULE_17__directives_kml_layer__["a" /* KmlLayer */], __WEBPACK_IMPORTED_MODULE_12__directives_data_layer__["a" /* DataLayer */],
+    __WEBPACK_IMPORTED_MODULE_23__directives_street_view_panorama__["a" /* StreetViewPanorama */], __WEBPACK_IMPORTED_MODULE_20__directives_places_auto_complete__["a" /* PlacesAutoComplete */], __WEBPACK_IMPORTED_MODULE_13__directives_directions_renderer__["a" /* DirectionsRenderer */],
+    __WEBPACK_IMPORTED_MODULE_14__directives_drawing_manager__["a" /* DrawingManager */],
+];
+var NguiMapModule = /** @class */ (function () {
+    function NguiMapModule() {
+    }
+    NguiMapModule.forRoot = function (config) {
+        if (config === void 0) { config = {}; }
+        return {
+            ngModule: NguiMapModule,
+            providers: [
+                { provide: __WEBPACK_IMPORTED_MODULE_5__services_config__["a" /* NG_MAP_CONFIG_TOKEN */], useValue: config }
+            ],
+        };
+    };
+    NguiMapModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                    imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"]],
+                    declarations: COMPONENTS_DIRECTIVES,
+                    exports: [COMPONENTS_DIRECTIVES],
+                    providers: [
+                        __WEBPACK_IMPORTED_MODULE_3__services_geo_coder__["a" /* GeoCoder */],
+                        __WEBPACK_IMPORTED_MODULE_4__services_navigator_geolocation__["a" /* NavigatorGeolocation */],
+                        __WEBPACK_IMPORTED_MODULE_19__services_ngui_map__["a" /* NguiMap */],
+                        __WEBPACK_IMPORTED_MODULE_2__services_option_builder__["a" /* OptionBuilder */],
+                        { provide: __WEBPACK_IMPORTED_MODULE_6__services_api_loader__["a" /* NgMapApiLoader */], useClass: __WEBPACK_IMPORTED_MODULE_6__services_api_loader__["b" /* NgMapAsyncCallbackApiLoader */] },
+                    ]
+                },] },
+    ];
+    /** @nocollapse */
+    NguiMapModule.ctorParameters = function () { return []; };
+    return NguiMapModule;
+}());
+
+//# sourceMappingURL=ngui-map.module.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/services/api-loader.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NgMapApiLoader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NgMapAsyncCallbackApiLoader; });
+/* unused harmony export NgMapAsyncApiLoader */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject__ = __webpack_require__("../../../../rxjs/ReplaySubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__("../../../../@ngui/map/dist/services/config.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util__ = __webpack_require__("../../../../@ngui/map/dist/services/util.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_first__ = __webpack_require__("../../../../rxjs/operator/first.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_first___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_first__);
+
+
+
+
+
+
+var NgMapApiLoader = /** @class */ (function () {
+    function NgMapApiLoader(config) {
+        this.config = config;
+        this.api$ = __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_first__["first"].call(new __WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject__["ReplaySubject"](1));
+        this.config = this.config || { apiUrl: 'https://maps.google.com/maps/api/js' };
+    }
+    NgMapApiLoader.prototype.ngOnDestroy = function () {
+        this.api$.complete();
+    };
+    return NgMapApiLoader;
+}());
+
+var NgMapAsyncCallbackApiLoader = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](NgMapAsyncCallbackApiLoader, _super);
+    function NgMapAsyncCallbackApiLoader(zone, config) {
+        var _this = _super.call(this, config) || this;
+        _this.zone = zone;
+        return _this;
+    }
+    NgMapAsyncCallbackApiLoader.prototype.load = function () {
+        var _this = this;
+        if (typeof window === 'undefined') {
+            return;
+        }
+        if (Object(__WEBPACK_IMPORTED_MODULE_4__util__["b" /* isMapsApiLoaded */])()) {
+            this.api$.next(google.maps);
+        }
+        else if (!document.querySelector('#ngui-map-api')) {
+            window['nguiMapRef'] = window['nguiMapRef'] || [];
+            window['nguiMapRef'].push({ zone: this.zone, componentFn: function () { return _this.api$.next(google.maps); } });
+            this.addGoogleMapsApi();
+        }
+    };
+    NgMapAsyncCallbackApiLoader.prototype.addGoogleMapsApi = function () {
+        window['initNguiMap'] = window['initNguiMap'] || function () {
+            window['nguiMapRef'].forEach(function (nguiMapRef) {
+                nguiMapRef.zone.run(function () { nguiMapRef.componentFn(); });
+            });
+            window['nguiMapRef'].splice(0, window['nguiMapRef'].length);
+        };
+        var script = document.createElement('script');
+        script.id = 'ngui-map-api';
+        // script.src = "https://maps.google.com/maps/api/js?callback=initNguiMap";
+        var apiUrl = this.config.apiUrl;
+        apiUrl += apiUrl.indexOf('?') !== -1 ? '&' : '?';
+        script.src = apiUrl + 'callback=initNguiMap';
+        document.querySelector('body').appendChild(script);
+    };
+    NgMapAsyncCallbackApiLoader.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    NgMapAsyncCallbackApiLoader.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"], },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_3__config__["a" /* NG_MAP_CONFIG_TOKEN */],] },] },
+    ]; };
+    return NgMapAsyncCallbackApiLoader;
+}(NgMapApiLoader));
+
+var NgMapAsyncApiLoader = /** @class */ (function (_super) {
+    __WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __extends */](NgMapAsyncApiLoader, _super);
+    function NgMapAsyncApiLoader(config) {
+        return _super.call(this, config) || this;
+    }
+    NgMapAsyncApiLoader.prototype.load = function () {
+        var _this = this;
+        if (typeof window === 'undefined') {
+            return;
+        }
+        if (Object(__WEBPACK_IMPORTED_MODULE_4__util__["b" /* isMapsApiLoaded */])()) {
+            this.api$.next(google.maps);
+        }
+        else if (!document.querySelector('#ngui-map-api')) {
+            var script = document.createElement('script');
+            script.id = 'ngui-map-api';
+            script.async = true;
+            script.onload = function () { return _this.api$.next(google.maps); };
+            script.src = this.config.apiUrl;
+            document.querySelector('body').appendChild(script);
+        }
+    };
+    NgMapAsyncApiLoader.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    NgMapAsyncApiLoader.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_3__config__["a" /* NG_MAP_CONFIG_TOKEN */],] },] },
+    ]; };
+    return NgMapAsyncApiLoader;
+}(NgMapApiLoader));
+
+//# sourceMappingURL=api-loader.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/services/config.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NG_MAP_CONFIG_TOKEN; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
+var NG_MAP_CONFIG_TOKEN = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('NG_MAP_CONFIG_TOKEN');
+//# sourceMappingURL=config.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/services/geo-coder.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeoCoder; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api_loader__ = __webpack_require__("../../../../@ngui/map/dist/services/api-loader.js");
+
+
+
+/**
+ *   Provides [defered/promise API](https://docs.angularjs.org/api/ng/service/$q)
+ *   service for Google Geocoder service
+ */
+var GeoCoder = /** @class */ (function () {
+    function GeoCoder(apiLoader) {
+        this.apiLoader = apiLoader;
+        this.apiLoaderSubs = [];
+    }
+    GeoCoder.prototype.geocode = function (options) {
+        var _this = this;
+        return new __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"](function (responseObserver) {
+            _this.apiLoaderSubs.push(_this.apiLoader.api$
+                .subscribe(function () { return _this.requestGeocode(options, responseObserver); }));
+        });
+    };
+    GeoCoder.prototype.ngOnDestroy = function () {
+        this.apiLoaderSubs.map(function (sub) { return sub.unsubscribe(); });
+    };
+    GeoCoder.prototype.requestGeocode = function (options, observer) {
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode(options, function (results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                observer.next(results);
+                observer.complete();
+            }
+            else {
+                observer.error(results);
+            }
+        });
+    };
+    GeoCoder.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    GeoCoder.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_2__api_loader__["a" /* NgMapApiLoader */], },
+    ]; };
+    return GeoCoder;
+}());
+
+//# sourceMappingURL=geo-coder.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/services/navigator-geolocation.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigatorGeolocation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+
+
+/**
+ *  service for navigator.geolocation methods
+ */
+var NavigatorGeolocation = /** @class */ (function () {
+    function NavigatorGeolocation() {
+    }
+    NavigatorGeolocation.prototype.getCurrentPosition = function (geoLocationOptions) {
+        geoLocationOptions = geoLocationOptions || { timeout: 5000 };
+        return new __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"](function (responseObserver) {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    responseObserver.next(position);
+                    responseObserver.complete();
+                }, function (evt) { return responseObserver.error(evt); }, geoLocationOptions);
+            }
+            else {
+                responseObserver.error('Browser Geolocation service failed.');
+            }
+        });
+    };
+    NavigatorGeolocation.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    NavigatorGeolocation.ctorParameters = function () { return []; };
+    return NavigatorGeolocation;
+}());
+
+//# sourceMappingURL=navigator-geolocation.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/services/ngui-map.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NguiMap; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__option_builder__ = __webpack_require__("../../../../@ngui/map/dist/services/option-builder.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__geo_coder__ = __webpack_require__("../../../../@ngui/map/dist/services/geo-coder.js");
+
+
+
+/**
+ * collection of map instance-related properties and methods
+ */
+var NguiMap = /** @class */ (function () {
+    function NguiMap(geoCoder, optionBuilder, zone) {
+        var _this = this;
+        this.geoCoder = geoCoder;
+        this.optionBuilder = optionBuilder;
+        this.zone = zone;
+        this.updateGoogleObject = function (object, changes) {
+            var val, currentValue, setMethodName;
+            if (object) {
+                for (var key in changes) {
+                    setMethodName = "set" + key.replace(/^[a-z]/, function (x) { return x.toUpperCase(); });
+                    currentValue = changes[key].currentValue;
+                    if (['position', 'center'].indexOf(key) !== -1 && typeof currentValue === 'string') {
+                        // To preserve setMethod name in Observable callback, wrap it as a function, then execute
+                        (function (setMethodName) {
+                            _this.geoCoder.geocode({ address: currentValue }).subscribe(function (results) {
+                                if (typeof object[setMethodName] === 'function') {
+                                    object[setMethodName](results[0].geometry.location);
+                                }
+                                else {
+                                    console.error('Not all options are dynamically updatable according to Googles Maps API V3 documentation.\n' +
+                                        'Please check Google Maps API documentation, and use "setOptions" instead.');
+                                }
+                            });
+                        })(setMethodName);
+                    }
+                    else {
+                        val = _this.optionBuilder.googlize(currentValue);
+                        if (typeof object[setMethodName] === 'function') {
+                            object[setMethodName](val);
+                        }
+                        else {
+                            console.error('Not all options are dynamically updatable according to Googles Maps API V3 documentation.\n' +
+                                'Please check Google Maps API documentation, and use "setOptions" instead.');
+                        }
+                    }
+                }
+            }
+        };
+    }
+    NguiMap.prototype.setObjectEvents = function (definedEvents, thisObj, prefix) {
+        var _this = this;
+        definedEvents.forEach(function (definedEvent) {
+            var eventName = definedEvent
+                .replace(/([A-Z])/g, function ($1) { return "_" + $1.toLowerCase(); }) // positionChanged -> position_changed
+                .replace(/^map_/, ''); // map_click -> click  to avoid DOM conflicts
+            var zone = _this.zone;
+            zone.runOutsideAngular(function () {
+                thisObj[prefix].addListener(eventName, function (event) {
+                    var param = event ? event : {};
+                    param.target = this;
+                    zone.run(function () { return thisObj[definedEvent].emit(param); });
+                });
+            });
+        });
+    };
+    NguiMap.prototype.clearObjectEvents = function (definedEvents, thisObj, prefix) {
+        var _this = this;
+        definedEvents.forEach(function (definedEvent) {
+            var eventName = definedEvent
+                .replace(/([A-Z])/g, function ($1) { return "_" + $1.toLowerCase(); }) // positionChanged -> position_changed
+                .replace(/^map_/, ''); // map_click -> click  to avoid DOM conflicts
+            _this.zone.runOutsideAngular(function () {
+                if (thisObj[prefix]) {
+                    google.maps.event.clearListeners(thisObj[prefix], eventName);
+                }
+            });
+        });
+        if (thisObj[prefix]) {
+            if (thisObj[prefix].setMap) {
+                thisObj[prefix].setMap(null);
+            }
+            delete thisObj[prefix].nguiMapComponent;
+            delete thisObj[prefix];
+        }
+    };
+    NguiMap.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    NguiMap.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_2__geo_coder__["a" /* GeoCoder */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__option_builder__["a" /* OptionBuilder */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
+    ]; };
+    return NguiMap;
+}());
+
+//# sourceMappingURL=ngui-map.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/services/option-builder.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OptionBuilder; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__("../../../../@ngui/map/dist/services/util.js");
+
+
+/**
+ * change any object to google object options
+ * e.g. [1,2] -> new google.maps.LatLng(1,2);
+ */
+var OptionBuilder = /** @class */ (function () {
+    function OptionBuilder() {
+    }
+    OptionBuilder.prototype.googlizeAllInputs = function (definedInputs, userInputs) {
+        var _this = this;
+        var options = {};
+        // if options given from user, only take options and ignore other inputs
+        if (userInputs.options) {
+            console.log('userInputs.options .................', userInputs.options);
+            options = userInputs.options;
+            if (!this.onlyOptionsGiven(definedInputs, userInputs)) {
+                console.error('when "options" are used, other options are ignored');
+            }
+        }
+        else {
+            definedInputs.forEach(function (input) {
+                if (userInputs[input] !== undefined) {
+                    options[input] = _this.googlize(userInputs[input], { key: input });
+                }
+            });
+        }
+        return options;
+    };
+    OptionBuilder.prototype.googlizeMultiple = function (inputs, options) {
+        options = options || {};
+        for (var key in inputs) {
+            var val = inputs[key];
+            // (non-strings are fully converted)
+            if (typeof val !== 'string') {
+                options[key] = val;
+            } // sometimes '0' needed to stay as it is
+            else if (!(options['doNotConverStringToNumber'] && val.match(/^[0-9]+$/))) {
+                options[key] = this.googlize(val, { key: key });
+            }
+        } // for(var key in attrs)
+        return options;
+    };
+    OptionBuilder.prototype.googlize = function (input, options) {
+        options = options || {};
+        var output = input;
+        if (typeof input === 'string') {
+            if (input === 'false') {
+                output = false;
+            }
+            else if (input === '0') {
+                output = 0;
+            }
+            else {
+                output =
+                    // -> googlize -> getJsonParsed -> googlizeMultiple -> googlize until all elements are parsed
+                    this.getJSONParsed(input, options)
+                        /* Foo.Bar(...) -> new google.maps.Foo.Bar(...) */
+                        || this.getAnyMapObject(input)
+                        /*  MapTypeID.HYBRID -> new google.maps.MapTypeID.HYBRID */
+                        || this.getAnyMapConstant(input, options)
+                        /*  2016-06-20 -> new Date('2016-06-20') */
+                        || this.getDateObject(input)
+                        || input;
+            }
+        }
+        if (options['key']) {
+            var key = options['key'];
+            if (output instanceof Array) {
+                if (key === 'bounds') {
+                    output = new google.maps.LatLngBounds(output[0], output[1]);
+                }
+                else if (key === 'icons') {
+                    output = this.getMapIcons(output);
+                }
+                else if (key === 'position' || key.match(/^geoFallback/)) {
+                    output = this.getLatLng(output);
+                }
+            }
+            else if (output instanceof Object) {
+                if (key === 'icon') {
+                    output = this.getMarkerIcon(output);
+                }
+                else if (key.match(/ControlOptions$/)) {
+                    output = this.getMapControlOption(output);
+                }
+            }
+        }
+        // delete keys only for processing, not used by google
+        delete output['doNotConverStringToNumber'];
+        delete output['key'];
+        return output;
+    };
+    OptionBuilder.prototype.getLatLng = function (input) {
+        var output;
+        if (input[0].constructor === Array) {
+            output = input.map(function (el) { return new google.maps.LatLng(el[0], el[1]); });
+        }
+        else if (!isNaN(parseFloat(input[0])) && isFinite(input[0])) {
+            output = new google.maps.LatLng(input[0], input[1]);
+        }
+        return output;
+    };
+    OptionBuilder.prototype.getJSONParsed = function (input, options) {
+        var output;
+        try {
+            output = Object(__WEBPACK_IMPORTED_MODULE_1__util__["a" /* getJSON */])(input);
+            if (output instanceof Array) {
+                // [{a:1}] : not lat/lng ones
+                if (output[0].constructor !== Object) {
+                    output = this.getLatLng(output);
+                }
+            }
+            else if (output === Object(output)) {
+                // check for nested hashes and convert to Google API options
+                var newOptions = options;
+                newOptions['doNotConverStringToNumber'] = true;
+                output = this.googlizeMultiple(output, newOptions);
+            }
+        }
+        catch (e) {
+        }
+        return output;
+    };
+    OptionBuilder.prototype.getAnyMapObject = function (input) {
+        var output;
+        if (input.match(/^[A-Z][a-zA-Z0-9]+\(.*\)$/)) {
+            try {
+                output = Function("return new google.maps." + input + ";")();
+            }
+            catch (e) { }
+        }
+        return output;
+    };
+    OptionBuilder.prototype.getAnyMapConstant = function (input, options) {
+        var output;
+        if (input.match(/^([A-Z][a-zA-Z0-9]+)\.([A-Z]+)$/)) {
+            try {
+                var matches = input.match(/^([A-Z][a-zA-Z0-9]+)\.([A-Z]+)$/);
+                output = google.maps[matches[1]][matches[2]];
+            }
+            catch (e) { }
+        }
+        else if (input.match(/^[A-Z]+$/)) {
+            try {
+                var capitalizedKey = options['key'].charAt(0).toUpperCase() +
+                    options['key'].slice(1);
+                output = google.maps[capitalizedKey][input];
+            }
+            catch (e) { }
+        }
+        return output;
+    };
+    /**
+     * streetviewControl, panControl, etc, not a general control
+     */
+    OptionBuilder.prototype.getMapControlOption = function (controlOptions) {
+        var newControlOptions = controlOptions;
+        for (var key in newControlOptions) {
+            if (newControlOptions[key]) {
+                var value = newControlOptions[key];
+                if (typeof value === 'string') {
+                    value = value.toUpperCase();
+                }
+                else if (key === 'mapTypeIds') {
+                    value = value.map(function (str) {
+                        if (str.match(/^[A-Z]+$/)) {
+                            return google.maps.MapTypeId[str.toUpperCase()];
+                        }
+                        else {
+                            return str;
+                        }
+                    });
+                }
+                if (key === 'style') {
+                    var objName = key.replace(/Options$/, '') + 'Style';
+                    newControlOptions[key] = google.maps[objName][value];
+                }
+                else if (key === 'position') {
+                    newControlOptions[key] = google.maps.ControlPosition[value];
+                }
+                else {
+                    newControlOptions[key] = value;
+                }
+            }
+        }
+        return newControlOptions;
+    };
+    OptionBuilder.prototype.getDateObject = function (input) {
+        var output;
+        if (input.match(/^(\d{4}\-\d\d\-\d\d([tT][\d:\.]*)?)([zZ]|([+\-])(\d\d):?(\d\d))?$/)) {
+            try {
+                output = new Date(input);
+            }
+            catch (e) { }
+        }
+        return output;
+    };
+    OptionBuilder.prototype.getMapIcons = function (input) {
+        return input.map(function (el) {
+            if (el.icon.path.match(/^[A-Z_]+$/)) {
+                el.icon.path = google.maps.SymbolPath[el.icon.path];
+            }
+            return el;
+        });
+    };
+    OptionBuilder.prototype.getMarkerIcon = function (input) {
+        var output = input;
+        if (('' + output.path).match(/^[A-Z_]+$/)) {
+            output.path = google.maps.SymbolPath[output.path];
+        }
+        for (var key in output) {
+            var arr = output[key];
+            if (key === 'anchor' || key === 'origin' || key === 'labelOrigin') {
+                output[key] = new google.maps.Point(arr[0], arr[1]);
+            }
+            else if (key === 'size' || key === 'scaledSize') {
+                output[key] = new google.maps.Size(arr[0], arr[1]);
+            }
+        }
+        return output;
+    };
+    OptionBuilder.prototype.onlyOptionsGiven = function (definedInputs, userInputs) {
+        for (var i = 0; i < definedInputs.length; i++) {
+            var input = definedInputs[i];
+            if (input !== 'options' && typeof userInputs[input] !== 'undefined') {
+                return false;
+            }
+        }
+        return true;
+    };
+    OptionBuilder.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    OptionBuilder.ctorParameters = function () { return []; };
+    return OptionBuilder;
+}());
+
+//# sourceMappingURL=option-builder.js.map
+
+/***/ }),
+
+/***/ "../../../../@ngui/map/dist/services/util.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export jsonize */
+/* harmony export (immutable) */ __webpack_exports__["a"] = getJSON;
+/* harmony export (immutable) */ __webpack_exports__["c"] = toCamelCase;
+/* harmony export (immutable) */ __webpack_exports__["b"] = isMapsApiLoaded;
+/**
+ * return json string from json-like string
+ */
+function jsonize(str) {
+    try {
+        JSON.parse(str);
+        return str;
+    }
+    catch (e) {
+        return str
+            .replace(/([\$\w]+)\s*:/g, // wrap keys without double quote
+        function (_, $1) {
+            return '"' + $1 + '":';
+        })
+            .replace(/'([^']+)'/g, // replacing single quote to double quote
+        function (_, $1) {
+            return '"' + $1 + '"';
+        });
+    }
+}
+/**
+ * Returns string to an object by using JSON.parse()
+ */
+function getJSON(input) {
+    if (typeof input === 'string') {
+        var re = /^[\+\-]?[0-9\.]+,[ ]*\ ?[\+\-]?[0-9\.]+$/; // lat,lng
+        if (input.match(re)) {
+            input = '[' + input + ']';
+        }
+        return JSON.parse(jsonize(input));
+    }
+    else {
+        return input;
+    }
+}
+/* tslint:enable */
+/**
+ * Returns camel-cased from string 'Foo Bar' to 'fooBar'
+ */
+function toCamelCase(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (letter, index) {
+        return index === 0 ? letter.toLowerCase() : letter.toUpperCase();
+    }).replace(/\s+/g, '');
+}
+function isMapsApiLoaded() {
+    return typeof google === 'object' && typeof google.maps === 'object';
+}
+//# sourceMappingURL=util.js.map
 
 /***/ }),
 
@@ -10898,6 +13022,129 @@ exports.concatMap = concatMap;
 
 /***/ }),
 
+/***/ "../../../../rxjs/operator/debounceTime.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subscriber_1 = __webpack_require__("../../../../rxjs/Subscriber.js");
+var async_1 = __webpack_require__("../../../../rxjs/scheduler/async.js");
+/**
+ * Emits a value from the source Observable only after a particular time span
+ * has passed without another source emission.
+ *
+ * <span class="informal">It's like {@link delay}, but passes only the most
+ * recent value from each burst of emissions.</span>
+ *
+ * <img src="./img/debounceTime.png" width="100%">
+ *
+ * `debounceTime` delays values emitted by the source Observable, but drops
+ * previous pending delayed emissions if a new value arrives on the source
+ * Observable. This operator keeps track of the most recent value from the
+ * source Observable, and emits that only when `dueTime` enough time has passed
+ * without any other value appearing on the source Observable. If a new value
+ * appears before `dueTime` silence occurs, the previous value will be dropped
+ * and will not be emitted on the output Observable.
+ *
+ * This is a rate-limiting operator, because it is impossible for more than one
+ * value to be emitted in any time window of duration `dueTime`, but it is also
+ * a delay-like operator since output emissions do not occur at the same time as
+ * they did on the source Observable. Optionally takes a {@link IScheduler} for
+ * managing timers.
+ *
+ * @example <caption>Emit the most recent click after a burst of clicks</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.debounceTime(1000);
+ * result.subscribe(x => console.log(x));
+ *
+ * @see {@link auditTime}
+ * @see {@link debounce}
+ * @see {@link delay}
+ * @see {@link sampleTime}
+ * @see {@link throttleTime}
+ *
+ * @param {number} dueTime The timeout duration in milliseconds (or the time
+ * unit determined internally by the optional `scheduler`) for the window of
+ * time required to wait for emission silence before emitting the most recent
+ * source value.
+ * @param {Scheduler} [scheduler=async] The {@link IScheduler} to use for
+ * managing the timers that handle the timeout for each value.
+ * @return {Observable} An Observable that delays the emissions of the source
+ * Observable by the specified `dueTime`, and may drop some values if they occur
+ * too frequently.
+ * @method debounceTime
+ * @owner Observable
+ */
+function debounceTime(dueTime, scheduler) {
+    if (scheduler === void 0) { scheduler = async_1.async; }
+    return this.lift(new DebounceTimeOperator(dueTime, scheduler));
+}
+exports.debounceTime = debounceTime;
+var DebounceTimeOperator = (function () {
+    function DebounceTimeOperator(dueTime, scheduler) {
+        this.dueTime = dueTime;
+        this.scheduler = scheduler;
+    }
+    DebounceTimeOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new DebounceTimeSubscriber(subscriber, this.dueTime, this.scheduler));
+    };
+    return DebounceTimeOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var DebounceTimeSubscriber = (function (_super) {
+    __extends(DebounceTimeSubscriber, _super);
+    function DebounceTimeSubscriber(destination, dueTime, scheduler) {
+        _super.call(this, destination);
+        this.dueTime = dueTime;
+        this.scheduler = scheduler;
+        this.debouncedSubscription = null;
+        this.lastValue = null;
+        this.hasValue = false;
+    }
+    DebounceTimeSubscriber.prototype._next = function (value) {
+        this.clearDebounce();
+        this.lastValue = value;
+        this.hasValue = true;
+        this.add(this.debouncedSubscription = this.scheduler.schedule(dispatchNext, this.dueTime, this));
+    };
+    DebounceTimeSubscriber.prototype._complete = function () {
+        this.debouncedNext();
+        this.destination.complete();
+    };
+    DebounceTimeSubscriber.prototype.debouncedNext = function () {
+        this.clearDebounce();
+        if (this.hasValue) {
+            this.destination.next(this.lastValue);
+            this.lastValue = null;
+            this.hasValue = false;
+        }
+    };
+    DebounceTimeSubscriber.prototype.clearDebounce = function () {
+        var debouncedSubscription = this.debouncedSubscription;
+        if (debouncedSubscription !== null) {
+            this.remove(debouncedSubscription);
+            debouncedSubscription.unsubscribe();
+            this.debouncedSubscription = null;
+        }
+    };
+    return DebounceTimeSubscriber;
+}(Subscriber_1.Subscriber));
+function dispatchNext(subscriber) {
+    subscriber.debouncedNext();
+}
+//# sourceMappingURL=debounceTime.js.map
+
+/***/ }),
+
 /***/ "../../../../rxjs/operator/distinctUntilChanged.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13541,6 +15788,60 @@ var QueueScheduler = (function (_super) {
 }(AsyncScheduler_1.AsyncScheduler));
 exports.QueueScheduler = QueueScheduler;
 //# sourceMappingURL=QueueScheduler.js.map
+
+/***/ }),
+
+/***/ "../../../../rxjs/scheduler/async.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var AsyncAction_1 = __webpack_require__("../../../../rxjs/scheduler/AsyncAction.js");
+var AsyncScheduler_1 = __webpack_require__("../../../../rxjs/scheduler/AsyncScheduler.js");
+/**
+ *
+ * Async Scheduler
+ *
+ * <span class="informal">Schedule task as if you used setTimeout(task, duration)</span>
+ *
+ * `async` scheduler schedules tasks asynchronously, by putting them on the JavaScript
+ * event loop queue. It is best used to delay tasks in time or to schedule tasks repeating
+ * in intervals.
+ *
+ * If you just want to "defer" task, that is to perform it right after currently
+ * executing synchronous code ends (commonly achieved by `setTimeout(deferredTask, 0)`),
+ * better choice will be the {@link asap} scheduler.
+ *
+ * @example <caption>Use async scheduler to delay task</caption>
+ * const task = () => console.log('it works!');
+ *
+ * Rx.Scheduler.async.schedule(task, 2000);
+ *
+ * // After 2 seconds logs:
+ * // "it works!"
+ *
+ *
+ * @example <caption>Use async scheduler to repeat task in intervals</caption>
+ * function task(state) {
+ *   console.log(state);
+ *   this.schedule(state + 1, 1000); // `this` references currently executing Action,
+ *                                   // which we reschedule with new state and delay
+ * }
+ *
+ * Rx.Scheduler.async.schedule(task, 3000, 0);
+ *
+ * // Logs:
+ * // 0 after 3s
+ * // 1 after 4s
+ * // 2 after 5s
+ * // 3 after 6s
+ *
+ * @static true
+ * @name async
+ * @owner Scheduler
+ */
+exports.async = new AsyncScheduler_1.AsyncScheduler(AsyncAction_1.AsyncAction);
+//# sourceMappingURL=async.js.map
 
 /***/ }),
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102180526) do
+ActiveRecord::Schema.define(version: 20171107013155) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -219,6 +219,7 @@ ActiveRecord::Schema.define(version: 20171102180526) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "position"
+    t.string   "slug"
   end
 
   add_index "spree_drop_down_items", ["drop_down_id"], name: "index_spree_drop_down_items_on_drop_down_id"
@@ -229,6 +230,7 @@ ActiveRecord::Schema.define(version: 20171102180526) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "position"
+    t.string   "slug"
   end
 
   create_table "spree_gateways", force: :cascade do |t|

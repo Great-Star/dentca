@@ -1,5 +1,9 @@
 class DropDownSerializer < ActiveModel::Serializer
-  attributes :id, :name, :presentation
+  attributes :id, :name, :presentation, :position, :has_item, :slug
+
+  def has_item
+    object.has_item?
+  end
   
   has_many :maintainable_pages, embed: :objects,
                     serializer: MaintainablePageSerializer

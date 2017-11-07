@@ -15,7 +15,7 @@ module Api
         private
 
         def drop_down
-            @drop_down = Spree::DropDown.find(params[:id])
+            @drop_down = Spree::DropDown.find_by!(name: params[:id])
         end
     end
 end

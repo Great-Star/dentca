@@ -11,7 +11,7 @@ module Api
         end
 
         def show
-            @drop_down_item = drop_down.drop_down_items.find(params[:id])
+            @drop_down_item = drop_down.drop_down_items.find_by!(name: params[:id])
 
             respond_with @drop_down_item
         end
@@ -19,7 +19,7 @@ module Api
         private
             def drop_down
                 if params[:drop_down_id].present?
-                    @drop_down = Spree::DropDown.find(params[:drop_down_id])
+                    @drop_down = Spree::DropDown.find_by!(name: params[:drop_down_id])
                 end
             end
     end

@@ -20,4 +20,10 @@
             <%= f.error_message_on :maintainable_page_ids %>
         <% end %>
     </div>
+    <div class="col-xs-12 col-md-12">
+        <%= f.field_container :slug, class: ['form-group'] do %>
+            <%= f.label :slug, Spree.t(:slug) %>
+            <%= f.text_field :slug, class: 'form-control' %>
+        <% end %>
+    </div>    
 </div>
