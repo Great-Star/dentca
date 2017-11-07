@@ -15,6 +15,7 @@ module Spree
             if page != nil
                 self.maintainable_pages.delete(page) unless self.slug.blank?
             end
+            self.name = self.name.downcase.strip.gsub(' ', '-')
         end
     end
 end

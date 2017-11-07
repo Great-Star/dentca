@@ -30,6 +30,8 @@ module Spree
             if !self.slug.blank? || self.maintainable_pages.any?
                 self.drop_down_items.delete_all
             end
+
+            self.name = self.name.downcase.strip.gsub(' ', '-')
         end
     end
 end
