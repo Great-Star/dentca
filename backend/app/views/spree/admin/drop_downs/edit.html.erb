@@ -21,7 +21,7 @@
         <div class="panel-body">
             <%= render partial: 'form', locals: { f: f } %>
         </div>
-        <table class="table table-condensed table-bordered sortable" data-hook data-sortable-link="<%= update_items_positions_admin_drop_downs_path %>">
+        <table class="table table-condensed table-bordered sortable" id="drop_down_item_field" data-hook data-sortable-link="<%= update_items_positions_admin_drop_downs_path %>">
             <thead data-hook="option_header">
                 <tr>
                     <th class="no-border"></th>
@@ -51,3 +51,26 @@
     </div>
 <% end %>
 
+<% content_for :head do %>
+    <%= javascript_tag do %>
+      $(document).ready(function(){
+        let isShowOrHide = () => {
+            if ($('#drop_down_slug').val() || $('#drop_down_select').val()){
+                $( "#drop_down_item_field" ).hide();
+            } else{
+                $( "#drop_down_item_field" ).show();
+            }
+        }
+
+        $('#drop_down_form').change(() => {
+            console.log("change");
+            isShowOrHide();
+        });
+        $('#drop_down_slug').keypress(() => {
+            console.log("change");
+            isShowOrHide();
+        });
+        isShowOrHide();
+      });
+    <% end %>
+<% end %>

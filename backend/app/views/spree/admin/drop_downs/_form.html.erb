@@ -1,4 +1,4 @@
-<div data-hook="admin_inside_drop_down_form" class="form-group row">
+<div data-hook="admin_inside_drop_down_form" class="form-group row" id="drop_down_form">
     <div class="col-xs-12 col-md-4">
         <%= f.field_container :name, class: ['form-group'] do %>
             <%= f.label :name, Spree.t(:name) %> <span class="required">*</span>
@@ -16,14 +16,14 @@
     <div data-hook="new_corporate_account_maintain_page" class="col-xs-12 col-md-4">
         <%= f.field_container :maintain_page, class: ['form-group'] do %>
             <%= f.label :maintainable_page_ids, Spree.t(:page) %>
-            <%= f.collection_select(:maintainable_page_ids, Spree::MaintainablePage.all, :id, :name, { include_blank: Spree.t('match_choices.none') }, { class: 'select2' }) %>
+            <%= f.collection_select(:maintainable_page_ids, Spree::MaintainablePage.all, :id, :name, { include_blank: Spree.t('match_choices.none') }, { class: 'select2', id: 'drop_down_select'}) %>
             <%= f.error_message_on :maintainable_page_ids %>
         <% end %>
     </div>
     <div class="col-xs-12 col-md-12">
         <%= f.field_container :slug, class: ['form-group'] do %>
             <%= f.label :slug, Spree.t(:link_to) %>
-            <%= f.text_field :slug, class: 'form-control' %>
+            <%= f.text_field :slug, class: 'form-control', id: 'drop_down_slug' %>
         <% end %>
     </div>    
 </div>
