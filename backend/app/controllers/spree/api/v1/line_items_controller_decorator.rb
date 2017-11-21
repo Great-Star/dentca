@@ -11,7 +11,7 @@ Spree::Api::V1::LineItemsController.class_eval do
             line_item_params[:options] || {}
         )
 
-        creat_order_info(variant, params[:line_item][:variants] || {}, params[:line_item][:price], params[:line_item][:original_line_item]);
+        creat_order_info(variant,  params[:line_item][:price], params[:line_item][:original_line_item]);
         if @line_item.errors.empty?
             respond_with(@line_item, status: 201, default_template: :show)
         else
@@ -19,11 +19,10 @@ Spree::Api::V1::LineItemsController.class_eval do
         end
     end
 
-    def creat_order_info(master, variants, price, origin)
+    # code to do update
+
+    def creat_order_info(master, price, origin)
         context = ""
-        variants.each do |id|
-            context += "#{Spree::Variant.find(id).options_text}"
-        end
         
         adj_slug =""
         Spree::Product.all.each do |product|
@@ -31,10 +30,11 @@ Spree::Api::V1::LineItemsController.class_eval do
                 adj_slug = product.slug
             end
         end
-
-        order_info = Spree::OrderInfo.create(context: context, price: price, line_item_id: @line_item.id, adj_slug: adj_slug, original_line_item: origin)
-        Rails.logger.warn "-------------------------OrderInfo #{origin}--------------------------------"
-
+        @line_item.options_context = context
+        @line_item.adjustment_slug = adj_slug
+        @line_item.adjust_order_number = origin
+        @line_item.ordered_price = price
         @line_item.price = price
+        @line_item.save!
     end
 end

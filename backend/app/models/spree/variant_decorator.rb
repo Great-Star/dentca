@@ -1,6 +1,5 @@
 module Spree
     Variant.class_eval do
-        belongs_to :order_infos
         belongs_to :product_variant_value, class_name: "Spree::ProductVariantValue"
 
         # _validators.reject!{ |key, _| key == :option_values }

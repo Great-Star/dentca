@@ -15,17 +15,18 @@ Spree::Api::ApiHelpers.class_eval do
   class_variable_set(:@@option_type_attributes, class_variable_get(:@@option_type_attributes).push(:hide_option_value))
 
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:adj_sku))
+  class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:shipping_type_id))
   # class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_variant_types))
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_prices))
   class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_price_sets))
-  # class_variable_set(:@@product_attributes, class_variable_get(:@@product_attributes).push(:product_))
-
-  class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:order_info_id))
+  
   class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:is_clone))
   class_variable_set(:@@variant_attributes, class_variable_get(:@@variant_attributes).push(:option_values)) #?????
 
-  class_variable_set(:@@line_item_attributes, class_variable_get(:@@line_item_attributes).push(:order_info))
   class_variable_set(:@@line_item_attributes, class_variable_get(:@@line_item_attributes).push(:adjust_order_number))
+  class_variable_set(:@@line_item_attributes, class_variable_get(:@@line_item_attributes).push(:adjustment_slug))
+  class_variable_set(:@@line_item_attributes, class_variable_get(:@@line_item_attributes).push(:is_own_ship))
+  
   class_variable_set(:@@option_value_attributes, class_variable_get(:@@option_value_attributes).push(:image))
   
   class_variable_set(:@@user_attributes, class_variable_get(:@@user_attributes).push(:doctor))
@@ -37,5 +38,7 @@ Spree::Api::ApiHelpers.class_eval do
 
   class_variable_set(:@@taxon_attributes, class_variable_get(:@@taxon_attributes).push(:description))
   class_variable_set(:@@taxon_attributes, class_variable_get(:@@taxon_attributes).push(:title))
+
+  class_variable_set(:@@shipment_attributes, class_variable_get(:@@shipment_attributes).push(:is_own_shipping))
 
 end

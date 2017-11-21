@@ -55,7 +55,7 @@
     <%= javascript_tag do %>
       $(document).ready(function(){
         let isShowOrHide = () => {
-            if ($('#drop_down_slug').val() || $('#drop_down_select').val()){
+            if ($('#drop_down_link_to').val() || $('#drop_down_select').val()){
                 $( "#drop_down_item_field" ).hide();
             } else{
                 $( "#drop_down_item_field" ).show();
@@ -63,11 +63,12 @@
         }
 
         $('#drop_down_form').change(() => {
-            console.log("change");
             isShowOrHide();
         });
-        $('#drop_down_slug').keypress(() => {
-            console.log("change");
+        $('#drop_down_link_to').keypress(() => {
+            isShowOrHide();
+        });
+        $('#drop_down_link_to').blur(() => {
             isShowOrHide();
         });
         isShowOrHide();

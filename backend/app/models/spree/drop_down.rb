@@ -1,6 +1,7 @@
 module Spree
     class DropDown < Spree::Base
         before_save :validate_drop_down
+        before_save :save_slug
 
         acts_as_list
 
@@ -24,14 +25,23 @@ module Spree
         def validate_drop_down
             page = self.maintainable_pages.first
             if page != nil
-                self.maintainable_pages.delete(page) unless self.slug.blank?
+                self.maintainable_pages.delete(page) unless self.link_to.blank?
             end
 
-            if !self.slug.blank? || self.maintainable_pages.any?
+            if !self.link_to.blank? || self.maintainable_pages.any?
                 self.drop_down_items.delete_all
             end
 
-            self.name = self.name.downcase.strip.gsub(' ', '-')
+            self.name = self.name.downcase.strip.gsub(' ', '_')
+        end
+
+        def save_slug
+            page = self.maintainable_pages.first
+            if page != nil
+                self.slug = page.link
+            else
+                self.slug = self.link_to
+            end
         end
     end
 end

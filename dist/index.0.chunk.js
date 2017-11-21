@@ -4,8 +4,8 @@ webpackJsonp(["index.0"],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Order; });
-/* unused harmony export LightOrder */
+/* unused harmony export Order */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LightOrder; });
 /*
  * Order model
  * Detailed info http://guides.spreecommerce.org/developer/orders.html
@@ -310,7 +310,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/user/components/orders/order-detail/order-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"order\">\r\n  <div class=\"panel panel-default\">\r\n    <div class=\"panel-body\">\r\n      <div class=\"row\">\r\n        <div class=\"active col-md-6\">\r\n          <div class=\"row\">\r\n\r\n            <div class=\"col-md-4\">\r\n              <small>SHIPMENT</small>\r\n              <h5>\r\n                <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n                {{order.total}}\r\n              </h5>\r\n            </div>\r\n\r\n            <div class=\"col-md-4\">\r\n              <small>STATUS</small>\r\n              <h5 class=\"status\">\r\n                {{order.shipment_state | uppercase}}\r\n              </h5>\r\n            </div>\r\n            \r\n            <div class=\"col-md-4\">\r\n              <small>ITEMS</small>\r\n              <h5>\r\n                {{order.line_items.length}}\r\n              </h5>\r\n            </div>\r\n\r\n          </div>\r\n          </div>\r\n      </div>\r\n      <hr>\r\n      <div class='row' *ngFor=\"let line_item of order.line_items\">\r\n        <br>\r\n        <div class=\"col-md-2\">\r\n          <img class=\"line_item_image\" [src]=\"getProductImageUrl(line_item)\" alt=\"Line Item\">\r\n        </div>\r\n        \r\n        <div class=\"col-md-3\">\r\n          <h5 class=\"ptitle\">\r\n            <a [routerLink]=\"['/product', line_item.variant.slug]\">\r\n              <span class=\"text-uppercase text-primary\">{{line_item.variant.name}}</span>\r\n            </a>\r\n          </h5>\r\n          <h6 class=\"\" *ngIf = \"line_item.order_info.adj_slug\">\r\n            <a (click)=\"createAdjOrder(line_item)\">\r\n              <span style=\"cursor: pointer\">Request Adjustment</span>\r\n            </a>\r\n          </h6>\r\n        </div>\r\n\r\n        <div class=\"col-md-2\">\r\n          <h5 class=\"strong\">\r\n            <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n            {{line_item.total}}\r\n          </h5>\r\n          <small>\r\n            MRP: \r\n            <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n            {{line_item.price}}\r\n          </small><br/>\r\n        </div>\r\n        <div class=\"col-md-2\">\r\n          <h5 class=\"strong\">\r\n            {{order.number}}\r\n          </h5>\r\n        </div>\r\n\r\n        <div class=\"col-md-3\">\r\n          <h5 class=\"strong\">\r\n            <div class=\"pull-right\">\r\n              <a (click)=\"caseView(line_item.id)\" class=\"view-details-link strong\" style=\"cursor: pointer\">View Case</a>\r\n            </div>\r\n          </h5>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <br>\r\n  <h5>SHIPPING DETAILS</h5>\r\n  <div class=\"panel panel-default\">\r\n    <div class=\"row panel-body\">\r\n      <div class=\"col-md-12\">\r\n        <h5>Order No: {{order.number}}</h5>\r\n      </div>\r\n      \r\n      <div class=\"col-md-12\">\r\n        <address>\r\n          <strong>{{order.ship_address.full_name}}.</strong><br>\r\n          {{order.ship_address.address1}}<br>\r\n          {{order.ship_address.address2}}<br>\r\n          {{order.ship_address.city}}, {{order.ship_address.zipcode}}<br>\r\n          <abbr title=\"Phone\">P:</abbr> {{order.ship_address.phone}}\r\n        </address>\r\n      </div>\r\n\r\n      <dl class=\"col-md-12\">\r\n        <dt>\r\n          Total Amount:\r\n          <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n          {{order.total}}\r\n        </dt>\r\n        \r\n        <dd>\r\n          MRP: \r\n          <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n          {{order.item_total}}\r\n        </dd>\r\n\r\n        <dd>\r\n          Shipping: \r\n          <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n          {{order.ship_total}}\r\n        </dd>\r\n        \r\n        <dd>\r\n          Adjustment: \r\n          <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n          {{order.adjustment_total}}\r\n        </dd>\r\n      </dl>\r\n\r\n      <dl class=\"col-md-12\">\r\n        <dt>\r\n          Payment: {{order.payment_state | humanize | uppercase}}\r\n        </dt>\r\n      </dl>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div *ngIf=\"order\">\r\n    <div class=\"panel panel-default\">\r\n        <div class=\"panel-body\">\r\n            <div class=\"row\">\r\n                <div class=\"active col-md-6\">\r\n                    <div class=\"row\">\r\n\r\n                        <div class=\"col-md-4\">\r\n                            <small>SHIPMENT</small>\r\n                            <h5>\r\n                                <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i> {{order.total}}\r\n                            </h5>\r\n                        </div>\r\n\r\n                        <div class=\"col-md-4\">\r\n                            <small>STATUS</small>\r\n                            <h5 class=\"status\">\r\n                                {{order.shipment_state | uppercase}}\r\n                            </h5>\r\n                        </div>\r\n\r\n                        <div class=\"col-md-4\">\r\n                            <small>ITEMS</small>\r\n                            <h5>\r\n                                {{order.line_items.length}}\r\n                            </h5>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <hr>\r\n            <div class='row' *ngFor=\"let line_item of order.line_items\">\r\n                <br>\r\n                <div class=\"col-md-2\">\r\n                    <img class=\"line_item_image\" [src]=\"getProductImageUrl(line_item)\" alt=\"Line Item\">\r\n                </div>\r\n\r\n                <div class=\"col-md-3\">\r\n                    <h5 class=\"ptitle\">\r\n                        <a [routerLink]=\"['/product', line_item.product_slug]\">\r\n                            <span class=\"text-uppercase text-primary\">{{line_item.product_name}}</span>\r\n                        </a>\r\n                    </h5>\r\n                    <h6 class=\"\" *ngIf=\"line_item.adjustment_slug\">\r\n                        <a (click)=\"createAdjOrder(line_item)\">\r\n                            <span style=\"cursor: pointer\">Request Adjustment</span>\r\n                        </a>\r\n                    </h6>\r\n                </div>\r\n\r\n                <div class=\"col-md-2\">\r\n                    <h5 class=\"strong\">\r\n                        <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i> {{line_item.total}}\r\n                    </h5>\r\n                    <small>\r\n            MRP: \r\n            <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n            {{line_item.total}}\r\n          </small><br/>\r\n                </div>\r\n                <div class=\"col-md-2\">\r\n                    <h5 class=\"strong\">\r\n                        {{order.number}}\r\n                    </h5>\r\n                </div>\r\n\r\n                <div class=\"col-md-3\">\r\n                    <h5 class=\"strong\">\r\n                        <div class=\"pull-right\">\r\n                            <a (click)=\"caseView(line_item.id)\" class=\"view-details-link strong\" style=\"cursor: pointer\">View Case</a>\r\n                        </div>\r\n                    </h5>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <br>\r\n    <!-- <h5>SHIPPING DETAILS</h5>\r\n  <div class=\"panel panel-default\">\r\n    <div class=\"row panel-body\">\r\n      <div class=\"col-md-12\">\r\n        <h5>Order No: {{order.number}}</h5>\r\n      </div>\r\n      \r\n      <div class=\"col-md-12\">\r\n        <address>\r\n          <strong>{{order.ship_address.full_name}}.</strong><br>\r\n          {{order.ship_address.address1}}<br>\r\n          {{order.ship_address.address2}}<br>\r\n          {{order.ship_address.city}}, {{order.ship_address.zipcode}}<br>\r\n          <abbr title=\"Phone\">P:</abbr> {{order.ship_address.phone}}\r\n        </address>\r\n      </div>\r\n\r\n      <dl class=\"col-md-12\">\r\n        <dt>\r\n          Total Amount:\r\n          <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n          {{order.total}}\r\n        </dt>\r\n        \r\n        <dd>\r\n          MRP: \r\n          <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n          {{order.item_total}}\r\n        </dd>\r\n\r\n        <dd>\r\n          Shipping: \r\n          <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n          {{order.ship_total}}\r\n        </dd>\r\n        \r\n        <dd>\r\n          Adjustment: \r\n          <i class=\"fa fa-{{order.currency | lowercase}}\" aria-hidden=\"true\"></i>\r\n          {{order.adjustment_total}}\r\n        </dd>\r\n      </dl>\r\n\r\n      <dl class=\"col-md-12\">\r\n        <dt>\r\n          Payment: {{order.payment_state | humanize | uppercase}}\r\n        </dt>\r\n      </dl>\r\n    </div>\r\n  </div> -->\r\n</div>"
 
 /***/ }),
 
@@ -380,26 +380,14 @@ var OrderDetailComponent = (function () {
         });
     };
     OrderDetailComponent.prototype.getProductImageUrl = function (line_item) {
-        if (line_item.variant.images[0]) {
-            var image_url = line_item.variant.images[0].small_url;
-            return __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].API_ENDPOINT + image_url;
-        }
-        return __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].API_ENDPOINT;
+        return __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].API_ENDPOINT + line_item.image_url;
     };
     OrderDetailComponent.prototype.createAdjOrder = function (line_item) {
-        // [routerLink]="['/product', line_item.order_info.adj_slug]"
-        this.router.navigate(['/product', line_item.order_info.adj_slug]);
+        this.router.navigate(['/product', line_item.adjustment_slug]);
         this.store.dispatch(this.checkout.updateAdjustmentOrder(line_item.id.toString()));
     };
     OrderDetailComponent.prototype.caseView = function (id) {
-        // this.childSubscription$ = this.userOrder$.subscribe(res=>{
-        //     let orders = res;
-        //     orders.forEach(order => {
-        //       if (order.original_line_item == id){
         this.router.navigate(['/user', 'orders', 'adjust', id]);
-        //     }          
-        //   });
-        // });
     };
     OrderDetailComponent.prototype.ngOnDestroy = function () {
         this.routeSubscription$.unsubscribe();
@@ -481,7 +469,7 @@ var OrderListItemComponent = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__core_models_order__["a" /* Order */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__core_models_order__["a" /* Order */]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__core_models_order__["a" /* LightOrder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__core_models_order__["a" /* LightOrder */]) === "function" && _a || Object)
 ], OrderListItemComponent.prototype, "order", void 0);
 OrderListItemComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -867,7 +855,7 @@ function getUserState(state) {
  *
  *
  * @param {UserState} state
- * @returns {Order[]}
+ * @returns {LightOrder[]}
  */
 var fetchUserOrders = function (state) {
     console.log("state2", state.orders.toJS());

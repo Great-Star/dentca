@@ -52,5 +52,9 @@ module Angspree
           :max_age => 0
       end
     end
+
+    config.after_initialize do
+      config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::CustomCalc
+    end
   end
 end

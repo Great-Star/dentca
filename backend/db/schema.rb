@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107013155) do
+ActiveRecord::Schema.define(version: 20171120140650) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -220,6 +220,7 @@ ActiveRecord::Schema.define(version: 20171107013155) do
     t.datetime "updated_at",   null: false
     t.integer  "position"
     t.string   "slug"
+    t.string   "link_to"
   end
 
   add_index "spree_drop_down_items", ["drop_down_id"], name: "index_spree_drop_down_items_on_drop_down_id"
@@ -231,6 +232,7 @@ ActiveRecord::Schema.define(version: 20171107013155) do
     t.datetime "updated_at",   null: false
     t.integer  "position"
     t.string   "slug"
+    t.string   "link_to"
   end
 
   create_table "spree_gateways", force: :cascade do |t|
@@ -268,21 +270,26 @@ ActiveRecord::Schema.define(version: 20171107013155) do
   create_table "spree_line_items", force: :cascade do |t|
     t.integer  "variant_id"
     t.integer  "order_id"
-    t.integer  "quantity",                                                            null: false
-    t.decimal  "price",                        precision: 10, scale: 2,               null: false
-    t.datetime "created_at",                                                          null: false
-    t.datetime "updated_at",                                                          null: false
+    t.integer  "quantity",                                                              null: false
+    t.decimal  "price",                        precision: 10, scale: 2,                 null: false
+    t.datetime "created_at",                                                            null: false
+    t.datetime "updated_at",                                                            null: false
     t.string   "currency"
     t.decimal  "cost_price",                   precision: 10, scale: 2
     t.integer  "tax_category_id"
     t.decimal  "adjustment_total",             precision: 10, scale: 2, default: 0.0
     t.decimal  "additional_tax_total",         precision: 10, scale: 2, default: 0.0
     t.decimal  "promo_total",                  precision: 10, scale: 2, default: 0.0
-    t.decimal  "included_tax_total",           precision: 10, scale: 2, default: 0.0, null: false
-    t.decimal  "pre_tax_amount",               precision: 12, scale: 4, default: 0.0, null: false
-    t.decimal  "taxable_adjustment_total",     precision: 10, scale: 2, default: 0.0, null: false
-    t.decimal  "non_taxable_adjustment_total", precision: 10, scale: 2, default: 0.0, null: false
+    t.decimal  "included_tax_total",           precision: 10, scale: 2, default: 0.0,   null: false
+    t.decimal  "pre_tax_amount",               precision: 12, scale: 4, default: 0.0,   null: false
+    t.decimal  "taxable_adjustment_total",     precision: 10, scale: 2, default: 0.0,   null: false
+    t.decimal  "non_taxable_adjustment_total", precision: 10, scale: 2, default: 0.0,   null: false
     t.string   "adjust_order_number"
+    t.integer  "shipping_type_id"
+    t.decimal  "ordered_price"
+    t.string   "adjustment_slug"
+    t.string   "options_context"
+    t.boolean  "is_own_ship",                                           default: false
   end
 
   add_index "spree_line_items", ["order_id"], name: "index_spree_line_items_on_order_id"
@@ -387,16 +394,6 @@ ActiveRecord::Schema.define(version: 20171107013155) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "position"
-  end
-
-  create_table "spree_order_infos", force: :cascade do |t|
-    t.string   "context"
-    t.float    "price"
-    t.integer  "line_item_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "adj_slug"
-    t.string   "original_line_item"
   end
 
   create_table "spree_order_promotions", force: :cascade do |t|
@@ -620,6 +617,7 @@ ActiveRecord::Schema.define(version: 20171107013155) do
     t.datetime "discontinue_on"
     t.text     "order_info_option_ids"
     t.string   "adj_sku"
+    t.integer  "shipping_type_id"
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on"
@@ -627,6 +625,7 @@ ActiveRecord::Schema.define(version: 20171107013155) do
   add_index "spree_products", ["discontinue_on"], name: "index_spree_products_on_discontinue_on"
   add_index "spree_products", ["name"], name: "index_spree_products_on_name"
   add_index "spree_products", ["shipping_category_id"], name: "index_spree_products_on_shipping_category_id"
+  add_index "spree_products", ["shipping_type_id"], name: "index_spree_products_on_shipping_type_id"
   add_index "spree_products", ["slug"], name: "index_spree_products_on_slug", unique: true
   add_index "spree_products", ["tax_category_id"], name: "index_spree_products_on_tax_category_id"
 
@@ -868,16 +867,17 @@ ActiveRecord::Schema.define(version: 20171107013155) do
     t.integer  "order_id"
     t.integer  "address_id"
     t.string   "state"
-    t.datetime "created_at",                                                          null: false
-    t.datetime "updated_at",                                                          null: false
+    t.datetime "created_at",                                                            null: false
+    t.datetime "updated_at",                                                            null: false
     t.integer  "stock_location_id"
     t.decimal  "adjustment_total",             precision: 10, scale: 2, default: 0.0
     t.decimal  "additional_tax_total",         precision: 10, scale: 2, default: 0.0
     t.decimal  "promo_total",                  precision: 10, scale: 2, default: 0.0
-    t.decimal  "included_tax_total",           precision: 10, scale: 2, default: 0.0, null: false
-    t.decimal  "pre_tax_amount",               precision: 12, scale: 4, default: 0.0, null: false
-    t.decimal  "taxable_adjustment_total",     precision: 10, scale: 2, default: 0.0, null: false
-    t.decimal  "non_taxable_adjustment_total", precision: 10, scale: 2, default: 0.0, null: false
+    t.decimal  "included_tax_total",           precision: 10, scale: 2, default: 0.0,   null: false
+    t.decimal  "pre_tax_amount",               precision: 12, scale: 4, default: 0.0,   null: false
+    t.decimal  "taxable_adjustment_total",     precision: 10, scale: 2, default: 0.0,   null: false
+    t.decimal  "non_taxable_adjustment_total", precision: 10, scale: 2, default: 0.0,   null: false
+    t.boolean  "is_own_shipping",                                       default: false
   end
 
   add_index "spree_shipments", ["address_id"], name: "index_spree_shipments_on_address_id"
@@ -936,6 +936,12 @@ ActiveRecord::Schema.define(version: 20171107013155) do
   add_index "spree_shipping_rates", ["selected"], name: "index_spree_shipping_rates_on_selected"
   add_index "spree_shipping_rates", ["shipment_id", "shipping_method_id"], name: "spree_shipping_rates_join_index", unique: true
   add_index "spree_shipping_rates", ["tax_rate_id"], name: "index_spree_shipping_rates_on_tax_rate_id"
+
+  create_table "spree_shipping_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "spree_skrill_transactions", force: :cascade do |t|
     t.string   "email"
@@ -1247,7 +1253,6 @@ ActiveRecord::Schema.define(version: 20171107013155) do
     t.datetime "updated_at"
     t.integer  "stock_items_count",                                 default: 0,     null: false
     t.datetime "discontinue_on"
-    t.integer  "order_info_id"
     t.boolean  "is_clone",                                          default: false
     t.boolean  "is_present",                                        default: false
     t.integer  "product_variant_value_id"

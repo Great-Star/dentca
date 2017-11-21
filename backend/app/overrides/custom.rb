@@ -2,36 +2,6 @@
 #     :name=>"change_logo",
 #     :remove=>"erb[loud]:contains(link_to)");
 
-#------------------------- Product form customization -----------------------
-
-Deface::Override.new(:virtual_path => "spree/admin/products/_form",
-    :name => "modify_variant_manage_form",
-    :replace => "[data-hook='admin_product_form_multiple_variants']",
-    :text => "<div data-hook='admin_product_form_sku'>
-          <%= f.field_container :sku, class: ['form-group'] do %>
-            <%= f.label :sku, Spree.t(:sku) %>
-            <%= f.text_field :sku, size: 16, class: 'form-control' %>
-          <% end %>
-        </div>")
-
-Deface::Override.new(:virtual_path => "spree/admin/products/_form",
-    :name => "add_adj_sku",
-    :insert_after => "[data-hook='admin_product_form_sku']",
-    :text => "<div data-hook='admin_product_form_adj_sku'>
-        <%= f.field_container :adj_sku, class: ['form-group'] do %>
-          <%= f.label :adj_sku, Spree.t(:adjustment_sku) %>
-          <%= f.error_message_on :adj_sku %>
-          <%= f.text_field :adj_sku, class: 'form-control' %>
-        <% end %>
-      </div>")
-
-Deface::Override.new(:virtual_path => "spree/admin/products/_form",
-    :name => "remove_shipping_specs",
-    :remove => "div#shipping_specs")  
-
-Deface::Override.new(:virtual_path => "spree/admin/products/new",
-    :name => "remove_product_prototype_field",
-    :remove => "[data-hook='product-from-prototype']")    
 
 Deface::Override.new(:virtual_path => "spree/admin/variants/_form",
     :name => "add_validation_comment",

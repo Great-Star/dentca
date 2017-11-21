@@ -18,7 +18,7 @@ var Image = (function () {
 /***/ "../../../../../src/app/product/components/product-detail-page/product-checkbox/product-checkbox.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<input type=\"checkbox\" [checked]=\"isChecked\" class= \"check-option\"/>\n<label style=\"font-size: 18px;\">{{type.presentation}}<span *ngIf=\"type.mandatory\" style=\"color:red;\">*</span></label>\n<div [innerHTML]=\"type.description\"></div> "
+module.exports = "<label style=\"font-size: 18px;\">\n    <input type=\"checkbox\" [checked]=\"isChecked\" (change)=\"isChecked = !isChecked\" class= \"check-option\"/>\n    {{type.presentation}}<span *ngIf=\"type.mandatory\" style=\"color:red;\">*</span>\n</label>\n<div [innerHTML]=\"type.description\"></div> "
 
 /***/ }),
 
@@ -83,7 +83,7 @@ ProductCheckboxComponent = __decorate([
 /***/ "../../../../../src/app/product/components/product-detail-page/product-description/product-description.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <i>{{description}}</i>\r\n</div>"
+module.exports = "<div [innerHtml]=\"description | toHtml\">\r\n</div>"
 
 /***/ }),
 
@@ -339,7 +339,6 @@ var ProductDetailsComponent = (function () {
         console.log("send cart");
         var line_item = {
             variant_id: this.product.master.id,
-            variants: [],
             price: this.productPrice,
             origin: this.original_line_item
         };
@@ -1135,6 +1134,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// import { ToHtmlPipe } from './../shared/pipes/to-html.pipe';
 // Routes
 
 var ProductModule = (function () {
@@ -1159,8 +1159,7 @@ ProductModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__components_product_detail_page_product_group_product_group_component__["a" /* ProductGroupComponent */],
             __WEBPACK_IMPORTED_MODULE_16__components_product_detail_page_product_text_product_text_component__["a" /* ProductTextComponent */],
             __WEBPACK_IMPORTED_MODULE_17__components_product_detail_page_product_type_description_product_type_description_component__["a" /* ProductTypeDescriptionComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__components_product_detail_page_product_checkbox_product_checkbox_component__["a" /* ProductCheckboxComponent */]
-            // pipes
+            __WEBPACK_IMPORTED_MODULE_18__components_product_detail_page_product_checkbox_product_checkbox_component__["a" /* ProductCheckboxComponent */],
         ],
         exports: [
             // components

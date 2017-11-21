@@ -5,8 +5,11 @@ module Spree
         has_many :product_prices, class_name: "Spree::ProductPrice", :dependent => :destroy
         has_many :product_price_sets, class_name: "Spree::ProductPriceSet", through: :product_prices
         has_many :option_values, class_name: "Spree::OptionValue", through: :option_types
+        belongs_to :shipping_type, class_name: "Spree::ShippingType"
         after_save :auto_create_product_variant_types
         after_save :auto_create_variants
+
+        validates :shipping_type_id, presence: true
 
         accepts_nested_attributes_for :product_prices
 

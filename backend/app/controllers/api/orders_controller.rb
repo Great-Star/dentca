@@ -11,19 +11,19 @@ class Api::OrdersController < BaseController
   end
 
   def show
-    token = request.headers['X-Spree-Order-Token']
+    # token = request.headers['X-Spree-Order-Token']
 
-    if token.present?
-      @order = Spree::Order.find_by!(number: params[:id], guest_token: token)
-    else
+    # if token.present?
+    #   @order = Spree::Order.find_by!(number: params[:id], guest_token: token)
+    # else
       check_authorization
-      authorize! :show, @user
+      # authorize! :show, @user
       @order = @user.orders.find_by!(number: params[:id])
-    end
+    # end
 
     render json: @order,
            scope: spree_current_user,
-           serializer: OrderSerializer,
+           serializer: LiteOrderSerializer,
            root: false
   end
 end

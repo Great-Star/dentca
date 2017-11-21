@@ -282,7 +282,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.2.2)
       rake
-    rake (12.1.0)
+    rake (12.3.0)
     ransack (1.4.1)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
@@ -461,4 +461,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.15.3
+   1.16.0

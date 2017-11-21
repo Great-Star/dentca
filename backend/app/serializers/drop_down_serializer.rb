@@ -4,9 +4,6 @@ class DropDownSerializer < ActiveModel::Serializer
   def has_item
     object.has_item?
   end
-  
-  has_many :maintainable_pages, embed: :objects,
-                    serializer: MaintainablePageSerializer
 
   has_many :drop_down_items, embed: :objects,
                     serializer: DropDownItemSerializer

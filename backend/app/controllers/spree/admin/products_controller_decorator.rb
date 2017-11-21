@@ -1,7 +1,6 @@
 
 Spree::Admin::ProductsController.class_eval do
     # before_action :update_variant, only: :update
-    # after_action :create_variant_1, only: :update
 
     def update
         if params[:product][:taxon_ids].present?
@@ -15,9 +14,6 @@ Spree::Admin::ProductsController.class_eval do
 
         if @object.update_attributes(permitted_resource_params)
             invoke_callbacks(:update, :after)
-
-            # update_variant
-            # create_clone_variant
 
             flash[:success] = flash_message_for(@object, :successfully_updated)
 

@@ -1,7 +1,17 @@
 class LiteLineItemSerializer < BaseSerializer
-  attributes :single_display_amount, :display_amount, :total, :image_url
+  attributes :id, :single_display_amount, :display_amount, :total, :adjustment_slug, :product_name, :product_slug, :image_url
+
+  def product_name
+    object.variant.name
+  end
+
+  def product_slug
+    object.variant.slug
+  end
 
   def image_url
-  	object.variant.images.first.attachment.url('small')
+    if object.variant.images.first
+      object.variant.images.first.attachment.url('small')
+    end
   end
 end

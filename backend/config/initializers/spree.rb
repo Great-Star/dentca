@@ -15,7 +15,7 @@ Spree.config do |config|
   # config.track_inventory_levels = false
     # config.override_actionmailer_config = false
     # config.mails_from = "no-reply@yourdomain.com" 
-  # config.action_view.raise_on_missing_translations = true
+  # config.action_view.raise_on_missing_translations = true  
 end
 
 Spree.user_class = "Spree::User"
@@ -34,3 +34,6 @@ SpreeEditor::Config.tap do |config|
 end
 
 Spree::Api::Config[:requires_authentication] = false
+
+config = Rails.application.config
+

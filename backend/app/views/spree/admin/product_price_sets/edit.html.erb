@@ -5,7 +5,9 @@
 
 <% content_for :page_actions do %>
   <span id="new_add_product_price" data-hook>
-    <%= button_link_to Spree.t(:add_product_price), "javascript:;", { icon: 'add', :'data-target' => "tbody#product_prices", class: 'btn-success spree_price_add_fields' } %>
+    <% if @product_price_set.id != 1 %>
+      <%= button_link_to Spree.t(:add_product_price), "javascript:;", { icon: 'add', :'data-target' => "tbody#product_prices", class: 'btn-success spree_price_add_fields' } %>
+    <% end %>
   </span>
 <% end %>
 
@@ -21,27 +23,29 @@
     <div class="panel-body">
       <%= render partial: 'form', locals: { f: f } %>
     </div>
-    <table class="table table-condensed table-bordered" data-hook >
-      <thead data-hook="product_price_header">
-        <tr>
-          <th colspan="1"><%= Spree.t(:product) %> <span class="required">*</span></th>
-          <th><%= Spree.t(:price) %> <span class="required">*</span></th>
-          <th class="actions"></th>
-        </tr>
-      </thead>
-      <tbody id="product_prices">
-        <% if @product_price_set.product_prices.empty? %>
-          <tr id="none" data-hook="product_price_none">
-            <td colspan="2"><%= Spree.t(:none) %></td>
-            <td class="actions text-center"></td>
+    <% if @product_price_set.id != 1 %>
+      <table class="table table-condensed table-bordered" data-hook >
+        <thead data-hook="product_price_header">
+          <tr>
+            <th colspan="1"><%= Spree.t(:product) %> <span class="required">*</span></th>
+            <th><%= Spree.t(:price) %> <span class="required">*</span></th>
+            <th class="actions"></th>
           </tr>
-        <% else %>
-          <%= f.fields_for :product_prices do |product_price_form| %>
-            <%= render partial: 'product_price_fields', locals: { f: product_price_form } %>
+        </thead>
+        <tbody id="product_prices">
+          <% if @product_price_set.product_prices.empty? %>
+            <tr id="none" data-hook="product_price_none">
+              <td colspan="2"><%= Spree.t(:none) %></td>
+              <td class="actions text-center"></td>
+            </tr>
+          <% else %>
+            <%= f.fields_for :product_prices do |product_price_form| %>
+              <%= render partial: 'product_price_fields', locals: { f: product_price_form } %>
+            <% end %>
           <% end %>
-        <% end %>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    <% end %>
     <div class="panel-footer text-center">
       <%= render partial: 'spree/admin/shared/edit_resource_links' %>
     </div>
