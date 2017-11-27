@@ -6,10 +6,9 @@ module Spree
         has_many :product_price_sets, class_name: "Spree::ProductPriceSet", through: :product_prices
         has_many :option_values, class_name: "Spree::OptionValue", through: :option_types
         belongs_to :shipping_type, class_name: "Spree::ShippingType"
+        before_save :validate_shipping_type
         after_save :auto_create_product_variant_types
         after_save :auto_create_variants
-
-        validates :shipping_type_id, presence: true
 
         accepts_nested_attributes_for :product_prices
 
@@ -57,6 +56,10 @@ module Spree
         
         def build_variants_from_option_values_hash
 
+        end
+
+        def validate_shipping_type
+            self.shipping_type_id = 2 if self.is_consolidated
         end
     end
 end

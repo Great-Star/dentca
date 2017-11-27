@@ -10,6 +10,7 @@ module Spree
 
         belongs_to :corporate_account, class_name: "Spree::CorporateAccount"
         belongs_to :product_price_set, class_name: "Spree::ProductPriceSet"
+        belongs_to :shipping_category, class_name: "Spree::ShippingCategory"
 
         def selected_user_roles
             self.spree_roles.pluck(:name)

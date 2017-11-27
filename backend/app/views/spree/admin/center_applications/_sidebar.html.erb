@@ -1,0 +1,17 @@
+<% content_for :page_title do %>
+    <%= link_to Spree.t(:center_applications), admin_center_applications_url %> /
+<% end %>
+
+<% content_for :sidebar do %>
+    <ul class="nav nav-pills nav-stacked" data-hook="admin_center_application_tab_options">
+
+      <li<%== ' class="active"' if current == :application %>>
+        <%= link_to_with_icon 'user', Spree.t(:"admin.center_application.application"), edit_admin_center_application_url(@center_application) %>
+      </li>
+
+      <li<%== ' class="active"' if current == :address %>>
+        <%= link_to_with_icon 'user', Spree.t(:"admin.center_application.address"), address_admin_center_application_url(@center_application) %>
+      </li>
+
+    </ul>
+<% end %>

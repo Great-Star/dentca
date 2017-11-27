@@ -12,25 +12,38 @@ module Spree
             end
 
             def compute_package(package)
-                variant_ids = []
-                package.contents.reduce(0) do |sum, content|
-                    sum += compute_from_matched_line_items(package.order.line_items, content.inventory_unit.line_item_id, variant_ids)
+                if package.contents.size == 1
+                    compute_from(package.contents.first)
+                else
+                    # compute_from_consolidation(package.contents.first)
+                    self.preferred_amount_1x
                 end
             end
 
-            def compute_from_matched_line_items(line_items, id, variant_ids)
-                type = line_items.find(id).shipping_type_id 
-                variant_id = line_items.find(id).variant_id
-                is_own_ship = line_items.find(id).is_own_ship
-                if type == 1 || variant_ids.include?(variant_id)
-                    return 0
-                end
-                variant_ids.push(variant_id)
-                if is_own_ship
-                    return self.preferred_amount_1x
-                end
-                type == 2 ? self.preferred_amount_1x : self.preferred_amount_2x
+            def compute_from_consolidation(content)
+                type = content.inventory_unit.line_item.shipping_type_id
+                self.preferred_amount_1x
             end
+
+            def compute_from(content)
+                type = content.inventory_unit.line_item.shipping_type_id
+                is_own_ship = content.inventory_unit.line_item.is_own_ship
+
+                # case of free shipping
+                return 0 if type == 1  
+
+                # case of own shipping?
+                return self.preferred_amount_1x if is_own_ship
+
+                # case of 1 way shipping
+                if type == 2    
+                    self.preferred_amount_1x
+                # case of 2 way shippings
+                else            
+                    self.preferred_amount_2x
+                end
+            end
+            
         end
     end
 end

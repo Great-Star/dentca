@@ -65,11 +65,6 @@ var AddressFormComponent = (function () {
         this.onSumbitInitValue();
     };
     AddressFormComponent.prototype.onSubmit = function () {
-        // const address = this.addressForm.value;
-        // let addressAttributes;
-        // addressAttributes = this.createAddresAttributes(address);
-        // this.checkoutService.updateOrder(addressAttributes)
-        //   .subscribe();
     };
     AddressFormComponent.prototype.ngOnDestroy = function () {
     };
@@ -243,8 +238,8 @@ var AddressComponent = (function () {
         this.checkoutService = checkoutService;
         this.addrService = addrService;
         this.router = router;
-        this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["d" /* getOrderNumber */]);
-        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["e" /* getOrderState */])
+        this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["e" /* getOrderNumber */]);
+        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["f" /* getOrderState */])
             .subscribe(function (state) {
             _this.orderState = state;
         });
@@ -282,33 +277,18 @@ var AddressComponent = (function () {
     };
     AddressComponent.prototype.checkoutToDelivery = function () {
         var _this = this;
-        // console.log("8888888", this.createAddressAttr());
-        console.log("current State---", this.orderState);
         if (this.orderState === 'address') {
-            this.checkoutService.updateOrder(this.createAddressAttr())
+            this.checkoutService.updateOrderAndState(this.createAddressAttr())
                 .do(function () {
-                _this.router.navigate(['/checkout', 'delivery']);
+                _this.router.navigate(['/checkout', 'payment']);
             })
                 .subscribe();
         }
         else {
-            this.router.navigate(['/checkout', 'delivery']);
+            this.router.navigate(['/checkout', 'payment']);
         }
-        // if (this.orderState === 'delivery' || this.orderState === 'address') {
-        //   this.checkoutService.changeOrderState()
-        //     .do(() => {
-        //       this.router.navigate(['/checkout', 'payment']);
-        //     })
-        //     .subscribe();
-        // } else {
-        // this.router.navigate(['/checkout', 'delivery']);
-        // }
     };
     AddressComponent.prototype.ngOnDestroy = function () {
-        // if (this.orderState === 'delivery') {
-        //   this.checkoutService.changeOrderState()
-        //     .subscribe();
-        // }
         this.stateSub$.unsubscribe();
     };
     return AddressComponent;
@@ -522,8 +502,8 @@ var DeliveryOptionsComponent = (function () {
         this.checkoutService = checkoutService;
         this.store = store;
         this.shippingRates = [];
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["i" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["h" /* getTotalCartItems */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["k" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["j" /* getTotalCartItems */]);
     }
     DeliveryOptionsComponent.prototype.ngOnInit = function () {
         // this.setOrder();
@@ -609,7 +589,7 @@ var ShipAddressComponent = (function () {
     function ShipAddressComponent(store) {
         this.store = store;
         this.onChangeAddress = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.shipAddress$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["f" /* getShipAddress */]);
+        this.shipAddress$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["h" /* getShipAddress */]);
     }
     ShipAddressComponent.prototype.ngOnInit = function () {
         this.isChecked = true;
@@ -650,7 +630,7 @@ var _a;
 /***/ "../../../../../src/app/checkout/cart/cart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"cart-section\">\r\n    <div *ngIf=\"(totalCartItems$ | async) > 0 else emptyCart\">\r\n        <div class=\"checkout-header-container\">\r\n            <div class=\"checkout-header\">\r\n                <span class=\"text\">My Shopping Bag ({{totalCartItems$ | async}})</span>\r\n            </div>\r\n            <div class=\"total-price\">Total: ${{totalCartValue$ | async | number:'1.2-2'}}</div>\r\n        </div>\r\n        <div class=\"prod-set\">\r\n            <app-line-item-list></app-line-item-list>\r\n        </div>\r\n        <div class=\"right\">\r\n          <app-order-total-summary [totalCartValue]=\"totalCartValue$ | async\"></app-order-total-summary>\r\n        </div>\r\n    </div>\r\n    <ng-template #emptyCart>\r\n        <app-empty-cart></app-empty-cart>\r\n    </ng-template>\r\n</div>"
+module.exports = "<div class=\"cart-section\">\r\n    <div *ngIf=\"(totalCartItems$ | async) > 0 || (shipItems$ | async)?.length > 0 else emptyCart\">\r\n        <div class=\"line-item-field\">\r\n            <div class=\"checkout-header-container\">\r\n                <div class=\"checkout-header\">\r\n                    <span class=\"text\">My Shopping Bag ({{totalCartItems$ | async}})</span>\r\n                </div>\r\n                <div class=\"total-price\">Total: ${{totalCartValue$ | async | number:'1.2-2'}}</div>\r\n            </div>\r\n            <div class=\"prod-set\">\r\n                <app-line-item-list></app-line-item-list>\r\n            </div>\r\n        </div>\r\n        <div class=\"ship-item-field\" *ngIf=\"(shipItems$ | async)?.length as length\">\r\n            <div class=\"checkout-header-container\">\r\n                <div class=\"checkout-header\">\r\n                    <span class=\"text\">My ShippingItems ({{length}})</span>\r\n                </div>\r\n                <div class=\"prod-set\">\r\n                    <app-ship-item-list [shipItems]=\"shipItems$ | async\"></app-ship-item-list>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"right\">\r\n            <app-order-total-summary [totalCartValue]=\"totalCartValue$ | async\"></app-order-total-summary>\r\n        </div>\r\n    </div>\r\n    <ng-template #emptyCart>\r\n        <app-empty-cart></app-empty-cart>\r\n    </ng-template>\r\n</div>"
 
 /***/ }),
 
@@ -695,8 +675,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CartComponent = (function () {
     function CartComponent(store) {
         this.store = store;
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["i" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["h" /* getTotalCartItems */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["k" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["j" /* getTotalCartItems */]);
+        this.shipItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["i" /* getShipment */]);
     }
     CartComponent.prototype.ngOnInit = function () {
     };
@@ -729,12 +710,16 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_line_item_list_line_item_line_item_component__ = __webpack_require__("../../../../../src/app/checkout/cart/components/line-item-list/line-item/line-item.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_order_total_summary_order_total_summary_component__ = __webpack_require__("../../../../../src/app/checkout/cart/components/order-total-summary/order-total-summary.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_empty_cart_empty_cart_component__ = __webpack_require__("../../../../../src/app/checkout/cart/components/empty-cart/empty-cart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_ship_item_list_ship_item_list_component__ = __webpack_require__("../../../../../src/app/checkout/cart/components/ship-item-list/ship-item-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_ship_item_list_ship_item_ship_item_component__ = __webpack_require__("../../../../../src/app/checkout/cart/components/ship-item-list/ship-item/ship-item.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -755,7 +740,9 @@ CartModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_4__components_line_item_list_line_item_list_component__["a" /* LineItemListComponent */],
             __WEBPACK_IMPORTED_MODULE_5__components_line_item_list_line_item_line_item_component__["a" /* LineItemComponent */],
             __WEBPACK_IMPORTED_MODULE_6__components_order_total_summary_order_total_summary_component__["a" /* OrderTotalSummaryComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__components_empty_cart_empty_cart_component__["a" /* EmptyCartComponent */]
+            __WEBPACK_IMPORTED_MODULE_7__components_empty_cart_empty_cart_component__["a" /* EmptyCartComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__components_ship_item_list_ship_item_list_component__["a" /* ShipItemListComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__components_ship_item_list_ship_item_ship_item_component__["a" /* ShipItemComponent */]
         ],
         exports: [],
         imports: [
@@ -882,7 +869,7 @@ var LineItemListComponent = (function () {
     function LineItemListComponent(store, actions) {
         this.store = store;
         this.actions = actions;
-        this.lineItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["c" /* getLineItems */]);
+        this.lineItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["d" /* getLineItems */]);
     }
     LineItemListComponent.prototype.ngOnInit = function () {
     };
@@ -917,7 +904,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".prod-item {\n  background: #fff;\n  border: 1px solid #eaeaec;\n  box-shadow: 0 0 4px rgba(40, 44, 63, 0.08);\n  margin-bottom: 30px;\n  text-transform: none;\n  padding-bottom: 0 !important; }\n  .prod-item .col1 {\n    width: 20%;\n    display: inline-block;\n    vertical-align: bottom; }\n    .prod-item .col1 img {\n      width: 120px;\n      height: 160px;\n      -o-object-fit: contain;\n         object-fit: contain; }\n  .prod-item .col2 {\n    vertical-align: top;\n    display: inline-block;\n    padding: 10px 10px 10px 25px;\n    min-height: 145px;\n    position: relative;\n    width: 79%; }\n    .prod-item .col2 .prod-name {\n      display: inline-block;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      max-width: 400px;\n      padding: 5px 5px 5px 0;\n      float: left; }\n      .prod-item .col2 .prod-name .gray {\n        color: gray; }\n      .prod-item .col2 .prod-name a {\n        font-size: 14px;\n        font-family: \"Whitney-semi-bold\";\n        font-weight: 600;\n        color: #535766;\n        margin-right: 6px; }\n    .prod-item .col2 .prod-amount {\n      padding: 5px 5px 5px 0;\n      display: inline-block;\n      vertical-align: top;\n      font-weight: 600;\n      font-size: 14px;\n      font-family: \"Whitney-semi-bold\";\n      color: #535766;\n      margin-left: 20px;\n      float: left; }\n      .prod-item .col2 .prod-amount .gray {\n        color: gray; }\n    .prod-item .col2 .option-qty-wrap {\n      padding: 5px 5px 5px 0;\n      display: inline-block;\n      color: #535766;\n      margin-left: 20px;\n      vertical-align: top; }\n      .prod-item .col2 .option-qty-wrap .option-qty {\n        padding-right: 10px;\n        display: inline-block; }\n        .prod-item .col2 .option-qty-wrap .option-qty .qty {\n          cursor: pointer;\n          margin-right: 20px; }\n          .prod-item .col2 .option-qty-wrap .option-qty .qty .gray {\n            color: gray; }\n    .prod-item .col2 .prod-total {\n      float: right;\n      color: #535766; }\n      .prod-item .col2 .prod-total .gray {\n        color: gray; }\n    .prod-item .col2 .prod-option {\n      color: #535766;\n      margin-top: 10px; }\n      .prod-item .col2 .prod-option .gray {\n        color: gray; }\n    .prod-item .col2 .edit-move-delete {\n      position: absolute;\n      right: 25px;\n      right: 20px;\n      bottom: 0;\n      border-top: 1px solid #eaeaec;\n      padding-top: 9px;\n      font-size: 13px;\n      font-weight: 600;\n      padding-left: 0;\n      color: #696e79; }\n      .prod-item .col2 .edit-move-delete .delete-item, .prod-item .col2 .edit-move-delete .move-item {\n        font-family: \"Whitney-semi-bold\";\n        margin: 0 15px 0 0;\n        color: #526cd0;\n        cursor: pointer; }\n      .prod-item .col2 .edit-move-delete .move-item {\n        color: #526cd0; }\n", ""]);
+exports.push([module.i, ".prod-item {\n  background: #fff;\n  border: 1px solid #15d27c;\n  box-shadow: 0 0 4px rgba(40, 44, 63, 0.08);\n  margin-bottom: 30px;\n  text-transform: none;\n  padding-bottom: 0 !important; }\n  .prod-item .col1 {\n    width: 20%;\n    display: inline-block;\n    vertical-align: bottom;\n    text-align: center; }\n    .prod-item .col1 img {\n      width: 120px;\n      height: 160px;\n      -o-object-fit: contain;\n         object-fit: contain; }\n  .prod-item .col2 {\n    vertical-align: top;\n    display: inline-block;\n    padding: 10px 10px 10px 25px;\n    min-height: 145px;\n    position: relative;\n    width: 79%; }\n    .prod-item .col2 .prod-name {\n      display: inline-block;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      max-width: 400px;\n      padding: 5px 5px 5px 0;\n      float: left; }\n      .prod-item .col2 .prod-name .gray {\n        color: gray; }\n      .prod-item .col2 .prod-name a {\n        font-size: 14px;\n        font-family: \"Whitney-semi-bold\";\n        font-weight: 600;\n        color: #535766;\n        margin-right: 6px; }\n    .prod-item .col2 .prod-amount {\n      padding: 5px 5px 5px 0;\n      display: inline-block;\n      vertical-align: top;\n      font-weight: 600;\n      font-size: 14px;\n      font-family: \"Whitney-semi-bold\";\n      color: #535766;\n      margin-left: 20px;\n      float: left; }\n      .prod-item .col2 .prod-amount .gray {\n        color: gray; }\n    .prod-item .col2 .option-qty-wrap {\n      padding: 5px 5px 5px 0;\n      display: inline-block;\n      color: #535766;\n      margin-left: 20px;\n      vertical-align: top; }\n      .prod-item .col2 .option-qty-wrap .option-qty {\n        padding-right: 10px;\n        display: inline-block; }\n        .prod-item .col2 .option-qty-wrap .option-qty .qty {\n          cursor: pointer;\n          margin-right: 20px; }\n          .prod-item .col2 .option-qty-wrap .option-qty .qty .gray {\n            color: gray; }\n    .prod-item .col2 .prod-total {\n      float: right;\n      color: #535766; }\n      .prod-item .col2 .prod-total .gray {\n        color: gray; }\n    .prod-item .col2 .prod-option {\n      color: #535766;\n      margin-top: 10px; }\n      .prod-item .col2 .prod-option .gray {\n        color: gray; }\n    .prod-item .col2 .edit-move-delete {\n      position: absolute;\n      right: 25px;\n      right: 20px;\n      bottom: 0;\n      border-top: 1px solid #eaeaec;\n      padding-top: 9px;\n      font-size: 13px;\n      font-weight: 600;\n      padding-left: 0;\n      color: #696e79; }\n      .prod-item .col2 .edit-move-delete .delete-item,\n      .prod-item .col2 .edit-move-delete .move-item {\n        font-family: \"Whitney-semi-bold\";\n        margin: 0 15px 0 0;\n        color: #526cd0;\n        cursor: pointer; }\n      .prod-item .col2 .edit-move-delete .move-item {\n        color: #526cd0; }\n", ""]);
 
 // exports
 
@@ -969,7 +956,6 @@ var LineItemComponent = (function () {
         this.amount = this.lineItem.display_amount;
         this.total = this.lineItem.total;
         // this.context = this.lineItem.order_infos[0].context;
-        console.log("LineItem", this.lineItem);
     };
     // Change this method once angular releases RC4
     // Follow this linke to know more about this issue https://github.com/angular/angular/issues/12869
@@ -1001,7 +987,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/checkout/cart/components/order-total-summary/order-total-summary.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"order-total-summary\">\r\n  <div class=\"order-total footer\">\r\n    <div class=\"place-order\">\r\n      <button (click)=\"placeOrder()\" class=\"order-btn\">PLACE ORDER</button>\r\n    </div>\r\n    <div class=\"total-amount\">\r\n      <span class=\"total-rupees\">${{totalCartValue | number:'1.2-2'}}</span>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"order-total-summary\">\r\n    <div class=\"order-total footer\" *ngIf=\"updateState != undefined\">\r\n        <div class=\"place-order\">\r\n            <button (click)=\"placeOrder()\" class=\"order-btn\" *ngIf=\"updateState\">SAVE AND CONTIUE</button>\r\n            <button (click)=\"placeOrder()\" class=\"order-btn\" *ngIf=\"!updateState\">CONTIUE</button>\r\n        </div>\r\n        <div class=\"total-amount\">\r\n            <span class=\"total-rupees\">${{totalCartValue | number:'1.2-2'}}</span>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -1056,8 +1042,10 @@ var OrderTotalSummaryComponent = (function () {
         this.actions = actions;
         this.checkoutService = checkoutService;
         this.router = router;
-        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["e" /* getOrderState */])
+        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["f" /* getOrderState */])
             .subscribe(function (state) { return _this.orderState = state; });
+        this.updateStatusSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["m" /* getUpdateStatus */])
+            .subscribe(function (state) { return _this.updateState = state; });
     }
     OrderTotalSummaryComponent.prototype.ngOnInit = function () {
     };
@@ -1066,16 +1054,27 @@ var OrderTotalSummaryComponent = (function () {
         if (this.orderState === 'cart') {
             this.checkoutService.changeOrderState()
                 .do(function () {
-                _this.router.navigate(['/checkout', 'address']);
+                _this.navigateNext();
             })
                 .subscribe();
         }
         else {
-            this.router.navigate(['/checkout', 'address']);
+            if (this.updateState)
+                this.checkoutService.updateOrder()
+                    .do(function () {
+                    _this.navigateNext();
+                })
+                    .subscribe();
+            else
+                this.navigateNext();
         }
+    };
+    OrderTotalSummaryComponent.prototype.navigateNext = function () {
+        this.router.navigate(['/checkout', 'delivery']);
     };
     OrderTotalSummaryComponent.prototype.ngOnDestroy = function () {
         this.stateSub$.unsubscribe();
+        this.updateStatusSub$.unsubscribe();
     };
     return OrderTotalSummaryComponent;
 }());
@@ -1094,6 +1093,168 @@ OrderTotalSummaryComponent = __decorate([
 
 var _a, _b, _c, _d;
 //# sourceMappingURL=order-total-summary.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/checkout/cart/components/ship-item-list/ship-item-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngFor=\"let shipItem of shipItems\">\n    <app-ship-item [shipItem]=\"shipItem\"></app-ship-item>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/checkout/cart/components/ship-item-list/ship-item-list.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/checkout/cart/components/ship-item-list/ship-item-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipItemListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ShipItemListComponent = (function () {
+    function ShipItemListComponent() {
+    }
+    ShipItemListComponent.prototype.ngOnInit = function () {
+    };
+    return ShipItemListComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Array)
+], ShipItemListComponent.prototype, "shipItems", void 0);
+ShipItemListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-ship-item-list',
+        template: __webpack_require__("../../../../../src/app/checkout/cart/components/ship-item-list/ship-item-list.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/checkout/cart/components/ship-item-list/ship-item-list.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], ShipItemListComponent);
+
+//# sourceMappingURL=ship-item-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/checkout/cart/components/ship-item-list/ship-item/ship-item.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"ship-item\">\n    <div *ngIf=\"isConsolidated()\" class=\"ship-type\">\n        <span>Consolidated Shipping Item</span>\n    </div>\n\n    <div class=\"ship-info\">\n        <div class=\"ship-number\">\n            <span class=\"gray\">Number:</span> {{number}}\n        </div>\n        <div class=\"ship-rate-name\">\n            <span class=\"gray\">Method:</span> {{rateName}}\n        </div>\n        <div class=\"ship-rate-cost\">\n            <span class=\"gray\">Cost:</span> {{rateCost}}\n        </div>\n        <div class=\"ship-state\">\n            <span class=\"gray\">State:</span> {{state}}\n        </div>\n        <div class=\"ship-detail\">\n            <a (click)=\"convertDetail()\">Detail</a>\n        </div>\n    </div>\n    <div class=\"line-item-info\" *ngIf=\"isDetail\">\n        <ng-template ngFor let-item [ngForOf]=\"manifestItems\">\n            <ng-template ngFor let-lineItem [ngForOf]=\"lineItems$ | async\">\n                <ng-template [ngIf]=\"item.line_item_id == lineItem.id\">\n                    <div class=\"prod-item\">\n                        <div class=\"col1\">\n                            <img [src]=\"getImage(lineItem)\" alt=\"lineItem\">\n                        </div>\n                        <div class=\"col2\">\n                            <div class=\"prod-name\">\n                                <span class=\"gray\">Name:</span>\n                                <a class=\"c-gray\">\n                                    {{lineItem.variant.name}}\n                                </a>\n                            </div>\n                            <div class=\"prod-amount\">\n                                <span class=\"gray\">Price:</span> {{lineItem.variant.price}}\n                            </div>\n                            <div class=\"prod-quantity\">\n                                <span class=\"gray\">Qty:</span> {{lineItem.quantity}}\n                            </div>\n                        </div>\n                    </div>\n                </ng-template>\n            </ng-template>\n        </ng-template>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/checkout/cart/components/ship-item-list/ship-item/ship-item.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ship-item {\n  background: #fff;\n  border: 1px solid #15d27c;\n  box-shadow: 0 0 4px rgba(40, 44, 63, 0.08);\n  margin-bottom: 30px;\n  text-transform: none;\n  padding-bottom: 0 !important; }\n  .ship-item .ship-type {\n    background-color: #1ed479;\n    color: #fff;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    padding: 2px; }\n  .ship-item .ship-info {\n    padding: 20px; }\n    .ship-item .ship-info .gray {\n      color: gray; }\n    .ship-item .ship-info .ship-number {\n      display: inline-block;\n      width: 25%;\n      color: #535766; }\n    .ship-item .ship-info .ship-rate-name {\n      display: inline-block;\n      width: 25%;\n      color: #14ca77; }\n    .ship-item .ship-info .ship-rate-cost {\n      display: inline-block;\n      width: 15%;\n      color: #14ca77; }\n    .ship-item .ship-info .ship-state {\n      display: inline-block;\n      width: 15%;\n      color: #535766; }\n    .ship-item .ship-info .ship-detail {\n      display: inline-block;\n      width: 15%;\n      text-align: right;\n      color: #526cd0; }\n      .ship-item .ship-info .ship-detail a {\n        color: #526cd0; }\n  .ship-item .line-item-info .col1 {\n    width: 10%;\n    display: inline-block;\n    vertical-align: bottom;\n    margin-left: 3%; }\n    .ship-item .line-item-info .col1 img {\n      width: 60px;\n      height: 80px;\n      -o-object-fit: contain;\n         object-fit: contain; }\n  .ship-item .line-item-info .col2 {\n    vertical-align: top;\n    display: inline-block;\n    padding: 10px 10px 10px 25px;\n    position: relative;\n    width: 85%; }\n    .ship-item .line-item-info .col2 .prod-name {\n      display: inline-block;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      max-width: 400px;\n      padding: 5px 5px 5px 0;\n      float: left; }\n      .ship-item .line-item-info .col2 .prod-name .gray {\n        color: gray; }\n      .ship-item .line-item-info .col2 .prod-name a {\n        font-size: 14px;\n        font-family: \"Whitney-semi-bold\";\n        font-weight: 600;\n        color: #535766;\n        margin-right: 6px; }\n    .ship-item .line-item-info .col2 .prod-amount,\n    .ship-item .line-item-info .col2 .prod-quantity {\n      padding: 5px 5px 5px 0;\n      display: inline-block;\n      vertical-align: top;\n      font-weight: 600;\n      font-size: 14px;\n      font-family: \"Whitney-semi-bold\";\n      color: #535766;\n      margin-left: 20px;\n      float: right; }\n      .ship-item .line-item-info .col2 .prod-amount .gray,\n      .ship-item .line-item-info .col2 .prod-quantity .gray {\n        color: gray; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/checkout/cart/components/ship-item-list/ship-item/ship-item.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipItemComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__ = __webpack_require__("../../../../../src/app/core/models/shipment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__ = __webpack_require__("../../../../../src/app/checkout/reducers/selectors.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ShipItemComponent = (function () {
+    function ShipItemComponent(store) {
+        this.store = store;
+        this.lineItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["d" /* getLineItems */]);
+    }
+    ShipItemComponent.prototype.ngOnInit = function () {
+        this.isDetail = false;
+        this.manifestItems = this.shipItem.manifest;
+        this.number = this.shipItem.number;
+        this.rateName = this.shipItem.selected_shipping_rate.name;
+        this.rateCost = this.shipItem.selected_shipping_rate.display_cost;
+        this.state = this.shipItem.state;
+    };
+    ShipItemComponent.prototype.getImage = function (lineItem) {
+        if (lineItem.variant.images[0])
+            return __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].API_ENDPOINT + lineItem.variant.images[0].product_url;
+        else
+            return "assets/logo.png";
+    };
+    ShipItemComponent.prototype.isConsolidated = function () {
+        if (this.manifestItems.length > 1)
+            return true;
+        else
+            return false;
+    };
+    ShipItemComponent.prototype.convertDetail = function () {
+        this.isDetail = !this.isDetail;
+    };
+    return ShipItemComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["a" /* Shipment */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["a" /* Shipment */]) === "function" && _a || Object)
+], ShipItemComponent.prototype, "shipItem", void 0);
+ShipItemComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-ship-item',
+        template: __webpack_require__("../../../../../src/app/checkout/cart/components/ship-item-list/ship-item/ship-item.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/checkout/cart/components/ship-item-list/ship-item/ship-item.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["f" /* Store */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["f" /* Store */]) === "function" && _b || Object])
+], ShipItemComponent);
+
+var _a, _b;
+//# sourceMappingURL=ship-item.component.js.map
 
 /***/ }),
 
@@ -1230,9 +1391,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var DeliverySummaryComponent = (function () {
     function DeliverySummaryComponent(store) {
         this.store = store;
-        this.total$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["i" /* getTotalCartValue */]);
-        this.itemTotal$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["j" /* getTotalItemValue */]);
-        this.totalItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["h" /* getTotalCartItems */]);
+        this.total$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["k" /* getTotalCartValue */]);
+        this.itemTotal$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["l" /* getTotalItemValue */]);
+        this.totalItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["j" /* getTotalCartItems */]);
     }
     DeliverySummaryComponent.prototype.ngOnInit = function () {
     };
@@ -1255,7 +1416,7 @@ var _a;
 /***/ "../../../../../src/app/checkout/delivery/components/shipment-list/shipment-item/shipment-item.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"ship-item\">\n    <div *ngFor=\"let item of manifestItems\">\n        <ng-template ngFor let-lineItem [ngForOf]=\"lineItems$ | async\">\n            <ng-template [ngIf]=\"item.line_item_id == lineItem.id\">\n                <div class=\"prod-item\">\n                    <div class=\"col1\">\n                        <img [src]=\"getImage(lineItem)\" alt=\"\">\n                    </div>\n                    <div class=\"col2\">\n                        <div class=\"prod-name\">\n                            <span class=\"gray\">Name:</span>\n                            <a class=\"c-gray\">\n                                {{lineItem.variant.name}}\n                            </a>\n                        </div>\n                        <div class=\"prod-amount\">\n                            <span class=\"gray\">Price:</span> {{lineItem.variant.price}}\n                        </div>\n                        <div class=\"prod-quantity\">\n                            <span class=\"gray\">Qty:</span> {{lineItem.quantity}}\n                        </div>\n                    </div>\n                </div>\n            </ng-template>\n        </ng-template>\n    </div>\n</div>\n<div class=\"ship-rate\">\n    <label class=\"own-ship\">\n        <input type=\"checkbox\" [checked]=\"isOwnShipping\" (change)=\"handleChange($event)\"> Use Own Shipping\n    </label>\n    <ul *ngFor=\"let rate of shippingRates; let id = index\">\n        <label>\n            <input type=\"radio\" name=\"radioGroup{{shipmentItem.number}}\" [value]=\"rate.id\" (change)=\"onSelChange(rate)\" [checked]=\"rate.id === selectedShippingRate.id\">\n            {{rate.name}} ({{rate.display_cost}})\n        </label>\n    </ul>\n</div>"
+module.exports = "<div class=\"ship-item\">\n    <div *ngIf=\"isConsolidated()\">\n        <span>Consolidated Items</span>\n    </div>\n    <div *ngFor=\"let item of manifestItems\">\n        <ng-template ngFor let-lineItem [ngForOf]=\"lineItems$ | async\">\n            <ng-template [ngIf]=\"item.line_item_id == lineItem.id\">\n                <div class=\"prod-item\">\n                    <div class=\"col1\">\n                        <img [src]=\"getImage(lineItem)\" alt=\"lineItem\">\n                    </div>\n                    <div class=\"col2\">\n                        <div class=\"prod-name\">\n                            <span class=\"gray\">Name:</span>\n                            <a class=\"c-gray\">\n                                {{lineItem.variant.name}}\n                            </a>\n                        </div>\n                        <div class=\"prod-amount\">\n                            <span class=\"gray\">Price:</span> {{lineItem.variant.price}}\n                        </div>\n                        <div class=\"prod-quantity\">\n                            <span class=\"gray\">Qty:</span> {{lineItem.quantity}}\n                        </div>\n                    </div>\n                </div>\n            </ng-template>\n        </ng-template>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1267,7 +1428,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".prod-item {\n  background: #fff;\n  border: 1px solid #eaeaec;\n  box-shadow: 0 0 4px rgba(40, 44, 63, 0.08);\n  margin-bottom: 30px;\n  text-transform: none;\n  padding-bottom: 0 !important; }\n  .prod-item .col1 {\n    width: 10%;\n    display: inline-block;\n    vertical-align: bottom;\n    margin-left: 3%; }\n    .prod-item .col1 img {\n      width: 60px;\n      height: 80px;\n      -o-object-fit: contain;\n         object-fit: contain; }\n  .prod-item .col2 {\n    vertical-align: top;\n    display: inline-block;\n    padding: 10px 10px 10px 25px;\n    position: relative;\n    width: 85%; }\n    .prod-item .col2 .prod-name {\n      display: inline-block;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      max-width: 400px;\n      padding: 5px 5px 5px 0;\n      float: left; }\n      .prod-item .col2 .prod-name .gray {\n        color: gray; }\n      .prod-item .col2 .prod-name a {\n        font-size: 14px;\n        font-family: \"Whitney-semi-bold\";\n        font-weight: 600;\n        color: #535766;\n        margin-right: 6px; }\n    .prod-item .col2 .prod-amount,\n    .prod-item .col2 .prod-quantity {\n      padding: 5px 5px 5px 0;\n      display: inline-block;\n      vertical-align: top;\n      font-weight: 600;\n      font-size: 14px;\n      font-family: \"Whitney-semi-bold\";\n      color: #535766;\n      margin-left: 20px;\n      float: right; }\n      .prod-item .col2 .prod-amount .gray,\n      .prod-item .col2 .prod-quantity .gray {\n        color: gray; }\n\n.own-ship {\n  font-size: 16px;\n  padding: 15px; }\n", ""]);
+exports.push([module.i, ".ship-item {\n  background: #fff;\n  border: 1px solid #15d27c;\n  box-shadow: 0 0 4px rgba(40, 44, 63, 0.08);\n  margin-bottom: 30px;\n  text-transform: none;\n  padding-bottom: 0 !important; }\n  .ship-item .col1 {\n    width: 10%;\n    display: inline-block;\n    vertical-align: bottom;\n    margin-left: 3%; }\n    .ship-item .col1 img {\n      width: 60px;\n      height: 80px;\n      -o-object-fit: contain;\n         object-fit: contain; }\n  .ship-item .col2 {\n    vertical-align: top;\n    display: inline-block;\n    padding: 10px 10px 10px 25px;\n    position: relative;\n    width: 85%; }\n    .ship-item .col2 .prod-name {\n      display: inline-block;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      max-width: 400px;\n      padding: 5px 5px 5px 0;\n      float: left; }\n      .ship-item .col2 .prod-name .gray {\n        color: gray; }\n      .ship-item .col2 .prod-name a {\n        font-size: 14px;\n        font-family: \"Whitney-semi-bold\";\n        font-weight: 600;\n        color: #535766;\n        margin-right: 6px; }\n    .ship-item .col2 .prod-amount,\n    .ship-item .col2 .prod-quantity {\n      padding: 5px 5px 5px 0;\n      display: inline-block;\n      vertical-align: top;\n      font-weight: 600;\n      font-size: 14px;\n      font-family: \"Whitney-semi-bold\";\n      color: #535766;\n      margin-left: 20px;\n      float: right; }\n      .ship-item .col2 .prod-amount .gray,\n      .ship-item .col2 .prod-quantity .gray {\n        color: gray; }\n\n.own-ship {\n  font-size: 16px;\n  padding: 15px; }\n", ""]);
 
 // exports
 
@@ -1304,37 +1465,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ShipmentItemComponent = (function () {
     function ShipmentItemComponent(store) {
         this.store = store;
-        this.onSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.lineItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["c" /* getLineItems */]);
+        this.lineItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["d" /* getLineItems */]);
     }
     ShipmentItemComponent.prototype.ngOnInit = function () {
-        this.shippingRates = this.shipmentItem.shipping_rates;
         this.manifestItems = this.shipmentItem.manifest;
-        this.isOwnShipping = this.shipmentItem.is_own_shipping;
-        this.selectedShippingRate = this.shipmentItem.selected_shipping_rate;
-        this.onSelected.emit(this.createSeletedAttributes());
-    };
-    ShipmentItemComponent.prototype.onSelChange = function (rate) {
-        console.log("Selected-----", rate);
-        this.selectedShippingRate = rate;
-        this.onSelected.emit(this.createSeletedAttributes());
-    };
-    ShipmentItemComponent.prototype.createSeletedAttributes = function () {
-        return {
-            'selected_shipping_rate_id': this.selectedShippingRate.id,
-            'id': this.shipmentItem.id,
-            'is_own_shipping': this.isOwnShipping
-        };
     };
     ShipmentItemComponent.prototype.getImage = function (lineItem) {
         if (lineItem.variant.images[0])
             return __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].API_ENDPOINT + lineItem.variant.images[0].product_url;
         else
-            return false;
+            return "assets/logo.png";
     };
-    ShipmentItemComponent.prototype.handleChange = function (e) {
-        this.isOwnShipping = !this.isOwnShipping;
-        this.onSelected.emit(this.createSeletedAttributes());
+    ShipmentItemComponent.prototype.isConsolidated = function () {
+        if (this.manifestItems.length > 1)
+            return true;
+        else
+            return false;
     };
     return ShipmentItemComponent;
 }());
@@ -1342,10 +1488,6 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["a" /* Shipment */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["a" /* Shipment */]) === "function" && _a || Object)
 ], ShipmentItemComponent.prototype, "shipmentItem", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", Object)
-], ShipmentItemComponent.prototype, "onSelected", void 0);
 ShipmentItemComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-shipment-item',
@@ -1363,7 +1505,7 @@ var _a, _b;
 /***/ "../../../../../src/app/checkout/delivery/components/shipment-list/shipment-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let item of shipmentItems$ | async\">\n    <app-shipment-item [shipmentItem]=\"item\" (onSelected)=\"onRateSelected($event)\"></app-shipment-item>\n</div>"
+module.exports = "<ng-template [ngIf]=\"(shipmentItems$ | async)?.length > 0\">\n    <div *ngFor=\"let item of shipmentItems$ | async\">\n        <app-shipment-item [shipmentItem]=\"item\"></app-shipment-item>\n    </div>\n    <app-shipment-rating [shipmentItems]=\"shipmentItems$ | async\" (onSelected)=\"onRateSelected($event)\"></app-shipment-rating>\n</ng-template>"
 
 /***/ }),
 
@@ -1409,25 +1551,13 @@ var ShipmentListComponent = (function () {
     function ShipmentListComponent(store) {
         this.store = store;
         this.onShipRatesSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.shipmentItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["g" /* getShipment */]);
+        this.shipmentItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["i" /* getShipment */]);
     }
     ShipmentListComponent.prototype.ngOnInit = function () {
         this.selectedRates = [];
     };
     ShipmentListComponent.prototype.onRateSelected = function (selectedRate) {
-        this.selectedRates = this.selectedRates.map(function (rate) {
-            return rate.id == selectedRate.id ? selectedRate : rate;
-        });
-        if (this.selectedRates.indexOf(selectedRate) == -1)
-            this.selectedRates.push(selectedRate);
-        this.onShipRatesSelected.emit(this.createRatesAttributes());
-    };
-    ShipmentListComponent.prototype.createRatesAttributes = function () {
-        var shipAttributes = {};
-        this.selectedRates.map(function (rate, index) {
-            shipAttributes[index] = rate;
-        });
-        return { 'shipments_attributes': shipAttributes };
+        this.onShipRatesSelected.emit({ 'shipments_attributes': selectedRate });
     };
     return ShipmentListComponent;
 }());
@@ -1449,10 +1579,121 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/checkout/delivery/components/shipment-list/shipment-rating/shipment-rating.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"ship-rate\" *ngIf=\"isOwnShipping != undefined && selectedRateIndex != undefined\">\n    <label class=\"own-ship\">\n      <input type=\"checkbox\" [checked]=\"isOwnShipping\" (change)=\"handleChange($event)\"> Use Own Shipping\n  </label>\n    <ul *ngFor=\"let rate of shippingRates; let index = index\">\n        <label>\n          <input type=\"radio\" name=\"radioGroup\" [value]=\"index\" (change)=\"onSelChange(index)\" [checked]=\"index === selectedRateIndex\">\n          {{rate.name}}\n      </label>\n    </ul>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/checkout/delivery/components/shipment-list/shipment-rating/shipment-rating.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/checkout/delivery/components/shipment-list/shipment-rating/shipment-rating.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipmentRatingComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reducers_selectors__ = __webpack_require__("../../../../../src/app/checkout/reducers/selectors.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ShipmentRatingComponent = (function () {
+    function ShipmentRatingComponent(store) {
+        var _this = this;
+        this.store = store;
+        this.onSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.isOwnSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["c" /* getIsOwnShipFlag */])
+            .subscribe(function (flag) {
+            return _this.isOwnShipping = flag;
+        });
+        this.selectedIndexSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["g" /* getSelectedRateIndex */])
+            .subscribe(function (index) {
+            return _this.selectedRateIndex = index;
+        });
+    }
+    ShipmentRatingComponent.prototype.ngOnInit = function () {
+        this.shippingRates = this.shipmentItems[0].shipping_rates;
+        this.onSelected.emit(this.createSeletedAttributes());
+    };
+    ShipmentRatingComponent.prototype.createSeletedAttributes = function () {
+        var _this = this;
+        var selectedRates = [];
+        this.shipmentItems.map(function (item) {
+            selectedRates.push({
+                'selected_shipping_rate_id': item.shipping_rates[_this.selectedRateIndex].id,
+                'id': item.id,
+                'is_own_shipping': _this.isOwnShipping
+            });
+        });
+        return selectedRates;
+    };
+    ShipmentRatingComponent.prototype.handleChange = function (e) {
+        this.isOwnShipping = !this.isOwnShipping;
+        this.onSelected.emit(this.createSeletedAttributes());
+    };
+    ShipmentRatingComponent.prototype.onSelChange = function (index) {
+        this.selectedRateIndex = index;
+        this.onSelected.emit(this.createSeletedAttributes());
+    };
+    ShipmentRatingComponent.prototype.ngOnDestroy = function () {
+        this.isOwnSub$.unsubscribe();
+        this.selectedIndexSub$.unsubscribe();
+    };
+    return ShipmentRatingComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Array)
+], ShipmentRatingComponent.prototype, "shipmentItems", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", Object)
+], ShipmentRatingComponent.prototype, "onSelected", void 0);
+ShipmentRatingComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-shipment-rating',
+        template: __webpack_require__("../../../../../src/app/checkout/delivery/components/shipment-list/shipment-rating/shipment-rating.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/checkout/delivery/components/shipment-list/shipment-rating/shipment-rating.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["f" /* Store */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ngrx_store__["f" /* Store */]) === "function" && _a || Object])
+], ShipmentRatingComponent);
+
+var _a;
+//# sourceMappingURL=shipment-rating.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/checkout/delivery/delivery.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"delivery-section\">\n    <app-shipment-list (onShipRatesSelected)=\"onSelected($event)\" class=\"left\"></app-shipment-list>\n    <app-delivery-summary class=\"right\"></app-delivery-summary>\n    <button (click)=\"checkoutToPayment()\" class=\"btn\">CONTINUE TO PAYMENT</button>\n</div>"
+module.exports = "<div class=\"delivery-section\">\n    <app-shipment-list (onShipRatesSelected)=\"onSelected($event)\" class=\"left\"></app-shipment-list>\n    <app-delivery-summary class=\"right\"></app-delivery-summary>\n    <button (click)=\"checkoutToPayment()\" class=\"btn\">CONTINUE TO ADDRESS</button>\n</div>"
 
 /***/ }),
 
@@ -1504,7 +1745,7 @@ var DeliveryComponent = (function () {
         this.store = store;
         this.checkoutService = checkoutService;
         this.router = router;
-        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["e" /* getOrderState */])
+        this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["f" /* getOrderState */])
             .subscribe(function (state) {
             _this.orderState = state;
         });
@@ -1517,14 +1758,14 @@ var DeliveryComponent = (function () {
     DeliveryComponent.prototype.checkoutToPayment = function () {
         var _this = this;
         if (this.orderState === 'delivery') {
-            this.checkoutService.updateOrder({ 'order': this.shipAttributes })
+            this.checkoutService.updateOrderAndState({ 'order': this.shipAttributes })
                 .do(function () {
-                _this.router.navigate(['/checkout', 'payment']);
+                _this.router.navigate(['/checkout', 'address']);
             })
                 .subscribe();
         }
         else {
-            this.router.navigate(['/checkout', 'payment']);
+            this.router.navigate(['/checkout', 'address']);
         }
     };
     return DeliveryComponent;
@@ -1554,12 +1795,14 @@ var _a, _b, _c;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_shipment_list_shipment_list_component__ = __webpack_require__("../../../../../src/app/checkout/delivery/components/shipment-list/shipment-list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shipment_list_shipment_item_shipment_item_component__ = __webpack_require__("../../../../../src/app/checkout/delivery/components/shipment-list/shipment-item/shipment-item.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_delivery_summary_delivery_summary_component__ = __webpack_require__("../../../../../src/app/checkout/delivery/components/delivery-summary/delivery-summary.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_shipment_list_shipment_rating_shipment_rating_component__ = __webpack_require__("../../../../../src/app/checkout/delivery/components/shipment-list/shipment-rating/shipment-rating.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1581,6 +1824,7 @@ DeliveryModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__components_shipment_list_shipment_list_component__["a" /* ShipmentListComponent */],
             __WEBPACK_IMPORTED_MODULE_4__components_shipment_list_shipment_item_shipment_item_component__["a" /* ShipmentItemComponent */],
             __WEBPACK_IMPORTED_MODULE_5__components_delivery_summary_delivery_summary_component__["a" /* DeliverySummaryComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__components_shipment_list_shipment_rating_shipment_rating_component__["a" /* ShipmentRatingComponent */],
         ]
     })
 ], DeliveryModule);
@@ -2035,10 +2279,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PaymentComponent = (function () {
     function PaymentComponent(store) {
         this.store = store;
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["i" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["h" /* getTotalCartItems */]);
-        this.address$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["f" /* getShipAddress */]);
-        this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["d" /* getOrderNumber */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["k" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["j" /* getTotalCartItems */]);
+        this.address$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["h" /* getShipAddress */]);
+        this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["e" /* getOrderNumber */]);
     }
     PaymentComponent.prototype.ngOnInit = function () {
     };

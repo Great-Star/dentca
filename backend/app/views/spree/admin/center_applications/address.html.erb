@@ -1,0 +1,25 @@
+<%= render partial: 'spree/admin/center_applications/sidebar', locals: { current: :address } %>
+<%= render partial: 'spree/admin/center_applications/center_application_page_actions',
+           locals: { center_application: @center_application, events: @center_application_events } %>
+
+<% content_for :page_title do %>
+    <%= link_to @center_application.office_name, edit_admin_center_application_url(@center_application) %> /
+    <%= Spree.t(:address) %>
+<% end %>
+
+<div data-hook="admin_center_application_address" id="admin_center_application_edit_address">
+  <div data-hook="admin_center_application_edit_form_header">
+    <%= render partial: 'spree/admin/shared/error_messages', locals: { target: @center_application } %>
+  </div>
+
+  <div data-hook="admin_user_address_edit_form">
+    <%= form_for [:admin, @center_application], as: :center_application, url: address_admin_center_application_url(@center_application), method: :put do |f| %>
+      <%= render partial: 'address_form', locals: { f: f } %>
+
+      <div class="form-actions text-center well" data-hook="admin_center_application_edit_form_button">
+        <%= render partial: 'spree/admin/shared/edit_resource_links', locals: { collection_url: admin_center_applications_url } %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

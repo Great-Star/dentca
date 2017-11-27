@@ -6,4 +6,12 @@ class Api::CountriesController < BaseController
            root: false,
            each_serializer: CountrySerializer
   end
+
+  def show
+    @country = Spree::Country.includes(:states).find(params[:id])
+
+    render json: @country,
+           root: false,
+           serializer: CountrySerializer
+  end
 end

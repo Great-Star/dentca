@@ -1,0 +1,16 @@
+<%= render partial: 'spree/admin/center_applications/sidebar', locals: { current: :application } %>
+<%= render partial: 'spree/admin/center_applications/center_application_page_actions',
+           locals: { center_application: @center_application, events: @center_application_events } %>
+
+<% content_for :page_title do %>
+    <%= @center_application.office_name %>
+<% end %>
+
+<%= render :partial => 'spree/admin/shared/error_messages', :locals => { :target => @center_application } %>
+
+<%= form_for [:admin, @center_application] do |f| %>
+    <fieldset>
+      <%= render :partial => 'form', :locals => { :f => f } %>
+      <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+    </fieldset>
+<% end %>

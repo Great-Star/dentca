@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     resources :passwords
     resources :credit_cards, only: :destroy
     resources :addresses, only: :destroy
-    resources :countries, only: :index
+    resources :countries, only: %i(index show)
     resources :orders, only: %i(index show)
     resource :corporate_accounts
     resources :option_cases
@@ -42,6 +42,12 @@ Rails.application.routes.draw do
       end
     end
     resources :maintainable_pages
+
+    resources :center_applications, only: %i(index create) do
+      collection do
+        get :activated
+      end
+    end
   end
 
   mount Spree::Core::Engine, at: '/spree'
@@ -69,6 +75,21 @@ Rails.application.routes.draw do
       end
       resources :drop_down_items
       resources :maintainable_pages
+
+      resources :center_applications do
+        member do
+          get :address
+          put :address
+
+          # state
+          put :review
+          put :cancel
+          put :resume
+          put :accept
+          put :activate
+          put :deactivate
+        end
+      end
     end
   end
 

@@ -55,6 +55,9 @@ module Angspree
 
     config.after_initialize do
       config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::CustomCalc
+      config.spree.stock_splitters = [
+        Spree::Stock::Splitter::Consolidated
+      ]
     end
   end
 end

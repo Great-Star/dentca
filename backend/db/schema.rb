@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120140650) do
+ActiveRecord::Schema.define(version: 20171123093719) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -151,6 +151,21 @@ ActiveRecord::Schema.define(version: 20171120140650) do
   add_index "spree_calculators", ["calculable_id", "calculable_type"], name: "index_spree_calculators_on_calculable_id_and_calculable_type"
   add_index "spree_calculators", ["deleted_at"], name: "index_spree_calculators_on_deleted_at"
   add_index "spree_calculators", ["id", "type"], name: "index_spree_calculators_on_id_and_type"
+
+  create_table "spree_center_applications", force: :cascade do |t|
+    t.string   "office_name"
+    t.string   "head_doctor"
+    t.string   "email"
+    t.string   "website"
+    t.integer  "num_of_doctors", default: 0
+    t.integer  "num_of_staff",   default: 0
+    t.string   "college"
+    t.string   "degree"
+    t.string   "state"
+    t.integer  "address_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "spree_corporate_accounts", force: :cascade do |t|
     t.string   "company_id"
@@ -601,7 +616,7 @@ ActiveRecord::Schema.define(version: 20171120140650) do
   add_index "spree_product_variant_values", ["product_variant_type_id"], name: "index_spree_product_variant_values_on_product_variant_type_id"
 
   create_table "spree_products", force: :cascade do |t|
-    t.string   "name",                  default: "",   null: false
+    t.string   "name",                  default: "",    null: false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -610,14 +625,15 @@ ActiveRecord::Schema.define(version: 20171120140650) do
     t.string   "meta_keywords"
     t.integer  "tax_category_id"
     t.integer  "shipping_category_id"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.boolean  "promotionable",         default: true
     t.string   "meta_title"
     t.datetime "discontinue_on"
     t.text     "order_info_option_ids"
     t.string   "adj_sku"
     t.integer  "shipping_type_id"
+    t.boolean  "is_consolidated",       default: false
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on"
@@ -1226,6 +1242,7 @@ ActiveRecord::Schema.define(version: 20171120140650) do
     t.string   "license"
     t.integer  "corporate_account_id"
     t.integer  "product_price_set_id"
+    t.integer  "shipping_category_id"
   end
 
   add_index "spree_users", ["bill_address_id"], name: "index_spree_users_on_bill_address_id"
@@ -1234,6 +1251,7 @@ ActiveRecord::Schema.define(version: 20171120140650) do
   add_index "spree_users", ["email"], name: "email_idx_unique", unique: true
   add_index "spree_users", ["product_price_set_id"], name: "index_spree_users_on_product_price_set_id"
   add_index "spree_users", ["ship_address_id"], name: "index_spree_users_on_ship_address_id"
+  add_index "spree_users", ["shipping_category_id"], name: "index_spree_users_on_shipping_category_id"
   add_index "spree_users", ["spree_api_key"], name: "index_spree_users_on_spree_api_key"
 
   create_table "spree_variants", force: :cascade do |t|

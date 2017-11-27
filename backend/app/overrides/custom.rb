@@ -64,6 +64,10 @@ Deface::Override.new(:virtual_path => "spree/admin/users/_form",
                         <%= f.label :product_price_set_id, Spree.t(:product_price_set) %>
                         <%= f.collection_select(:product_price_set_id, Spree::ProductPriceSet.all, :id, :name, { }, { class: 'select2' }) %>
                     <% end %>
+                    <%= f.field_container :shipping_category_id, class: ['form-group'] do %>
+                        <%= f.label :shipping_category_id, Spree.t(:shipping_category) %>
+                        <%= f.collection_select(:shipping_category_id, Spree::ShippingCategory.all, :id, :name, { }, { class: 'select2' }) %>
+                    <% end %>
                 <% end %>
             </div>
         </div>")    

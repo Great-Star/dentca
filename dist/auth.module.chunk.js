@@ -160,7 +160,6 @@ var CorpSignUpComponent = (function () {
         var values = this.c_registerForm.value;
         var keys = Object.keys(values);
         this.formSubmit = true;
-        console.log("sign up value", this.c_registerForm.value);
         if (this.c_registerForm.valid) {
             this.c_registerSubs = this.authService.c_register(values).subscribe(function (data) {
                 var errors = data.errors;
@@ -243,7 +242,6 @@ var CorpSignUpComponent = (function () {
     };
     CorpSignUpComponent.prototype.countryChanged = function (e) {
         this.c_registerForm.controls['country_id'].setValue(e.value);
-        console.log(e.value);
         var ct;
         for (var index in this.addressData) {
             if (this.addressData[index].id == e.value) {
@@ -258,11 +256,9 @@ var CorpSignUpComponent = (function () {
             };
             return str;
         });
-        console.log(ct);
     };
     CorpSignUpComponent.prototype.stateChanged = function (e) {
         this.c_registerForm.controls['state_id'].setValue(e.value);
-        console.log(e.value);
     };
     return CorpSignUpComponent;
 }());

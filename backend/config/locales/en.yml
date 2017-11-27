@@ -21,3 +21,61 @@
 
 en:
   hello: "Hello world"
+
+  # used for: Spree.t()
+  spree:
+
+    # Center Application
+    centers: Centers
+    application_details: Application Details
+
+    office_name: Office Name
+    head_doctor: Head Doctor
+    email: Email
+    website: Website
+    num_of_doctors: Number of Doctors
+    num_of_staff: Number of Staff
+    college: College
+    degree: Degree
+
+    center_applications: Center Applications
+    new_center_application: New Center Application
+    center_application_sure_want_to: Are you sure you want to %{event} this center application?
+
+    center_application_updated: Center Application Updated
+    center_application_under_review: Center Application under Review
+    center_application_cancelled: Center Application Cancelled
+    center_application_resumed: Center Application Resumed
+    center_application_accepted: Center Application Accepted
+    center_application_activated: Center Application Activated
+    center_application_deactivated: Center Application Deactivated
+
+    center_application_state:
+      pending: Pending
+      review: Review
+      cancelled: Cancelled
+      activated: Activated
+      deactivated: Deactivated
+
+    admin:
+      center_application:
+        application: Application
+        address: Address
+
+        events:
+          review: review
+          cancel: cancel
+          resume: resume
+          accept: accept
+          activate: activate
+          deactivate: deactivate
+
+    # Events
+    deactivate: Deactivate
+
+  # used for: plural_resource_name()
+  activerecord:
+    models:
+      spree/center_application:
+        one: Center Application
+        other: Center Applications

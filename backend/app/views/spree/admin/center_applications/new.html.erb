@@ -1,0 +1,24 @@
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @center_application } %>
+
+<% content_for :page_title do %>
+    <%= link_to Spree.t(:center_applications), admin_center_applications_url %> /
+    <%= Spree.t(:new_center_application) %>
+<% end %>
+
+<%= form_for [:admin, @center_application] do |f| %>
+    <fieldset data-hook="new_property">
+
+      <div class="row">
+        <div class="col-md-6">
+          <%= render partial: 'form', locals: { f: f } %>
+        </div>
+        <div class="col-md-6">
+          <%= render partial: 'address_form', locals: { f: f } %>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <%= render partial: 'spree/admin/shared/new_resource_links' %>
+      </div>
+    </fieldset>
+<% end %>

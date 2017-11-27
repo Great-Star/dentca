@@ -20,7 +20,8 @@ Spree::Admin::UsersController.class_eval do
                                         :doctor,
                                         :license,
                                         :corporate_account_id,
-                                        :product_price_set_id])
+                                        :product_price_set_id,
+                                        :shipping_category_id])
         end
 
         def selected_user_roles

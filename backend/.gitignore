@@ -18,3 +18,9 @@
 
 # Ignore spree folder in public
 /public/spree/products
+
+# IDE
+/.idea/*
+
+# Debug files
+.byebug_history

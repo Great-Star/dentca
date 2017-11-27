@@ -7,7 +7,6 @@ class Spree::ProductVariantValue < ActiveRecord::Base
 
 
     # delegate :name, :presentation, to: :product_variant_type, prefix: true, allow_nil: true
-
     # self.whitelisted_ransackable_attributes = ['presentation']
 end
 

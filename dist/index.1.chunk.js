@@ -160,16 +160,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-// <app-content-header (toggleSize)="toggleSize($event)"></app-content-header>
-//  <app-customize></app-customize>
-// <app-filter-summary></app-filter-summary>
 var ContentComponent = (function () {
     function ContentComponent() {
         this.toggleLayout = { size: 'COZY' };
     }
     ContentComponent.prototype.ngOnInit = function () {
-        console.log("user", this.user);
-        console.log("@@@@@@@@@@@", this.products);
     };
     ContentComponent.prototype.toggleSize = function (layoutInfo) {
         this.toggleLayout = layoutInfo;
@@ -642,7 +637,6 @@ var HomeComponent = (function () {
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.getTaxon();
-        // this.store.dispatch(this.actions.getAllProducts());
         this.products$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__product_reducers_selectors__["a" /* getProducts */]);
         if (localStorage.getItem('user')) {
             this.userService.getUser().subscribe(function (res) {

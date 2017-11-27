@@ -1,13 +1,14 @@
 module Spree
     Order.class_eval do
         before_save :save_original_line
+        
         def save_original_line
             if line_items[0] != nil
                 self.original_line_item = self.line_items[0].adjust_order_number
             end
         end
 
-        def update_shipping_rates_and_amounts_if_own_shipping!
+        def update_shipping_rates_and_amounts_if_own_shipping
             self.update_line_items_for_own_shipping
             self.refresh_shipment_rates
             shipments.map { |s| s.update_amounts }
@@ -21,5 +22,11 @@ module Spree
                 end
             end
         end
+
+        remove_checkout_step :address
+        insert_checkout_step :address, before: :payment
+        
     end
 end
+
+Spree::Order.state_machine.before_transition from: :delivery, do: :update_shipping_rates_and_amounts_if_own_shipping
