@@ -502,8 +502,8 @@ var DeliveryOptionsComponent = (function () {
         this.checkoutService = checkoutService;
         this.store = store;
         this.shippingRates = [];
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["k" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["j" /* getTotalCartItems */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["l" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["k" /* getTotalCartItems */]);
     }
     DeliveryOptionsComponent.prototype.ngOnInit = function () {
         // this.setOrder();
@@ -589,7 +589,7 @@ var ShipAddressComponent = (function () {
     function ShipAddressComponent(store) {
         this.store = store;
         this.onChangeAddress = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.shipAddress$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["h" /* getShipAddress */]);
+        this.shipAddress$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["i" /* getShipAddress */]);
     }
     ShipAddressComponent.prototype.ngOnInit = function () {
         this.isChecked = true;
@@ -630,7 +630,7 @@ var _a;
 /***/ "../../../../../src/app/checkout/cart/cart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"cart-section\">\r\n    <div *ngIf=\"(totalCartItems$ | async) > 0 || (shipItems$ | async)?.length > 0 else emptyCart\">\r\n        <div class=\"line-item-field\">\r\n            <div class=\"checkout-header-container\">\r\n                <div class=\"checkout-header\">\r\n                    <span class=\"text\">My Shopping Bag ({{totalCartItems$ | async}})</span>\r\n                </div>\r\n                <div class=\"total-price\">Total: ${{totalCartValue$ | async | number:'1.2-2'}}</div>\r\n            </div>\r\n            <div class=\"prod-set\">\r\n                <app-line-item-list></app-line-item-list>\r\n            </div>\r\n        </div>\r\n        <div class=\"ship-item-field\" *ngIf=\"(shipItems$ | async)?.length as length\">\r\n            <div class=\"checkout-header-container\">\r\n                <div class=\"checkout-header\">\r\n                    <span class=\"text\">My ShippingItems ({{length}})</span>\r\n                </div>\r\n                <div class=\"prod-set\">\r\n                    <app-ship-item-list [shipItems]=\"shipItems$ | async\"></app-ship-item-list>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"right\">\r\n            <app-order-total-summary [totalCartValue]=\"totalCartValue$ | async\"></app-order-total-summary>\r\n        </div>\r\n    </div>\r\n    <ng-template #emptyCart>\r\n        <app-empty-cart></app-empty-cart>\r\n    </ng-template>\r\n</div>"
+module.exports = "<div class=\"cart-section\">\r\n    <div *ngIf=\"(totalCartItems$ | async) > 0 || (shipItems$ | async)?.length > 0 else emptyCart\">\r\n        <div class=\"line-item-field\">\r\n            <div class=\"checkout-header-container\">\r\n                <div class=\"checkout-header\">\r\n                    <span class=\"text\">My Shopping Bag ({{totalCartItems$ | async}})</span>\r\n                </div>\r\n                <div class=\"total-price\">Total: ${{totalCartValue$ | async | number:'1.2-2'}}</div>\r\n            </div>\r\n            <div class=\"prod-set\">\r\n                <app-line-item-list></app-line-item-list>\r\n            </div>\r\n        </div>\r\n        <div class=\"ship-item-field\" *ngIf=\"(shipItems$ | async)?.length as length\">\r\n            <div class=\"checkout-header-container\">\r\n                <div class=\"checkout-header\">\r\n                    <span class=\"text\">My Shipping Items ({{length}})</span>\r\n                </div>\r\n                <div class=\"prod-set\">\r\n                    <app-ship-item-list [shipItems]=\"shipItems$ | async\"></app-ship-item-list>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"right\">\r\n            <app-order-total-summary [totalCartValue]=\"totalCartValue$ | async\"></app-order-total-summary>\r\n        </div>\r\n    </div>\r\n    <ng-template #emptyCart>\r\n        <app-empty-cart></app-empty-cart>\r\n    </ng-template>\r\n</div>"
 
 /***/ }),
 
@@ -642,7 +642,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".cart-section {\n  max-width: 980px;\n  margin: auto;\n  margin-top: -90px; }\n  .cart-section .checkout-header-container .checkout-header {\n    display: inline-block;\n    padding: 30px 0; }\n    .cart-section .checkout-header-container .checkout-header .text {\n      font-size: 18px;\n      font-weight: 600;\n      color: #535766;\n      font-family: \"Whitney-semi-bold\"; }\n  .cart-section .checkout-header-container .total-price {\n    float: right;\n    padding: 30px 0;\n    display: inline-block;\n    font-size: 18px;\n    color: #535766; }\n  .cart-section .prod-set {\n    width: 100%;\n    display: inline-block;\n    height: 100%;\n    overflow: auto;\n    padding-left: 1px; }\n    .cart-section .prod-set .wishlist-link {\n      cursor: pointer;\n      text-align: center;\n      display: block;\n      height: 40px;\n      padding-top: 10px;\n      background: #fff;\n      color: #535766;\n      border: 1px solid #eaeaec; }\n      .cart-section .prod-set .wishlist-link .icon {\n        width: 12px;\n        height: 16px;\n        background-position: -689px 0;\n        display: inline-block;\n        overflow: hidden;\n        background-repeat: no-repeat;\n        background-size: 4250px 153px;\n        vertical-align: middle;\n        background-image: url(/assets/checkout_sprite.png);\n        margin-right: 5px; }\n  .cart-section .right {\n    display: inline-block;\n    float: right;\n    width: 29%;\n    vertical-align: top;\n    margin-top: 52px;\n    padding-left: 35px; }\n", ""]);
+exports.push([module.i, ".cart-section {\n  max-width: 980px;\n  margin: auto;\n  margin-top: -90px; }\n  .cart-section .checkout-header-container .checkout-header {\n    display: inline-block;\n    padding: 30px 0; }\n    .cart-section .checkout-header-container .checkout-header .text {\n      font-size: 18px;\n      font-weight: 600;\n      color: #535766;\n      font-family: \"Whitney-semi-bold\"; }\n  .cart-section .checkout-header-container .total-price {\n    float: right;\n    padding: 30px 0;\n    display: inline-block;\n    font-size: 18px;\n    color: #535766; }\n  .cart-section .prod-set {\n    width: 100%;\n    display: inline-block;\n    height: 100%;\n    overflow: auto;\n    padding-left: 1px; }\n    .cart-section .prod-set .wishlist-link {\n      cursor: pointer;\n      text-align: center;\n      display: block;\n      height: 40px;\n      padding-top: 10px;\n      background: #fff;\n      color: #535766;\n      border: 1px solid #eaeaec; }\n      .cart-section .prod-set .wishlist-link .icon {\n        width: 12px;\n        height: 16px;\n        background-position: -689px 0;\n        display: inline-block;\n        overflow: hidden;\n        background-repeat: no-repeat;\n        background-size: 4250px 153px;\n        vertical-align: middle;\n        background-image: url(/assets/checkout_sprite.png);\n        margin-right: 5px; }\n  .cart-section .right {\n    display: inline-block;\n    float: right;\n    width: 50%;\n    vertical-align: top;\n    margin-top: 52px;\n    padding-left: 35px; }\n", ""]);
 
 // exports
 
@@ -675,9 +675,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CartComponent = (function () {
     function CartComponent(store) {
         this.store = store;
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["k" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["j" /* getTotalCartItems */]);
-        this.shipItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["i" /* getShipment */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["l" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["k" /* getTotalCartItems */]);
+        this.shipItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["j" /* getShipment */]);
     }
     CartComponent.prototype.ngOnInit = function () {
     };
@@ -987,7 +987,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/checkout/cart/components/order-total-summary/order-total-summary.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"order-total-summary\">\r\n    <div class=\"order-total footer\" *ngIf=\"updateState != undefined\">\r\n        <div class=\"place-order\">\r\n            <button (click)=\"placeOrder()\" class=\"order-btn\" *ngIf=\"updateState\">SAVE AND CONTIUE</button>\r\n            <button (click)=\"placeOrder()\" class=\"order-btn\" *ngIf=\"!updateState\">CONTIUE</button>\r\n        </div>\r\n        <div class=\"total-amount\">\r\n            <span class=\"total-rupees\">${{totalCartValue | number:'1.2-2'}}</span>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"order-total-summary\">\r\n    <div class=\"order-total footer\" *ngIf=\"updateState != undefined\">\r\n        <div class=\"back-shopping\">\r\n            <button (click)=\"navigateShopping()\" class=\"shop-btn\">CONTINUE SHOPPING</button>\r\n        </div>\r\n        <div class=\"place-order\">\r\n            <button (click)=\"placeOrder()\" class=\"order-btn\" *ngIf=\"updateState\">SAVE AND CONTINUE</button>\r\n            <button (click)=\"placeOrder()\" class=\"order-btn\" *ngIf=\"!updateState\">NEXT STEP</button>\r\n        </div>\r\n        <div class=\"total-amount\">\r\n            <span class=\"total-rupees\">${{totalCartValue | number:'1.2-2'}}</span>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -999,7 +999,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".order-total-summary .coupon-section {\n  position: relative;\n  text-align: left;\n  font-size: inherit;\n  border-bottom: 1px dotted #d4d5d9;\n  min-height: 30px;\n  padding-bottom: 20px !important;\n  margin-bottom: 10px; }\n  .order-total-summary .coupon-section .text-label {\n    font-size: 14px;\n    display: block;\n    font-weight: 600;\n    color: #596062;\n    font-family: \"Whitney-semi-bold\"; }\n  .order-total-summary .coupon-section .apply-coupon:after {\n    font-size: 14px;\n    content: 'Apply Coupon';\n    position: absolute;\n    background: #fff;\n    color: #526cd0;\n    border: 1px solid #526cd0;\n    font-weight: 600;\n    font-family: \"Whitney-semi-bold\";\n    border-radius: 3px;\n    padding: 2px 12px;\n    top: -6px;\n    right: 0px; }\n\n.order-total-summary .gift-wrap-order {\n  height: 20px;\n  margin-bottom: 80px;\n  position: relative; }\n  .order-total-summary .gift-wrap-order .gift-wrap-checkbox {\n    float: right;\n    width: 20px;\n    height: 20px;\n    background-position: -116px 0;\n    overflow: hidden;\n    background-repeat: no-repeat;\n    background-size: 4250px 153px;\n    vertical-align: middle;\n    background-image: url(/assets/checkout_sprite.png);\n    margin-top: 8px;\n    margin-right: 0;\n    cursor: pointer; }\n  .order-total-summary .gift-wrap-order .gift-card-lbl, .order-total-summary .gift-wrap-order .gift-card-price {\n    font-size: 14px;\n    font-family: \"Whitney-semi-bold\";\n    font-weight: 600;\n    color: #596062; }\n  .order-total-summary .gift-wrap-order .not-cod {\n    display: block;\n    margin-top: 0;\n    padding: 3px 0 0;\n    font-size: 12px;\n    color: #535766; }\n\n.order-total-summary .order-summary-span {\n  position: relative;\n  padding: none;\n  border-bottom: 1px solid #eaeaec; }\n  .order-total-summary .order-summary-span:before {\n    content: 'Price Details';\n    position: absolute;\n    top: -32px;\n    font-size: 12px;\n    left: 0;\n    text-transform: uppercase;\n    font-weight: 600;\n    font-family: \"Whitney-semi-bold\";\n    color: #7e818c; }\n  .order-total-summary .order-summary-span .bag-total, .order-total-summary .order-summary-span .coupon, .order-total-summary .order-summary-span .shipping {\n    padding-bottom: 8px;\n    height: 22px;\n    margin-bottom: 6px;\n    position: relative; }\n    .order-total-summary .order-summary-span .bag-total span, .order-total-summary .order-summary-span .coupon span, .order-total-summary .order-summary-span .shipping span {\n      color: #535766; }\n  .order-total-summary .order-summary-span .bag-total > .value,\n  .order-total-summary .order-summary-span .coupon > .apply-coupon,\n  .order-total-summary .order-summary-span .shipping > .shipping-fee {\n    position: absolute;\n    right: 0;\n    text-align: right;\n    color: #596062; }\n  .order-total-summary .order-summary-span .coupon > .c-blue {\n    color: #526cd0;\n    cursor: pointer; }\n  .order-total-summary .order-summary-span .shipping > .c-green {\n    color: #20bd99; }\n\n.order-total-summary .order-total.footer {\n  position: relative;\n  display: inline-block;\n  width: 100%;\n  vertical-align: top;\n  margin-top: 42px;\n  margin-bottom: 40px;\n  clear: right;\n  min-height: 80px; }\n  .order-total-summary .order-total.footer .place-order {\n    position: absolute;\n    right: 0;\n    width: auto;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    text-align: right; }\n    .order-total-summary .order-total.footer .place-order .order-btn {\n      border: none;\n      border-radius: 3px;\n      height: 45px;\n      background-color: #2cd2b1 !important;\n      font-weight: 600 !important;\n      box-shadow: none;\n      width: 100%;\n      color: #fff;\n      font-family: \"Whitney-semi-bold\";\n      font-size: 14px;\n      margin: 10px auto; }\n  .order-total-summary .order-total.footer .total-amount {\n    float: none;\n    position: absolute;\n    top: -51px;\n    left: 0;\n    right: 0;\n    text-align: right;\n    margin: 20px auto;\n    color: #333; }\n    .order-total-summary .order-total.footer .total-amount .total-rupees {\n      color: #535766;\n      font-weight: 600;\n      font-size: 15px;\n      font-family: \"Whitney-semi-bold\"; }\n    .order-total-summary .order-total.footer .total-amount:after {\n      content: 'Order Total';\n      font-size: 15px;\n      top: 0;\n      position: absolute;\n      color: #596062;\n      left: 0;\n      text-align: left;\n      font-weight: 600;\n      font-family: \"Whitney-semi-bold\"; }\n", ""]);
+exports.push([module.i, ".order-total-summary .coupon-section {\n  position: relative;\n  text-align: left;\n  font-size: inherit;\n  border-bottom: 1px dotted #d4d5d9;\n  min-height: 30px;\n  padding-bottom: 20px !important;\n  margin-bottom: 10px; }\n  .order-total-summary .coupon-section .text-label {\n    font-size: 14px;\n    display: block;\n    font-weight: 600;\n    color: #596062;\n    font-family: \"Whitney-semi-bold\"; }\n  .order-total-summary .coupon-section .apply-coupon:after {\n    font-size: 14px;\n    content: 'Apply Coupon';\n    position: absolute;\n    background: #fff;\n    color: #526cd0;\n    border: 1px solid #526cd0;\n    font-weight: 600;\n    font-family: \"Whitney-semi-bold\";\n    border-radius: 3px;\n    padding: 2px 12px;\n    top: -6px;\n    right: 0px; }\n\n.order-total-summary .gift-wrap-order {\n  height: 20px;\n  margin-bottom: 80px;\n  position: relative; }\n  .order-total-summary .gift-wrap-order .gift-wrap-checkbox {\n    float: right;\n    width: 20px;\n    height: 20px;\n    background-position: -116px 0;\n    overflow: hidden;\n    background-repeat: no-repeat;\n    background-size: 4250px 153px;\n    vertical-align: middle;\n    background-image: url(/assets/checkout_sprite.png);\n    margin-top: 8px;\n    margin-right: 0;\n    cursor: pointer; }\n  .order-total-summary .gift-wrap-order .gift-card-lbl,\n  .order-total-summary .gift-wrap-order .gift-card-price {\n    font-size: 14px;\n    font-family: \"Whitney-semi-bold\";\n    font-weight: 600;\n    color: #596062; }\n  .order-total-summary .gift-wrap-order .not-cod {\n    display: block;\n    margin-top: 0;\n    padding: 3px 0 0;\n    font-size: 12px;\n    color: #535766; }\n\n.order-total-summary .order-summary-span {\n  position: relative;\n  padding: none;\n  border-bottom: 1px solid #eaeaec; }\n  .order-total-summary .order-summary-span:before {\n    content: 'Price Details';\n    position: absolute;\n    top: -32px;\n    font-size: 12px;\n    left: 0;\n    text-transform: uppercase;\n    font-weight: 600;\n    font-family: \"Whitney-semi-bold\";\n    color: #7e818c; }\n  .order-total-summary .order-summary-span .bag-total,\n  .order-total-summary .order-summary-span .coupon,\n  .order-total-summary .order-summary-span .shipping {\n    padding-bottom: 8px;\n    height: 22px;\n    margin-bottom: 6px;\n    position: relative; }\n    .order-total-summary .order-summary-span .bag-total span,\n    .order-total-summary .order-summary-span .coupon span,\n    .order-total-summary .order-summary-span .shipping span {\n      color: #535766; }\n  .order-total-summary .order-summary-span .bag-total > .value,\n  .order-total-summary .order-summary-span .coupon > .apply-coupon,\n  .order-total-summary .order-summary-span .shipping > .shipping-fee {\n    position: absolute;\n    right: 0;\n    text-align: right;\n    color: #596062; }\n  .order-total-summary .order-summary-span .coupon > .c-blue {\n    color: #526cd0;\n    cursor: pointer; }\n  .order-total-summary .order-summary-span .shipping > .c-green {\n    color: #20bd99; }\n\n.order-total-summary .order-total.footer {\n  position: relative;\n  display: inline-block;\n  width: 100%;\n  vertical-align: top;\n  margin-top: 42px;\n  margin-bottom: 40px;\n  clear: right;\n  min-height: 80px; }\n  .order-total-summary .order-total.footer .place-order {\n    position: absolute;\n    right: 0;\n    width: 45%;\n    top: 0;\n    bottom: 0;\n    text-align: right; }\n    .order-total-summary .order-total.footer .place-order .order-btn {\n      border: none;\n      border-radius: 3px;\n      height: 45px;\n      background-color: #2cd2b1 !important;\n      font-weight: 600 !important;\n      box-shadow: none;\n      width: 100%;\n      color: #fff;\n      font-family: \"Whitney-semi-bold\";\n      font-size: 14px;\n      margin: 10px auto; }\n  .order-total-summary .order-total.footer .back-shopping {\n    position: absolute;\n    width: 45%;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    text-align: right; }\n    .order-total-summary .order-total.footer .back-shopping .shop-btn {\n      border-width: 1px;\n      border-radius: 3px;\n      border-color: #2cd2b1 !important;\n      height: 45px;\n      background-color: #fff !important;\n      font-weight: 600 !important;\n      box-shadow: none;\n      width: 100%;\n      color: #2cd2b1;\n      font-family: \"Whitney-semi-bold\";\n      font-size: 14px;\n      margin: 10px auto; }\n  .order-total-summary .order-total.footer .total-amount {\n    float: none;\n    position: absolute;\n    top: -51px;\n    right: 0;\n    width: 45%;\n    text-align: right;\n    margin: 20px auto;\n    color: #333; }\n    .order-total-summary .order-total.footer .total-amount .total-rupees {\n      color: #535766;\n      font-weight: 600;\n      font-size: 15px;\n      font-family: \"Whitney-semi-bold\"; }\n    .order-total-summary .order-total.footer .total-amount:after {\n      content: 'Order Total';\n      font-size: 15px;\n      top: 0;\n      position: absolute;\n      color: #596062;\n      left: 0;\n      text-align: left;\n      font-weight: 600;\n      font-family: \"Whitney-semi-bold\"; }\n", ""]);
 
 // exports
 
@@ -1044,7 +1044,7 @@ var OrderTotalSummaryComponent = (function () {
         this.router = router;
         this.stateSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["f" /* getOrderState */])
             .subscribe(function (state) { return _this.orderState = state; });
-        this.updateStatusSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["m" /* getUpdateStatus */])
+        this.updateStatusSub$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["n" /* getUpdateStatus */])
             .subscribe(function (state) { return _this.updateState = state; });
     }
     OrderTotalSummaryComponent.prototype.ngOnInit = function () {
@@ -1071,6 +1071,9 @@ var OrderTotalSummaryComponent = (function () {
     };
     OrderTotalSummaryComponent.prototype.navigateNext = function () {
         this.router.navigate(['/checkout', 'delivery']);
+    };
+    OrderTotalSummaryComponent.prototype.navigateShopping = function () {
+        this.router.navigate(['/home']);
     };
     OrderTotalSummaryComponent.prototype.ngOnDestroy = function () {
         this.stateSub$.unsubscribe();
@@ -1242,7 +1245,7 @@ var ShipItemComponent = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["a" /* Shipment */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["a" /* Shipment */]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["b" /* Shipment */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["b" /* Shipment */]) === "function" && _a || Object)
 ], ShipItemComponent.prototype, "shipItem", void 0);
 ShipItemComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1391,9 +1394,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var DeliverySummaryComponent = (function () {
     function DeliverySummaryComponent(store) {
         this.store = store;
-        this.total$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["k" /* getTotalCartValue */]);
-        this.itemTotal$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["l" /* getTotalItemValue */]);
-        this.totalItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["j" /* getTotalCartItems */]);
+        this.total$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["l" /* getTotalCartValue */]);
+        this.itemTotal$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["m" /* getTotalItemValue */]);
+        this.totalItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["k" /* getTotalCartItems */]);
     }
     DeliverySummaryComponent.prototype.ngOnInit = function () {
     };
@@ -1486,7 +1489,7 @@ var ShipmentItemComponent = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["a" /* Shipment */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["a" /* Shipment */]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["b" /* Shipment */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_models_shipment__["b" /* Shipment */]) === "function" && _a || Object)
 ], ShipmentItemComponent.prototype, "shipmentItem", void 0);
 ShipmentItemComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1551,7 +1554,7 @@ var ShipmentListComponent = (function () {
     function ShipmentListComponent(store) {
         this.store = store;
         this.onShipRatesSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.shipmentItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["i" /* getShipment */]);
+        this.shipmentItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_2__reducers_selectors__["j" /* getShipment */]);
     }
     ShipmentListComponent.prototype.ngOnInit = function () {
         this.selectedRates = [];
@@ -2234,7 +2237,7 @@ var _a, _b, _c, _d, _e, _f;
 /***/ "../../../../../src/app/checkout/payment/payment.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"payment-section\">\r\n\t<div class=\"left\">\r\n\t\t<div class=\"payment-header\">\r\n\t\t\t<span class=\"lbl\">Choose Payment Mode</span>\r\n\t\t\t<span class=\"amt you-pay\">\r\n\t\t\t\t<span class=\"amt\">You Pay</span>\r\n\t\t\t\t<span class=\"you-pay\">${{totalCartValue$ | async | number:'1.2-2'}}</span>\r\n\t\t\t</span>\r\n\t\t</div>\r\n\t\t<div class=\"pay-body\">\r\n\t\t\t<app-payment-modes-list [orderNumber]=\"orderNumber$ | async\" [paymentAmount]=\"totalCartValue$ | async\"></app-payment-modes-list>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"right\">\r\n\t\t<div class=\"mini-bag-summary\">\r\n\t\t\t<div class=\"lbl\">ORDER SUMMARY</div>\r\n\t\t\t<div class=\"items\">{{totalCartItems$ | async}} ITEMS</div>\r\n\t\t\t<div class=\"order-total\">\r\n\t\t\t\t<span>Order Total</span>\r\n\t\t\t\t<span class=\"value\">${{totalCartValue$ | async | number:'1.2-2'}}</span>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"shipping\">\r\n\t\t\t\t<span>Delivery</span>\r\n\t\t\t\t<span class=\"shipping-fee c-green\">FREE</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"pay-lbl-total\">\r\n\t\t\t<span class=\"pay-lbl\">Total Payable</span>\r\n\t\t\t<span class=\"pay-total\">${{totalCartValue$ | async | number:'1.2-2'}}</span>\r\n\t\t</div>\r\n\t\t<div class=\"address-summary\">\r\n\t\t\t<div class=\"address-lbl\">DELIVER TO</div>\r\n\t\t\t<div class=\"name\">{{(address$ | async).full_name}}</div>\r\n\t\t\t<div class=\"add-info\">{{(address$ | async).address1}}</div>\r\n\t\t\t<div class=\"add-info\">{{(address$ | async).address2}}</div>\r\n\t\t\t<div class=\"add-info\">{{(address$ | async).city}} - {{(address$ | async).zipcode}}</div>\r\n\t\t\t<!--<div class=\"add-info\">Maharashtra</div>-->\r\n\t\t\t<div class=\"add-info\">Mobile: {{(address$ | async).phone}}</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"payment-section\">\r\n    <div class=\"left\">\r\n        <div class=\"payment-header\">\r\n            <span class=\"lbl\">Choose Payment Mode</span>\r\n            <span class=\"amt you-pay\">\r\n\t\t\t\t<span class=\"amt\">You Pay</span>\r\n            <span class=\"you-pay\">${{totalCartValue$ | async | number:'1.2-2'}}</span>\r\n            </span>\r\n        </div>\r\n        <div class=\"pay-body\">\r\n            <app-payment-modes-list [orderNumber]=\"orderNumber$ | async\" [paymentAmount]=\"totalCartValue$ | async\"></app-payment-modes-list>\r\n        </div>\r\n    </div>\r\n    <div class=\"right\">\r\n        <div class=\"mini-bag-summary\">\r\n            <div class=\"lbl\">ORDER SUMMARY</div>\r\n            <div class=\"items\">{{totalCartItems$ | async}} ITEMS</div>\r\n            <div class=\"order-total\">\r\n                <span>Order Total</span>\r\n                <span class=\"value\">${{totalCartValue$ | async | number:'1.2-2'}}</span>\r\n            </div>\r\n            <div class=\"shipping\">\r\n                <span>Delivery</span>\r\n                <span class=\"shipping-fee c-green\">{{selectedRate$ | async}}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"pay-lbl-total\">\r\n            <span class=\"pay-lbl\">Total Payable</span>\r\n            <span class=\"pay-total\">${{totalCartValue$ | async | number:'1.2-2'}}</span>\r\n        </div>\r\n        <div class=\"address-summary\">\r\n            <div class=\"address-lbl\">DELIVER TO</div>\r\n            <div class=\"name\">{{(address$ | async).full_name}}</div>\r\n            <div class=\"add-info\">{{(address$ | async).address1}}</div>\r\n            <div class=\"add-info\">{{(address$ | async).address2}}</div>\r\n            <div class=\"add-info\">{{(address$ | async).city}} - {{(address$ | async).zipcode}}</div>\r\n            <!--<div class=\"add-info\">Maharashtra</div>-->\r\n            <div class=\"add-info\">Mobile: {{(address$ | async).phone}}</div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -2279,10 +2282,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PaymentComponent = (function () {
     function PaymentComponent(store) {
         this.store = store;
-        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["k" /* getTotalCartValue */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["j" /* getTotalCartItems */]);
-        this.address$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["h" /* getShipAddress */]);
+        this.totalCartValue$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["l" /* getTotalCartValue */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["k" /* getTotalCartItems */]);
+        this.address$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["i" /* getShipAddress */]);
         this.orderNumber$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["e" /* getOrderNumber */]);
+        this.selectedRate$ = this.store.select(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["h" /* getSelectedRateName */]);
     }
     PaymentComponent.prototype.ngOnInit = function () {
     };
@@ -2441,21 +2445,6 @@ var PaymentMode = (function () {
 }());
 
 //# sourceMappingURL=payment_mode.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/core/models/shipment.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Shipment; });
-var Shipment = (function () {
-    function Shipment() {
-    }
-    return Shipment;
-}());
-
-//# sourceMappingURL=shipment.js.map
 
 /***/ })
 

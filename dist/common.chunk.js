@@ -20,6 +20,28 @@ var Product = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/core/models/shipment.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Shipment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LightShipment; });
+var Shipment = (function () {
+    function Shipment() {
+    }
+    return Shipment;
+}());
+
+var LightShipment = (function () {
+    function LightShipment() {
+    }
+    return LightShipment;
+}());
+
+//# sourceMappingURL=shipment.js.map
+
+/***/ }),
+
 /***/ "../../../../ng2-select2/ng2-select2.component.js":
 /***/ (function(module, exports, __webpack_require__) {
 

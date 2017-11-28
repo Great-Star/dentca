@@ -26,7 +26,8 @@ var map = {
 	],
 	"./user/index": [
 		"../../../../../src/app/user/index.ts",
-		"index.0"
+		"index.0",
+		"common"
 	]
 };
 function webpackAsyncContext(req) {
@@ -864,14 +865,14 @@ var routes = [
 var CenterActions = (function () {
     function CenterActions() {
     }
-    CenterActions.prototype.getAllCenters = function () {
+    CenterActions.prototype.getActivatedCenters = function () {
         return {
-            type: CenterActions.GET_ALL_CENTERS
+            type: CenterActions.GET_ACTIVATED_CENTERS
         };
     };
-    CenterActions.prototype.getAllCentersSuccess = function (centers) {
+    CenterActions.prototype.getActivatedCentersSuccess = function (centers) {
         return {
-            type: CenterActions.GET_ALL_CENTERS_SUCCESS,
+            type: CenterActions.GET_ACTIVATED_CENTERS_SUCCESS,
             payload: centers
         };
     };
@@ -889,8 +890,8 @@ var CenterActions = (function () {
     return CenterActions;
 }());
 
-CenterActions.GET_ALL_CENTERS = 'GET_ALL_CENTERS';
-CenterActions.GET_ALL_CENTERS_SUCCESS = 'GET_ALL_CENTERS_SUCCESS';
+CenterActions.GET_ACTIVATED_CENTERS = 'GET_ACTIVATED_CENTERS';
+CenterActions.GET_ACTIVATED_CENTERS_SUCCESS = 'GET_ACTIVATED_CENTERS_SUCCESS';
 CenterActions.GET_COUNTRY = 'GET_COUNTRY';
 CenterActions.GET_COUNTRY_SUCCESS = 'GET_COUNTRY_SUCCESS';
 //# sourceMappingURL=center.actions.js.map
@@ -946,7 +947,7 @@ var CenterComponent = (function () {
     function CenterComponent(store, centerActions) {
         this.store = store;
         this.centerActions = centerActions;
-        this.store.dispatch(this.centerActions.getAllCenters());
+        this.store.dispatch(this.centerActions.getActivatedCenters());
         this.store.dispatch(this.centerActions.getCountry());
     }
     CenterComponent.prototype.ngOnInit = function () {
@@ -973,20 +974,22 @@ var _a, _b;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CenterModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngui_map__ = __webpack_require__("../../../../@ngui/map/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__center_component__ = __webpack_require__("../../../../../src/app/blog/center/center.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_center_map_center_map_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-map/center-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_center_application_center_application_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-application/center-application.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_center_application_success_center_application_success_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-application-success/center-application-success.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_index__ = __webpack_require__("../../../../../src/app/shared/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map__ = __webpack_require__("../../../../@ngui/map/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__center_component__ = __webpack_require__("../../../../../src/app/blog/center/center.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_center_map_center_map_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-map/center-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_center_application_center_application_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-application/center-application.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_center_application_success_center_application_success_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-application-success/center-application-success.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1004,16 +1007,17 @@ var CenterModule = (function () {
 CenterModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* RouterModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_4__ngui_map__["a" /* NguiMapModule */],
+            __WEBPACK_IMPORTED_MODULE_1__shared_index__["a" /* SharedModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"],
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["d" /* RouterModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_5__ngui_map__["a" /* NguiMapModule */],
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__center_component__["a" /* CenterComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components_center_map_center_map_component__["a" /* CenterMapComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__components_center_application_center_application_component__["a" /* CenterApplicationComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__components_center_application_success_center_application_success_component__["a" /* CenterApplicationSuccessComponent */]
+            __WEBPACK_IMPORTED_MODULE_6__center_component__["a" /* CenterComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__components_center_map_center_map_component__["a" /* CenterMapComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__components_center_application_center_application_component__["a" /* CenterApplicationComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__components_center_application_success_center_application_success_component__["a" /* CenterApplicationSuccessComponent */]
         ]
     })
 ], CenterModule);
@@ -1031,6 +1035,8 @@ CenterModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_center_map_center_map_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-map/center-map.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_center_application_center_application_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-application/center-application.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_center_application_success_center_application_success_component__ = __webpack_require__("../../../../../src/app/blog/center/components/center-application-success/center-application-success.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_guards_center_guard__ = __webpack_require__("../../../../../src/app/core/guards/center.guard.ts");
+
 
 
 
@@ -1042,7 +1048,11 @@ var routes = [
             { path: '', redirectTo: 'map', pathMatch: 'full' },
             { path: 'map', component: __WEBPACK_IMPORTED_MODULE_1__components_center_map_center_map_component__["a" /* CenterMapComponent */] },
             { path: 'application', component: __WEBPACK_IMPORTED_MODULE_2__components_center_application_center_application_component__["a" /* CenterApplicationComponent */] },
-            { path: 'application/success', component: __WEBPACK_IMPORTED_MODULE_3__components_center_application_success_center_application_success_component__["a" /* CenterApplicationSuccessComponent */] }
+            {
+                path: 'application/success',
+                component: __WEBPACK_IMPORTED_MODULE_3__components_center_application_success_center_application_success_component__["a" /* CenterApplicationSuccessComponent */],
+                canActivate: [__WEBPACK_IMPORTED_MODULE_4__core_guards_center_guard__["a" /* CanActivateViaCenterGuard */]]
+            }
         ]
     }
 ];
@@ -1053,7 +1063,7 @@ var routes = [
 /***/ "../../../../../src/app/blog/center/components/center-application-success/center-application-success.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"!completedCenterApp\">\n  <p>You are not authorized to access this page!</p>\n</div>\n\n<div *ngIf=\"completedCenterApp\">\n  <h1>\n    Dentca-4 Center Application Successful!\n  </h1>\n\n  <p>Your Dentca-4 Center Application has been submitted.</p>\n  <p>Submitted on: {{ completedCenterApp.address.created_at }}</p>\n\n  <table class=\"table\">\n    <tbody>\n      <tr>\n        <th scope=\"row\">Office Name</th>\n        <td>{{ completedCenterApp.office_name }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Address</th>\n        <td>{{ completedCenterApp.address.address1 + ' ' +\n               completedCenterApp.address.address2 + ' ' +\n               completedCenterApp.address.city + ' ' +\n               completedCenterApp.address.state_id + ' ' +\n               completedCenterApp.address.zipcode }}\n        </td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Email</th>\n        <td>{{ completedCenterApp.email }}</td>\n      </tr>\n      <tr *ngIf=\"completedCenterApp.website\">\n        <th scope=\"row\">Website</th>\n        <td>{{ completedCenterApp.website }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Number of Doctors</th>\n        <td>{{ completedCenterApp.num_of_doctors }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Number of Staff</th>\n        <td>{{ completedCenterApp.num_of_staff }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Head Doctor</th>\n        <td>{{ completedCenterApp.head_doctor }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">College</th>\n        <td>{{ completedCenterApp.college }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Degree</th>\n        <td>{{ completedCenterApp.degree }}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<a [routerLink]=\"['/blog/center/map']\">Go back to Map Page</a>\n\n\n\n"
+module.exports = "<div *ngIf=\"!completedCenterApp\">\n  <p>You are not authorized to access this page!</p>\n</div>\n\n<div *ngIf=\"completedCenterApp\">\n  <h1>\n    Dentca-4 Center Application Successful!\n  </h1>\n\n  <p>Your Dentca-4 Center Application has been submitted.</p>\n  <p>Submitted on: {{ completedCenterApp.address.created_at | date }}</p>\n\n  <table class=\"table\">\n    <tbody>\n      <tr>\n        <th scope=\"row\">Office Name</th>\n        <td>{{ completedCenterApp.office_name }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Address</th>\n        <td>{{ getFullAddress(completedCenterApp.address) }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Email</th>\n        <td>{{ completedCenterApp.email }}</td>\n      </tr>\n      <tr *ngIf=\"completedCenterApp.website\">\n        <th scope=\"row\">Website</th>\n        <td>{{ completedCenterApp.website }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Number of Doctors</th>\n        <td>{{ completedCenterApp.num_of_doctors }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Number of Staff</th>\n        <td>{{ completedCenterApp.num_of_staff }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Head Doctor</th>\n        <td>{{ completedCenterApp.head_doctor }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">College</th>\n        <td>{{ completedCenterApp.college }}</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">Degree</th>\n        <td>{{ completedCenterApp.degree }}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<a [routerLink]=\"['/blog/center/map']\">Go back to Map Page</a>\n\n\n\n"
 
 /***/ }),
 
@@ -1082,6 +1092,9 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CenterApplicationSuccessComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_services_center_service__ = __webpack_require__("../../../../../src/app/core/services/center.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_models_address__ = __webpack_require__("../../../../../src/app/core/models/address.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reducers_center_selectors__ = __webpack_require__("../../../../../src/app/blog/center/reducers/center.selectors.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1093,72 +1106,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var CenterApplicationSuccessComponent = (function () {
-    function CenterApplicationSuccessComponent(centerService) {
+    function CenterApplicationSuccessComponent(centerService, store) {
         this.centerService = centerService;
+        this.store = store;
         this.completedCenterApp = null;
+        this.getFullAddress = __WEBPACK_IMPORTED_MODULE_2__core_models_address__["b" /* getFullAddress */];
     }
     CenterApplicationSuccessComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.completedCenterApp = this.centerService.completedCenterApp;
-        /*
-        const centerAppReply = {
-          office_name: "API Office",
-          head_doctor: "API Doctor",
-          email: "api@gmail.com",
-          website: null,
-          num_of_doctors: 0,
-          num_of_staff: 0,
-          college: "API College",
-          degree: "API Degree",
-          state: "pending",
-          address: {
-            id: 33,
-            firstname: "Jeric Paul",
-            lastname: "de Leon",
-            address1: "11602 Chester Avenue",
-            address2: "",
-            city: "Garden Grove",
-            zipcode: "92840",
-            phone: "16572100260",
-            state_name: null,
-            alternative_phone: null,
-            company: null,
-            state_id: 3529,
-            country_id: 232,
-            created_at: "2017-11-20T19:52:52.761Z",
-            updated_at: "2017-11-20T19:52:52.761Z"
-          }
-        };
-    
-        // temp
-        this.completedCenterApp = {
-          office_name: centerAppReply.office_name,
-          head_doctor: centerAppReply.head_doctor,
-          email: centerAppReply.email,
-          website: centerAppReply.website,
-          num_of_doctors: centerAppReply.num_of_doctors.toString(),
-          num_of_staff: centerAppReply.num_of_staff.toString(),
-          college: centerAppReply.college,
-          degree: centerAppReply.degree,
-          state: centerAppReply.state,
-          address: {
-            firstname: centerAppReply.address.firstname,
-            lastname: centerAppReply.address.lastname,
-            address1: centerAppReply.address.address1,
-            address2: centerAppReply.address.address2,
-            city: centerAppReply.address.city,
-            zipcode: centerAppReply.address.zipcode,
-            phone: centerAppReply.address.phone,
-            state_name: centerAppReply.address.state_name,
-            alternative_phone: centerAppReply.address.alternative_phone,
-            company: centerAppReply.address.company,
-            state_id: centerAppReply.address.state_id.toString(),
-            country_id: centerAppReply.address.country_id.toString(),
-            created_at: centerAppReply.address.created_at,
-            updated_at: centerAppReply.address.updated_at
-          }
-        };
-        */
+        this.store.select(__WEBPACK_IMPORTED_MODULE_4__reducers_center_selectors__["b" /* getCountry */])
+            .first(function (value) { return value.toJSON().states; })
+            .filter(function (value) { return value && value.toJSON().states && value.toJSON().states.length > 0; })
+            .subscribe(function (value) {
+            var country = value.toJSON();
+            if (_this.completedCenterApp) {
+                _this.completedCenterApp.address.state_text = country.states.find((function (state) { return state.id === +_this.completedCenterApp.address.state_id; })).name;
+            }
+        });
     };
     CenterApplicationSuccessComponent.prototype.ngOnDestroy = function () {
         this.centerService.completedCenterApp = null;
@@ -1171,10 +1140,10 @@ CenterApplicationSuccessComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/blog/center/components/center-application-success/center-application-success.component.html"),
         styles: [__webpack_require__("../../../../../src/app/blog/center/components/center-application-success/center-application-success.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__core_services_center_service__["a" /* CenterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__core_services_center_service__["a" /* CenterService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__core_services_center_service__["a" /* CenterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__core_services_center_service__["a" /* CenterService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ngrx_store__["f" /* Store */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ngrx_store__["f" /* Store */]) === "function" && _b || Object])
 ], CenterApplicationSuccessComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=center-application-success.component.js.map
 
 /***/ }),
@@ -1182,7 +1151,7 @@ var _a;
 /***/ "../../../../../src/app/blog/center/components/center-application/center-application.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\nTODO:\n- consider writing components for form group items;\n  - must take into account nested form groups and custom validation errors / messages\n\nAngular 2 validated forms:\n- use reactive forms whenever possible\n- put sync / async validation during the FormBuilder creation\n\n- for markup:\n  - use css for: required green / red borders\n  - to be used in conjunction with the ff. rules:\n    - follow Bootstrap form control convention\n    - 'control-label' class on all control labels\n    - 'required' class on all required labels / inputs\n-->\n\n<h1>\n  Create Dentca-4 Center Application\n</h1>\n\n<br/>\n\n<form [formGroup]=\"centerAppForm\" (ngSubmit)=\"save()\" novalidate>\n\n  <!-- office_name -->\n  <div class=\"form-group\"\n       [ngClass]=\"{'has-error': hasError('office_name')}\">\n    <label class=\"center-block control-label required\" >Office Name:</label>\n    <input class=\"form-control required\"\n           formControlName=\"office_name\">\n    <div *ngIf=\"hasError('office_name')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('office_name', centerAppForm).errors.required\">\n        Office name is required.\n      </span>\n    </div>\n  </div>\n\n  <!-- head_doctor -->\n  <div class=\"form-group\"\n       [ngClass]=\"{'has-error': hasError('head_doctor')}\">\n    <label class=\"center-block control-label required\" >Head Doctor:</label>\n    <input class=\"form-control required\"\n           formControlName=\"head_doctor\">\n    <div *ngIf=\"hasError('head_doctor')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('head_doctor', centerAppForm).errors.required\">\n        Head Doctor is required.\n      </span>\n    </div>\n  </div>\n\n  <br/>\n\n  <!-- address -->\n  <div formGroupName=\"address_attributes\" class=\"well well-lg\">\n    <h4>Address</h4>\n\n    <div class=\"row\">\n\n      <div class=\"col-md-6\">\n        <!-- address_attributes.firstname -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.firstname')}\">\n          <label class=\"center-block control-label required\">First Name:</label>\n          <input class=\"form-control required\"\n                 formControlName=\"firstname\">\n          <div *ngIf=\"hasError('address_attributes.firstname')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.firstname', centerAppForm).errors.required\">\n          Address is required.\n        </span>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"col-md-6\">\n        <!-- address_attributes.lastname -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.lastname')}\">\n          <label class=\"center-block control-label required\">Last Name:</label>\n          <input class=\"form-control required\"\n                 formControlName=\"lastname\">\n          <div *ngIf=\"hasError('address_attributes.lastname')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.lastname', centerAppForm).errors.required\">\n          Address is required.\n        </span>\n          </div>\n        </div>\n      </div>\n\n    </div>\n\n    <!-- address_attributes.address1 -->\n    <div class=\"form-group\"\n         [ngClass]=\"{'has-error': hasError('address_attributes.address1')}\">\n      <label class=\"center-block control-label required\">Address 1:</label>\n      <input class=\"form-control required\"\n             formControlName=\"address1\">\n      <div *ngIf=\"hasError('address_attributes.address1')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.address1', centerAppForm).errors.required\">\n          Address is required.\n        </span>\n      </div>\n    </div>\n\n    <!-- address_attributes.address2 -->\n    <div class=\"form-group\">\n      <label class=\"center-block control-label\">Address 2:</label>\n      <input class=\"form-control\" formControlName=\"address2\">\n    </div>\n\n    <div class=\"row\">\n\n      <div class=\"col-md-6\">\n\n        <!-- address_attributes.city -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.city')}\">\n          <label class=\"center-block control-label required\" >City:</label>\n          <input class=\"form-control required\"\n                 formControlName=\"city\">\n          <div *ngIf=\"hasError('address_attributes.city')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.city', centerAppForm).errors.required\">\n          City is required.\n        </span>\n          </div>\n        </div>\n\n      </div>\n\n      <div class=\"col-md-3\">\n\n        <!-- address_attributes.state_id -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.state_id')}\">\n          <label class=\"center-block control-label required\" >State:</label>\n          <select class=\"form-control required\" formControlName=\"state_id\">\n            <option value=\"\" selected=\"selected\"></option>\n            <option *ngFor=\"let state of states\" [value]=\"state.id\">{{ state.name }}</option>\n          </select>\n          <div *ngIf=\"hasError('address_attributes.state_id')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.state_id', centerAppForm).errors.required\">\n          State is required.\n        </span>\n          </div>\n        </div>\n\n      </div>\n\n      <div class=\"col-md-3\">\n\n        <!-- address_attributes.zipcode -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.zipcode')}\">\n          <label class=\"center-block control-label required\" >Zip:</label>\n          <input class=\"form-control required\"\n                 type=\"number\"\n                 formControlName=\"zipcode\">\n          <div *ngIf=\"hasError('address_attributes.zipcode')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.zipcode', centerAppForm).errors.required\">\n          Zip Code is required.\n        </span>\n            <span class=\"help-block\"\n                  *ngIf=\"getElementFromFG('address_attributes.zipcode', centerAppForm).errors.pattern\">\n          Zip Code must be exactly 5 numbers.\n        </span>\n          </div>\n        </div>\n\n      </div>\n\n    </div>\n\n    <!-- address_attributes.phone -->\n    <div class=\"form-group\">\n      <label class=\"center-block control-label\">Phone:</label>\n      <input class=\"form-control\" formControlName=\"phone\">\n    </div>\n  </div>\n\n  <!-- email -->\n  <div class=\"form-group\"\n       [ngClass]=\"{'has-error': hasError('email')}\">\n    <label class=\"center-block control-label required\" >Email:</label>\n    <input class=\"form-control required\"\n           formControlName=\"email\">\n    <div *ngIf=\"hasError('email')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('email', centerAppForm).errors.required\">\n        Email is required.\n      </span>\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('email', centerAppForm).errors.pattern\">\n        Email must be a valid email address_attributes.\n      </span>\n    </div>\n  </div>\n\n  <!-- Website -->\n  <div class=\"form-group\">\n    <label class=\"center-block control-label\">Website:</label>\n    <input class=\"form-control\" formControlName=\"website\">\n  </div>\n\n  <div class=\"row\">\n\n    <div class=\"col-md-6\">\n\n      <!-- num_of_doctors -->\n      <div class=\"form-group\"\n           [ngClass]=\"{'has-error': hasError('num_of_doctors')}\">\n        <label class=\"center-block control-label required\" >Number of Doctors:</label>\n        <input class=\"form-control required\"\n               type=\"number\"\n               formControlName=\"num_of_doctors\">\n        <div *ngIf=\"hasError('num_of_doctors')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('num_of_doctors', centerAppForm).errors.required\">\n        Number of Doctors is required.\n      </span>\n          <span class=\"help-block\"\n                *ngIf=\"getElementFromFG('num_of_doctors', centerAppForm).errors.pattern\">\n        Number of Doctors must be any number greater than or equal to 1.\n      </span>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"col-md-6\">\n\n      <!-- num_of_staff -->\n      <div class=\"form-group\"\n           [ngClass]=\"{'has-error': hasError('num_of_staff')}\">\n        <label class=\"center-block control-label required\" >Number of Staff:</label>\n        <input class=\"form-control required\"\n               type=\"number\"\n               formControlName=\"num_of_staff\">\n        <div *ngIf=\"hasError('num_of_staff')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('num_of_staff', centerAppForm).errors.required\">\n        Number of Staff is required.\n      </span>\n          <span class=\"help-block\"\n                *ngIf=\"getElementFromFG('num_of_staff', centerAppForm).errors.pattern\">\n        Number of Staff must be any number greater than or equal to 1.\n      </span>\n        </div>\n      </div>\n\n    </div>\n\n  </div>\n\n\n\n  <br/>\n\n  <div class=\"well well-lg\">\n    <h4>Education</h4>\n\n    <!-- college -->\n    <div class=\"form-group\"\n         [ngClass]=\"{'has-error': hasError('college')}\">\n      <label class=\"center-block control-label required\" >College:</label>\n      <input class=\"form-control required\"\n             formControlName=\"college\">\n      <div *ngIf=\"hasError('college')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('college', centerAppForm).errors.required\">\n        College is required.\n      </span>\n      </div>\n    </div>\n\n    <!-- degree -->\n    <div class=\"form-group\"\n         [ngClass]=\"{'has-error': hasError('degree')}\">\n      <label class=\"center-block control-label required\" >Degree:</label>\n      <input class=\"form-control required\"\n             formControlName=\"degree\">\n      <div *ngIf=\"hasError('degree')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('degree', centerAppForm).errors.required\">\n        Degree is required.\n      </span>\n      </div>\n    </div>\n\n  </div>\n\n  <!-- submit -->\n  <div style=\"margin-bottom: 1em\">\n    <button type=\"submit\"\n            class=\"btn btn-lg btn-success\"\n            [disabled]=\"centerAppForm.pristine || centerAppForm.invalid\" >Save</button> &nbsp;\n    <button type=\"reset\"\n            class=\"btn btn-lg btn-danger\"\n            (click)=\"revert()\"\n            [disabled]=\"centerAppForm.pristine && centerAppForm.get('address_attributes').pristine\" >Revert</button>\n  </div>\n</form>\n\n<!--\n<p>Form value: {{ centerAppForm.value | json }}</p>\n<p>Form valid: {{ centerAppForm.valid | json }}</p>\n-->\n"
+module.exports = "<!--\nTODO:\n- consider writing components for form group items;\n  - must take into account nested form groups and custom validation errors / messages\n\nAngular 2 validated forms:\n- use reactive forms whenever possible\n- put sync / async validation during the FormBuilder creation\n\n- for markup:\n  - use css for: required green / red borders\n  - to be used in conjunction with the ff. rules:\n    - follow Bootstrap form control convention\n    - 'control-label' class on all control labels\n    - 'required' class on all required labels / inputs\n-->\n\n<h1>\n  Create Dentca-4 Center Application\n</h1>\n\n<br/>\n\n<!-- stateQuery -->\n<div class=\"row\">\n  <div class=\"form-group col-md-6\">\n    <label for=\"state-checker\">Please check first for Dentca-4 availability by entering your ZIP code: </label>\n    <input id=\"state-checker\"\n           class=\"form-control\"\n           type=\"number\"\n           pattern=\"[0-9]{5}\"\n           [(ngModel)]=\"stateQuery\"\n           (keyup)=\"onStateQueryKeyUp($event)\"\n           required>\n    <div *ngIf=\"stateQuery && stateQuery.toString().length === 5 && stateQueryAllowed\">\n      <p>Congratulations, you can reserve this area!</p>\n    </div>\n    <div *ngIf=\"stateQuery && stateQuery.toString().length === 5 && !stateQueryAllowed\">\n      <p>Sorry, that area is already taken. Please contact our <a href=\"mailto:info@dentca.com\">sales associate</a>.</p>\n    </div>\n  </div>\n</div>\n\n<form [formGroup]=\"centerAppForm\" (ngSubmit)=\"save()\" novalidate>\n\n  <!-- office_name -->\n  <div class=\"form-group\"\n       [ngClass]=\"{'has-error': hasError('office_name')}\">\n    <label class=\"center-block control-label required\" >Office Name:</label>\n    <input class=\"form-control required\"\n           formControlName=\"office_name\">\n    <div *ngIf=\"hasError('office_name')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('office_name', centerAppForm).errors.required\">\n        Office name is required.\n      </span>\n    </div>\n  </div>\n\n  <!-- head_doctor -->\n  <div class=\"form-group\"\n       [ngClass]=\"{'has-error': hasError('head_doctor')}\">\n    <label class=\"center-block control-label required\" >Head Doctor:</label>\n    <input class=\"form-control required\"\n           formControlName=\"head_doctor\">\n    <div *ngIf=\"hasError('head_doctor')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('head_doctor', centerAppForm).errors.required\">\n        Head Doctor is required.\n      </span>\n    </div>\n  </div>\n\n  <br/>\n\n  <!-- address -->\n  <div formGroupName=\"address_attributes\" class=\"well well-lg\">\n    <h4>Address</h4>\n\n    <div class=\"row\">\n\n      <div class=\"col-md-6\">\n        <!-- address_attributes.firstname -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.firstname')}\">\n          <label class=\"center-block control-label required\">First Name:</label>\n          <input class=\"form-control required\"\n                 formControlName=\"firstname\">\n          <div *ngIf=\"hasError('address_attributes.firstname')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.firstname', centerAppForm).errors.required\">\n          Address is required.\n        </span>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"col-md-6\">\n        <!-- address_attributes.lastname -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.lastname')}\">\n          <label class=\"center-block control-label required\">Last Name:</label>\n          <input class=\"form-control required\"\n                 formControlName=\"lastname\">\n          <div *ngIf=\"hasError('address_attributes.lastname')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.lastname', centerAppForm).errors.required\">\n          Address is required.\n        </span>\n          </div>\n        </div>\n      </div>\n\n    </div>\n\n    <!-- address_attributes.address1 -->\n    <div class=\"form-group\"\n         [ngClass]=\"{'has-error': hasError('address_attributes.address1')}\">\n      <label class=\"center-block control-label required\">Address 1:</label>\n      <input class=\"form-control required\"\n             formControlName=\"address1\">\n      <div *ngIf=\"hasError('address_attributes.address1')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.address1', centerAppForm).errors.required\">\n          Address is required.\n        </span>\n      </div>\n    </div>\n\n    <!-- address_attributes.address2 -->\n    <div class=\"form-group\">\n      <label class=\"center-block control-label\">Address 2:</label>\n      <input class=\"form-control\" formControlName=\"address2\">\n    </div>\n\n    <div class=\"row\">\n\n      <div class=\"col-md-6\">\n\n        <!-- address_attributes.city -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.city')}\">\n          <label class=\"center-block control-label required\" >City:</label>\n          <input class=\"form-control required\"\n                 formControlName=\"city\">\n          <div *ngIf=\"hasError('address_attributes.city')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.city', centerAppForm).errors.required\">\n          City is required.\n        </span>\n          </div>\n        </div>\n\n      </div>\n\n      <div class=\"col-md-3\">\n\n        <!-- address_attributes.state_id -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.state_id')}\">\n          <label class=\"center-block control-label required\" >State:</label>\n          <select class=\"form-control required\" formControlName=\"state_id\">\n            <option value=\"\" selected=\"selected\"></option>\n            <option *ngFor=\"let state of states\" [value]=\"state.id\">{{ state.name }}</option>\n          </select>\n          <div *ngIf=\"hasError('address_attributes.state_id')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.state_id', centerAppForm).errors.required\">\n          State is required.\n        </span>\n          </div>\n        </div>\n\n      </div>\n\n      <div class=\"col-md-3\">\n\n        <!-- address_attributes.zipcode -->\n        <div class=\"form-group\"\n             [ngClass]=\"{'has-error': hasError('address_attributes.zipcode')}\">\n          <label class=\"center-block control-label required\" >Zip:</label>\n          <input class=\"form-control required\"\n                 type=\"number\"\n                 formControlName=\"zipcode\">\n          <div *ngIf=\"hasError('address_attributes.zipcode')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.zipcode', centerAppForm).errors.required\">\n          Zip Code is required.\n        </span>\n            <span class=\"help-block\"\n                  *ngIf=\"getElementFromFG('address_attributes.zipcode', centerAppForm).errors.pattern\">\n          Zip Code must be exactly 5 numbers.\n        </span>\n          </div>\n        </div>\n\n      </div>\n\n    </div>\n\n    <!-- address_attributes.phone -->\n    <div class=\"form-group\"\n         [ngClass]=\"{'has-error': hasError('address_attributes.phone')}\">\n      <label class=\"center-block control-label required\">Phone</label>\n      <input class=\"form-control required\"\n             formControlName=\"phone\">\n      <div *ngIf=\"hasError('address_attributes.phone')\">\n        <span class=\"help-block\"\n              *ngIf=\"getElementFromFG('address_attributes.phone', centerAppForm).errors.required\">\n          Phone is required.\n        </span>\n      </div>\n    </div>\n  </div>\n\n  <!-- email -->\n  <div class=\"form-group\"\n       [ngClass]=\"{'has-error': hasError('email')}\">\n    <label class=\"center-block control-label required\" >Email:</label>\n    <input class=\"form-control required\"\n           formControlName=\"email\">\n    <div *ngIf=\"hasError('email')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('email', centerAppForm).errors.required\">\n        Email is required.\n      </span>\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('email', centerAppForm).errors.pattern\">\n        Email must be a valid email address_attributes.\n      </span>\n    </div>\n  </div>\n\n  <!-- Website -->\n  <div class=\"form-group\">\n    <label class=\"center-block control-label\">Website:</label>\n    <input class=\"form-control\" formControlName=\"website\">\n  </div>\n\n  <div class=\"row\">\n\n    <div class=\"col-md-6\">\n\n      <!-- num_of_doctors -->\n      <div class=\"form-group\"\n           [ngClass]=\"{'has-error': hasError('num_of_doctors')}\">\n        <label class=\"center-block control-label required\" >Number of Doctors:</label>\n        <input class=\"form-control required\"\n               type=\"number\"\n               formControlName=\"num_of_doctors\">\n        <div *ngIf=\"hasError('num_of_doctors')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('num_of_doctors', centerAppForm).errors.required\">\n        Number of Doctors is required.\n      </span>\n          <span class=\"help-block\"\n                *ngIf=\"getElementFromFG('num_of_doctors', centerAppForm).errors.pattern\">\n        Number of Doctors must be any number greater than or equal to 1.\n      </span>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"col-md-6\">\n\n      <!-- num_of_staff -->\n      <div class=\"form-group\"\n           [ngClass]=\"{'has-error': hasError('num_of_staff')}\">\n        <label class=\"center-block control-label required\" >Number of Staff:</label>\n        <input class=\"form-control required\"\n               type=\"number\"\n               formControlName=\"num_of_staff\">\n        <div *ngIf=\"hasError('num_of_staff')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('num_of_staff', centerAppForm).errors.required\">\n        Number of Staff is required.\n      </span>\n          <span class=\"help-block\"\n                *ngIf=\"getElementFromFG('num_of_staff', centerAppForm).errors.pattern\">\n        Number of Staff must be any number greater than or equal to 1.\n      </span>\n        </div>\n      </div>\n\n    </div>\n\n  </div>\n\n\n\n  <br/>\n\n  <div class=\"well well-lg\">\n    <h4>Education</h4>\n\n    <!-- college -->\n    <div class=\"form-group\"\n         [ngClass]=\"{'has-error': hasError('college')}\">\n      <label class=\"center-block control-label required\" >College:</label>\n      <input class=\"form-control required\"\n             formControlName=\"college\">\n      <div *ngIf=\"hasError('college')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('college', centerAppForm).errors.required\">\n        College is required.\n      </span>\n      </div>\n    </div>\n\n    <!-- degree -->\n    <div class=\"form-group\"\n         [ngClass]=\"{'has-error': hasError('degree')}\">\n      <label class=\"center-block control-label required\" >Degree:</label>\n      <input class=\"form-control required\"\n             formControlName=\"degree\">\n      <div *ngIf=\"hasError('degree')\">\n      <span class=\"help-block\"\n            *ngIf=\"getElementFromFG('degree', centerAppForm).errors.required\">\n        Degree is required.\n      </span>\n      </div>\n    </div>\n\n  </div>\n\n  <!-- submit -->\n  <div style=\"margin-bottom: 1em\">\n    <button type=\"submit\"\n            class=\"btn btn-lg btn-success\"\n            [disabled]=\"centerAppForm.pristine || centerAppForm.invalid\" >Save</button> &nbsp;\n    <button type=\"reset\"\n            class=\"btn btn-lg btn-danger\"\n            (click)=\"revert()\"\n            [disabled]=\"centerAppForm.pristine && centerAppForm.get('address_attributes').pristine\" >Revert</button>\n  </div>\n</form>\n\n<!--\n<p>Form value: {{ centerAppForm.value | json }}</p>\n<p>Form valid: {{ centerAppForm.valid | json }}</p>\n-->\n"
 
 /***/ }),
 
@@ -1242,14 +1211,21 @@ var CenterApplicationComponent = (function () {
         this.formBuilder = formBuilder;
         this.centerService = centerService;
         this.store = store;
+        this.stateQuery = null;
+        this.stateQueryAllowed = false;
+        this.centers = [];
     }
     CenterApplicationComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.country$ = this.store.select(__WEBPACK_IMPORTED_MODULE_6__reducers_center_selectors__["b" /* getCountry */]);
-        this.countrySub = this.country$.subscribe(function (country) {
-            if (country) {
-                _this.states = country.toJSON().states;
-            }
+        this.store.select(__WEBPACK_IMPORTED_MODULE_6__reducers_center_selectors__["a" /* getActivatedCenters */])
+            .first(function (value) { return value.length > 0; })
+            .subscribe(function (centers) {
+            _this.centers = centers;
+        });
+        this.store.select(__WEBPACK_IMPORTED_MODULE_6__reducers_center_selectors__["b" /* getCountry */])
+            .first(function (value) { return value.toJSON().states; })
+            .subscribe(function (country) {
+            _this.states = country.toJSON().states;
         });
         // create form
         this.centerAppForm = this.formBuilder.group({
@@ -1262,7 +1238,7 @@ var CenterApplicationComponent = (function () {
                 address2: '',
                 city: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required],
                 zipcode: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].pattern(/^\d{5}$/i)]],
-                phone: '',
+                phone: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required],
                 state_id: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required]
                 // country_id: ['', Validators.required ] // Always USA
             }),
@@ -1344,6 +1320,15 @@ var CenterApplicationComponent = (function () {
             return obj.get(key);
         }, target);
     };
+    CenterApplicationComponent.prototype.onStateQueryKeyUp = function (event) {
+        var _this = this;
+        if (this.stateQuery && this.centers.length > 0) {
+            var matchingCenters = this.centers.filter(function (center) { return center.address.zipcode === _this.stateQuery.toString(); });
+            this.stateQueryAllowed = matchingCenters.length === 0 ? true : false;
+        }
+    };
+    CenterApplicationComponent.prototype.ngOnDestroy = function () {
+    };
     return CenterApplicationComponent;
 }());
 CenterApplicationComponent = __decorate([
@@ -1363,7 +1348,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/blog/center/components/center-map/center-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1>\n    Dentca4 Center Locations:\n  </h1>\n</div>\n\n<p>\n  <a [routerLink]=\"['/blog/center/application']\">Apply for a Dentca4 Center today!</a>\n</p>\n\n<div>\n  <ngui-map\n    zoom=\"4\"\n    center=\"Kansas\"\n    (mapReady$)=\"onMapReady($event)\"\n    (mapClick)=\"onMapClick($event)\"\n    (idle)=\"onIdle($event)\">\n    <marker *ngFor=\"let pos of positions\"\n            [position]=\"pos\"\n            (initialized$)=\"onMarkerInit($event)\"></marker>\n  </ngui-map>\n</div>\n\n<div>\n  <table class=\"table\">\n    <thead>\n      <tr>\n        <th scope=\"col\">#</th>\n        <th scope=\"col\">Office Name</th>\n        <th scope=\"col\">Head Doctor</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let center of centers\">\n        <th scope=\"row\">{{ center.id }}</th>\n        <td>{{ center.office_name }}</td>\n        <td>{{ center.head_doctor }}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n"
+module.exports = "<div>\n  <h1>\n    Dentca-4 Center Locations:\n  </h1>\n</div>\n\n<p>\n  <a [routerLink]=\"['/blog/center/application']\">Apply for a Dentca-4 Center today!</a>\n</p>\n\n<div>\n  <ngui-map\n    zoom=\"4\"\n    center=\"Kansas\"\n    (mapReady$)=\"onMapReady($event)\"\n    (mapClick)=\"onMapClick($event)\"\n    (idle)=\"onIdle($event)\">\n    <marker *ngFor=\"let center of centersWithAddressFiltered\"\n            [position]=\"getFullAddress(center.address)\"\n            (initialized$)=\"onMarkerInit($event)\"\n            (click)=\"onMarkerClick($event, center)\"></marker>\n    <info-window id=\"infoWindow\">\n      <div *ngIf=\"marker.center\">\n        <h4>{{ marker.center.office_name }}</h4>\n        <p>{{ marker.center.head_doctor }}</p>\n        <p>{{ getFullAddress(marker.center.address) }}</p>\n        <p>Tel: {{ marker.center.address.phone }}</p>\n        <a *ngIf=\"marker.center.website\" href=\"{{ marker.center.website }}\">{{ marker.center.website }}</a>\n      </div>\n    </info-window>\n  </ngui-map>\n</div>\n\n<br/>\n\n<div class=\"form-group col-md-4\">\n  <label for=\"selectedState\">Filter by State: </label>\n  <select #stateFilter\n          class=\"form-control\"\n          [(ngModel)]=\"selectedState\"\n          (change)=\"onChange($event)\"\n          id=\"selectedState\">\n    <option value=\"\" selected>None</option>\n    <option disabled>──────────</option>\n    <option *ngFor=\"let state of states\"\n            [value]=\"state.id\">\n      {{ state.name }}\n    </option>\n  </select>\n</div>\n\n<div>\n  <table class=\"table\">\n    <thead>\n      <tr>\n        <th scope=\"col\">Office Name</th>\n        <th scope=\"col\">Head Doctor</th>\n        <th scope=\"col\">Address</th>\n        <th scope=\"col\">Phone</th>\n        <th scope=\"col\">Email</th>\n        <th scope=\"col\">Website</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let center of centersWithAddressFiltered\">\n        <th scope=\"row\">{{ center.office_name }}</th>\n        <td>{{ center.head_doctor }}</td>\n        <td>{{ getFullAddress(center.address) }}</td>\n        <td>{{ center.address.phone }}</td>\n        <td>{{ center.email }}</td>\n        <td><a href=\"{{ center.website }}\">{{ center.website }}</a></td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -1393,8 +1378,11 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reducers_center_selectors__ = __webpack_require__("../../../../../src/app/blog/center/reducers/center.selectors.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_models_address__ = __webpack_require__("../../../../../src/app/core/models/address.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reducers_center_selectors__ = __webpack_require__("../../../../../src/app/blog/center/reducers/center.selectors.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1408,35 +1396,54 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var CenterMapComponent = (function () {
     function CenterMapComponent(store) {
         this.store = store;
-        this.centers = [];
-        this.country = null;
+        this.centersWithAddress = [];
+        this.centersWithAddressFiltered = [];
+        this.states = [];
+        this.selectedState = '';
+        this.selectedState$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["BehaviorSubject"]('');
+        this.getFullAddress = __WEBPACK_IMPORTED_MODULE_3__core_models_address__["b" /* getFullAddress */];
+        this.marker = {
+            center: null
+        };
     }
     CenterMapComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.centers$ = this.store.select(__WEBPACK_IMPORTED_MODULE_3__reducers_center_selectors__["a" /* getCenters */]);
-        this.country$ = this.store.select(__WEBPACK_IMPORTED_MODULE_3__reducers_center_selectors__["b" /* getCountry */]);
-        this.positionsSub = __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].combineLatest([this.centers$, this.country$]).subscribe(function (value) {
-            _this.centers = value[0];
-            if (value[1]) {
-                _this.country = value[1].toJSON();
+        var centers$ = this.store.select(__WEBPACK_IMPORTED_MODULE_5__reducers_center_selectors__["a" /* getActivatedCenters */]);
+        var country$ = this.store.select(__WEBPACK_IMPORTED_MODULE_5__reducers_center_selectors__["b" /* getCountry */]);
+        this.centersWithAddressSub = __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].combineLatest([centers$, country$, this.selectedState$])
+            .filter(function (value) { return value[0].length > 0; })
+            .filter(function (value) { return value[1] && value[1].toJSON().states && value[1].toJSON().states.length > 0; })
+            .subscribe(function (value) {
+            // get values from observables
+            var centers = value[0];
+            var country = value[1].toJSON();
+            var search = value[2];
+            // init states
+            if (_this.states.length === 0) {
+                _this.states = country.states;
             }
-            if (_this.centers.length > 0 &&
-                _this.country &&
-                _this.country.states &&
-                _this.country.states.length > 0) {
-                _this.positions = _this.centers.map(function (center) { return center.address.address1 + ' ' +
-                    center.address.address2 + ' ' +
-                    center.address.city + ' ' +
-                    _this.country.states.find((function (state) { return state.id === +center.address.state_id; })).name; });
+            // init centersWithAddress
+            _this.centersWithAddress = centers.map(function (center) {
+                var newCenter = center;
+                newCenter.address.state_text = country.states.find((function (state) { return state.id === +center.address.state_id; })).name;
+                return newCenter;
+            });
+            // refresh: centersWithAddressFiltered
+            if (search === '') {
+                _this.centersWithAddressFiltered = _this.centersWithAddress;
+            }
+            else {
+                _this.centersWithAddressFiltered = _this.centersWithAddress.filter(function (center) { return search === center.address.state_id.toString(); });
             }
         });
     };
     // Map: ready
     CenterMapComponent.prototype.onMapReady = function (event) {
-        // console.log(event);
     };
     // Map: click
     CenterMapComponent.prototype.onMapClick = function (event) {
@@ -1450,9 +1457,16 @@ var CenterMapComponent = (function () {
     CenterMapComponent.prototype.onMarkerInit = function (event) {
         // console.log(event);
     };
+    CenterMapComponent.prototype.onChange = function (event) {
+        this.selectedState$.next(this.selectedState);
+    };
+    CenterMapComponent.prototype.onMarkerClick = function (event, data) {
+        this.marker.center = data;
+        event.target.nguiMapComponent.openInfoWindow('infoWindow', event.target);
+    };
     CenterMapComponent.prototype.ngOnDestroy = function () {
-        if (this.positionsSub) {
-            this.positionsSub.unsubscribe();
+        if (this.centersWithAddressSub) {
+            this.centersWithAddressSub.unsubscribe();
         }
     };
     return CenterMapComponent;
@@ -1463,7 +1477,7 @@ CenterMapComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/blog/center/components/center-map/center-map.component.html"),
         styles: [__webpack_require__("../../../../../src/app/blog/center/components/center-map/center-map.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__ngrx_store__["f" /* Store */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngrx_store__["f" /* Store */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__ngrx_store__["f" /* Store */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ngrx_store__["f" /* Store */]) === "function" && _a || Object])
 ], CenterMapComponent);
 
 var _a;
@@ -1502,10 +1516,10 @@ var CenterEffects = (function () {
         this.actions$ = actions$;
         this.centerService = centerService;
         this.centerActions = centerActions;
-        this.GetAllCenters$ = this.actions$
-            .ofType(__WEBPACK_IMPORTED_MODULE_0__actions_center_actions__["a" /* CenterActions */].GET_ALL_CENTERS)
-            .switchMap(function (action) { return _this.centerService.getCenters(); })
-            .map(function (data) { return _this.centerActions.getAllCentersSuccess(data); });
+        this.GetActivatedCenters$ = this.actions$
+            .ofType(__WEBPACK_IMPORTED_MODULE_0__actions_center_actions__["a" /* CenterActions */].GET_ACTIVATED_CENTERS)
+            .switchMap(function (action) { return _this.centerService.getActivatedCenters(); })
+            .map(function (data) { return _this.centerActions.getActivatedCentersSuccess(data); });
         this.GetCountry$ = this.actions$
             .ofType(__WEBPACK_IMPORTED_MODULE_0__actions_center_actions__["a" /* CenterActions */].GET_COUNTRY)
             .switchMap(function (action) { return _this.centerService.getCountry(); })
@@ -1516,7 +1530,7 @@ var CenterEffects = (function () {
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__ngrx_effects__["b" /* Effect */])(),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _a || Object)
-], CenterEffects.prototype, "GetAllCenters$", void 0);
+], CenterEffects.prototype, "GetActivatedCenters$", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__ngrx_effects__["b" /* Effect */])(),
     __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _b || Object)
@@ -1550,7 +1564,7 @@ var centerReducer = function (state, _a) {
             return state.merge({
                 country: payload
             });
-        case __WEBPACK_IMPORTED_MODULE_0__actions_center_actions__["a" /* CenterActions */].GET_ALL_CENTERS_SUCCESS:
+        case __WEBPACK_IMPORTED_MODULE_0__actions_center_actions__["a" /* CenterActions */].GET_ACTIVATED_CENTERS_SUCCESS:
             return state.merge({
                 centers: payload
             });
@@ -1567,9 +1581,9 @@ var centerReducer = function (state, _a) {
 
 "use strict";
 /* unused harmony export getCenterState */
-/* unused harmony export fetchCenters */
+/* unused harmony export fetchActivatedCenters */
 /* unused harmony export fetchCountry */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getCenters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getActivatedCenters; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCountry; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reselect__ = __webpack_require__("../../../../reselect/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reselect__);
@@ -1579,14 +1593,14 @@ function getCenterState(state) {
     return state.center;
 }
 // ******************** Individual selectors ***************************
-function fetchCenters(state) {
+function fetchActivatedCenters(state) {
     return state.centers.toJS();
 }
 function fetchCountry(state) {
     return state.country;
 }
 // *************************** PUBLIC API's ****************************
-var getCenters = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCenterState, fetchCenters);
+var getActivatedCenters = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCenterState, fetchActivatedCenters);
 var getCountry = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCenterState, fetchCountry);
 //# sourceMappingURL=center.selectors.js.map
 
@@ -1609,7 +1623,7 @@ var getCountry = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"]
 
 var CenterStateRecord = Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["Record"])({
     centers: Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["List"])([]),
-    country: null,
+    country: Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["Map"])({}),
 });
 //# sourceMappingURL=center.state.js.map
 
@@ -2111,19 +2125,21 @@ var CheckoutStateRecord = Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["Record
 /* unused harmony export fetchSelectedRate */
 /* unused harmony export fetchIsOwnShipFlag */
 /* unused harmony export fetchUpdateStatus */
+/* unused harmony export fetchSelectedRateName */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getLineItems; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getOrderNumber; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return getTotalCartItems; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return getTotalCartValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return getTotalItemValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return getShipAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return getTotalCartItems; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return getTotalCartValue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return getTotalItemValue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return getShipAddress; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getBillAddress; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getOrderState; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getAdjustmentOrder; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return getShipment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return getShipment; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getIsOwnShipFlag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getSelectedRateIndex; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return getUpdateStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return getUpdateStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return getSelectedRateName; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reselect__ = __webpack_require__("../../../../reselect/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reselect__);
 
@@ -2173,6 +2189,13 @@ function fetchIsOwnShipFlag(state) {
 function fetchUpdateStatus(state) {
     return state.isUpdated;
 }
+function fetchSelectedRateName(state) {
+    var shipmentEntities = state.shipmentEntities.toJS();
+    if (shipmentEntities.length > 0)
+        return shipmentEntities[0].selected_shipping_rate.name;
+    else
+        return "";
+}
 // *************************** PUBLIC API's ****************************
 var getLineItems = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchLineItems);
 var getOrderNumber = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchOrderNumber);
@@ -2187,6 +2210,7 @@ var getShipment = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"
 var getIsOwnShipFlag = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchIsOwnShipFlag);
 var getSelectedRateIndex = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchSelectedRate);
 var getUpdateStatus = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchUpdateStatus);
+var getSelectedRateName = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getCheckoutState, fetchSelectedRateName);
 //# sourceMappingURL=selectors.js.map
 
 /***/ }),
@@ -2245,6 +2269,52 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/core/guards/center.guard.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CanActivateViaCenterGuard; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_center_service__ = __webpack_require__("../../../../../src/app/core/services/center.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CanActivateViaCenterGuard = (function () {
+    function CanActivateViaCenterGuard(router, centerService) {
+        this.router = router;
+        this.centerService = centerService;
+    }
+    CanActivateViaCenterGuard.prototype.canActivate = function (route, state) {
+        if (this.centerService.completedCenterApp !== null) {
+            return true;
+        }
+        else {
+            this.router.navigate(['/blog/center']);
+            return false;
+        }
+    };
+    return CanActivateViaCenterGuard;
+}());
+CanActivateViaCenterGuard = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_center_service__["a" /* CenterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_center_service__["a" /* CenterService */]) === "function" && _b || Object])
+], CanActivateViaCenterGuard);
+
+var _a, _b;
+//# sourceMappingURL=center.guard.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/core/index.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2270,12 +2340,13 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__user_effects_user_effects__ = __webpack_require__("../../../../../src/app/user/effects/user.effects.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__user_services_user_service__ = __webpack_require__("../../../../../src/app/user/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__ = __webpack_require__("../../../../../src/app/core/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_menu_service__ = __webpack_require__("../../../../../src/app/core/services/menu.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__layout_actions_menu_actions__ = __webpack_require__("../../../../../src/app/layout/actions/menu.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__layout_effects_menu_effects__ = __webpack_require__("../../../../../src/app/layout/effects/menu.effects.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_center_service__ = __webpack_require__("../../../../../src/app/core/services/center.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__blog_center_actions_center_actions__ = __webpack_require__("../../../../../src/app/blog/center/actions/center.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__blog_center_effects_center_effects__ = __webpack_require__("../../../../../src/app/blog/center/effects/center.effects.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__guards_center_guard__ = __webpack_require__("../../../../../src/app/core/guards/center.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_menu_service__ = __webpack_require__("../../../../../src/app/core/services/menu.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__layout_actions_menu_actions__ = __webpack_require__("../../../../../src/app/layout/actions/menu.actions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__layout_effects_menu_effects__ = __webpack_require__("../../../../../src/app/layout/effects/menu.effects.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_center_service__ = __webpack_require__("../../../../../src/app/core/services/center.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__blog_center_actions_center_actions__ = __webpack_require__("../../../../../src/app/blog/center/actions/center.actions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__blog_center_effects_center_effects__ = __webpack_require__("../../../../../src/app/blog/center/effects/center.effects.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2310,6 +2381,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 function httpInterceptor(backend, defaultOptions) {
     return new __WEBPACK_IMPORTED_MODULE_6__services_http__["a" /* HttpService */](backend, defaultOptions);
 }
@@ -2329,8 +2401,8 @@ CoreModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_12__ngrx_effects__["c" /* EffectsModule */].run(__WEBPACK_IMPORTED_MODULE_14__product_effects_product_effects__["a" /* ProductEffects */]),
             __WEBPACK_IMPORTED_MODULE_12__ngrx_effects__["c" /* EffectsModule */].run(__WEBPACK_IMPORTED_MODULE_0__checkout_effects_checkout_effects__["a" /* CheckoutEffects */]),
             __WEBPACK_IMPORTED_MODULE_12__ngrx_effects__["c" /* EffectsModule */].run(__WEBPACK_IMPORTED_MODULE_16__user_effects_user_effects__["a" /* UserEffects */]),
-            __WEBPACK_IMPORTED_MODULE_12__ngrx_effects__["c" /* EffectsModule */].run(__WEBPACK_IMPORTED_MODULE_21__layout_effects_menu_effects__["a" /* MenuEffects */]),
-            __WEBPACK_IMPORTED_MODULE_12__ngrx_effects__["c" /* EffectsModule */].run(__WEBPACK_IMPORTED_MODULE_24__blog_center_effects_center_effects__["a" /* CenterEffects */])
+            __WEBPACK_IMPORTED_MODULE_12__ngrx_effects__["c" /* EffectsModule */].run(__WEBPACK_IMPORTED_MODULE_22__layout_effects_menu_effects__["a" /* MenuEffects */]),
+            __WEBPACK_IMPORTED_MODULE_12__ngrx_effects__["c" /* EffectsModule */].run(__WEBPACK_IMPORTED_MODULE_25__blog_center_effects_center_effects__["a" /* CenterEffects */])
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_10__services_variant_parser_service__["a" /* VariantParserService */],
@@ -2349,11 +2421,12 @@ CoreModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__user_actions_user_actions__["a" /* UserActions */],
             __WEBPACK_IMPORTED_MODULE_17__user_services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_11__services_address_service__["a" /* AddressService */],
-            __WEBPACK_IMPORTED_MODULE_19__services_menu_service__["a" /* MenuService */],
-            __WEBPACK_IMPORTED_MODULE_20__layout_actions_menu_actions__["a" /* MenuActions */],
-            __WEBPACK_IMPORTED_MODULE_22__services_center_service__["a" /* CenterService */],
-            __WEBPACK_IMPORTED_MODULE_23__blog_center_actions_center_actions__["a" /* CenterActions */],
-            __WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* CanActivateViaAuthGuard */]
+            __WEBPACK_IMPORTED_MODULE_20__services_menu_service__["a" /* MenuService */],
+            __WEBPACK_IMPORTED_MODULE_21__layout_actions_menu_actions__["a" /* MenuActions */],
+            __WEBPACK_IMPORTED_MODULE_23__services_center_service__["a" /* CenterService */],
+            __WEBPACK_IMPORTED_MODULE_24__blog_center_actions_center_actions__["a" /* CenterActions */],
+            __WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* CanActivateViaAuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_19__guards_center_guard__["a" /* CanActivateViaCenterGuard */]
         ]
     })
 ], CoreModule);
@@ -2367,6 +2440,7 @@ CoreModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Address; });
+/* harmony export (immutable) */ __webpack_exports__["b"] = getFullAddress;
 /* Address model
  * Detailed info http://guides.spreecommerce.org/developer/addresses.html
  * Public API's http://guides.spreecommerce.org/api/addresses.html
@@ -2377,6 +2451,13 @@ var Address = (function () {
     return Address;
 }());
 
+function getFullAddress(address) {
+    return address.address1 + ' ' +
+        address.address2 + ' ' +
+        address.city + ' ' +
+        (address.state_text ? address.state_text : '') + ' ' +
+        address.zipcode;
+}
 //# sourceMappingURL=address.js.map
 
 /***/ }),
@@ -2709,8 +2790,8 @@ var CenterService = (function () {
             return error;
         });
     };
-    CenterService.prototype.getCenters = function () {
-        return this.http.get('/api/center_applications')
+    CenterService.prototype.getActivatedCenters = function () {
+        return this.http.get('/api/center_applications/activated')
             .map(function (res) { return res.json(); });
     };
     // Hardcode for now; system only uses United States-based applications
@@ -3986,7 +4067,7 @@ var HeaderComponent = (function () {
     }
     HeaderComponent.prototype.ngOnInit = function () {
         this.isAuthenticated$ = this.store.select(__WEBPACK_IMPORTED_MODULE_3__auth_reducers_selectors__["a" /* getAuthStatus */]);
-        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_5__checkout_reducers_selectors__["j" /* getTotalCartItems */]);
+        this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_5__checkout_reducers_selectors__["k" /* getTotalCartItems */]);
         this.dropDowns$ = this.store.select(__WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["a" /* getAllDropDowns */]);
     };
     return HeaderComponent;

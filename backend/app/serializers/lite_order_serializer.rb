@@ -5,5 +5,6 @@ class LiteOrderSerializer < BaseSerializer
   )
 
   has_many :line_items, serializer: LiteLineItemSerializer
+  has_many :shipments, serializer: LiteShipmentSerializer
 
 end

@@ -18,7 +18,7 @@ Deface::Override.new(:virtual_path => "spree/admin/shipping_methods/index",
         <td class='text-center'><%= Spree::Money.new(shipping_method.calculator.preferred_amount_2x, currency: shipping_method.calculator.preferred_currency) %></td>
         <td class='text-center'><%= shipping_method.shipping_categories.collect(&:name).join(', ') if shipping_method.shipping_categories %></td>
         <td data-hook='admin_shipping_methods_index_row_actions' class='actions actions-2 text-right'>
-          <%= link_to_edit(shipping_method, no_text: true) if can? :edit, shipping_method %>
-          <%= link_to_delete(shipping_method, no_text: true) if can? :delete, shipping_method %>
+            <%= link_to_edit(shipping_method, no_text: true) if can? :edit, shipping_method %>
+            <%= link_to_delete(shipping_method, no_text: true) if can? :delete, shipping_method %>
         </td>
-      </tr>")
+    </tr>")

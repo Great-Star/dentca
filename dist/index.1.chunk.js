@@ -574,7 +574,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n        <h1>{{taxon.title}}</h1>\r\n        <h3>{{taxon.description}}</h3>\r\n    </div>\r\n    <div class=\"col-xs-12\" *ngIf=\"currentUser$ != undefined\">\r\n        <app-content [user]=\"currentUser$\" [products]=\"products$ | async\" [taxonId]=\"taxonId\" >\r\n        </app-content>\r\n    </div>\r\n</div> \r\n"
+module.exports = "<div class=\"row\" *ngFor=\"let taxon of taxons\">\r\n    <div class=\"col-xs-12\">\r\n        <h1>{{taxon.title}}</h1>\r\n        <h3>{{taxon.description}}</h3>\r\n    </div>\r\n    <div class=\"col-xs-12\" *ngIf=\"currentUser$ != undefined\">\r\n        <app-content [user]=\"currentUser$\" [products]=\"products$ | async\" [taxonId]=\"taxon.id\">\r\n        </app-content>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -631,12 +631,11 @@ var HomeComponent = (function () {
         this.router = router;
         this.userService = userService;
         router.events.subscribe(function (event) {
-            _this.getTaxon();
+            _this.taxons = _this.getTaxons(parseInt(_this.route.snapshot.params['id']));
         });
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.getTaxon();
         this.products$ = this.store.select(__WEBPACK_IMPORTED_MODULE_1__product_reducers_selectors__["a" /* getProducts */]);
         if (localStorage.getItem('user')) {
             this.userService.getUser().subscribe(function (res) {
@@ -647,12 +646,16 @@ var HomeComponent = (function () {
             this.currentUser$ = false;
         }
     };
-    HomeComponent.prototype.getTaxon = function () {
-        this.taxonId = parseInt(this.route.snapshot.params['id']);
+    HomeComponent.prototype.getTaxons = function (id) {
         var taxons = JSON.parse(localStorage.getItem('taxons'));
-        for (var i = 0; i < taxons.length; i++) {
-            if (taxons[i]['id'] == this.taxonId)
-                this.taxon = taxons[i];
+        if (!isNaN(id)) {
+            return taxons.filter(function (taxon) {
+                if (taxon.id == id)
+                    return taxon;
+            });
+        }
+        else {
+            return taxons;
         }
     };
     return HomeComponent;

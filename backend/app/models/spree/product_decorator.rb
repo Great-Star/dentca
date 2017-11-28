@@ -9,8 +9,12 @@ module Spree
         before_save :validate_shipping_type
         after_save :auto_create_product_variant_types
         after_save :auto_create_variants
-
         accepts_nested_attributes_for :product_prices
+
+        _validators[:shipping_category]
+            .find { |v| v.is_a? ActiveRecord::Validations::PresenceValidator }
+            .attributes
+            .delete(:shipping_category)
 
         def empty_option_values?
             options.empty? || options.any? do |opt|
