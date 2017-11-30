@@ -1,6 +1,10 @@
 module Spree
     Order.class_eval do
         before_save :save_original_line
+
+        before_validation(on: :create) do
+            self.number = Spree::Core::NumberGenerator.new({prefix: '', length: 6}).send(:generate_permalink, Spree::Order)
+        end
         
         def save_original_line
             if line_items[0] != nil
@@ -23,6 +27,13 @@ module Spree
             end
         end
 
+        def ensure_line_item_numbers
+            transaction do
+                line_items.each_with_index{ |line_item, index| line_item.ensure_number(self.number, index)}
+                save!
+            end
+        end
+
         remove_checkout_step :address
         insert_checkout_step :address, before: :payment
         
@@ -30,3 +41,4 @@ module Spree
 end
 
 Spree::Order.state_machine.before_transition from: :delivery, do: :update_shipping_rates_and_amounts_if_own_shipping
+Spree::Order.state_machine.before_transition from: :delivery, do: :ensure_line_item_numbers

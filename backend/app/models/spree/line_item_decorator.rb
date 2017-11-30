@@ -26,5 +26,10 @@ module Spree
     def trans_own_shipping
        self.is_own_ship = true
     end
+
+    def ensure_number(number, index)
+      self.number = "#{number}-#{index.to_s}"
+    end
+
   end
 end

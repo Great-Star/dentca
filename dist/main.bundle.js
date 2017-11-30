@@ -2026,13 +2026,13 @@ var checkoutReducer = function (state, _a) {
             });
         case __WEBPACK_IMPORTED_MODULE_0__actions_checkout_actions__["a" /* CheckoutActions */].CHANGE_ORDER_STATE_SUCCESS:
             _orderState = payload.state;
-            _totalCartValue = parseFloat(payload.total);
-            _totalItemValue = parseFloat(payload.item_total);
+            // _totalCartValue = parseFloat(payload.total);
+            // _totalItemValue = parseFloat(payload.item_total);
             _shipmentEntities = payload.shipments;
             return state.merge({
                 orderState: _orderState,
-                totalCartValue: _totalCartValue,
-                totalItemValue: _totalItemValue,
+                // totalCartValue: _totalCartValue,
+                // totalItemValue: _totalItemValue,
                 shipmentEntities: _shipmentEntities
             });
         case __WEBPACK_IMPORTED_MODULE_0__actions_checkout_actions__["a" /* CheckoutActions */].UPDATE_ORDER_AND_STATE_SUCCESS:

@@ -371,8 +371,6 @@ var FilterPipe = (function () {
                 if (priceSet == set.id)
                     productPresent2 = true;
             });
-            if (priceSet == 1)
-                productPresent2 = true;
             return productPresent && productPresent2;
         });
     };

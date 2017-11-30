@@ -4,17 +4,21 @@ Deface::Override.new(:virtual_path => "spree/admin/products/edit",
     :text => "<% content_for :head do %>
         <%= javascript_tag do %>
             $(document).ready(function(){
-            console.log('asdasdasd');
-            var isConsolidatedShip = function() {
-                if ($('#consolidate_check').is(':checked'))
-                    $('#product_shipping_type_field').hide();
-                else
-                    $('#product_shipping_type_field').show();
-            }
-            $('#consolidate_check').change( function() {
+                var isConsolidatedShip = function() {
+                    if ($('#consolidate_check').is(':checked')){
+                        console.log('selected', $('#product_shipping_type_field .select2').val());
+                        $('#product_shipping_type_field .select2').val(2).trigger('change');
+                    }
+                }
+                $('#product_shipping_type_field .select2').on('select2-selecting', function(e) { 
+                    if (e.val != 2) 
+                        $('#consolidate_check').prop('checked', false)
+                });
+
+                $('#consolidate_check').change( function() {
+                    isConsolidatedShip();
+                })
                 isConsolidatedShip();
-            })
-            isConsolidatedShip();
             });
         <% end %>
     <% end %>")

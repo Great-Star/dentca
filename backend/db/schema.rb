@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171123093719) do
+ActiveRecord::Schema.define(version: 20171130091205) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -305,6 +305,7 @@ ActiveRecord::Schema.define(version: 20171123093719) do
     t.string   "adjustment_slug"
     t.string   "options_context"
     t.boolean  "is_own_ship",                                           default: false
+    t.string   "number"
   end
 
   add_index "spree_line_items", ["order_id"], name: "index_spree_line_items_on_order_id"
