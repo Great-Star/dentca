@@ -1524,6 +1524,7 @@ function isElement(node) {
 }
 var FileLikeObject = (function () {
     function FileLikeObject(fileOrInput) {
+        this.rawFile = fileOrInput;
         var isInput = isElement(fileOrInput);
         var fakePathOrObject = isInput ? fileOrInput.value : fileOrInput;
         var postfix = typeof fakePathOrObject === 'string' ? 'FakePath' : 'Object';
@@ -1537,7 +1538,6 @@ var FileLikeObject = (function () {
         this.name = path.slice(path.lastIndexOf('/') + path.lastIndexOf('\\') + 2);
     };
     FileLikeObject.prototype._createFromObject = function (object) {
-        // this.lastModifiedDate = copy(object.lastModifiedDate);
         this.size = object.size;
         this.type = object.type;
         this.name = object.name;
@@ -1565,29 +1565,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var file_uploader_class_1 = __webpack_require__("../../../../ng2-file-upload/file-upload/file-uploader.class.js");
-// todo: filters
 var FileSelectDirective = (function () {
     function FileSelectDirective(element) {
+        this.onFileSelected = new core_1.EventEmitter();
         this.element = element;
     }
     FileSelectDirective.prototype.getOptions = function () {
         return this.uploader.options;
     };
     FileSelectDirective.prototype.getFilters = function () {
-        return void 0;
+        return {};
     };
     FileSelectDirective.prototype.isEmptyAfterSelection = function () {
         return !!this.element.nativeElement.attributes.multiple;
     };
     FileSelectDirective.prototype.onChange = function () {
-        // let files = this.uploader.isHTML5 ? this.element.nativeElement[0].files : this.element.nativeElement[0];
         var files = this.element.nativeElement.files;
         var options = this.getOptions();
         var filters = this.getFilters();
-        // if(!this.uploader.isHTML5) this.destroy();
         this.uploader.addToQueue(files, options, filters);
+        this.onFileSelected.emit(files);
         if (this.isEmptyAfterSelection()) {
-            // todo
             this.element.nativeElement.value = '';
         }
     };
@@ -1597,6 +1595,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", file_uploader_class_1.FileUploader)
 ], FileSelectDirective.prototype, "uploader", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], FileSelectDirective.prototype, "onFileSelected", void 0);
 __decorate([
     core_1.HostListener('change'),
     __metadata("design:type", Function),
@@ -1680,6 +1682,7 @@ var FileType = (function () {
             'mod': 'audio',
             'm4a': 'audio',
             'compress': 'compress',
+            'zip': 'compress',
             'rar': 'compress',
             '7z': 'compress',
             'lz': 'compress',
@@ -1819,6 +1822,7 @@ exports.FileUploadModule = FileUploadModule;
 
 "use strict";
 
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var file_like_object_class_1 = __webpack_require__("../../../../ng2-file-upload/file-upload/file-like-object.class.js");
 var file_item_class_1 = __webpack_require__("../../../../ng2-file-upload/file-upload/file-item.class.js");
 var file_type_class_1 = __webpack_require__("../../../../ng2-file-upload/file-upload/file-type.class.js");
@@ -1836,15 +1840,18 @@ var FileUploader = (function () {
             isHTML5: true,
             filters: [],
             removeAfterUpload: false,
-            disableMultipart: false
+            disableMultipart: false,
+            formatDataFunction: function (item) { return item._file; },
+            formatDataFunctionIsAsync: false
         };
         this.setOptions(options);
+        this.response = new core_1.EventEmitter();
     }
     FileUploader.prototype.setOptions = function (options) {
         this.options = Object.assign(this.options, options);
-        this.authToken = options.authToken;
-        this.authTokenHeader = options.authTokenHeader || 'Authorization';
-        this.autoUpload = options.autoUpload;
+        this.authToken = this.options.authToken;
+        this.authTokenHeader = this.options.authTokenHeader || 'Authorization';
+        this.autoUpload = this.options.autoUpload;
         this.options.filters.unshift({ name: 'queueLimit', fn: this._queueLimitFilter });
         if (this.options.maxFileSize) {
             this.options.filters.unshift({ name: 'fileSize', fn: this._fileSizeFilter });
@@ -1858,7 +1865,6 @@ var FileUploader = (function () {
         for (var i = 0; i < this.queue.length; i++) {
             this.queue[i].url = this.options.url;
         }
-        // this.options.filters.unshift({name: 'folder', fn: this._folderFilter});
     };
     FileUploader.prototype.addToQueue = function (files, options, filters) {
         var _this = this;
@@ -1960,11 +1966,6 @@ var FileUploader = (function () {
     };
     FileUploader.prototype.destroy = function () {
         return void 0;
-        /*forEach(this._directives, (key) => {
-         forEach(this._directives[key], (object) => {
-         object.destroy();
-         });
-         });*/
     };
     FileUploader.prototype.onAfterAddingAll = function (fileItems) {
         return { fileItems: fileItems };
@@ -2039,30 +2040,37 @@ var FileUploader = (function () {
     };
     FileUploader.prototype._xhrTransport = function (item) {
         var _this = this;
+        var that = this;
         var xhr = item._xhr = new XMLHttpRequest();
         var sendable;
         this._onBeforeUploadItem(item);
-        // todo
-        /*item.formData.map(obj => {
-         obj.map((value, key) => {
-         form.append(key, value);
-         });
-         });*/
         if (typeof item._file.size !== 'number') {
             throw new TypeError('The file specified is no longer valid');
         }
         if (!this.options.disableMultipart) {
             sendable = new FormData();
             this._onBuildItemForm(item, sendable);
-            sendable.append(item.alias, item._file, item.file.name);
+            var appendFile = function () { return sendable.append(item.alias, item._file, item.file.name); };
+            if (!this.options.parametersBeforeFiles) {
+                appendFile();
+            }
+            // For AWS, Additional Parameters must come BEFORE Files
             if (this.options.additionalParameter !== undefined) {
                 Object.keys(this.options.additionalParameter).forEach(function (key) {
-                    sendable.append(key, _this.options.additionalParameter[key]);
+                    var paramVal = _this.options.additionalParameter[key];
+                    // Allow an additional parameter to include the filename
+                    if (typeof paramVal === 'string' && paramVal.indexOf('{{file_name}}') >= 0) {
+                        paramVal = paramVal.replace('{{file_name}}', item.file.name);
+                    }
+                    sendable.append(key, paramVal);
                 });
+            }
+            if (this.options.parametersBeforeFiles) {
+                appendFile();
             }
         }
         else {
-            sendable = item._file;
+            sendable = this.options.formatDataFunction(item);
         }
         xhr.upload.onprogress = function (event) {
             var progress = Math.round(event.lengthComputable ? event.loaded * 100 / event.total : 0);
@@ -2105,7 +2113,17 @@ var FileUploader = (function () {
         if (this.authToken) {
             xhr.setRequestHeader(this.authTokenHeader, this.authToken);
         }
-        xhr.send(sendable);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                that.response.emit(xhr.responseText);
+            }
+        };
+        if (this.options.formatDataFunctionIsAsync) {
+            sendable.then(function (result) { return xhr.send(JSON.stringify(result)); });
+        }
+        else {
+            xhr.send(sendable);
+        }
         this._render();
     };
     FileUploader.prototype._getTotalProgress = function (value) {
@@ -2135,11 +2153,7 @@ var FileUploader = (function () {
     };
     FileUploader.prototype._render = function () {
         return void 0;
-        // todo: ?
     };
-    // protected _folderFilter(item:FileItem):boolean {
-    //   return !!(item.size || item.type);
-    // }
     FileUploader.prototype._queueLimitFilter = function () {
         return this.options.queueLimit === undefined || this.queue.length < this.options.queueLimit;
     };
@@ -2154,16 +2168,9 @@ var FileUploader = (function () {
     FileUploader.prototype._isSuccessCode = function (status) {
         return (status >= 200 && status < 300) || status === 304;
     };
-    /* tslint:disable */
     FileUploader.prototype._transformResponse = function (response, headers) {
-        // todo: ?
-        /*var headersGetter = this._headersGetter(headers);
-         forEach($http.defaults.transformResponse, (transformFn) => {
-         response = transformFn(response, headersGetter);
-         });*/
         return response;
     };
-    /* tslint:enable */
     FileUploader.prototype._parseHeaders = function (headers) {
         var parsed = {};
         var key;
@@ -2182,9 +2189,6 @@ var FileUploader = (function () {
         });
         return parsed;
     };
-    /*protected _iframeTransport(item:FileItem) {
-     // todo: implement it later
-     }*/
     FileUploader.prototype._onWhenAddingFileFailed = function (item, filter, options) {
         this.onWhenAddingFileFailed(item, filter, options);
     };
@@ -2210,12 +2214,10 @@ var FileUploader = (function () {
         this.onProgressAll(total);
         this._render();
     };
-    /* tslint:disable */
     FileUploader.prototype._onSuccessItem = function (item, response, status, headers) {
         item._onSuccess(response, status, headers);
         this.onSuccessItem(item, response, status, headers);
     };
-    /* tslint:enable */
     FileUploader.prototype._onCancelItem = function (item, response, status, headers) {
         item._onCancel(response, status, headers);
         this.onCancelItem(item, response, status, headers);
@@ -2249,7 +2251,7 @@ exports.FileUploadModule = file_upload_module_1.FileUploadModule;
 /***/ "../../../../ngx-file-drop/lib/ngx-drop/file-drop.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"dropZone\"  [className]=\"customstyle\" [class.over]=\"dragoverflag\" \r\n    (drop)=\"dropFiles($event)\" \r\n    (dragover)=\"onDragOver($event)\" (dragleave)=\"onDragLeave($event)\">\r\n    <div class=\"content\">\r\n        {{headertext}}\r\n    </div>\r\n</div>"
+module.exports = "<div id=\"dropZone\"  [className]=\"customstyle\" [class.over]=\"dragoverflag\"\r\n    (drop)=\"dropFiles($event)\"\r\n    (dragover)=\"onDragOver($event)\" (dragleave)=\"onDragLeave($event)\">\r\n    <div class=\"content\">\r\n        <ng-content></ng-content>\r\n        {{headertext}}\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -2277,8 +2279,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_TimerObservable__ = __webpack_require__("../../../../rxjs/observable/TimerObservable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_TimerObservable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_TimerObservable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_TimerObservable__ = __webpack_require__("../../../../rxjs/_esm5/observable/TimerObservable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__upload_file_model__ = __webpack_require__("../../../../ngx-file-drop/lib/ngx-drop/upload-file.model.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__upload_event_model__ = __webpack_require__("../../../../ngx-file-drop/lib/ngx-drop/upload-event.model.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2298,7 +2299,7 @@ var FileComponent = (function () {
     function FileComponent(zone) {
         var _this = this;
         this.zone = zone;
-        this.headertext = "";
+        this.headertext = '';
         this.customstyle = null;
         this.onFileDrop = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.onFileOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
@@ -2315,11 +2316,9 @@ var FileComponent = (function () {
             component: this
         };
         if (!this.customstyle) {
-            this.customstyle = "drop-zone";
+            this.customstyle = 'drop-zone';
         }
     }
-    FileComponent.prototype.ngOnInit = function () {
-    };
     FileComponent.prototype.onDragOver = function (event) {
         if (!this.dragoverflag) {
             this.dragoverflag = true;
@@ -2337,11 +2336,26 @@ var FileComponent = (function () {
     FileComponent.prototype.dropFiles = function (event) {
         var _this = this;
         this.dragoverflag = false;
-        event.dataTransfer.dropEffect = "copy";
-        var length = event.dataTransfer.items.length;
+        event.dataTransfer.dropEffect = 'copy';
+        var length;
+        if (event.dataTransfer.items) {
+            length = event.dataTransfer.items.length;
+        }
+        else {
+            length = event.dataTransfer.files.length;
+        }
         for (var i = 0; i < length; i++) {
-            var entry = event.dataTransfer.items[i].webkitGetAsEntry();
-            entry.getme;
+            var entry;
+            if (event.dataTransfer.items) {
+                if (event.dataTransfer.items[i].webkitGetAsEntry) {
+                    entry = event.dataTransfer.items[i].webkitGetAsEntry();
+                }
+            }
+            else {
+                if (event.dataTransfer.files[i].webkitGetAsEntry) {
+                    entry = event.dataTransfer.files[i].webkitGetAsEntry();
+                }
+            }
             if (entry.isFile) {
                 var toUpload = new __WEBPACK_IMPORTED_MODULE_2__upload_file_model__["a" /* UploadFile */](entry.name, entry);
                 this.addToQueue(toUpload);
@@ -2351,9 +2365,9 @@ var FileComponent = (function () {
             }
         }
         this.preventAndStop(event);
-        var timer = __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_TimerObservable__["TimerObservable"].create(200, 200);
+        var timer = __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_TimerObservable__["a" /* TimerObservable */].create(200, 200);
         this.subscription = timer.subscribe(function (t) {
-            if (_this.stack.length == 0) {
+            if (_this.stack.length === 0) {
                 _this.onFileDrop.emit(new __WEBPACK_IMPORTED_MODULE_3__upload_event_model__["a" /* UploadEvent */](_this.files));
                 _this.files = [];
                 _this.subscription.unsubscribe();
@@ -2370,27 +2384,38 @@ var FileComponent = (function () {
         }
         else {
             this.pushToStack(path);
-            path = path + "/";
-            var dirReader = item.createReader();
-            var entries = dirReader.readEntries(function (entries) {
-                //add empty folders
-                if (entries.length == 0) {
-                    var toUpload_1 = new __WEBPACK_IMPORTED_MODULE_2__upload_file_model__["a" /* UploadFile */](path, item);
-                    window['angularComponentRef'].zone.run(function () {
-                        window['angularComponentRef'].addToQueue(toUpload_1);
-                    });
-                }
-                else {
-                    for (var i = 0; i < entries.length; i++) {
+            path = path + '/';
+            var dirReader_1 = item.createReader();
+            var entries_1 = [];
+            var readEntries_1 = function () {
+                dirReader_1.readEntries(function (res) {
+                    if (!res.length) {
+                        // add empty folders
+                        if (entries_1.length === 0) {
+                            var toUpload_1 = new __WEBPACK_IMPORTED_MODULE_2__upload_file_model__["a" /* UploadFile */](path, item);
+                            window['angularComponentRef'].zone.run(function () {
+                                window['angularComponentRef'].addToQueue(toUpload_1);
+                            });
+                        }
+                        else {
+                            for (var i = 0; i < entries_1.length; i++) {
+                                window['angularComponentRef'].zone.run(function () {
+                                    window['angularComponentRef'].traverseFileTree(entries_1[i], path + entries_1[i].name);
+                                });
+                            }
+                        }
                         window['angularComponentRef'].zone.run(function () {
-                            window['angularComponentRef'].traverseFileTree(entries[i], path + entries[i].name);
+                            window['angularComponentRef'].popToStack();
                         });
                     }
-                }
-                window['angularComponentRef'].zone.run(function () {
-                    window['angularComponentRef'].popToStack();
+                    else {
+                        // continue with the reading
+                        entries_1 = entries_1.concat(res);
+                        readEntries_1();
+                    }
                 });
-            });
+            };
+            readEntries_1();
         }
     };
     FileComponent.prototype.addToQueue = function (item) {
@@ -2539,46 +2564,62 @@ var UploadFile = (function () {
 
 /***/ }),
 
-/***/ "../../../../rxjs/observable/TimerObservable.js":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "../../../../rxjs/_esm5/observable/TimerObservable.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimerObservable; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_isNumeric__ = __webpack_require__("../../../../rxjs/_esm5/util/isNumeric.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scheduler_async__ = __webpack_require__("../../../../rxjs/_esm5/scheduler/async.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_isScheduler__ = __webpack_require__("../../../../rxjs/_esm5/util/isScheduler.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_isDate__ = __webpack_require__("../../../../rxjs/_esm5/util/isDate.js");
+/** PURE_IMPORTS_START .._util_isNumeric,.._Observable,.._scheduler_async,.._util_isScheduler,.._util_isDate PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || /*@__PURE__*/ (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b)
+            if (b.hasOwnProperty(p))
+                d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var isNumeric_1 = __webpack_require__("../../../../rxjs/util/isNumeric.js");
-var Observable_1 = __webpack_require__("../../../../rxjs/Observable.js");
-var async_1 = __webpack_require__("../../../../rxjs/scheduler/async.js");
-var isScheduler_1 = __webpack_require__("../../../../rxjs/util/isScheduler.js");
-var isDate_1 = __webpack_require__("../../../../rxjs/util/isDate.js");
+
+
+
+
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
-var TimerObservable = (function (_super) {
+var TimerObservable = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
     __extends(TimerObservable, _super);
     function TimerObservable(dueTime, period, scheduler) {
-        if (dueTime === void 0) { dueTime = 0; }
-        _super.call(this);
-        this.period = -1;
-        this.dueTime = 0;
-        if (isNumeric_1.isNumeric(period)) {
-            this.period = Number(period) < 1 && 1 || Number(period);
+        if (dueTime === void 0) {
+            dueTime = 0;
         }
-        else if (isScheduler_1.isScheduler(period)) {
+        var _this = _super.call(this) || this;
+        _this.period = -1;
+        _this.dueTime = 0;
+        if (Object(__WEBPACK_IMPORTED_MODULE_0__util_isNumeric__["a" /* isNumeric */])(period)) {
+            _this.period = Number(period) < 1 && 1 || Number(period);
+        }
+        else if (Object(__WEBPACK_IMPORTED_MODULE_3__util_isScheduler__["a" /* isScheduler */])(period)) {
             scheduler = period;
         }
-        if (!isScheduler_1.isScheduler(scheduler)) {
-            scheduler = async_1.async;
+        if (!Object(__WEBPACK_IMPORTED_MODULE_3__util_isScheduler__["a" /* isScheduler */])(scheduler)) {
+            scheduler = __WEBPACK_IMPORTED_MODULE_2__scheduler_async__["a" /* async */];
         }
-        this.scheduler = scheduler;
-        this.dueTime = isDate_1.isDate(dueTime) ?
-            (+dueTime - this.scheduler.now()) :
+        _this.scheduler = scheduler;
+        _this.dueTime = Object(__WEBPACK_IMPORTED_MODULE_4__util_isDate__["a" /* isDate */])(dueTime) ?
+            (+dueTime - _this.scheduler.now()) :
             dueTime;
+        return _this;
     }
     /**
      * Creates an Observable that starts emitting after an `initialDelay` and
@@ -2623,7 +2664,9 @@ var TimerObservable = (function (_super) {
      * @owner Observable
      */
     TimerObservable.create = function (initialDelay, period, scheduler) {
-        if (initialDelay === void 0) { initialDelay = 0; }
+        if (initialDelay === void 0) {
+            initialDelay = 0;
+        }
         return new TimerObservable(initialDelay, period, scheduler);
     };
     TimerObservable.dispatch = function (state) {
@@ -2647,41 +2690,45 @@ var TimerObservable = (function (_super) {
         });
     };
     return TimerObservable;
-}(Observable_1.Observable));
-exports.TimerObservable = TimerObservable;
-//# sourceMappingURL=TimerObservable.js.map
+}(__WEBPACK_IMPORTED_MODULE_1__Observable__["a" /* Observable */]));
+
+//# sourceMappingURL=TimerObservable.js.map 
+
 
 /***/ }),
 
-/***/ "../../../../rxjs/util/isDate.js":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "../../../../rxjs/_esm5/util/isDate.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (immutable) */ __webpack_exports__["a"] = isDate;
+/** PURE_IMPORTS_START  PURE_IMPORTS_END */
 function isDate(value) {
     return value instanceof Date && !isNaN(+value);
 }
-exports.isDate = isDate;
-//# sourceMappingURL=isDate.js.map
+//# sourceMappingURL=isDate.js.map 
+
 
 /***/ }),
 
-/***/ "../../../../rxjs/util/isNumeric.js":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "../../../../rxjs/_esm5/util/isNumeric.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = isNumeric;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_isArray__ = __webpack_require__("../../../../rxjs/_esm5/util/isArray.js");
+/** PURE_IMPORTS_START .._util_isArray PURE_IMPORTS_END */
 
-var isArray_1 = __webpack_require__("../../../../rxjs/util/isArray.js");
 function isNumeric(val) {
     // parseFloat NaNs numeric-cast false positives (null|true|false|"")
     // ...but misinterprets leading-number strings, particularly hex literals ("0x...")
     // subtraction forces infinities to NaN
     // adding 1 corrects loss of precision from parseFloat (#15100)
-    return !isArray_1.isArray(val) && (val - parseFloat(val) + 1) >= 0;
+    return !Object(__WEBPACK_IMPORTED_MODULE_0__util_isArray__["a" /* isArray */])(val) && (val - parseFloat(val) + 1) >= 0;
 }
-exports.isNumeric = isNumeric;
 ;
-//# sourceMappingURL=isNumeric.js.map
+//# sourceMappingURL=isNumeric.js.map 
+
 
 /***/ })
 

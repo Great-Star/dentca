@@ -29,7 +29,10 @@ Rails.application.routes.draw do
     resources :addresses, only: :destroy
     resources :countries, only: %i(index show)
     resources :orders, only: %i(index show)
-    resource :corporate_accounts
+    resource :corporate_account do
+      get :orders
+      resources :corporate_users
+    end
     resources :option_cases
     resources :drop_downs do
       member do

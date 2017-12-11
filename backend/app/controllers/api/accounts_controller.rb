@@ -58,6 +58,7 @@ private
                                         :doctor,
                                         :license,
                                         :corporate_account_id,
+                                        :status,
                                         spree_role_ids: []])
   end
 

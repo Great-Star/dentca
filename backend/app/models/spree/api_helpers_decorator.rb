@@ -33,6 +33,7 @@ Spree::Api::ApiHelpers.class_eval do
   class_variable_set(:@@user_attributes, class_variable_get(:@@user_attributes).push(:license))
   class_variable_set(:@@user_attributes, class_variable_get(:@@user_attributes).push(:product_price_set_id))
   class_variable_set(:@@user_attributes, class_variable_get(:@@user_attributes).push(:corporate_account_id))
+  class_variable_set(:@@user_attributes, class_variable_get(:@@user_attributes).push(:status))
 
   class_variable_set(:@@order_attributes, class_variable_get(:@@order_attributes).push(:original_line_item))
 

@@ -24,7 +24,7 @@ protected
   end
 
   def unauthorized
-    render json: {status: 'unauthorized'},status: 401
+    render json: {status: 'unauthorized'}, status: 401
   end
 
   def check_authorization
@@ -52,6 +52,15 @@ protected
 
   def spree_current_user
     @spree_current_user
+  end
+
+  def check_corp_authorization
+    @corp_admin = @spree_current_user.corporate_account
+    if @spree_current_user.has_spree_role?('corp admin') && @corp_admin
+      @corp_admin
+    else
+      unauthorized
+    end
   end
 
   def invalid_resource!(resource)

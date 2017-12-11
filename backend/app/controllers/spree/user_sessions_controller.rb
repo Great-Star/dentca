@@ -22,21 +22,33 @@ class Spree::UserSessionsController < Devise::SessionsController
     # Warden authentication
     self.resource = warden.authenticate!(auth_options)
     if spree_user_signed_in?
-      respond_to do |format|
-        format.html {
-          flash[:success] = Spree.t(:logged_in_succesfully)
-          redirect_back_or_default(after_sign_in_path_for(spree_current_user))
-        }        
-        format.json {
-          @user = spree_current_user
-          @order = current_order({create_order_if_necessary: true})
-          @current_user_roles = @user.spree_roles
-          
-          render json: @user,
-                 root: false,
-                 scope: @user,
-                 serializer: LiteUserSerializer
-        }
+      if is_activated?
+        respond_to do |format|
+          format.html {
+            flash[:success] = Spree.t(:logged_in_succesfully)
+            redirect_back_or_default(after_sign_in_path_for(spree_current_user))
+          }        
+          format.json {
+            @user = spree_current_user
+            @order = current_order({create_order_if_necessary: true})
+            @current_user_roles = @user.spree_roles
+            
+            render json: @user,
+                  root: false,
+                  scope: @user,
+                  serializer: LiteUserSerializer
+          }
+        end
+      else
+        respond_to do |format|
+          format.html {
+            flash.now[:error] = "Current user is deaticated"
+            render :new
+          }        
+          format.json {
+            render json: { error: "Current user is deaticated" }, status: :unprocessable_entity, layout: false
+          }
+        end
       end
     else
       respond_to do |format|
@@ -79,5 +91,14 @@ class Spree::UserSessionsController < Devise::SessionsController
     def redirect_back_or_default(default)
       redirect_to(session["spree_user_return_to"] || default)
       session["spree_user_return_to"] = nil
+    end
+
+    def is_activated?
+      if spree_current_user.status == "activated"
+        return true
+      else
+        Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
+        return false
+      end
     end
 end

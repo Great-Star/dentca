@@ -210,6 +210,7 @@ var AppComponent = (function () {
         this.store.select(__WEBPACK_IMPORTED_MODULE_8__auth_reducers_selectors__["a" /* getAuthStatus */])
             .subscribe(function (isAuth) {
             if (isAuth) {
+                _this.store.dispatch(_this.userActions.getUser());
                 _this.orderSub$ = _this.checkoutService.fetchCurrentOrder()
                     .subscribe();
                 _this.store.dispatch(_this.userActions.getUserOrders());
@@ -277,24 +278,16 @@ var _a, _b, _c, _d, _e, _f, _g;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__layout_index__ = __webpack_require__("../../../../../src/app/layout/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__blog_blog_module__ = __webpack_require__("../../../../../src/app/blog/blog.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ngui_map__ = __webpack_require__("../../../../@ngui/map/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/add/operator/catch.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_add_operator_do__ = __webpack_require__("../../../../rxjs/add/operator/do.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_rxjs_add_operator_filter__ = __webpack_require__("../../../../rxjs/add/operator/filter.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_rxjs_add_operator_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_rxjs_add_operator_first__ = __webpack_require__("../../../../rxjs/add/operator/first.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_rxjs_add_operator_first___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_23_rxjs_add_operator_first__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_24_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_rxjs_add_operator_switchMap__ = __webpack_require__("../../../../rxjs/add/operator/switchMap.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25_rxjs_add_operator_switchMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_rxjs_add_operator_finally__ = __webpack_require__("../../../../rxjs/add/operator/finally.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_rxjs_add_operator_finally___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_26_rxjs_add_operator_finally__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_rxjs_add_observable_of__ = __webpack_require__("../../../../rxjs/add/observable/of.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_27_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_rxjs_add_observable_combineLatest__ = __webpack_require__("../../../../rxjs/add/observable/combineLatest.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_rxjs_add_observable_combineLatest___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28_rxjs_add_observable_combineLatest__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angular_font_awesome__ = __webpack_require__("../../../../angular-font-awesome/angular-font-awesome.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_rxjs_add_operator_do__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/do.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_rxjs_add_operator_filter__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/filter.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_rxjs_add_operator_first__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/first.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_rxjs_add_operator_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_rxjs_add_operator_finally__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/finally.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_rxjs_add_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_rxjs_add_observable_combineLatest__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/combineLatest.js");
 /**
  * TODO: move API key to config file
  * TODO: investigate the users of ProductActions / SearchActions; justify its placement in AppModule.providers
@@ -333,6 +326,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // Modules - Custom
 
 // Modules - Utility
+
 
 // RX
 
@@ -382,7 +376,8 @@ AppModule = __decorate([
             // Modules - Utility
             __WEBPACK_IMPORTED_MODULE_19__ngui_map__["a" /* NguiMapModule */].forRoot({
                 apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyDxyTHZsBeo1IDPnR_VSw8p9Yxg9Eb8PnQ'
-            })
+            }),
+            __WEBPACK_IMPORTED_MODULE_20_angular_font_awesome__["a" /* AngularFontAwesomeModule */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_11__product_actions_product_actions__["a" /* ProductActions */],
@@ -588,8 +583,7 @@ AuthActions.AUTHORIZE = 'AUTHORIZE';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_effects__ = __webpack_require__("../../../../@ngrx/effects/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_auth_service__ = __webpack_require__("../../../../../src/app/core/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_auth_actions__ = __webpack_require__("../../../../../src/app/auth/actions/auth.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -621,7 +615,7 @@ var AuthenticationEffects = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["a" /* Observable */]) === "function" && _a || Object)
 ], AuthenticationEffects.prototype, "Authorized$", void 0);
 AuthenticationEffects = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -1376,10 +1370,8 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CenterMapComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/_esm5/BehaviorSubject.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_models_address__ = __webpack_require__("../../../../../src/app/core/models/address.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reducers_center_selectors__ = __webpack_require__("../../../../../src/app/blog/center/reducers/center.selectors.ts");
@@ -1405,7 +1397,7 @@ var CenterMapComponent = (function () {
         this.centersWithAddressFiltered = [];
         this.states = [];
         this.selectedState = '';
-        this.selectedState$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["BehaviorSubject"]('');
+        this.selectedState$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]('');
         this.getFullAddress = __WEBPACK_IMPORTED_MODULE_3__core_models_address__["b" /* getFullAddress */];
         this.marker = {
             center: null
@@ -1415,7 +1407,7 @@ var CenterMapComponent = (function () {
         var _this = this;
         var centers$ = this.store.select(__WEBPACK_IMPORTED_MODULE_5__reducers_center_selectors__["a" /* getActivatedCenters */]);
         var country$ = this.store.select(__WEBPACK_IMPORTED_MODULE_5__reducers_center_selectors__["b" /* getCountry */]);
-        this.centersWithAddressSub = __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].combineLatest([centers$, country$, this.selectedState$])
+        this.centersWithAddressSub = __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */].combineLatest([centers$, country$, this.selectedState$])
             .filter(function (value) { return value[0].length > 0; })
             .filter(function (value) { return value[1] && value[1].toJSON().states && value[1].toJSON().states.length > 0; })
             .subscribe(function (value) {
@@ -1491,8 +1483,7 @@ var _a;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CenterEffects; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actions_center_actions__ = __webpack_require__("../../../../../src/app/blog/center/actions/center.actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngrx_effects__ = __webpack_require__("../../../../@ngrx/effects/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_center_service__ = __webpack_require__("../../../../../src/app/core/services/center.service.ts");
@@ -1529,11 +1520,11 @@ var CenterEffects = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */]) === "function" && _a || Object)
 ], CenterEffects.prototype, "GetActivatedCenters$", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _b || Object)
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */]) === "function" && _b || Object)
 ], CenterEffects.prototype, "GetCountry$", void 0);
 CenterEffects = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
@@ -2686,9 +2677,10 @@ var AuthService = (function () {
      */
     AuthService.prototype.c_register = function (data) {
         var _this = this;
-        return this.http.post('api/corporate_accounts', 
+        console.log("corp---", data);
+        return this.http.post('api/corporate_account', 
         // 'spree/signup.json',
-        { corporate_user: data }).map(function (res) {
+        { corporate_account: data }).map(function (res) {
             data = res.json();
             console.log(data);
             if (!data.errors) {
@@ -3086,11 +3078,9 @@ var _a, _b, _c;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -3124,7 +3114,7 @@ var HttpService = (function (_super) {
     __extends(HttpService, _super);
     function HttpService(backend, defaultOptions) {
         var _this = _super.call(this, backend, defaultOptions) || this;
-        _this.loading = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["Subject"]();
+        _this.loading = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["a" /* Subject */]();
         return _this;
     }
     /**
@@ -3273,7 +3263,7 @@ var HttpService = (function (_super) {
     HttpService.prototype.onCatch = function (error, caught) {
         console.log('Something went terrible wrong and error is', error);
         // this.loaderService.popError();
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].of(error);
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].of(error);
     };
     /**
      * onSubscribeSuccess
@@ -3893,8 +3883,7 @@ var _a;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuEffects; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_effects__ = __webpack_require__("../../../../@ngrx/effects/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_menu_actions__ = __webpack_require__("../../../../../src/app/layout/actions/menu.actions.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_menu_service__ = __webpack_require__("../../../../../src/app/core/services/menu.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3930,11 +3919,11 @@ var MenuEffects = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */]) === "function" && _a || Object)
 ], MenuEffects.prototype, "GetAllDropDowns$", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"]) === "function" && _b || Object)
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */]) === "function" && _b || Object)
 ], MenuEffects.prototype, "GetAllLinkPages$", void 0);
 MenuEffects = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -4010,7 +3999,7 @@ FooterComponent = __decorate([
 /***/ "../../../../../src/app/layout/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <nav class=\"navbar navbar-default navbar-fixed-top\">\r\n        <div class=\"container\">\r\n\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n                  <span class=\"sr-only\">Toggle navigation</span>\r\n                  <span class=\"icon-bar\"></span>\r\n                  <span class=\"icon-bar\"></span>\r\n                  <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" [routerLink]=\"['/blog', 'page', 'welcome']\"><img src=\"assets/logo.png\" alt=\"Angular Spree\"></a>\r\n            </div>\r\n\r\n            <!-- Collect the nav links, forms, and other content for toggling -->\r\n            <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <ng-template ngFor let-dropDown [ngForOf]=\"(dropDowns$ | async)\" let-i=\"index\">\r\n                        <li class=\"\" *ngIf=\"!dropDown.has_item; else DropDown\">\r\n                            <a [routerLink]=\"[dropDown.slug]\" *ngIf=\"dropDown.slug\">\r\n                                {{dropDown.presentation}}\r\n                            </a>\r\n                            <a [routerLink]=\"['404']\" *ngIf=\"!dropDown.slug\">\r\n                                {{dropDown.presentation}}\r\n                            </a>\r\n                        </li>\r\n                        <ng-template #DropDown>\r\n                            <li class=\"dropdown\" dropdown>\r\n                                <a class=\"dropdown-toggle\" dropdownToggle>\r\n                                    <i class=\"\" style=\"font-style:normal !important\">{{dropDown.presentation}}</i>\r\n                                    <span class=\"caret\"></span>\r\n                                </a>\r\n                                <ul class=\"dropdown-menu\" *dropdownMenu>\r\n                                    <li *ngFor=\"let item of dropDown.drop_down_items\">\r\n                                        <a [routerLink]=\"[item.slug]\" *ngIf=\"item.slug\">\r\n                                            {{item.presentation}}\r\n                                        </a>\r\n                                        <a [routerLink]=\"['404']\" *ngIf=\"!item.slug\">\r\n                                            {{item.presentation}}\r\n                                        </a>\r\n                                    </li>\r\n                                </ul>\r\n                            </li>\r\n                        </ng-template>\r\n                    </ng-template>\r\n\r\n                    <li class=\"dropdown\" *ngIf=\"(isAuthenticated$ | async)\" dropdown>\r\n                        <a class=\"dropdown-toggle\" dropdownToggle>\r\n                            <i class=\"\" style=\"font-style:normal !important\">Order</i>\r\n                            <span class=\"caret\"></span>\r\n                        </a>\r\n                        <ul class=\"dropdown-menu\" *dropdownMenu>\r\n                            <ul class=\"taxonomy\" *ngFor=\"let taxonomy of taxonomies\">\r\n                                <li *ngFor=\"let taxon of taxonomy.root.taxons\">\r\n                                    <a [routerLink]=\"['/home/', {id: taxon.id.toString()}]\">{{taxon.name}}</a>\r\n                                </li>\r\n                            </ul>\r\n                        </ul>\r\n                    </li>\r\n                </ul>\r\n\r\n                <app-profile-dropdown [totalCartItems]=\"totalCartItems$ | async\" [isAuthenticated]=\"isAuthenticated$ | async\"></app-profile-dropdown>\r\n            </div>\r\n        </div>\r\n    </nav>\r\n    <div>"
+module.exports = "<div>\r\n    <nav class=\"navbar navbar-default navbar-fixed-top\">\r\n        <div class=\"container\">\r\n\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n                  <span class=\"sr-only\">Toggle navigation</span>\r\n                  <span class=\"icon-bar\"></span>\r\n                  <span class=\"icon-bar\"></span>\r\n                  <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" [routerLink]=\"['/blog', 'page', 'welcome']\"><img src=\"assets/logo.png\" alt=\"Angular Spree\"></a>\r\n            </div>\r\n\r\n            <!-- Collect the nav links, forms, and other content for toggling -->\r\n            <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <ng-template ngFor let-dropDown [ngForOf]=\"(dropDowns$ | async)\" let-i=\"index\">\r\n                        <li class=\"\" *ngIf=\"!dropDown.has_item; else DropDown\">\r\n                            <a [routerLink]=\"[dropDown.slug]\" *ngIf=\"dropDown.slug\">\r\n                                {{dropDown.presentation}}\r\n                            </a>\r\n                            <a [routerLink]=\"['404']\" *ngIf=\"!dropDown.slug\">\r\n                                {{dropDown.presentation}}\r\n                            </a>\r\n                        </li>\r\n                        <ng-template #DropDown>\r\n                            <li class=\"dropdown\" dropdown>\r\n                                <a class=\"dropdown-toggle\" dropdownToggle>\r\n                                    <i class=\"\" style=\"font-style:normal !important\">{{dropDown.presentation}}</i>\r\n                                    <span class=\"caret\"></span>\r\n                                </a>\r\n                                <ul class=\"dropdown-menu\" *dropdownMenu>\r\n                                    <li *ngFor=\"let item of dropDown.drop_down_items\">\r\n                                        <a [routerLink]=\"[item.slug]\" *ngIf=\"item.slug\">\r\n                                            {{item.presentation}}\r\n                                        </a>\r\n                                        <a [routerLink]=\"['404']\" *ngIf=\"!item.slug\">\r\n                                            {{item.presentation}}\r\n                                        </a>\r\n                                    </li>\r\n                                </ul>\r\n                            </li>\r\n                        </ng-template>\r\n                    </ng-template>\r\n\r\n                    <li class=\"dropdown\" *ngIf=\"(isAuthenticated$ | async)\" dropdown>\r\n                        <a class=\"dropdown-toggle\" dropdownToggle>\r\n                            <i class=\"\" style=\"font-style:normal !important\">Order</i>\r\n                            <span class=\"caret\"></span>\r\n                        </a>\r\n                        <ul class=\"dropdown-menu\" *dropdownMenu>\r\n                            <ul class=\"taxonomy\" *ngFor=\"let taxonomy of taxonomies\">\r\n                                <li *ngFor=\"let taxon of taxonomy.root.taxons\">\r\n                                    <a [routerLink]=\"['/home/', {id: taxon.id.toString()}]\">{{taxon.name}}</a>\r\n                                </li>\r\n                            </ul>\r\n                        </ul>\r\n                    </li>\r\n                </ul>\r\n\r\n                <app-profile-dropdown [totalCartItems]=\"totalCartItems$ | async\" [isAuthenticated]=\"isAuthenticated$ | async\" [isCorpAdmin]=\"(user$ | async)?.get('corp_admin')\"></app-profile-dropdown>\r\n            </div>\r\n        </div>\r\n    </nav>\r\n    <div>"
 
 /***/ }),
 
@@ -4043,6 +4032,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__auth_reducers_selectors__ = __webpack_require__("../../../../../src/app/auth/reducers/selectors.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reducers_selectors__ = __webpack_require__("../../../../../src/app/layout/reducers/selectors.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__checkout_reducers_selectors__ = __webpack_require__("../../../../../src/app/checkout/reducers/selectors.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_reducers_selector__ = __webpack_require__("../../../../../src/app/user/reducers/selector.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4060,6 +4050,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HeaderComponent = (function () {
     function HeaderComponent(store, searchActions) {
         this.store = store;
@@ -4069,6 +4060,7 @@ var HeaderComponent = (function () {
         this.isAuthenticated$ = this.store.select(__WEBPACK_IMPORTED_MODULE_3__auth_reducers_selectors__["a" /* getAuthStatus */]);
         this.totalCartItems$ = this.store.select(__WEBPACK_IMPORTED_MODULE_5__checkout_reducers_selectors__["k" /* getTotalCartItems */]);
         this.dropDowns$ = this.store.select(__WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["a" /* getAllDropDowns */]);
+        this.user$ = this.store.select(__WEBPACK_IMPORTED_MODULE_6__user_reducers_selector__["b" /* getUser */]);
     };
     return HeaderComponent;
 }());
@@ -4094,7 +4086,7 @@ var _a, _b;
 /***/ "../../../../../src/app/layout/header/profile-dropdown/profile-dropdown.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"nav navbar-nav navbar-right\">\r\n  <li class=\"dropdown\" dropdown *ngIf=\"!isAuthenticated\">\r\n    <a class=\"dropdown-toggle\" dropdownToggle>\r\n      <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\r\n      <span class=\"caret\"></span>\r\n    </a>\r\n\r\n    <ul class=\"dropdown-menu\" *dropdownMenu>\r\n      <li><a [routerLink]=\"['/auth']\">Sign Up</a></li>\r\n      <li role=\"separator\" class=\"divider\"></li>\r\n      <li><a [routerLink]=\"['/auth', 'login']\">Login</a></li>\r\n    </ul>\r\n  </li>\r\n\r\n  <li class=\"dropdown\" dropdown *ngIf=\"isAuthenticated\">\r\n    <a class=\"dropdown-toggle\" dropdownToggle>\r\n      <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\r\n      <span class=\"caret\"></span>\r\n    </a>\r\n    <ul class=\"dropdown-menu\" *dropdownMenu>\r\n      <li><a routerLink=\"/user\">My Profile</a></li>\r\n      <li><a routerLink=\"/user/orders\">My Orders</a></li>\r\n      <li role=\"separator\" class=\"divider\"></li>\r\n      <li><a routerLink=\"/user/addresses\">Saved Addresses</a></li>\r\n      <li role=\"separator\" class=\"divider\"></li>\r\n      <li><a href=\"#\">Edit Profile</a></li>\r\n      <li><a (click)=\"logout()\">Logout</a></li>\r\n    </ul>\r\n  </li>\r\n\r\n  <li class=\"cart\" [routerLink]=\"['checkout','cart']\">\r\n    <a>\r\n      <i class=\"fa fa-shopping-bag\" aria-hidden=\"true\"></i> cart\r\n      <span class=\"badge badge-danger\">{{totalCartItems}}</span></a>\r\n  </li>\r\n</ul>"
+module.exports = "<ul class=\"nav navbar-nav navbar-right\">\r\n  <li class=\"dropdown\" dropdown *ngIf=\"!isAuthenticated\">\r\n    <a class=\"dropdown-toggle\" dropdownToggle>\r\n      <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\r\n      <span class=\"caret\"></span>\r\n    </a>\r\n\r\n    <ul class=\"dropdown-menu\" *dropdownMenu>\r\n      <li><a [routerLink]=\"['/auth']\">Sign Up</a></li>\r\n      <li role=\"separator\" class=\"divider\"></li>\r\n      <li><a [routerLink]=\"['/auth', 'login']\">Login</a></li>\r\n    </ul>\r\n  </li>\r\n\r\n  <li class=\"dropdown\" dropdown *ngIf=\"isAuthenticated\">\r\n    <a class=\"dropdown-toggle\" dropdownToggle>\r\n      <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\r\n      <span class=\"caret\"></span>\r\n    </a>\r\n    <ul class=\"dropdown-menu\" *dropdownMenu>\r\n      <li><a routerLink=\"/user\">My Profile</a></li>\r\n      <li><a routerLink=\"/user/orders\">My Orders</a></li>\r\n      <li role=\"separator\" class=\"divider\"></li>\r\n      <li><a routerLink=\"/user/addresses\">Saved Addresses</a></li>\r\n      <li role=\"separator\" class=\"divider\"></li>\r\n      <ng-template [ngIf]=\"isCorpAdmin\">\r\n        <li><a routerLink=\"/user/corpusers\">Company Users</a></li>\r\n        <li><a routerLink=\"/user/corporders\">Company Orders</a></li>\r\n        <li role=\"separator\" class=\"divider\"></li>\r\n      </ng-template>\r\n      <li><a (click)=\"logout()\">Logout</a></li>\r\n\r\n    </ul>\r\n  </li>\r\n\r\n  <li class=\"cart\" [routerLink]=\"['checkout','cart']\">\r\n    <a>\r\n      <i class=\"fa fa-shopping-bag\" aria-hidden=\"true\"></i> cart\r\n      <span class=\"badge badge-danger\">{{totalCartItems}}</span></a>\r\n  </li>\r\n</ul>"
 
 /***/ }),
 
@@ -4142,6 +4134,7 @@ var ProfileDropdownComponent = (function () {
         this.router = router;
     }
     ProfileDropdownComponent.prototype.ngOnInit = function () {
+        console.log("-----------", this.isCorpAdmin);
     };
     ProfileDropdownComponent.prototype.logout = function () {
         var _this = this;
@@ -4159,6 +4152,10 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", Number)
 ], ProfileDropdownComponent.prototype, "totalCartItems", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Boolean)
+], ProfileDropdownComponent.prototype, "isCorpAdmin", void 0);
 ProfileDropdownComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-profile-dropdown',
@@ -4369,8 +4366,7 @@ ProductActions.GET_ALL_TAXONOMIES_SUCCESS = 'GET_ALL_TAXONOMIES_SUCCESS';
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductEffects; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actions_product_actions__ = __webpack_require__("../../../../../src/app/product/actions/product-actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngrx_effects__ = __webpack_require__("../../../../@ngrx/effects/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_services_product_service__ = __webpack_require__("../../../../../src/app/core/services/product.service.ts");
@@ -4414,15 +4410,15 @@ var ProductEffects = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */]) === "function" && _a || Object)
 ], ProductEffects.prototype, "GetAllProducts$", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _b || Object)
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */]) === "function" && _b || Object)
 ], ProductEffects.prototype, "GetAllTaxonomies$", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"]) === "function" && _c || Object)
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */]) === "function" && _c || Object)
 ], ProductEffects.prototype, "GetProductDetail$", void 0);
 ProductEffects = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
@@ -4916,6 +4912,12 @@ var UserActions = (function () {
     UserActions.prototype.updateOrdersSuccess = function (order) {
         return { type: UserActions.UPDATE_USER_ORDERS_SUCCESS, payload: order };
     };
+    UserActions.prototype.getCountries = function () {
+        return { type: UserActions.GET_COUNTRIES };
+    };
+    UserActions.prototype.getCountriesSuccess = function (countries) {
+        return { type: UserActions.GET_COUNTRIES_SUCCESS, payload: countries };
+    };
     return UserActions;
 }());
 
@@ -4925,6 +4927,8 @@ UserActions.GET_CURRENT_USER = 'GET_CURRENT_USER';
 UserActions.GET_CURRENT_USER_SUCCESS = 'GET_CURRENT_USER_SUCCESS';
 UserActions.UPDATE_USER_ORDERS = 'UPDATE_USER_ORDERS';
 UserActions.UPDATE_USER_ORDERS_SUCCESS = 'UPDATE_USER_ORDERS_SUCCESS';
+UserActions.GET_COUNTRIES = 'GET_COUNTRIES';
+UserActions.GET_COUNTRIES_SUCCESS = 'GET_COUNTRIES_SUCCESS';
 //# sourceMappingURL=user.actions.js.map
 
 /***/ }),
@@ -4934,12 +4938,12 @@ UserActions.UPDATE_USER_ORDERS_SUCCESS = 'UPDATE_USER_ORDERS_SUCCESS';
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserEffects; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngrx_effects__ = __webpack_require__("../../../../@ngrx/effects/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/user/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_user_actions__ = __webpack_require__("../../../../../src/app/user/actions/user.actions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_services_address_service__ = __webpack_require__("../../../../../src/app/core/services/address.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4954,12 +4958,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UserEffects = (function () {
-    function UserEffects(actions$, userService, userActions) {
+    function UserEffects(actions$, userService, userActions, addrService) {
         var _this = this;
         this.actions$ = actions$;
         this.userService = userService;
         this.userActions = userActions;
+        this.addrService = addrService;
         // tslint:disable-next-line:member-ordering
         this.GetUserOrders$ = this.actions$
             .ofType(__WEBPACK_IMPORTED_MODULE_4__actions_user_actions__["a" /* UserActions */].GET_USER_ORDERS)
@@ -4976,28 +4982,93 @@ var UserEffects = (function () {
             .switchMap(function (action) { return _this.userService.getOrderDetail(action.payload); })
             .filter(function (order) { return order != undefined; })
             .map(function (order) { return _this.userActions.updateOrdersSuccess(order); });
+        this.GetCountries$ = this.actions$
+            .ofType(__WEBPACK_IMPORTED_MODULE_4__actions_user_actions__["a" /* UserActions */].GET_COUNTRIES)
+            .switchMap(function (action) { return _this.addrService.getCountries(); })
+            .map(function (countries) { return _this.userActions.getCountriesSuccess(countries); });
     }
     return UserEffects;
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"]) === "function" && _a || Object)
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["a" /* Observable */]) === "function" && _a || Object)
 ], UserEffects.prototype, "GetUserOrders$", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"]) === "function" && _b || Object)
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["a" /* Observable */]) === "function" && _b || Object)
 ], UserEffects.prototype, "GetUser$", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["b" /* Effect */])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"]) === "function" && _c || Object)
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["a" /* Observable */]) === "function" && _c || Object)
 ], UserEffects.prototype, "UpdateOrders$", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["b" /* Effect */])(),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["a" /* Observable */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["a" /* Observable */]) === "function" && _d || Object)
+], UserEffects.prototype, "GetCountries$", void 0);
 UserEffects = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["a" /* Actions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["a" /* Actions */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__actions_user_actions__["a" /* UserActions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__actions_user_actions__["a" /* UserActions */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["a" /* Actions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngrx_effects__["a" /* Actions */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_4__actions_user_actions__["a" /* UserActions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__actions_user_actions__["a" /* UserActions */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_5__core_services_address_service__["a" /* AddressService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__core_services_address_service__["a" /* AddressService */]) === "function" && _h || Object])
 ], UserEffects);
 
-var _a, _b, _c, _d, _e, _f;
+var _a, _b, _c, _d, _e, _f, _g, _h;
 //# sourceMappingURL=user.effects.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/user/reducers/selector.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getUserOrders; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getCountries; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reselect__ = __webpack_require__("../../../../reselect/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reselect__);
+
+// Base product state function
+/**
+ *
+ *
+ * @param {AppState} state
+ * @returns {UserState}
+ */
+function getUserState(state) {
+    return state.users;
+}
+// ******************** Individual selectors ***************************
+/**
+ *
+ *
+ * @param {UserState} state
+ * @returns {LightOrder[]}
+ */
+var fetchUserOrders = function (state) {
+    console.log("state2", state.orders.toJS());
+    return state.orders.toJS();
+};
+/**
+ *
+ *
+ * @param {UserState} state
+ * @returns {User}
+ */
+var fetchCurrentUser = function (state) {
+    return state.user;
+};
+/**
+ *
+ *
+ * @param {UserState} state
+ * @returns {Country[]}
+ */
+var fetchCountries = function (state) {
+    return state.countries.toJS();
+};
+// *************************** PUBLIC API's ****************************
+var getUserOrders = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getUserState, fetchUserOrders);
+var getUser = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getUserState, fetchCurrentUser);
+var getCountries = Object(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(getUserState, fetchCountries);
+//# sourceMappingURL=selector.js.map
 
 /***/ }),
 
@@ -5023,6 +5094,8 @@ var userReducer = function (state, _a) {
         case __WEBPACK_IMPORTED_MODULE_1__actions_user_actions__["a" /* UserActions */].UPDATE_USER_ORDERS_SUCCESS:
             var _orders = state.orders.insert(0, payload);
             return state.merge({ orders: _orders });
+        case __WEBPACK_IMPORTED_MODULE_1__actions_user_actions__["a" /* UserActions */].GET_COUNTRIES_SUCCESS:
+            return state.merge({ countries: payload });
         default:
             return state;
     }
@@ -5041,7 +5114,8 @@ var userReducer = function (state, _a) {
 
 var UserStateRecord = Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["Record"])({
     user: Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["Map"])({}),
-    orders: Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["List"])([])
+    orders: Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["List"])([]),
+    countries: Object(__WEBPACK_IMPORTED_MODULE_0_immutable__["List"])([])
 });
 //# sourceMappingURL=user.state.js.map
 
@@ -5097,7 +5171,7 @@ var UserService = (function () {
     UserService.prototype.getOrderDetail = function (orderNumber) {
         console.log("api/orders/" + orderNumber);
         return this.http.get("api/orders/" + orderNumber)
-            .map(function (res) { console.log(res.json()); return res.json(); });
+            .map(function (res) { return res.json(); });
     };
     /**
      *
@@ -5109,6 +5183,31 @@ var UserService = (function () {
     UserService.prototype.getUser = function () {
         var user_id = JSON.parse(localStorage.getItem('user')).id;
         return this.http.get("spree/api/v1/users/" + user_id)
+            .map(function (res) { return res.json(); });
+    };
+    ////////////
+    UserService.prototype.getCorpUser = function (id) {
+        return this.http.get("api/corporate_account/corporate_users/" + id)
+            .map(function (res) { return res.json(); });
+    };
+    UserService.prototype.getCorpUsers = function () {
+        return this.http.get("api/corporate_account/corporate_users")
+            .map(function (res) { return res.json(); });
+    };
+    UserService.prototype.getCorpOrders = function () {
+        return this.http.get("api/corporate_account/orders")
+            .map(function (res) { return res.json(); });
+    };
+    UserService.prototype.createCorpUser = function (param) {
+        return this.http.post("api/corporate_account/corporate_users", param)
+            .map(function (res) { return res.json(); });
+    };
+    UserService.prototype.updateCorpUser = function (id, param) {
+        return this.http.put("api/corporate_account/corporate_users/" + id, param)
+            .map(function (res) { return res.json(); });
+    };
+    UserService.prototype.deleteCorpUser = function (id) {
+        return this.http.delete("api/corporate_account/corporate_users/" + id)
             .map(function (res) { return res.json(); });
     };
     return UserService;

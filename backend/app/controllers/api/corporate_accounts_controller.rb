@@ -1,11 +1,15 @@
 module Api
     class CorporateAccountsController < BaseController
-        skip_before_action :verify_authenticity_token
+        skip_before_action :verify_authenticity_token, only: :create
+        before_filter :check_authorization, except: :create
+        before_filter :check_corp_authorization, only: :orders
 
         def create
             @corporate_account = Spree::CorporateAccount.create(corporate_account_params)
             if @corporate_account.persisted?
-                render_corp_account
+                render json: @corporate_account,
+                       root: true,
+                       serializer: CorporateAccountSerializer
             else
                 invalid_resource!(@corporate_account)
             end
@@ -14,9 +18,16 @@ module Api
         def show
         end
 
+        def orders
+            @orders = @corp_admin.orders
+            render  json: @orders,
+                    root: false,
+                    each_serializer: LiteOrderSerializer
+        end
+
         private
             def corporate_account_params
-                params.require(:corporate_user).permit(:id,
+                params.require(:corporate_account).permit(:id,
                                                         :company_id,
                                                         :company_name,
                                                         :email,
@@ -36,14 +47,9 @@ module Api
                                                         :contact_phone,
                                                         :address,
                                                         :shipping_category_id,
-                                                        :product_price_set_id)
+                                                        :product_price_set_id,
+                                                        :billing_type_id)
             end
 
-            def render_corp_account
-                render json: @corporate_account,
-                    #    scope: @corporate_account,
-                       root: true,
-                       serializer: CorporateAccountSerializer
-            end
-    end
+        end
 end

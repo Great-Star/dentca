@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130091205) do
+ActiveRecord::Schema.define(version: 20171204134717) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -1217,8 +1217,8 @@ ActiveRecord::Schema.define(version: 20171130091205) do
     t.string   "persistence_token"
     t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "sign_in_count",                      default: 0, null: false
-    t.integer  "failed_attempts",                    default: 0, null: false
+    t.integer  "sign_in_count",                      default: 0,           null: false
+    t.integer  "failed_attempts",                    default: 0,           null: false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
@@ -1231,8 +1231,8 @@ ActiveRecord::Schema.define(version: 20171130091205) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.datetime "reset_password_sent_at"
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
+    t.datetime "created_at",                                               null: false
+    t.datetime "updated_at",                                               null: false
     t.string   "spree_api_key",          limit: 48
     t.datetime "remember_created_at"
     t.datetime "deleted_at"
@@ -1244,6 +1244,7 @@ ActiveRecord::Schema.define(version: 20171130091205) do
     t.integer  "corporate_account_id"
     t.integer  "product_price_set_id"
     t.integer  "shipping_category_id"
+    t.string   "status",                             default: "activated"
   end
 
   add_index "spree_users", ["bill_address_id"], name: "index_spree_users_on_bill_address_id"

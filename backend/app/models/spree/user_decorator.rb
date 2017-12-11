@@ -1,5 +1,6 @@
 module Spree
     User.class_eval do
+        # attr_accessible :status
         before_save {
             if !selected_user_roles.include?('corporate user')
                 self.corporate_account_id = nil

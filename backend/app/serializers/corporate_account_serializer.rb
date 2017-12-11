@@ -4,6 +4,4 @@ class CorporateAccountSerializer < ActiveModel::Serializer
 
     belongs_to :country, class_name: "Spree::Country", serializer: CountrySerializer
     belongs_to :state, class_name: "Spree::State", serializer: StateSerializer
-
-    has_many :users, class_name: "Spree::User"              
 end

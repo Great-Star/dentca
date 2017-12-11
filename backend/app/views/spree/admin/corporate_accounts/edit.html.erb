@@ -12,11 +12,17 @@
 
     <div data-hook="admin_corporate_account_edit_form">
       <%= form_for [:admin, @corporate_account], as: :corporate_account, url: spree.admin_corporate_account_url(@corporate_account), method: :put do |f| %>
-        <%= render partial: 'form', locals: { f: f } %>
+        <fieldset data-hook="admin_corporate_account_edit_field">
+          <div class="row">
+            <div class="col-md-12">
+              <%= render partial: 'form', locals: { f: f } %>
+            </div>
+          </div>  
 
-        <div data-hook="admin_corporate_account_edit_form_button">
-          <%= render partial: 'spree/admin/shared/edit_resource_links', locals: { collection_url: spree.admin_corporate_accounts_url } %>
-        </div>
+          <div data-hook="admin_corporate_account_edit_form_button">
+            <%= render partial: 'spree/admin/shared/edit_resource_links', locals: { collection_url: spree.admin_corporate_accounts_url } %>
+          </div>
+        </fieldset>
       <% end %>
     </div>
   </div>

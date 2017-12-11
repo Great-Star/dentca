@@ -29,7 +29,7 @@ module Spree
 
         def ensure_line_item_numbers
             transaction do
-                line_items.each_with_index{ |line_item, index| line_item.ensure_number(self.number, index)}
+                line_items.each_with_index{ |line_item, index| line_item.ensure_number(self.number, index + 1)}
                 save!
             end
         end

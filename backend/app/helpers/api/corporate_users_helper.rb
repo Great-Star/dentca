@@ -1,0 +1,2 @@
+module Api::CorporateUsersHelper
+end

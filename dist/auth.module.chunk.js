@@ -208,6 +208,7 @@ var CorpSignUpComponent = (function () {
         var state_id = '';
         var shipping_category_id = '1';
         var product_price_set_id = '1';
+        var billing_type_id = '1';
         this.c_registerForm = this.fb.group({
             'company_id': [company_id, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
             'company_name': [company_name, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
@@ -225,7 +226,8 @@ var CorpSignUpComponent = (function () {
             'country_id': [country_id, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
             'state_id': [state_id, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
             'shipping_category_id': [shipping_category_id],
-            'product_price_set_id': [product_price_set_id]
+            'product_price_set_id': [product_price_set_id],
+            'billing_type_id': [billing_type_id]
         });
     };
     CorpSignUpComponent.prototype.redirectIfCorpSignIn = function () {
@@ -378,6 +380,12 @@ var LoginComponent = (function () {
         this.signInForm = this.fb.group({
             'email': [email, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required],
             'password': [password, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required]
+        });
+    };
+    LoginComponent.prototype.resetForm = function () {
+        this.signInForm.reset({
+            email: '',
+            password: ''
         });
     };
     LoginComponent.prototype.redirectIfUserLoggedIn = function () {
